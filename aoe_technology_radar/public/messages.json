@@ -57,6 +57,10 @@
     "quadrantsPreDescription": "The quadrants are:",
     "rings": [
       {
+        "description": "MAKKAPAKKA",
+        "name": "Keep"
+      },
+      {
         "description": "We can clearly recommend this technology. We have used it for longer period of time in many teams and it has proven to be stable and useful.",
         "name": "Adopt"
       },
@@ -71,10 +75,6 @@
       {
         "description": "This category is a bit special. Unlike the others, we recommend to stop doing or using something. That does not mean that they are bad and it often might be ok to use them in existing projects. But we move things here if we think we shouldn't do them anymore - because we see better options or alternatives now.",
         "name": "Hold"
-      },
-      {
-        "description": "MAKKAPAKKA",
-        "name": "Keep"
       }
     ],
     "ringsPreDescription": "Each of the items is classified in one of these rings:",

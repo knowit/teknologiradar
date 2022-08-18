@@ -6,11 +6,11 @@
     "tools": "Tools"
   },
   "rings": [
+    "keep",
     "adopt",
     "trial",
     "assess",
-    "hold",
-    "keep"
+    "hold"
     ],
   "showEmptyRings": false,
   "homepageContent": "both",
@@ -49,19 +49,19 @@
     "blipSize": 12,
     "ringsAttributes": [
       {
-        "radius": 8,
+        "radius": 4,
         "arcWidth": 6
       },
       {
-        "radius": 11,
+        "radius": 8,
         "arcWidth": 4
       },
       {
-        "radius": 14,
+        "radius": 12,
         "arcWidth": 2
       },
       {
-        "radius": 16,
+        "radius": 15,
         "arcWidth": 2
       },
       {

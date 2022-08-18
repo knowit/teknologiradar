@@ -9,7 +9,7 @@ exports.quadrants = [
     "platforms-and-aoe-services",
     "tools",
 ];
-exports.rings = ["all", "adopt", "trial", "assess", "hold", "keep"];
+exports.rings = ["all", "keep", "adopt", "trial", "assess", "hold"];
 var getItemPageNames = function (items) {
     return items.map(function (item) { return item.quadrant + "/" + item.name; });
 };
