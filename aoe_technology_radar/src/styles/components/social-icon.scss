@@ -1,0 +1,16 @@
+.social-icon-a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.social-icon {
+  font-size: 16px; /* Preferred icon size */
+  color: var(--color-gray-dark);
+}
