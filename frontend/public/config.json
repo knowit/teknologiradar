@@ -50,11 +50,11 @@
     "ringsAttributes": [
       {
         "radius": 4,
-        "arcWidth": 6
+        "arcWidth": 2
       },
       {
         "radius": 8,
-        "arcWidth": 4
+        "arcWidth": 2
       },
       {
         "radius": 12,
