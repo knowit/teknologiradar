@@ -1,8 +1,8 @@
 {
   "quadrants": {
-    "languages-and-frameworks": "Languages & Frameworks",
-    "methods-and-patterns": "Methods & Patterns",
-    "platforms-and-aoe-services": "Platforms & Operations",
+    "languages": "Languages",
+    "methods": "Methods",
+    "frameworks": "Frameworks",
     "tools": "Tools"
   },
   "rings": [
@@ -15,29 +15,29 @@
   "showEmptyRings": false,
   "homepageContent": "both",
   "quadrantsMap": {
-    "languages-and-frameworks": {
+    "languages": {
       "colour": "#84BFA4",
       "txtColour": "#444444",
       "position": 1,
-      "description": "We've placed development languages (such as Scala or Golang) here, as well as more low-level development frameworks (such as Play or Symfony), which are useful for implementing custom software of all kinds."
+      "description": "description"
     },
-    "methods-and-patterns": {
+    "methods": {
       "colour": "#248EA6",
       "txtColour": "white",
       "position": 2,
-      "description": "Here we put information on methods and patterns concerning development, continuous x, testing, organization, architecture, etc."
+      "description": "description"
     },
-    "platforms-and-aoe-services": {
+    "frameworks": {
       "colour": "#F25244",
       "txtColour": "#444444",
       "position": 3,
-      "description": "This quadrant clusters technologies around the operation of software and infrastructure related platforms, tools and services."
+      "description": "description"
     },
     "tools": {
       "colour": "#F2A25C",
       "txtColour": "white",
       "position": 4,
-      "description": "Here we put different software tools - from small helpers to bigger software projects"
+      "description": "description"
     }
   },
   "chartConfig": {

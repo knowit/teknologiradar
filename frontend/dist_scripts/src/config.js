@@ -4,9 +4,9 @@ exports.assetUrl = exports.isMobileViewport = exports.translate = exports.showEm
 exports.radarName = process.env.REACT_APP_RADAR_NAME || "AOE Technology Radar";
 exports.radarNameShort = exports.radarName;
 exports.quadrants = [
-    "languages-and-frameworks",
-    "methods-and-patterns",
-    "platforms-and-aoe-services",
+    "languages",
+    "methods",
+    "frameworks",
     "tools",
 ];
 exports.rings = ["all", "keep", "adopt", "trial", "assess", "hold"];
