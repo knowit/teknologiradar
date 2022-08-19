@@ -14,7 +14,7 @@
     "aoe_technology_radar-generateJson": "dist_scripts/scripts/generateJson.js"
   },
   "scripts": {
-    "prepare": "husky install && npm run build:scripts",
+    "prepare": "npm run build:scripts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:scripts": "tsc --project tsconfig.scripts.json",
@@ -40,7 +40,6 @@
     "front-matter": "4.0.2",
     "fs-extra": "10.1.0",
     "highlight.js": "11.5.1",
-    "husky": "8.0.1",
     "marked": "4.0.17",
     "moment": "2.29.3",
     "postcss-normalize": "10.0.1",
