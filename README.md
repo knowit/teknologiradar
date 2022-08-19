@@ -13,11 +13,7 @@ npm install --prefix frontend-cdk && npm install --prefix frontend
 ## Build frontend
 
 ```bash
-cd frontend && \
-(npx aoe_technology_radar-buildRadar && \
-npx aoe_technology_radar-generateJson && \
-npx aoe_technology_radar-createStaticFiles); \
-cd ..
+cd frontend && npm run build; cd ..
 ```
 
 ## Deploy frontend to AWS
