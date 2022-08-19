@@ -26,7 +26,7 @@ export class TechradarStack extends Stack {
     });
 
     new s3deploy.BucketDeployment(this, 'RadarFrontendBucketDeploy', {
-      sources: [s3deploy.Source.asset('../build-your-own-radar/dist')],
+      sources: [s3deploy.Source.asset('../frontend/public')],
       destinationBucket: websiteBucket,
       distribution,
       distributionPaths: ['/*'],
