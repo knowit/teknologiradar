@@ -7,7 +7,7 @@ Data fra 2022 er her: https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8
 ## First time setup
 
 ```bash
-cd frontend-cdk && npm install; cd .. \
+cd frontend-cdk && npm install; cd .. && \
 cd frontend && npm install; cd ..
 ```
 
@@ -18,12 +18,12 @@ cd frontend && npm install; cd ..
 ## Build frontend
 
 ```bash
-cd frontend && npm run build && ./dist_scripts/scripts/generateJson.js  && ./dist_scripts/scripts/createStaticFiles.js; cd ..
+cd frontend && npm run build && ./dist_scripts/scripts/generateJson.js && ./dist_scripts/scripts/createStaticFiles.js; cd ..
 ```
 
 ### Run frontend
 ```bash
-cd frontend; npx serve -s build
+cd frontend; npx serve -s build; cd ..
 ```
 
 ## Import and convert csv data to markdown files
