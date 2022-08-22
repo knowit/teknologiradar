@@ -27,6 +27,12 @@ cd knowit_technology_radar && npm run build; cd ..
 cd frontend && export REACT_APP_RADAR_NAME="Knowit Teknologiradar" && npm run build:static; cd ..
 ```
 
+## Import and convert csv data to markdown files
+```
+python3 csv_to_md.py [csv] [out]
+```
+Where [csv] is the csv-file path and [out] is the output directory path (./frontend/radar).
+
 ## Deploy frontend to AWS
 
 To deploy you must be logged into the aws cli (e.g., with `aws sso login`)
