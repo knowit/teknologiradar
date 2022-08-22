@@ -1,7 +1,7 @@
 {
-  "footerFootnote": "AOE is a leading global provider of services for digital transformation and digital business models. AOE relies exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital products and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.",
+  "footerFootnote": "Knowit is a Nordic powerhouse for the digital solutions of the future. Our vision is to create a sustainable and humane society through digitalization and innovation. Here, you can read more about us and what we stand for.",
   "legalInformationLabel": "Legal Information",
-  "legalInformationLink": "https://www.aoe.com/en/imprint.html",
+  "legalInformationLink": "https://www.knowit.no/globalassets/policies/kab_0239_eng_external_privacy_policy.pdf",
   "pageHelp": {
     "headlinePrefix": "How to use the",
     "paragraphs": [
@@ -14,7 +14,7 @@
         ]
       },
       {
-        "headline": "What is the AOE Technology Radar",
+        "headline": "What is the Knowit Teknologiradar",
         "values": [
           "The Tech Radar is an overview of different technologies - from languages, frameworks, tools and patterns to platforms - that we consider \"new or mentionable\". The radar therefore doesn't provide an overview of all established technologies - but it focuses on items that have recently gained in importance or changed."
         ]
@@ -42,7 +42,7 @@
         "name": "Languages and Frameworks"
       },
       {
-        "description": "Here we put different software tools - from small helpers to bigger software projects",
+        "description": "Here we put different software tools - from small helpers to bigger software projects.",
         "name": "Tools"
       },
       {
@@ -50,38 +50,38 @@
         "name": "Methods and Patterns"
       },
       {
-        "description": "(including AOE internal Services): Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.",
+        "description": "Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.",
         "name": "Platforms and Operations"
       }
     ],
     "quadrantsPreDescription": "The quadrants are:",
     "rings": [
       {
-        "description": "MAKKAPAKKA",
+        "description": "Technologies that already are core competencies and continue to have focus and be relevant for customer projects and internal competency groups.",
         "name": "Keep"
       },
       {
-        "description": "We can clearly recommend this technology. We have used it for longer period of time in many teams and it has proven to be stable and useful.",
+        "description": "Technologies that are ready to be adopted and should be encouranged in customer projects.",
         "name": "Adopt"
       },
       {
-        "description": "We have used it with success and recommend to have a closer look at the technology in this ring. The goal of items here is to look at them more closely, with the goal to bring them to the adopt level.",
+        "description": "New Technologies that are ready to be tried in PoC internal projects, and in greenfield projects with mature customers. Technologies that have proven to have some marked adoption with early adopters",
         "name": "Trial"
       },
       {
-        "description": "We have tried it out and we find it promising. We recommend having a look at these items when you face a specific need for the technology in your project.",
-        "name": "Assess"
+        "description": "New Technologies that look promising, we should learn more about and try out in internal PoC and innovation projects. Might turn out not to be a winning technology in the long run, but interesting and cool right now.",
+        "name": "Test"
       },
       {
-        "description": "This category is a bit special. Unlike the others, we recommend to stop doing or using something. That does not mean that they are bad and it often might be ok to use them in existing projects. But we move things here if we think we shouldn't do them anymore - because we see better options or alternatives now.",
+        "description": "TTechnologies that are starting to be outdated, we don't recommend using in new projects, and we should work to phase out of portfolio over time. We might deside to keep expert competence to maintain legacy system.",
         "name": "Hold"
       }
     ],
     "ringsPreDescription": "Each of the items is classified in one of these rings:",
     "sourcecodeLink": {
-      "description": "Contributions and source code of the AOE Tech Radar are on github:",
-      "href": "https://github.com/AOEpeople/aoe_technology_radar",
-      "name": "AOE Tech Radar on Github"
+      "description": "Contributions and source code of the Knowit Teknologiradar are on github:",
+      "href": "https://github.com/knowit/teknologiradar",
+      "name": "Knowit Teknologiradar on Github"
     }
   },
   "pageIndex": {
@@ -98,31 +98,23 @@
   "searchPlaceholder": "What are you looking for?",
   "socialLinks": [
     {
-      "href": "https://www.facebook.com/aoepeople",
-      "iconName": "facebook"
-    },
-    {
-      "href": "https://twitter.com/aoepeople",
+      "href": "https://twitter.com/knowitnorge",
       "iconName": "twitter"
     },
     {
-      "href": "https://www.linkedin.com/company/aoe",
+      "href": "https://www.linkedin.com/company/knowit",
       "iconName": "linkedIn"
     },
     {
-      "href": "https://www.xing.com/company/aoe",
-      "iconName": "xing"
-    },
-    {
-      "href": "https://www.instagram.com/aoepeople",
+      "href": "https://www.instagram.com/weareknowit",
       "iconName": "instagram"
     },
     {
-      "href": "https://www.youtube.com/user/aoepeople",
+      "href": "https://www.youtube.com/c/KnowitGroup",
       "iconName": "youtube"
     },
     {
-      "href": "https://github.com/aoepeople",
+      "href": "https://github.com/knowit",
       "iconName": "github"
     }
   ],
