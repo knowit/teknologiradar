@@ -8,22 +8,19 @@
       {
         "headline": "Introduction",
         "values": [
-          "Technology is moving fast and new technologies and innovations appear continuously.",
-          "It's essential for a development and technology company such as AOE to constantly improve and keep track with the latest useful innovations. It is important to openly look for innovations and new technologies and to question established technologies and methods every now and then.",
-          "But, it is also important to wisely choose which technologies to use in our daily work and in the different projects we are carrying out. As we all know: There is no silver bullet."
+          "blahblah"
         ]
       },
       {
         "headline": "What is the Knowit Teknologiradar",
         "values": [
-          "The Tech Radar is an overview of different technologies - from languages, frameworks, tools and patterns to platforms - that we consider \"new or mentionable\". The radar therefore doesn't provide an overview of all established technologies - but it focuses on items that have recently gained in importance or changed."
+          "blahblah"
         ]
       },
       {
         "headline": "How it is created",
         "values": [
-          "The items in the technology radar are raised by the different teams and therefore a lot of the items are related to the work and challenges the teams face in the different projects. In fact, we don't include anything on the radar, which we haven't already tried ourselves at least once.",
-          "There have been a lot of valuable discussions in different expert groups about the classification and details of each of technologies and innovations. And the result of all this can be found in the latest technology radar."
+          "blahblah"
         ]
       },
       {
@@ -73,7 +70,7 @@
         "name": "Test"
       },
       {
-        "description": "TTechnologies that are starting to be outdated, we don't recommend using in new projects, and we should work to phase out of portfolio over time. We might deside to keep expert competence to maintain legacy system.",
+        "description": "Technologies that are starting to be outdated, we don't recommend using in new projects, and we should work to phase out of portfolio over time. We might deside to keep expert competence to maintain legacy system.",
         "name": "Hold"
       }
     ],
