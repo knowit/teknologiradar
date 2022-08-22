@@ -1,67 +1,19 @@
 {
-  "name": "aoe_technology_radar",
-  "version": "3.3.1",
-  "description": "AOE Technology Radar",
-  "author": "AOE GmbH <contact-de@aoe.com> (http://www.aoe.com)",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AOEpeople/aoe_technology_radar.git"
-  },
-  "bin": {
-    "aoe_technology_radar-buildRadar": "dist_scripts/scripts/buildRadar.js",
-    "aoe_technology_radar-createStaticFiles": "dist_scripts/scripts/createStaticFiles.js",
-    "aoe_technology_radar-generateJson": "dist_scripts/scripts/generateJson.js"
-  },
+  "name": "frontend",
+  "version": "4.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "prepare": "npm run build:scripts",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:scripts": "tsc --project tsconfig.scripts.json",
-    "test": "react-scripts test --watchAll=false",
-    "ts:check": "tsc --noEmit",
-    "lint": "npm run ts:check && eslint src/**/*.tsx"
-  },
-  "dependencies": {
-    "@apideck/better-ajv-errors": "0.3.4",
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.3.0",
-    "@types/d3": "7.4.0",
-    "@types/fs-extra": "9.0.13",
-    "@types/jest": "28.1.2",
-    "@types/node": "17.0.33",
-    "@types/react": "18.0.14",
-    "@types/react-dom": "18.0.5",
-    "@types/sanitize-html": "2.6.2",
-    "@types/walk": "2.3.1",
-    "aoe_technology_radar": "^3.3.1",
-    "classnames": "2.3.1",
-    "d3": "7.4.4",
-    "front-matter": "4.0.2",
-    "fs-extra": "10.1.0",
-    "highlight.js": "11.5.1",
-    "marked": "4.0.17",
-    "moment": "2.29.3",
-    "postcss-normalize": "10.0.1",
-    "query-string": "7.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "4.4.0",
-    "react-router-dom": "6.3.0",
-    "react-scripts": "5.0.1",
-    "react-tooltip": "4.2.21",
-    "sanitize-html": "2.7.0",
-    "sass": "1.52.3",
-    "typescript": "4.7.4",
-    "walk": "2.3.15",
-    "yaml": "2.1.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/parser": "5.28.0",
-    "eslint": "8.18.0",
-    "eslint-config-react-app": "7.0.1",
-    "eslint-plugin-react": "7.30.0",
-    "yallist": "4.0.0"
+    "build": "npx aoe_technology_radar-buildRadar",
+    "postbuild": "npm run generateJson",
+    "prebuild:static": "npm run build",
+    "build:static": "npx aoe_technology_radar-createStaticFiles",
+    "generateJson": "npx aoe_technology_radar-generateJson",
+    "prestart": "npm run build:static",
+    "start": "npm run start:server",
+    "prestart:static": "npm run build:static",
+    "start:static": "npm run start:server",
+    "start:server": "python3 -m http.server 8080"
   },
   "browserslist": {
     "production": [
@@ -74,5 +26,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "aoe_technology_radar": "3.3.1"
   }
 }

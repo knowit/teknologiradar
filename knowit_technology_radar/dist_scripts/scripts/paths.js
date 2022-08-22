@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.appNodeModules = exports.appYarnLock = exports.appPublic = exports.appBuild = exports.appRdJson = exports.templateNodeModules = exports.templateBuild = exports.template = exports.radarJson = void 0;
+exports.appNodeModules = exports.appYarnLock = exports.appPublic = exports.appBuild = exports.appRdJson = exports.templateBuild = exports.template = exports.radarJson = void 0;
 var path_1 = require("path");
 var fs_1 = require("fs");
 exports.radarJson = "rd.json";

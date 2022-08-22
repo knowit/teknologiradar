@@ -7,13 +7,22 @@ Data fra 2022 er her: https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8
 ## First time setup
 
 ```bash
-npm install --prefix frontend-cdk && npm install --prefix frontend
+cd frontend-cdk && npm install; cd .. \
+cd knowit_technology_radar && (npm install && npm link); cd .. \
+cd frontend && npm install; cd ..
 ```
 
-## Build frontend
+
+## Build frontend framework
 
 ```bash
-cd frontend && npm run build && npx aoe_technology_radar-generateJson; cd ..
+cd knowit_technology_radar && npm run build; cd ..
+```
+
+## Build frontend instance
+
+```bash
+cd frontend && npm run start:static; cd ..
 ```
 
 ## Deploy frontend to AWS
