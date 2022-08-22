@@ -24,6 +24,10 @@
     background: var(--color-gray-normal);
     border-color: var(--color-gray-normal);
   }
+  &--keep {
+    background: var(--color-purple);
+    border-color: var(--color-purple);
+  }
   &--adopt {
     background: var(--color-green);
     border-color: var(--color-green);
