@@ -8,9 +8,11 @@ Data fra 2022 er her: https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8
 
 ```bash
 cd frontend-cdk && npm install; cd .. \
-cd knowit_technology_radar && (npm install && npm link); cd .. \
 cd frontend && npm install; cd ..
 ```
+
+<!-- TODO re-add when we're using our own custom radar -->
+<!-- cd knowit_technology_radar && (npm install && npm link); cd .. \ -->
 
 
 ## Build frontend framework
