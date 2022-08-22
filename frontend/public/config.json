@@ -49,11 +49,11 @@
     "blipSize": 12,
     "ringsAttributes": [
       {
-        "radius": 4,
+        "radius": 7,
         "arcWidth": 2
       },
       {
-        "radius": 8,
+        "radius": 10,
         "arcWidth": 2
       },
       {
@@ -61,11 +61,11 @@
         "arcWidth": 2
       },
       {
-        "radius": 15,
+        "radius": 14,
         "arcWidth": 2
       },
       {
-        "radius": 18,
+        "radius": 16,
         "arcWidth": 2
       }
     ]
