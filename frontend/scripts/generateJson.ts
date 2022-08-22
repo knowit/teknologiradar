@@ -14,9 +14,6 @@ process.on("unhandledRejection", (err) => {
   throw err;
 });
 
-fs.removeSync(paths.templateNodeModules);
-fs.ensureSymlinkSync(paths.appNodeModules, paths.templateNodeModules);
-
 const generateJson = async () => {
   const { createRadar } = require("./generateJson/radar");
   const { save } = require("./generateJson/file");

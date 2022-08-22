@@ -20,7 +20,7 @@ export interface ConfigData {
 }
 
 export const radarName =
-  process.env.REACT_APP_RADAR_NAME || "AOE Technology Radar";
+  process.env.REACT_APP_RADAR_NAME || "Knowit Technology Radar";
 export const radarNameShort = radarName;
 
 export const getItemPageNames = (items: Item[]) =>

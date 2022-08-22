@@ -70,8 +70,6 @@ process.env.NODE_ENV = "production";
 process.on("unhandledRejection", function (err) {
     throw err;
 });
-fs.removeSync(paths.templateNodeModules);
-fs.ensureSymlinkSync(paths.appNodeModules, paths.templateNodeModules);
 var generateJson = function () { return __awaiter(void 0, void 0, void 0, function () {
     var createRadar, save, radar, e_1;
     return __generator(this, function (_a) {
