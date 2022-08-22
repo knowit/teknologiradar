@@ -22,7 +22,7 @@ cd knowit_technology_radar && npm run build; cd ..
 ## Build frontend instance
 
 ```bash
-cd frontend && npm run start:static; cd ..
+cd frontend && export REACT_APP_RADAR_NAME="Knowit Teknologiradar" && npm run build:static; cd ..
 ```
 
 ## Deploy frontend to AWS
