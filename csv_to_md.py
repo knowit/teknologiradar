@@ -26,7 +26,7 @@ for e in quadrants:
 df_dict = df.to_dict(orient="records")
 
 for e in df_dict:
-    s = f"---\ntitle: \"{e['name']}\"\nring: {e['ring'].lower() if e['ring'] != 'TEST' else 'assess'}\nquadrant: {e['quadrant'].lower()}\n---{e['description'] if e['description']==e['description'] else ''}"
+    s = f"---\ntitle: \"{e['name']}\"\nring: {e['ring'].lower() if e['ring'] != 'TEST' else 'assess'}\nquadrant: {e['quadrant'].lower()}\n---\n{e['description'] if e['description']==e['description'] else ''}"
     if "/" in e["name"]:
         name = e["name"].replace("/", " slash ")
         e["name"] = name
