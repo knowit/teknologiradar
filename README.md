@@ -15,20 +15,19 @@ cd frontend && npm install; cd ..
 <!-- cd knowit_technology_radar && (npm install && npm link); cd .. \ -->
 
 
-## Build frontend framework
+## Build frontend
 
 ```bash
-cd knowit_technology_radar && npm run build; cd ..
+cd frontend && npm run build && ./dist_scripts/scripts/generateJson.js  && ./dist_scripts/scripts/createStaticFiles.js; cd ..
 ```
 
-## Build frontend instance
-
+### Run frontend
 ```bash
-cd frontend && export REACT_APP_RADAR_NAME="Knowit Teknologiradar" && npm run build:static; cd ..
+cd frontend; npx serve -s build
 ```
 
 ## Import and convert csv data to markdown files
-```
+```bash
 python3 csv_to_md.py [csv] [out]
 ```
 Where [csv] is the csv-file path and [out] is the output directory path (./frontend/radar).
