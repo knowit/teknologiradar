@@ -26,29 +26,26 @@
       {
         "headline": "How should it be used",
         "values": [
-          "The radar acts as an overview of technologies that we think everyone in the teams should currently know about.",
-          "Its goal is to act as a guide and inspiration for the daily work in the teams. Its purpose is also to provide helpful information and a bird's-eye perspective - so that decisions can be taken with a much deeper understanding of the subject matter. This results in more-informed and better-aligned decisions.",
-          "We also hope that developers outside of AOE find the information in our technology overview inspirational.",
-          "We group or categorize the items in 4 quadrants - (sometimes, when it's not 100% clear where a item belongs, we choose the best fit)."
+          "bla"
         ]
       }
     ],
     "quadrants": [
       {
-        "description": "We've placed development languages (such as Scala or Golang) here, as well as more low-level development frameworks (such as Play or Symfony), which are useful for implementing custom software of all kinds.",
-        "name": "Languages and Frameworks"
+        "name":"Languages",
+        "description": "b"
       },
       {
-        "description": "Here we put different software tools - from small helpers to bigger software projects.",
-        "name": "Tools"
+        "name": "Tools",
+        "description": "l"
       },
       {
-        "description": "Patterns are so important, and a lot of them are valid for a long time (compared to some tools or frameworks). So, this is the category where we put information on methods and patterns concerning development, continuous x, testing, organization, architecture, etc.",
-        "name": "Methods and Patterns"
+        "name": "Methods",
+        "description": "a"
       },
       {
-        "description": "Here we include infrastructure platforms and services. We also use this category to communicate news about AOE services that we want all AOE teams to be aware of.",
-        "name": "Platforms and Operations"
+        "name": "Frameworks",
+        "description": "h"
       }
     ],
     "quadrantsPreDescription": "The quadrants are:",
