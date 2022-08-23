@@ -23,7 +23,7 @@ for e in df_dict:
     e["name"] = e["name"].replace("*", "-star-")
     e["name"] = e["name"].replace("#", "-hashtag-")
     e["name"] = e["name"].replace("+", "-plus-")
-    e["name"] = re.sub("[<>:\"\\|? ,.()';_~^`´{}\[\]&%$@!§]","-", e["name"])
+    e["name"] = re.sub("[<>:\"\\|? ,.()';_~^`´{}\[\]&%$@!§]", "-", e["name"])
     e["name"] = re.sub("--+", "-", e["name"])
     e["name"] = e["name"].removeprefix("-").removesuffix("-")
 
