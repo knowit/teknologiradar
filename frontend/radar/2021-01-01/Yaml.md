@@ -1,5 +1,5 @@
 ---
-title: "Yaml"
+title: "YAML"
 ring: keep
 quadrant: languages
 ---
