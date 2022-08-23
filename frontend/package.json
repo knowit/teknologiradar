@@ -1,8 +1,7 @@
 {
   "name": "knowit_technology_radar",
   "version": "3.3.1",
-  "description": "AOE Technology Radar",
-  "author": "AOE GmbH <contact-de@aoe.com> (http://www.aoe.com)",
+  "description": "Knowit Technology Radar",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
