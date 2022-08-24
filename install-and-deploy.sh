@@ -5,6 +5,7 @@ data_folder="data"
 frontend_folder="frontend"
 frontend_cdk_folder="frontend-cdk"
 radar_folder="$frontend_folder/radar"
+min_python3_minor_version="8"
 
 fatal() {
     echo "⛔️$*" >&2
@@ -26,7 +27,7 @@ check_dependency () {
 }
 
 echo "🤖 Check whether dependencies are installed"
-check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)[0-9]+)/){$_.="\n"}') -gt 8" "🚧Python 3.9+ is required, you have $(python3 --version)"
+check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)[0-9]+)/){$_.="\n"}') -ge $min_python3_minor_version" "🚧Python 3.$min_python3_minor_version+ is required, you have $(python3 --version)"
 check_dependency "python3 -c \"import pandas\"" "🤒 Failed to find the pandas module for python"
 check_dependency "cdk --version" "🤕 Failed to find AWS cdk" 
 check_dependency "npm --version" "🤧 Failed to find npm"
@@ -38,7 +39,7 @@ echo "🪚 Generating the radar files"
 for file in "${data_folder}"/*.csv; do
     base_filename="${file##*/}"
     echo "🪵 Generating radar files from $base_filename"
-    python3 csv_to_md.py "$file" "$radar_folder/$base_filename" || fatal "😵‍💫 Failed to generate markdown files from $file to $radar_folder/$base_filename. Python3.9+ is required"
+    python3 csv_to_md.py "$file" "$radar_folder/$base_filename" || fatal "😵‍💫 Failed to generate markdown files from $file to $radar_folder/$base_filename."
 done
 echo "🛖 Generated radar markdown files successfully"
 
