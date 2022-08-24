@@ -70,7 +70,7 @@ process.env.NODE_ENV = "production";
 process.on("unhandledRejection", function (err) {
     throw err;
 });
-var generateJson = function () { return __awaiter(void 0, void 0, void 0, function () {
+var generateJson = function (path) { return __awaiter(void 0, void 0, void 0, function () {
     var createRadar, save, radar, e_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -83,7 +83,7 @@ var generateJson = function () { return __awaiter(void 0, void 0, void 0, functi
                 return [4 /*yield*/, createRadar()];
             case 2:
                 radar = _a.sent();
-                return [4 /*yield*/, save(JSON.stringify(radar), paths.radarJson)];
+                return [4 /*yield*/, save(JSON.stringify(radar), path)];
             case 3:
                 _a.sent();
                 return [3 /*break*/, 5];
@@ -95,9 +95,12 @@ var generateJson = function () { return __awaiter(void 0, void 0, void 0, functi
         }
     });
 }); };
-generateJson()
+generateJson(paths.radarJson)
     .then(function () {
-    console.log("".concat(paths.appRdJson, " created."));
+    generateJson(paths.appRdJsonPublic).then(function () {
+        console.log("".concat(paths.appRdJsonPublic, " created."));
+        console.log("".concat(paths.appRdJson, " created."));
+    });
 })
     .catch(function (err) {
     if (err && err.message) {

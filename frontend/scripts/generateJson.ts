@@ -14,22 +14,26 @@ process.on("unhandledRejection", (err) => {
   throw err;
 });
 
-const generateJson = async () => {
+const generateJson = async (outputPath: String) => {
   const { createRadar } = require("./generateJson/radar");
   const { save } = require("./generateJson/file");
 
   try {
     const radar = await createRadar();
 
-    await save(JSON.stringify(radar), paths.radarJson);
+    await save(JSON.stringify(radar), outputPath);
   } catch (e) {
     console.error("error:", e);
   }
 };
 
-generateJson()
+generateJson(paths.radarJson)
   .then(() => {
-    console.log(`${paths.appRdJson} created.`);
+    generateJson(paths.appRdJsonPublic)
+    .then(() => {
+      console.log(`${paths.appRdJsonPublic} created.`);
+      console.log(`${paths.appRdJson} created.`);
+    })
   })
   .catch((err) => {
     if (err && err.message) {
