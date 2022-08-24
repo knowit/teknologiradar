@@ -20,7 +20,7 @@ check_dependency () {
     eval "$test_cmd 1>/dev/null 2>&1"
     exit_code=$?
     if [[ ! "$exit_code" -eq "0" ]]; then
-        echo "⛔️ cmd executed: $test_cmd" >&2
+        echo "⛔️cmd executed: $test_cmd" >&2
         fatal "$err_msg"
     fi
 }
@@ -30,7 +30,7 @@ check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)
 check_dependency "python3 -c \"import pandas\"" "🤒 Failed to find the pandas module for python"
 check_dependency "cdk --version" "🤕 Failed to find AWS cdk" 
 check_dependency "npm --version" "🤧 Failed to find npm"
-check_dependency "aws sts get-caller-identity > /dev/null" "You are not logged into the aws cli"
+check_dependency "aws sts get-caller-identity > /dev/null" "🕵️You are not logged into the aws cli"
 
 echo "🤩 All dependencies found! "
 
