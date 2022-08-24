@@ -26,7 +26,7 @@ check_dependency () {
 }
 
 echo "🤖 Check whether dependencies are installed"
-check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)[0-9]+)/){$_.="\n"}') -gt 8" "🚧Python 3.8+ is required"
+check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)[0-9]+)/){$_.="\n"}') -gt 8" "🚧Python 3.9+ is required, you have $(python3 --version)"
 check_dependency "python3 -c \"import pandas\"" "🤒 Failed to find the pandas module for python"
 check_dependency "cdk --version" "🤕 Failed to find AWS cdk" 
 check_dependency "npm --version" "🤧 Failed to find npm"
