@@ -81,16 +81,16 @@ export const useAnimations = ({
       ),
       footer: createAnimation(
         {
-          transition: "opacity 15ms ease-out, transform 30ms ease-out",
+          transition: "opacity 15ms ease-out, transform 10ms ease-out",
           transform: "translateX(-40px)",
           opacity: "0",
         },
         {
-          transition: "opacity 15ms ease-out, transform 30ms ease-out",
+          transition: "opacity 15ms ease-out, transform 10ms ease-out",
           transform: "translateX(0px)",
           opacity: "1",
         },
-        60 + itemsInRing.length * 20
+        60 + itemsInRing.length
       ),
     }),
     [itemsInRing]
