@@ -18,7 +18,7 @@ check_dependency () {
     err_msg="$2"
     test_cmd="$1"
     # echo "Running test command '$test_cmd'"
-    eval "$test_cmd 1>/dev/null 2>1"
+    eval "$test_cmd 1>/dev/null 2>&1"
     exit_code=$?
     if [[ ! "$exit_code" -eq "0" ]]; then
         echo "⛔️ cmd executed: $test_cmd" >&2
