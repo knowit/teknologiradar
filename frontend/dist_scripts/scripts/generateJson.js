@@ -70,7 +70,7 @@ process.env.NODE_ENV = "production";
 process.on("unhandledRejection", function (err) {
     throw err;
 });
-var generateJson = function (path) { return __awaiter(void 0, void 0, void 0, function () {
+var generateJson = function () { return __awaiter(void 0, void 0, void 0, function () {
     var createRadar, save, radar, e_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -79,28 +79,29 @@ var generateJson = function (path) { return __awaiter(void 0, void 0, void 0, fu
                 save = require("./generateJson/file").save;
                 _a.label = 1;
             case 1:
-                _a.trys.push([1, 4, , 5]);
+                _a.trys.push([1, 5, , 6]);
                 return [4 /*yield*/, createRadar()];
             case 2:
                 radar = _a.sent();
-                return [4 /*yield*/, save(JSON.stringify(radar), path)];
+                return [4 /*yield*/, save(JSON.stringify(radar), paths.appRdJson)];
             case 3:
                 _a.sent();
-                return [3 /*break*/, 5];
+                return [4 /*yield*/, save(JSON.stringify(radar), paths.appRdJsonPublic)];
             case 4:
+                _a.sent();
+                return [3 /*break*/, 6];
+            case 5:
                 e_1 = _a.sent();
                 console.error("error:", e_1);
-                return [3 /*break*/, 5];
-            case 5: return [2 /*return*/];
+                return [3 /*break*/, 6];
+            case 6: return [2 /*return*/];
         }
     });
 }); };
-generateJson(paths.radarJson)
+generateJson()
     .then(function () {
-    generateJson(paths.appRdJsonPublic).then(function () {
-        console.log("".concat(paths.appRdJsonPublic, " created."));
-        console.log("".concat(paths.appRdJson, " created."));
-    });
+    console.log("".concat(paths.appRdJson, " created."));
+    console.log("".concat(paths.appRdJsonPublic, " created."));
 })
     .catch(function (err) {
     if (err && err.message) {
