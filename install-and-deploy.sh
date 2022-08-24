@@ -1,11 +1,10 @@
 #!/bin/bash
 
+start_folder="$(pwd)"
 data_folder="data"
 frontend_folder="frontend"
 frontend_cdk_folder="frontend-cdk"
 radar_folder="$frontend_folder/radar"
-
-root_folder="$(pwd)"
 
 fatal() {
     echo "⛔️$*" >&2
@@ -22,7 +21,7 @@ check_dependency () {
     exit_code=$?
     if [[ ! "$exit_code" -eq "0" ]]; then
         echo "⛔️ cmd executed: $test_cmd" >&2
-        fatal $err_msg
+        fatal "$err_msg"
     fi
 }
 
@@ -49,8 +48,8 @@ echo "🧰 Building the website"
 
 cd $frontend_folder || fatal "Failed to find the frontend folder!"
 
-echo "🔧 First time setup of the project"
-npm install || fatal "Failed to run npm install"
+echo "🔧 First time setup of website frontend"
+npm install || fatal "Failed to run npm install for frontend"
 echo "🔨 Compiling files"
 npm run build || fatal "Failed to build frontend"
 echo "🔩 Generating json files files"
@@ -61,7 +60,7 @@ echo "🛠 Creating static files"
 echo "🛌 Website built"
 
 echo "📤 Deploying website"
-cd "$root_folder/$frontend_cdk_folder" || fatal "Failed to find the frontend cdk folder"
+cd "$start_folder/$frontend_cdk_folder" || fatal "Failed to find the frontend cdk folder"
 
 echo "🔧 First time setup of frontend cdk"
 npm install || fatal "Failed to run npm install for frontend-cdk"
