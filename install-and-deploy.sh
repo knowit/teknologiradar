@@ -63,6 +63,9 @@ echo "🛌 Website built"
 echo "📤 Deploying website"
 cd "$root_folder/$frontend_cdk_folder" || fatal "Failed to find the frontend cdk folder"
 
+echo "🔧 First time setup of frontend cdk"
+npm install || fatal "Failed to run npm install for frontend-cdk"
+
 echo "📝 Displaying infrastructure difference built"
 cdk diff || fatal "Failed to diff infrastructure changes"
 echo "📈 Deploying changes to aws"
