@@ -33,10 +33,10 @@ export const useAnimations = ({
       background: createAnimation(
         {
           transform: "translateX(calc((100vw - 1200px) / 2 + 800px))",
-          transition: "transform 450ms cubic-bezier(0.24, 1.12, 0.71, 0.98)",
+          transition: "transform 45ms cubic-bezier(0.24, 1.12, 0.71, 0.98)",
         },
         {
-          transition: "transform 450ms cubic-bezier(0.24, 1.12, 0.71, 0.98)",
+          transition: "transform 45ms cubic-bezier(0.24, 1.12, 0.71, 0.98)",
           transform: "translateX(0)",
         },
         0
@@ -47,11 +47,11 @@ export const useAnimations = ({
           opacity: "0",
         },
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateX(0px)",
           opacity: "1",
         },
-        300
+        30
       ),
       text: createAnimation(
         {
@@ -59,11 +59,11 @@ export const useAnimations = ({
           opacity: "0",
         },
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateY(0px)",
           opacity: "1",
         },
-        600
+        60
       ),
       items: itemsInRing.map((item, i) =>
         createAnimation(
@@ -72,25 +72,25 @@ export const useAnimations = ({
             opacity: "0",
           },
           {
-            transition: "opacity 150ms ease-out, transform 300ms ease-out",
+            transition: "opacity 15ms ease-out, transform 30ms ease-out",
             transform: "translateX(0px)",
             opacity: "1",
           },
-          400 + 100 * i
+          40 + 10 * i
         )
       ),
       footer: createAnimation(
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateX(-40px)",
           opacity: "0",
         },
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateX(0px)",
           opacity: "1",
         },
-        600 + itemsInRing.length * 100
+        60 + itemsInRing.length * 20
       ),
     }),
     [itemsInRing]
@@ -101,12 +101,12 @@ export const useAnimations = ({
       background: createAnimation(
         animationsIn.background.stateB,
         animationsIn.background.stateA,
-        300 + itemsInRing.length * 50
+        50 + itemsInRing.length * 10
       ),
       navHeader: createAnimation(
         animationsIn.navHeader.stateB,
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateX(40px)",
           opacity: "0",
         },
@@ -116,7 +116,7 @@ export const useAnimations = ({
         animationsIn.text.stateB,
         {
           transform: "translateY(20px)",
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           opacity: "0",
         },
         0
@@ -125,21 +125,21 @@ export const useAnimations = ({
         createAnimation(
           animationsIn.items[i].stateB,
           {
-            transition: "opacity 150ms ease-out, transform 300ms ease-out",
+            transition: "opacity 15ms ease-out, transform 30ms ease-out",
             transform: "translateX(40px)",
             opacity: "0",
           },
-          100 + 50 * i
+          10 + 50 * i
         )
       ),
       footer: createAnimation(
         animationsIn.text.stateB,
         {
-          transition: "opacity 150ms ease-out, transform 300ms ease-out",
+          transition: "opacity 15ms ease-out, transform 30ms ease-out",
           transform: "translateX(40px)",
           opacity: "0",
         },
-        200 + itemsInRing.length * 50
+        50 + itemsInRing.length * 10
       ),
     }),
     [itemsInRing, animationsIn]
