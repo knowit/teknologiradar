@@ -1,0 +1,21 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [685-github-actions-deploy] # TODO: change to main
+  pull_request:
+    branches: [685-github-actions-deploy] # TODO: change to main
+
+defaults:
+  run:
+    working-directory: ./
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    - name: Hello world
+    run: echo Hello world
+
+    - name: Ls
+    run: ls
