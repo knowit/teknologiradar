@@ -31,6 +31,7 @@ check_dependency "test $(python3 --version | perl -pe 'if(($_)=/((?<=Python 3\.)
 check_dependency "python3 -c \"import pandas\"" "🤒 Failed to find the pandas module for python"
 check_dependency "cdk --version" "🤕 Failed to find AWS cdk" 
 check_dependency "npm --version" "🤧 Failed to find npm"
+check_dependency "node --version" "😳 Failed to find node"
 check_dependency "aws sts get-caller-identity > /dev/null" "🕵️You are not logged into the aws cli"
 
 echo "🤩 All dependencies found! "
@@ -55,9 +56,9 @@ npm install || fatal "Failed to run npm install for frontend"
 echo "🔨 Compiling files"
 npm run build || fatal "Failed to build frontend"
 echo "🔩 Generating json files files"
-./dist_scripts/scripts/generateJson.js || fatal "Failed to generate the rd.json file"
+node ./dist_scripts/scripts/generateJson.js || fatal "Failed to generate the rd.json file"
 echo "🛠 Creating static files"
-./dist_scripts/scripts/createStaticFiles.js || fatal "failed to create the static files"
+node ./dist_scripts/scripts/createStaticFiles.js || fatal "failed to create the static files"
  
 echo "🛌 Website built"
 
