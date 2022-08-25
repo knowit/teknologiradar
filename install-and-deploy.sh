@@ -18,8 +18,8 @@ echo "🔧 First time setup of frontend cdk"
 npm install || fatal "Failed to run npm install for frontend-cdk"
 
 echo "📝 Displaying infrastructure difference built"
-cdk diff || fatal "Failed to diff infrastructure changes"
+npx cdk diff || fatal "Failed to diff infrastructure changes"
 echo "📈 Deploying changes to aws"
-cdk deploy || fatal "Failed to deploy to aws"
+npx cdk deploy || fatal "Failed to deploy to aws"
 
 echo "💫🏋🏿🧙🏿‍♂️ Done!"
