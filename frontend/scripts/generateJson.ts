@@ -21,7 +21,8 @@ const generateJson = async () => {
   try {
     const radar = await createRadar();
 
-    await save(JSON.stringify(radar), paths.radarJson);
+    await save(JSON.stringify(radar), paths.appRdJson);
+    await save(JSON.stringify(radar), paths.appRdJsonPublic);
   } catch (e) {
     console.error("error:", e);
   }
@@ -29,8 +30,9 @@ const generateJson = async () => {
 
 generateJson()
   .then(() => {
-    console.log(`${paths.appRdJson} created.`);
-  })
+      console.log(`${paths.appRdJson} created.`);
+      console.log(`${paths.appRdJsonPublic} created.`);
+    })
   .catch((err) => {
     if (err && err.message) {
       console.error(err.message);

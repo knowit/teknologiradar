@@ -16,9 +16,9 @@ var getItemPageNames = function (items) {
 exports.getItemPageNames = getItemPageNames;
 exports.showEmptyRings = false;
 var messages = {
-    "languages-and-frameworks": "Languages & Frameworks",
-    "methods-and-patterns": "Methods & Patterns",
-    "platforms-and-aoe-services": "Platforms & Operations",
+    languages: "Languages",
+    methods: "Methods",
+    frameworks: "Frameworks",
     tools: "Tools",
 };
 var translate = function (key) { return messages[key] || "-"; };
