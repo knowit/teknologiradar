@@ -38,8 +38,9 @@ echo "🤩 All dependencies found! "
 echo "🪚 Generating the radar files"
 for file in "${data_folder}"/*.csv; do
     base_filename="${file##*/}"
+    revision_folder_name="${base_filename%.csv}"
     echo "🪵 Generating radar files from $base_filename"
-    python3 csv_to_md.py "$file" "$radar_folder/$base_filename" || fatal "😵‍💫 Failed to generate markdown files from $file to $radar_folder/$base_filename."
+    python3 csv_to_md.py "$file" "$radar_folder/$revision_folder_name" || fatal "😵‍💫 Failed to generate markdown files from $file to $radar_folder/$base_filename."
 done
 echo "🛖 Generated radar markdown files successfully"
 
