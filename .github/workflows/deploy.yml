@@ -11,11 +11,14 @@ defaults:
     working-directory: ./
 
 jobs:
-  build:
+  print:
     runs-on: ubuntu-latest
 
-    - name: Hello world
-    run: echo Hello world
+    steps:
+      - uses: actions/checkout@v3
 
-    - name: Ls
-    run: ls
+      - name: Hello world
+      run: echo Hello world
+
+      - name: Ls
+      run: ls
