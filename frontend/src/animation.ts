@@ -43,41 +43,6 @@ const getAnimationStates = (
   return animations.map((animation) => animation[stateName]);
 };
 
-const getMaxTransitionTime = (transition: string) => {
-  const re = /(\d+)ms/g;
-  const times: number[] = [];
-  let matches;
-  while ((matches = re.exec(transition)) != null) {
-    times.push(parseInt(matches[1], 10));
-  }
-  return Math.max(...times);
-};
-
-const getAnimationDuration = (animation: Animation | Animation[]): number => {
-  if (animation instanceof Array) {
-    return animation.reduce((maxDuration, a) => {
-      const duration = getAnimationDuration(a);
-      if (duration > maxDuration) {
-        return duration;
-      }
-      return maxDuration;
-    }, 0);
-  }
-
-  const state = animation.stateB;
-  const maxTransition = state.transition
-    ? getMaxTransitionTime(state.transition)
-    : 0;
-  return maxTransition + animation.delay;
-};
-
-const getMaxAnimationsDuration = (animations: Animations) =>
-  Math.max(
-    ...Object.values(animations).map((animations) =>
-      getAnimationDuration(Object.values(animations))
-    )
-  );
-
 export const createAnimationRunner = (
   animationsIn: AnimationConfig,
   subscriber: () => void = () => {}
@@ -99,7 +64,7 @@ export const createAnimationRunner = (
     {} as AnimationStates
   );
 
-  const animationsDuration = getMaxAnimationsDuration(animations);
+  const animationsDuration = 0;
 
   const animate = (name: string, animation: Animation[]) => {
     animation.forEach((a, index) => {
