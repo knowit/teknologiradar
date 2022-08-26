@@ -19,14 +19,15 @@ output_dir.mkdir(parents=True, exist_ok=True)
 for e in df_dict:
     s = f"---\ntitle: \"{e['name']}\"\nring: {e['ring'].lower() if e['ring'] != 'TEST' else 'assess'}\nquadrant: {e['quadrant'].lower()}\n---\n{e['description'] if e['description']==e['description'] else ''}"
 
-    e["name"] = e["name"].replace("/", "-slash-")
-    e["name"] = e["name"].replace("*", "-star-")
-    e["name"] = e["name"].replace("#", "-hashtag-")
-    e["name"] = e["name"].replace("+", "-plus-")
-    e["name"] = re.sub("[<>:\"\\|? ,.()';_~^`´{}\[\]&%$@!§]", "-", e["name"])
-    e["name"] = re.sub("--+", "-", e["name"])
-    e["name"] = e["name"].removeprefix("-").removesuffix("-")
+    name = e['name'].replace("/", "-slash-")
+    name = name.replace("*", "-star-")
+    name = name.replace("#", "-hashtag-")
+    name = name.replace("+", "-plus-")
+    name = re.sub("[<>:\"\\|? ,.()';_~^`´{}\[\]&%$@!§]", "-", name)
+    name = re.sub("--+", "-", name)
+    name = re.sub("^-", "", name)
+    name = re.sub("-$", "", name)
 
-    out_file = output_dir / f"{e['name'].lower()}.md" 
+    out_file = output_dir / f"{name.lower()}.md" 
     with out_file.open("w+") as f:
         f.write(s)
