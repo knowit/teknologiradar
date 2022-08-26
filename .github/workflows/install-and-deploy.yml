@@ -28,4 +28,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
           AWS_DEFAULT_REGION: eu-central-1
-        run: ./install-and-deploy.sh
+        run: echo $AWS_ACCESS_KEY_ID
