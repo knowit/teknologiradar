@@ -26,6 +26,9 @@ jobs:
       - name: Install pandas
         run: python3 -m pip install pandas
 
+      - name: Install and deploy
+        run: ./install-and-deploy.sh
+
 #      - name: cdk deploy
 #        uses: youyo/aws-cdk-github-actions@v2
 #        with:
