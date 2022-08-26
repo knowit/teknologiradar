@@ -10,7 +10,7 @@ Data from 2022 can be found at https://docs.google.com/spreadsheets/d/1DGSFsPbbj
 
 * Python 3.8+
 * The [pandas](https://pandas.pydata.org/) python package 
-    * to install run: `python3 -m ensurepip && python3 -m pip install pandas`
+    * to install run: `python3 -m pip install pandas`
 * Being logged into AWS i.e., the [AWS CLI](https://aws.amazon.com/cli/) or with environment variables
     * You can log in with e.g., `aws sso login`
 
