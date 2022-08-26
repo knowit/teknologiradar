@@ -9,12 +9,15 @@ import BlipPoints from './BlipPoints';
 import './chart.scss';
 import { ConfigData } from '../../config';
 
+type Position = "left" | "right" | "both";
+
 const RingLabel: React.FC<{
   ring: string
   xScale: d3.ScaleLinear<number, number>
   yScale: d3.ScaleLinear<number, number>
-  config: ConfigData
-}> = ({ring, xScale, yScale, config}) => {
+  config: ConfigData,
+  position: Position
+}> = ({ring, xScale, yScale, config, position}) => {
     const ringIndex = config.rings.findIndex(r => r === ring)
 
     const ringRadius = config.chartConfig.ringsAttributes[ringIndex].radius,
@@ -26,13 +29,17 @@ const RingLabel: React.FC<{
     return (
         <g className="ring-label">
           {/* Right hand-side label */}
-          <text x={xScale(distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
+          { position !== "left" &&
+            <text x={xScale(distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
               {ring}
-          </text>
+            </text>
+          }
           {/* Left hand-side label */}
-          <text x={xScale(-distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
+          { position !== "right" &&
+            <text x={xScale(-distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
               {ring}
-          </text>
+            </text>
+          }
         </g>
     );
 };
@@ -49,10 +56,24 @@ const RadarChart: React.FC<{
     .domain(config.chartConfig.scale)
     .range([config.chartConfig.size, 0]);
 
+  const allQuadrants = Object.keys(config.quadrants)
+
+  let position: Position = "both"
+
+  if (Object.keys(config.quadrantsMap).length === 1) {
+    // just 1 quadrant
+    const quad = Object.keys(config.quadrantsMap)[0]
+    const i = allQuadrants.indexOf(quad)
+    if (i === 0 || i === 3 ) {
+      position = "left"
+    } else {
+      position = "right"
+    }
+  }
+
   return (
     <div className="chart" style={{maxWidth: `${config.chartConfig.size}px`}}>
-      {/* <svg viewBox={`0 0 ${config.chartConfig.size} ${config.chartConfig.size}`}> */}
-      <svg viewBox="-50 -50 1000 1000">
+      <svg viewBox={`-0 -0 ${config.chartConfig.size} ${config.chartConfig.size}`}>
           <g transform={`translate(${xScale(0)}, 0)`}>
             <YAxis scale={yScale}/>
           </g>
@@ -65,7 +86,7 @@ const RadarChart: React.FC<{
           ))}
 
           {Array.from(config.rings).map((ring: string, index) => (
-              <RingLabel key={index} ring={ring} xScale={xScale} yScale={yScale} config={config} />
+              <RingLabel key={index} ring={ring} xScale={xScale} yScale={yScale} config={config} position={position}/>
           ))}
 
           <BlipPoints items={items} xScale={xScale} yScale={yScale} config={config} />
