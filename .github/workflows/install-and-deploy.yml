@@ -2,7 +2,7 @@ name: Deploy website
 
 on:
   push:
-    branches: [685-github-actions-deploy]
+    branches: [main]
 
 jobs:
   Install-and-deploy:
