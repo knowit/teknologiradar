@@ -1,5 +1,5 @@
-name: 'Deploy website'
-description: 'Deploy website to AWS S3'
+name: 'REUSABLE WORKFLOW: Deploy website'
+description: 'Deploy website to AWS dev or prod environment based on secrets input'
 
 on:
   workflow_call:
@@ -21,8 +21,10 @@ on:
         #required: true
         default: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
 
-runs:
-  using: "composite"
+jobs:
+  install-and-deploy:
+    name: Reusable deploy job
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
