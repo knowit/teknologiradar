@@ -1,26 +1,25 @@
 name: 'Deploy website'
 description: 'Deploy website to AWS S3'
-inputs:
-  cdk_default_account:
-    #description: ''
-    #required: true
-    default: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
-  aws_access_key_id:
-    #description: ''
-    #required: true
-    default: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-  aws_secret_access_key:
-    #description: ''
-    #required: true
-    default: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-  aws_session_token:
-    #description: ''
-    #required: true
-    default: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
 
 on:
-  push:
-    branches: [688-github-actions-deploy-prod] # TODO: change to main
+  workflow_call:
+    secrets:
+      cdk_default_account:
+        #description: ''
+        #required: true
+        default: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+      aws_access_key_id:
+        #description: ''
+        #required: true
+        default: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key:
+        #description: ''
+        #required: true
+        default: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+      aws_session_token:
+        #description: ''
+        #required: true
+        default: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
 
 runs:
   using: "composite"
