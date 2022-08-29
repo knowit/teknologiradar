@@ -1,5 +1,5 @@
 name: 'REUSABLE WORKFLOW: Deploy website'
-description: 'Deploy website to AWS dev or prod environment based on secrets input'
+#description: 'Deploy website to AWS dev or prod environment based on secrets input'
 
 on:
   workflow_call:
