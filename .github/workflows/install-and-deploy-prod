@@ -1,0 +1,17 @@
+name: 'Deploy website to prod'
+description: 'Installs and deploys website to AWS S3 production environment'
+
+on: workflow_dispatch
+
+jobs:
+  install-and-deploy-prod:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/install-and-deploy
+        with: # Change to PROD-secrets
+          cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+          aws_access_key_id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          aws_session_token: ${{ secrets.DEV_AWS_SESSION_TOKEN }}

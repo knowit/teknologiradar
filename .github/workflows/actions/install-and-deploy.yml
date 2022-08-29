@@ -1,0 +1,48 @@
+name: 'Deploy website'
+description: 'Deploy website to AWS S3'
+inputs:
+  cdk_default_account:
+    #description: ''
+    #required: true
+    default: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+  aws_access_key_id:
+    #description: ''
+    #required: true
+    default: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+  aws_secret_access_key:
+    #description: ''
+    #required: true
+    default: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+  aws_session_token:
+    #description: ''
+    #required: true
+    default: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
+
+on:
+  push:
+    branches: [688-github-actions-deploy-prod] # TODO: change to main
+
+runs:
+  using: "composite"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.6'
+
+      - name: Python and pip version
+        run: python3 --version && python3 -m pip --version
+
+      - name: Install pandas
+        run: python3 -m pip install pandas
+
+      - name: Install and deploy
+        env:
+          CDK_DEFAULT_ACCOUNT: ${{ inputs.cdk_default_account }} #${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+          AWS_DEFAULT_REGION: ${{ secrets.CDK_DEFAULT_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ inputs.aws_access_key_id }} #${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ inputs.aws_secret_access_key }} #${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ inputs.aws_session_token }} #${{ secrets.DEV_AWS_SESSION_TOKEN }}
+        run: ./install-and-deploy.sh
+
+# outputs?
