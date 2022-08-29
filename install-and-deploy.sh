@@ -17,7 +17,6 @@ echo "👾 Checking whether you are logged into aws"
 check_dependency "npx cdk diff" "🕵️ You are not logged into the AWS. Either run 'aws sso login' or set AWS environment variables. See https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envvars-set. Check also the CDK enviroment variables? Set at least CDK_DEFAULT_ACCOUNT and CDK_DEFAULT_REGION. See https://docs.aws.amazon.com/cdk/v2/guide/environments.html"
 echo "🤑 You're logged in!"
 
-npx cdk doctor || fatal "Failed to doctor!!"
 npx cdk bootstrap || fatal "Failed to bootstrap cdk. Have you specified your environment? These can be set with CDK_DEFAULT_ACCOUNT and CDK_DEFAULT_REGION. See https://docs.aws.amazon.com/cdk/v2/guide/environments.html"
 
 echo "📝 Displaying infrastructure difference built"
