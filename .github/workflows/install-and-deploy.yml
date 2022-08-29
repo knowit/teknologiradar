@@ -2,9 +2,7 @@ name: Deploy website
 
 on:
   push:
-    branches: [685-github-actions-deploy] # TODO: change to main
-  pull_request:
-    branches: [685-github-actions-deploy] # TODO: change to main
+    branches: [main]
 
 jobs:
   Install-and-deploy:
