@@ -7,7 +7,7 @@ on:
     branches: [685-github-actions-deploy] # TODO: change to main
 
 jobs:
-  Install and deploy:
+  Install-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
