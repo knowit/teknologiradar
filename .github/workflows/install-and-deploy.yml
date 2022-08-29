@@ -5,21 +5,13 @@ on:
   workflow_call:
     secrets:
       cdk_default_account:
-        #description: ''
-        #required: true
-        default: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+        required: true
       aws_access_key_id:
-        #description: ''
-        #required: true
-        default: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+        required: true
       aws_secret_access_key:
-        #description: ''
-        #required: true
-        default: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+        required: true
       aws_session_token:
-        #description: ''
-        #required: true
-        default: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
+        required: true
 
 jobs:
   install-and-deploy:
@@ -39,11 +31,11 @@ jobs:
 
       - name: Install and deploy
         env:
-          CDK_DEFAULT_ACCOUNT: ${{ inputs.cdk_default_account }} #${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+          CDK_DEFAULT_ACCOUNT: ${{ secrets.cdk_default_account }} #${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
           AWS_DEFAULT_REGION: ${{ secrets.CDK_DEFAULT_REGION }}
-          AWS_ACCESS_KEY_ID: ${{ inputs.aws_access_key_id }} #${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ inputs.aws_secret_access_key }} #${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-          AWS_SESSION_TOKEN: ${{ inputs.aws_session_token }} #${{ secrets.DEV_AWS_SESSION_TOKEN }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }} #${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }} #${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.aws_session_token }} #${{ secrets.DEV_AWS_SESSION_TOKEN }}
         run: ./install-and-deploy.sh
 
 # outputs?
