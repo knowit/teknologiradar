@@ -1,4 +1,4 @@
-name: 'Deploy website to AWS production environment'
+name: 'Deploy to AWS PROD env'
 
 on:
   workflow_dispatch:

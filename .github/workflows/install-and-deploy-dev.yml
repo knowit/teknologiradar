@@ -1,4 +1,4 @@
-name: 'Deploy website to AWS development environment'
+name: 'Deploy to AWS DEV env'
 
 on:
   push:
