@@ -28,13 +28,18 @@ The script will first install and build the frontend as a static website then de
 
 ### Issue new ACM certificate
 
-To issue a new certificate the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set (any value will do) while running the install script above (or `cdk` cli commands).
+To issue a new certificate the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set to a domain url to deploy to. 
+
+This step in deployment is not required unless its the first time deploying, the URLs are to be changed, or the certificate is expired.
 
 ```bash
+#URLs used as of writing
+#Production domain
+export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="teknologiradar-objectnet.knowit.no"
+
+#Development domain
 export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 ```
-
-To no longer 
 
 Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
 
