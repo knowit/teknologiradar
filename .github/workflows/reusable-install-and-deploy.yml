@@ -34,6 +34,7 @@ jobs:
         env:
           CDK_DEFAULT_ACCOUNT: ${{ secrets.cdk_default_account }}
           AWS_DEFAULT_REGION: ${{ secrets.cdk_default_region }}
+          CDK_DEFAULT_REGION: ${{ secrets.cdk_default_region }}
           AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
           AWS_SESSION_TOKEN: ${{ secrets.aws_session_token }}
