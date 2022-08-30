@@ -2,7 +2,7 @@ name: 'Deploy to AWS DEV env'
 
 on:
   push:
-    branches: [main] # TODO: change to main
+    branches: [688-github-actions-deploy-prod] # TODO: change to main
 
 jobs:
   install-and-deploy-dev:
@@ -10,7 +10,7 @@ jobs:
     uses: ./.github/workflows/reusable-install-and-deploy.yml
     secrets:
       cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
-      cdk_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
+      aws_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
       aws_access_key_id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
       aws_secret_access_key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
       aws_session_token: ${{ secrets.DEV_AWS_SESSION_TOKEN }}

@@ -1,8 +1,8 @@
-name: Deploy website
+name: Deploy website #TODO: delete file
 
 on:
   push:
-    branches: [688-github-actions-deploy-prod]
+    branches: [main]
 
 jobs:
   Install-and-deploy:
