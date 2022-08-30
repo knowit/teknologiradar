@@ -26,6 +26,14 @@ To install, build, and deploy the radar in one go, run
 
 The script will first install and build the frontend as a static website then deploy it to aws using [cdk](https://aws.amazon.com/cdk/).
 
+### Github Actions workflows
+* `deploy-dev.yml` deploys website to development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no))
+* `deploy-prod.yml` deploys website to production environment ([teknologiradar-objectnet.knowit.no](https://teknologiradar-objectnet.knowit.no), not live yet)
+
+`deploy-dev.yml` is triggered on pushes to main while `deploy-prod.yml` can be triggered manually.
+
+Both workflows use `reusable-install-and-deploy.yml`, which is a reusable workflow that installs and deploys the website to AWS development/production environment based on input.
+
 ## Installation
 
 ### First time setup
