@@ -2,7 +2,7 @@ name: Deploy website
 
 on:
   push:
-    branches: [main]
+    branches: [688-github-actions-deploy-prod]
 
 jobs:
   Install-and-deploy:
