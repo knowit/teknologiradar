@@ -6,6 +6,7 @@ on:
 
 jobs:
   install-and-deploy-dev:
+    name: Install and deploy dev
     uses: ./.github/workflows/reusable-install-and-deploy.yml
     secrets:
       cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}

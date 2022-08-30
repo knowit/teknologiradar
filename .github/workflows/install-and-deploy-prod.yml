@@ -5,6 +5,7 @@ on:
 
 jobs:
   install-and-deploy-prod:
+    name: Install and deploy prod
     uses: ./.github/workflows/reusable-install-and-deploy.yml
     secrets:
       cdk_default_account: ${{ secrets.PROD_CDK_DEFAULT_ACCOUNT }}
