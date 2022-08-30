@@ -1,6 +1,6 @@
 name: 'Deploy website to AWS production environment'
 
-on.workflow_dispatch:
+on: workflow_dispatch:
 
 jobs:
   install-and-deploy-prod:
