@@ -1,5 +1,4 @@
-name: 'Deploy website to dev'
-#description: 'Installs and deploys website to AWS dev environment'
+name: 'Deploy website to AWS development environment'
 
 on:
   push:
@@ -7,7 +6,7 @@ on:
 
 jobs:
   install-and-deploy-dev:
-    uses: ./.github/workflows/install-and-deploy.yml
+    uses: ./.github/workflows/reusable-install-and-deploy.yml
     secrets:
       cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
       cdk_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
