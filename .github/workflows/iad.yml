@@ -1,0 +1,30 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Install-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.6'
+
+      - name: Python and pip version
+        run: python3 --version && python3 -m pip --version
+
+      - name: Install pandas
+        run: python3 -m pip install pandas
+
+      - name: Install and deploy
+        env:
+          CDK_DEFAULT_ACCOUNT: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+          AWS_DEFAULT_REGION: ${{ secrets.CDK_DEFAULT_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+          AWS_SESSION_TOKEN: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
+        run: ./install-and-deploy.sh

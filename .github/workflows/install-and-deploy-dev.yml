@@ -2,7 +2,7 @@ name: 'Deploy to AWS DEV env'
 
 on:
   push:
-    branches: [688-github-actions-deploy-prod] # TODO: change to main
+    branches: [main] # TODO: change to main
 
 jobs:
   install-and-deploy-dev:
