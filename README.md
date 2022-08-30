@@ -26,6 +26,28 @@ To install, build, and deploy the radar in one go, run
 
 The script will first install and build the frontend as a static website then deploy it to aws using [cdk](https://aws.amazon.com/cdk/).
 
+### Issue new ACM certificate
+
+To issue a new certificate the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set (any value will do) while running the install script above (or `cdk` cli commands).
+
+```bash
+export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
+```
+
+To no longer 
+
+Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
+
+### Cancel a stuck deployment
+
+See [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html). 
+
+Alternatively, run the command:
+
+```bash
+aws cloudformation cancel-update-stack
+```
+
 ## Installation
 
 ### First time setup
