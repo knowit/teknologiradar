@@ -28,15 +28,25 @@ const QuadrantRings: React.FC<{
   config: ConfigData
 }> = ({ quadrant, xScale, config}) => {
     // order from top-right clockwise
-    const gradientAttributes = [
+    let gradientAttributes = [
       {x: 0,         y: 0,          cx: 1, cy: 1, r: 1},
       {x: xScale(0), y: 0,          cx: 0, cy: 1, r: 1},
       {x: xScale(0), y: xScale(0),  cx: 0, cy: 0, r: 1},
       {x: 0,         y: xScale(0),  cx: 1, cy: 0, r: 1}
     ];
-    const gradientId = `${quadrant.position}-radial-gradient`,
-        quadrantSize = config.chartConfig.size / 2;
 
+    const gradientId = `${quadrant.position}-radial-gradient`;
+    let quadrantSize = config.chartConfig.size / 2;
+
+    if (Object.keys(config.quadrantsMap).length === 1) {
+      quadrantSize = config.chartConfig.size;
+      gradientAttributes = [
+          {x: 0,  y: 0, cx: 1, cy: 1, r: 1},
+          {x: 0,  y: 0, cx: 0, cy: 1, r: 1},
+          {x: 0,  y: 0, cx: 0, cy: 0, r: 1},
+          {x: 0,  y: 0, cx: 1, cy: 0, r: 1}
+        ];
+    }    
     return (
       <g className="quadrant-ring">
         {/* Definition of the quadrant gradient */}
@@ -58,7 +68,7 @@ const QuadrantRings: React.FC<{
         />
 
         {/* Rings' arcs */}
-        {Array.from(config.rings).map((ringPosition, index) => (
+        {Array.from(config.rings).map((_, index) => (
           <path
             key={index}
             fill={quadrant.colour}

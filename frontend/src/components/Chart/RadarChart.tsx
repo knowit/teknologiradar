@@ -9,15 +9,14 @@ import BlipPoints from './BlipPoints';
 import './chart.scss';
 import { ConfigData } from '../../config';
 
-type Position = "left" | "right" | "both";
 
 const RingLabel: React.FC<{
   ring: string
   xScale: d3.ScaleLinear<number, number>
   yScale: d3.ScaleLinear<number, number>
   config: ConfigData,
-  position: Position
-}> = ({ring, xScale, yScale, config, position}) => {
+  singleQuadrant: boolean
+}> = ({ring, xScale, yScale, config, singleQuadrant}) => {
     const ringIndex = config.rings.findIndex(r => r === ring)
 
     const ringRadius = config.chartConfig.ringsAttributes[ringIndex].radius,
@@ -29,17 +28,15 @@ const RingLabel: React.FC<{
     return (
         <g className="ring-label">
           {/* Right hand-side label */}
-          { position !== "left" &&
+          { !singleQuadrant &&
             <text x={xScale(distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
               {ring}
             </text>
           }
           {/* Left hand-side label */}
-          { position !== "right" &&
             <text x={xScale(-distanceFromCentre)} y={yScale(0)} textAnchor="middle" dy=".35em">
               {ring}
             </text>
-          }
         </g>
     );
 };
@@ -49,27 +46,28 @@ const RadarChart: React.FC<{
   config: ConfigData
 }> = ({ items, config }) => {
 
-  const xScale = d3.scaleLinear()
+  let xScale = d3.scaleLinear()
     .domain(config.chartConfig.scale)
     .range([0, config.chartConfig.size]);
-  const yScale = d3.scaleLinear()
+  let yScale = d3.scaleLinear()
     .domain(config.chartConfig.scale)
     .range([config.chartConfig.size, 0]);
 
-  const allQuadrants = Object.keys(config.quadrants)
-
-  let position: Position = "both"
+  let singleQuadrant: boolean = false
 
   if (Object.keys(config.quadrantsMap).length === 1) {
     // just 1 quadrant
-    const quad = Object.keys(config.quadrantsMap)[0]
-    const i = allQuadrants.indexOf(quad)
-    if (i === 0 || i === 3 ) {
-      position = "left"
-    } else {
-      position = "right"
-    }
+    singleQuadrant = true;
+
+    xScale = d3.scaleLinear()
+    .domain(config.chartConfig.scale)
+    .range([0, config.chartConfig.size*1.99]);
+
+    yScale = d3.scaleLinear()
+    .domain(config.chartConfig.scale)
+    .range([config.chartConfig.size*1.99, 0]);
   }
+
 
   return (
     <div className="chart" style={{maxWidth: `${config.chartConfig.size}px`}}>
@@ -86,7 +84,7 @@ const RadarChart: React.FC<{
           ))}
 
           {Array.from(config.rings).map((ring: string, index) => (
-              <RingLabel key={index} ring={ring} xScale={xScale} yScale={yScale} config={config} position={position}/>
+              <RingLabel key={index} ring={ring} xScale={xScale} yScale={yScale} config={config} singleQuadrant={singleQuadrant}/>
           ))}
 
           <BlipPoints items={items} xScale={xScale} yScale={yScale} config={config} />

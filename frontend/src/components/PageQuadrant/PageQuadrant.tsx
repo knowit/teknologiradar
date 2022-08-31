@@ -30,7 +30,7 @@ export default function PageQuadrant({
 
   const filteredItems = items.filter((item: Item) => item.quadrant === pageName)
   const filteredConfig = {...config,  
-    quadrantsMap: {[pageName]: config.quadrantsMap[pageName]}}
+    quadrantsMap: {[pageName]: { ...config.quadrantsMap[pageName], position: 1 }}}
 
   return (
     <Fadeable leaving={leaving} onLeave={onLeave}>
