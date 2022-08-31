@@ -20,11 +20,6 @@ export class FrontendDistributionAndCertsStack {
 
     const hostedZone = r53.HostedZone.fromLookup(stack, "zone", { domainName: domain })
 
-    if (hostedZone.hostedZoneId == "DUMMY") {
-      console.error("🛑Failed to find a hosted zone with the domain name '" + domain + "'. A hosted zone with the domain name '" + domain + "' must manually be created in route53.")
-      exit(1)
-    }
-
     const cert = new acm.DnsValidatedCertificate(stack, 'CloudFrontTeknologiradarCertificate', {
       domainName: domain,
       hostedZone: hostedZone,
