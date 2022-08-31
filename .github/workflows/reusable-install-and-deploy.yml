@@ -1,0 +1,46 @@
+name: 'Reusable workflow to deploy website to AWS'
+
+on:
+  workflow_call:
+    inputs:
+      domain:
+        required: true
+        type: string
+    secrets:
+      cdk_default_account:
+        required: true
+      aws_default_region:
+        required: true
+      aws_access_key_id:
+        required: true
+      aws_secret_access_key:
+        required: true
+      aws_session_token:
+        required: true
+
+jobs:
+  install-and-deploy:
+    name: Install and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10.6'
+
+      - name: Python and pip version
+        run: python3 --version && python3 -m pip --version
+
+      - name: Install pandas
+        run: python3 -m pip install pandas
+
+      - name: Install and deploy
+        env:
+          TECH_RADAR_DOMAIN: ${{ inputs.domain }}
+          CDK_DEFAULT_ACCOUNT: ${{ secrets.cdk_default_account }}
+          CDK_DEFAULT_REGION: ${{ secrets.aws_default_region }}
+          AWS_DEFAULT_REGION: ${{ secrets.aws_default_region }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
+          AWS_SESSION_TOKEN: ${{ secrets.aws_session_token }}
+        run: ./install-and-deploy.sh

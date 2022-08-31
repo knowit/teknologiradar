@@ -10,20 +10,15 @@ import { exit } from 'process';
 export class FrontendDistributionAndCertsStack {
   constructor(websiteBucket: s3.Bucket, stack: Stack) {
 
-    var domain = process.env.TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN
+    var domain = process.env.TECH_RADAR_DOMAIN
     if (domain != undefined) {
       console.log('Updating frontend distribution, and issuing new certification for 🤳', domain);
     } else {
-      console.log('🛑Domain environment variable not specified! Please set TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN a domain url to deploy to.');
+      console.log('🛑Domain environment variable not specified! Please set TECH_RADAR_DOMAIN a domain url to deploy to.');
       exit(1)
     }
 
     const hostedZone = r53.HostedZone.fromLookup(stack, "zone", { domainName: domain })
-
-    if (hostedZone.hostedZoneId == "DUMMY") {
-      console.error("🛑Failed to find a hosted zone with the domain name '" + domain + "'. A hosted zone with the domain name '" + domain + "' must manually be created in route53.")
-      exit(1)
-    }
 
     const cert = new acm.DnsValidatedCertificate(stack, 'CloudFrontTeknologiradarCertificate', {
       domainName: domain,

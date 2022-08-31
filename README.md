@@ -29,23 +29,23 @@ export AWS_DEFAULT_REGION="eu-central-1"
 export CDK_DEFAULT_REGION="eu-central-1"
 export CDK_DEFAULT_ACCOUNT="<redacted>"
 
-export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
+export TECH_RADAR_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 ```
 
 ### Issue new ACM certificate
 
-To issue a new certificate the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set to a domain url to deploy to.
-A hosted zone with the same name as `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` in the correct AWS region must manually be created in route53.
+To issue a new certificate the `TECH_RADAR_DOMAIN` environment variable must be set to a domain url to deploy to.
+A hosted zone with the same name as `TECH_RADAR_DOMAIN` in the correct AWS region must manually be created in route53.
 
 Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
 
 ```bash
 #URLs used as of writing
 #Production domain
-export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="teknologiradar-objectnet.knowit.no"
+export TECH_RADAR_DOMAIN="teknologiradar-objectnet.knowit.no"
 
 #Development domain
-export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
+export TECH_RADAR_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 ```
 
 ### Executing the deployment
@@ -67,6 +67,15 @@ Alternatively, run the command:
 ```bash
 aws cloudformation cancel-update-stack
 ```
+
+### Github Actions workflows
+* [deploy-dev.yml](.github/workflows/deploy-dev.yml) deploys website to the development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no))
+* [deploy-prod.yml](.github/workflows/deploy-prod.yml) deploys website to the production environment ([teknologiradar-objectnet.knowit.no](https://teknologiradar-objectnet.knowit.no))
+
+`deploy-dev.yml` is triggered on pushes to main while `deploy-prod.yml` can be triggered manually on GitHub.
+
+Both workflows use `reusable-install-and-deploy.yml`, which is a reusable workflow that installs and deploys the website to AWS development/production environment based on input.
+
 
 ## Manual Installation
 
@@ -102,13 +111,13 @@ npm start
 
 ## Converting csv data to markdown
 
-The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefore, we have a script which convert csv files to markdown files which the frontend understands.
+The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefore, we have a script which converts csv files to markdown files which the frontend understands.
 
 ```bash
 python3 csv_to_md.py [csv] [out]
 ```
 
-Where `[csv]` is the csv-file path and `[out]` is the output directory path, e.g., `./frontend/radar/<name>`.
+Where `[csv]` is the csv file path and `[out]` is the output directory path. To have the frontend display the csv data, `[out]` should be `./frontend/radar/YYYY-MM-DD`, where the date represents when the csv data was created.
 
 ### Deploying to AWS
 
