@@ -14,7 +14,7 @@ echo "🔧 First time setup of frontend cdk"
 npm install || fatal "Failed to run npm install for frontend-cdk"
 
 echo "👾 Checking whether you are logged into aws"
-npx cdk doctor -v
+
 check_dependency "npx cdk diff" "🕵️ You are not logged into the AWS. Either run 'aws sso login' or set AWS environment variables. See https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html#envvars-set. Check also the CDK enviroment variables? Set at least CDK_DEFAULT_ACCOUNT and CDK_DEFAULT_REGION. See https://docs.aws.amazon.com/cdk/v2/guide/environments.html"
 echo "🤑 You're logged in!"
 

@@ -9,7 +9,7 @@ jobs:
     uses: ./.github/workflows/reusable-install-and-deploy.yml
     secrets:
       cdk_default_account: ${{ secrets.PROD_CDK_DEFAULT_ACCOUNT }}
-      cdk_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
+      aws_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
       aws_access_key_id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
       aws_secret_access_key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
       aws_session_token: ${{ secrets.PROD_AWS_SESSION_TOKEN }}
