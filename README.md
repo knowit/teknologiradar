@@ -68,13 +68,13 @@ npm start
 
 ## Import and convert csv data to markdown files
 
-The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefor, we have a script which convert csv files to markdown files which the frontend understands.
+The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefor, we have a script which converts csv files to markdown files which the frontend understands.
 
 ```bash
 python3 csv_to_md.py [csv] [out]
 ```
 
-Where `[csv]` is the csv-file path and `[out]` is the output directory path, e.g., `./frontend/radar/<name>`.
+Where `[csv]` is the csv file path and `[out]` is the output directory path. To have the frontend display the csv data, `[out]` should be `./frontend/radar/YYYY-MM-DD`, where the date represents when the csv data was created.
 
 ### Deploying to AWS
 
