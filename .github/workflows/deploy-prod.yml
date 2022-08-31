@@ -1,7 +1,8 @@
 name: 'Deploy to AWS PROD env'
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [688-github-actions-deploy-prod]
 
 jobs:
   install-and-deploy-prod:
