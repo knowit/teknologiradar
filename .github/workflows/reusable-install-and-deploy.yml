@@ -33,6 +33,7 @@ jobs:
       - name: Install and deploy
         env:
           CDK_DEFAULT_ACCOUNT: ${{ secrets.cdk_default_account }}
+          CDK_DEFAULT_REGION: ${{ secrets.aws_default_region }}
           AWS_DEFAULT_REGION: ${{ secrets.aws_default_region }}
           AWS_ACCESS_KEY_ID: ${{ secrets.aws_access_key_id }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.aws_secret_access_key }}
