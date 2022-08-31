@@ -69,10 +69,10 @@ aws cloudformation cancel-update-stack
 ```
 
 ### Github Actions workflows
-* `deploy-dev.yml` deploys website to development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no), not live)
-* `deploy-prod.yml` deploys website to production environment ([teknologiradar-objectnet.knowit.no](https://teknologiradar-objectnet.knowit.no))
+* [deploy-dev.yml](.github/workflows/deploy-dev.yml) deploys website to the development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no))
+* [deploy-prod.yml](.github/workflows/deploy-prod.yml) deploys website to the production environment ([teknologiradar-objectnet.knowit.no](https://teknologiradar-objectnet.knowit.no))
 
-`deploy-dev.yml` is triggered on pushes to main while `deploy-prod.yml` can be triggered manually.
+`deploy-dev.yml` is triggered on pushes to main while `deploy-prod.yml` can be triggered manually on GitHub.
 
 Both workflows use `reusable-install-and-deploy.yml`, which is a reusable workflow that installs and deploys the website to AWS development/production environment based on input.
 
@@ -111,7 +111,7 @@ npm start
 
 ## Converting csv data to markdown
 
-The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefor, we have a script which converts csv files to markdown files which the frontend understands.
+The website needs to have its data in a specific format. We prefer to use a single csv file for each revision. Therefore, we have a script which converts csv files to markdown files which the frontend understands.
 
 ```bash
 python3 csv_to_md.py [csv] [out]
