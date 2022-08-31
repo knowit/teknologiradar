@@ -2,12 +2,14 @@ name: 'Deploy to AWS DEV env'
 
 on:
   push:
-    branches: [main]
+    branches: [688-github-actions-deploy-prod] # TODO: change to main
 
 jobs:
   install-and-deploy-dev:
     name: Install and deploy dev
     uses: ./.github/workflows/reusable-install-and-deploy.yml
+    with:
+      domain: dev.teknologiradar-objectnet.knowit.no
     secrets:
       cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
       aws_default_region: ${{ secrets.CDK_DEFAULT_REGION }}

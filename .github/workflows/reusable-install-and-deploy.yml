@@ -2,6 +2,10 @@ name: 'Reusable workflow to deploy website to AWS'
 
 on:
   workflow_call:
+    inputs:
+      domain:
+        required: true
+        type: string
     secrets:
       cdk_default_account:
         required: true
@@ -32,6 +36,7 @@ jobs:
 
       - name: Install and deploy
         env:
+          TECH_RADAR_DOMAIN: ${{ inputs.domain }}
           CDK_DEFAULT_ACCOUNT: ${{ secrets.cdk_default_account }}
           CDK_DEFAULT_REGION: ${{ secrets.aws_default_region }}
           AWS_DEFAULT_REGION: ${{ secrets.aws_default_region }}

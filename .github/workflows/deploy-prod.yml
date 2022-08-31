@@ -7,6 +7,8 @@ jobs:
   install-and-deploy-prod:
     name: Install and deploy prod
     uses: ./.github/workflows/reusable-install-and-deploy.yml
+    with:
+      domain: teknologiradar-objectnet.knowit.no
     secrets:
       cdk_default_account: ${{ secrets.PROD_CDK_DEFAULT_ACCOUNT }}
       aws_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
