@@ -26,19 +26,19 @@ export AWS_SECRET_ACCESS_KEY="<redacted>"
 export AWS_SESSION_TOKEN="<redacted>"
 
 export AWS_DEFAULT_REGION="eu-central-1"
+export CDK_DEFAULT_REGION="eu-central-1"
 export CDK_DEFAULT_ACCOUNT="<redacted>"
 
-#Uncomment to issue new certificates, see [Issue new ACM certificate]
-#export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
+export TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 ```
 
 ### Issue new ACM certificate
 
-To issue a new certificate (needed for HTTPS) the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set to a domain url to deploy to. 
+To issue a new certificate the `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` environment variable must be set to a domain url to deploy to.
+A hosted zone with the same name as `TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN` in the correct AWS region must manually be created in route53.
 
 Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
 
-This step in deployment is not required unless its the first time deploying, the URLs are to be changed, or the certificate is expired.
 ```bash
 #URLs used as of writing
 #Production domain

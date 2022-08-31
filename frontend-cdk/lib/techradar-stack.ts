@@ -33,12 +33,6 @@ export class TechradarStack extends Stack {
     const deployUser = new iam.User(this, 'deploy_website');
     websiteBucket.grantWrite(deployUser);
 
-    var domain = process.env.TECH_RADAR_ISSUE_NEW_CERT_TO_DOMAIN
-    if (domain != undefined) {
-      console.log('Updating frontend distribution, and issuing new certification for 🤳', domain);
-      new FrontendDistributionAndCertsStack(domain, websiteBucket, this);
-    } else {
-      console.log('Domain not specified, will not update frontend distribution and certificate')
-    }
+    new FrontendDistributionAndCertsStack(websiteBucket, this);
   }
 }
