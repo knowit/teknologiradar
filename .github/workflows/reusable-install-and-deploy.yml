@@ -15,8 +15,6 @@ on:
         required: true
       aws_secret_access_key:
         required: true
-      aws_session_token:
-        required: true
       iam_deploy_role:
         required: true
 
@@ -37,7 +35,7 @@ jobs:
         run: python3 -m pip install pandas
 
       - name: Configure aws credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.aws_access_key_id }}
           aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
