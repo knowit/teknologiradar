@@ -16,6 +16,7 @@ Frontend for Knowit teknologiradar, based on [AOE Technology Radar](https://gith
         * CertificateManager
         * CloudFormation
         * SSM
+        * and the `iam:PassRole` permission
 
 ## Automatic installation and deployment
 
