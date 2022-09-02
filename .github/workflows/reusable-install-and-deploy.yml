@@ -15,8 +15,6 @@ on:
         required: true
       aws_secret_access_key:
         required: true
-      iam_deploy_role:
-        required: true
 
 jobs:
   install-and-deploy:
@@ -40,7 +38,6 @@ jobs:
           aws-access-key-id: ${{ secrets.aws_access_key_id }}
           aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
           aws-region: ${{ secrets.aws_default_region }}
-          #role-to-assume: ${{ secrets.iam_deploy_role }}
       - name: Install and deploy
         env:
           TECH_RADAR_DOMAIN: ${{ inputs.domain }}
