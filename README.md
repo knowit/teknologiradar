@@ -43,7 +43,7 @@ export TECH_RADAR_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 To issue a new certificate the `TECH_RADAR_DOMAIN` environment variable must be set to a domain url to deploy to.
 A hosted zone with the same name as `TECH_RADAR_DOMAIN` in the correct AWS region must manually be created in route53.
 
-Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
+Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated. See [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html). 
 
 ```bash
 #URLs used as of writing
@@ -63,16 +63,6 @@ To build and deploy the radar in one go, run
 ```
 
 The script will first install and build the frontend as a static website then deploy it to aws using [cdk](https://aws.amazon.com/cdk/).
-
-### Cancel a stuck deployment
-
-See [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html). 
-
-Alternatively, run the command:
-
-```bash
-aws cloudformation cancel-update-stack
-```
 
 ### Github Actions workflows
 * [deploy-dev.yml](.github/workflows/deploy-dev.yml) deploys website to the development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no))
