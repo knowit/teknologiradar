@@ -7,8 +7,15 @@ Frontend for Knowit teknologiradar, based on [AOE Technology Radar](https://gith
 * Python 3.8+
 * The [pandas](https://pandas.pydata.org/) python package 
     * to install run: `python3 -m pip install pandas`
-* Being logged into AWS i.e., the [AWS CLI](https://aws.amazon.com/cli/) or with environment variables
+* (To deploy) Being logged into AWS i.e., the [AWS CLI](https://aws.amazon.com/cli/) or with environment variables
     * You can log in with e.g., `aws sso login`
+    * The AWS account must have permissions for 
+        * S3
+        * Route53
+        * CloudFront
+        * CertificateManager
+        * CloudFormation
+        * SSM
 
 ## Automatic installation and deployment
 
@@ -23,7 +30,6 @@ If logging into aws using the [AWS CLI](https://aws.amazon.com/cli/), this secti
 ```bash
 export AWS_ACCESS_KEY_ID="<redacted>"
 export AWS_SECRET_ACCESS_KEY="<redacted>"
-export AWS_SESSION_TOKEN="<redacted>"
 
 export AWS_DEFAULT_REGION="eu-central-1"
 export CDK_DEFAULT_REGION="eu-central-1"
@@ -129,4 +135,4 @@ cd frontend-cdk; cdk deploy; cd ..
 
 ## Data
 
-You must be a knowit employee to view the raw data, but when (😉) you are the categories can be found [here](https://docs.google.com/spreadsheets/d/1UmmJh3Xzj_wDKrjuN3HRArPzFoaOlyQTP_SlkCfLTfU/edit#gid=0) and the data for 2022 [here](https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8LuiVKB531cXOBI-hXieoIt0Ag/edit#gid=1741192413). 
+You must be a knowit employee to view the raw data, but when (😉) you are, the categories can be found [here](https://docs.google.com/spreadsheets/d/1UmmJh3Xzj_wDKrjuN3HRArPzFoaOlyQTP_SlkCfLTfU/edit#gid=0) and the data for 2022 [here](https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8LuiVKB531cXOBI-hXieoIt0Ag/edit#gid=1741192413). 
