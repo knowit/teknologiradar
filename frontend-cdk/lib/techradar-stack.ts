@@ -30,9 +30,6 @@ export class TechradarStack extends Stack {
       distributionPaths: ['/*'],
     });
 
-    const deployUser = new iam.User(this, 'deploy_website');
-    websiteBucket.grantWrite(deployUser);
-
     new FrontendDistributionAndCertsStack(websiteBucket, this);
   }
 }
