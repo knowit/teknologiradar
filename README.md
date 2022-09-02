@@ -7,8 +7,15 @@ Frontend for Knowit teknologiradar, based on [AOE Technology Radar](https://gith
 * Python 3.8+
 * The [pandas](https://pandas.pydata.org/) python package 
     * to install run: `python3 -m pip install pandas`
-* Being logged into AWS i.e., the [AWS CLI](https://aws.amazon.com/cli/) or with environment variables
+* (To deploy) Being logged into AWS i.e., the [AWS CLI](https://aws.amazon.com/cli/) or with environment variables
     * You can log in with e.g., `aws sso login`
+    * The AWS account must have permissions for 
+        * S3
+        * Route53
+        * CloudFront
+        * CertificateManager
+        * CloudFormation
+        * SSM
 
 ## Automatic installation and deployment
 
@@ -23,7 +30,6 @@ If logging into aws using the [AWS CLI](https://aws.amazon.com/cli/), this secti
 ```bash
 export AWS_ACCESS_KEY_ID="<redacted>"
 export AWS_SECRET_ACCESS_KEY="<redacted>"
-export AWS_SESSION_TOKEN="<redacted>"
 
 export AWS_DEFAULT_REGION="eu-central-1"
 export CDK_DEFAULT_REGION="eu-central-1"
@@ -37,7 +43,7 @@ export TECH_RADAR_DOMAIN="dev.teknologiradar-objectnet.knowit.no"
 To issue a new certificate the `TECH_RADAR_DOMAIN` environment variable must be set to a domain url to deploy to.
 A hosted zone with the same name as `TECH_RADAR_DOMAIN` in the correct AWS region must manually be created in route53.
 
-Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated.
+Please note that if the current account does not have authorization to issue new certificates, the deploy will be stuck until it is canceled or the certificate manually validated. See [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html). 
 
 ```bash
 #URLs used as of writing
@@ -57,16 +63,6 @@ To build and deploy the radar in one go, run
 ```
 
 The script will first install and build the frontend as a static website then deploy it to aws using [cdk](https://aws.amazon.com/cdk/).
-
-### Cancel a stuck deployment
-
-See [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html). 
-
-Alternatively, run the command:
-
-```bash
-aws cloudformation cancel-update-stack
-```
 
 ### Github Actions workflows
 * [deploy-dev.yml](.github/workflows/deploy-dev.yml) deploys website to the development environment ([dev.teknologiradar-objectnet.knowit.no](https://dev.teknologiradar-objectnet.knowit.no))
@@ -129,4 +125,4 @@ cd frontend-cdk; cdk deploy; cd ..
 
 ## Data
 
-You must be a knowit employee to view the raw data, but when (😉) you are the categories can be found [here](https://docs.google.com/spreadsheets/d/1UmmJh3Xzj_wDKrjuN3HRArPzFoaOlyQTP_SlkCfLTfU/edit#gid=0) and the data for 2022 [here](https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8LuiVKB531cXOBI-hXieoIt0Ag/edit#gid=1741192413). 
+You must be a knowit employee to view the raw data, but when (😉) you are, the categories can be found [here](https://docs.google.com/spreadsheets/d/1UmmJh3Xzj_wDKrjuN3HRArPzFoaOlyQTP_SlkCfLTfU/edit#gid=0) and the data for 2022 [here](https://docs.google.com/spreadsheets/d/1DGSFsPbbjRNZx7aKm8LuiVKB531cXOBI-hXieoIt0Ag/edit#gid=1741192413). 

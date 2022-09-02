@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@types/jest": "^28.1.8",
-    "@types/node": "18.7.13",
-    "@types/prettier": "2.7.0",
-    "aws-cdk": "2.39.0",
+    "@types/node": "^18.7.13",
+    "@types/prettier": "^2.7.0",
+    "aws-cdk": "^2.39.0",
     "jest": "^28.0.8",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.1",
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@aws-cdk/aws-s3": "^1.170.0",
-    "aws-cdk-lib": "2.39.0",
+    "aws-cdk-lib": "^2.39.0",
     "constructs": "^10.1.87",
     "source-map-support": "^0.5.21"
   }
