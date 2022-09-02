@@ -1,0 +1,18 @@
+name: 'Deploy to AWS DEV env'
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  install-and-deploy-dev:
+    name: Install and deploy dev
+    uses: ./.github/workflows/reusable-install-and-deploy.yml
+    with:
+      domain: dev.teknologiradar-objectnet.knowit.no
+    secrets:
+      cdk_default_account: ${{ secrets.DEV_CDK_DEFAULT_ACCOUNT }}
+      aws_default_region: ${{ secrets.CDK_DEFAULT_REGION }}
+      aws_access_key_id: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+      aws_session_token: ${{ secrets.DEV_AWS_SESSION_TOKEN }}
