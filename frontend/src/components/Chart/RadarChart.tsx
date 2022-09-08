@@ -45,15 +45,10 @@ const RadarChart: React.FC<{
   items: Item[]
   config: ConfigData
 }> = ({ items, config }) => {
-
-  let xScale = d3.scaleLinear()
-    .domain(config.chartConfig.scale)
-    .range([0, config.chartConfig.size]);
-  let yScale = d3.scaleLinear()
-    .domain(config.chartConfig.scale)
-    .range([config.chartConfig.size, 0]);
-
   const singleQuadrant: boolean = Object.keys(config.quadrantsMap).length === 1
+
+  let xScale: d3.ScaleLinear<number, number, never>;
+  let yScale: d3.ScaleLinear<number, number, never>;
 
   if (singleQuadrant) {
     xScale = d3.scaleLinear()
@@ -63,6 +58,14 @@ const RadarChart: React.FC<{
     yScale = d3.scaleLinear()
     .domain(config.chartConfig.scale)
     .range([config.chartConfig.size*1.99, 0]);
+  } else {
+    xScale = d3.scaleLinear()
+    .domain(config.chartConfig.scale)
+    .range([0, config.chartConfig.size]);
+    
+    yScale = d3.scaleLinear()
+    .domain(config.chartConfig.scale)
+    .range([config.chartConfig.size, 0]);
   }
   
 
@@ -77,7 +80,7 @@ const RadarChart: React.FC<{
           </g>
 
           {Object.values(config.quadrantsMap).map((value, index) => (
-              <QuadrantRings key={index} quadrant={value} xScale={xScale} config={config} />
+              <QuadrantRings key={index} quadrant={value} xScale={xScale} config={config} singleQuadrant={singleQuadrant} />
           ))}
 
           {Array.from(config.rings).map((ring: string, index) => (
