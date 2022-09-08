@@ -53,12 +53,9 @@ const RadarChart: React.FC<{
     .domain(config.chartConfig.scale)
     .range([config.chartConfig.size, 0]);
 
-  let singleQuadrant: boolean = false
+  const singleQuadrant: boolean = Object.keys(config.quadrantsMap).length === 1
 
-  if (Object.keys(config.quadrantsMap).length === 1) {
-    // just 1 quadrant
-    singleQuadrant = true;
-
+  if (singleQuadrant) {
     xScale = d3.scaleLinear()
     .domain(config.chartConfig.scale)
     .range([0, config.chartConfig.size*1.99]);
@@ -67,7 +64,7 @@ const RadarChart: React.FC<{
     .domain(config.chartConfig.scale)
     .range([config.chartConfig.size*1.99, 0]);
   }
-
+  
 
   return (
     <div className="chart" style={{maxWidth: `${config.chartConfig.size}px`}}>
