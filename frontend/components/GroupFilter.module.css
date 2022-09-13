@@ -1,0 +1,11 @@
+.filtersWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  gap: 5px;
+}

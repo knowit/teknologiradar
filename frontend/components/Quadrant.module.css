@@ -1,0 +1,66 @@
+.wrapper {
+  background-color: var(--color-fg);
+  border: 1px solid var(--color-green1);
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-height: 180px;
+    overflow-y: scroll;
+    scrollbar-color: var(--color-green1) var(--color-green1);
+  }
+  .wrapper::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--color-fg);
+    scrollbar-color: var(--color-green1) var(--color-green1);
+  }
+  .wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--color-green1);
+    border-radius: 5px;
+    scrollbar-color: var(--color-green1) var(--color-green1);
+  }
+  .wrapper::-webkit-scrollbar-track {
+    background-color: var(--color-fg);
+    scrollbar-color: var(--color-green1) var(--color-green1);
+  }
+}
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.titleWrapper {
+  border-right: 1px solid var(--color-green1);
+  border-bottom: 1px solid var(--color-green1);
+  padding: 5px;
+}
+
+.quadrantTitle {
+  color: var(--color-green1);
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .description {
+    display: none;
+  }
+}
+.description {
+  padding: 0;
+  margin: 0;
+}
+.quadrantList {
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.quadrantListItem {
+  padding: 5px;
+  display: block;
+  background-color: rgba(75, 100, 85, 0.2);
+  list-style: none;
+}

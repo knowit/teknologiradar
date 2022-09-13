@@ -1,78 +1,27 @@
 {
-  "name": "knowit_technology_radar",
-  "version": "3.3.1",
-  "description": "Knowit Technology Radar",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AOEpeople/aoe_technology_radar.git"
-  },
-  "bin": {
-    "knowit_technology_radar-buildRadar": "dist_scripts/scripts/buildRadar.js",
-    "knowit_technology_radar-createStaticFiles": "dist_scripts/scripts/createStaticFiles.js",
-    "knowit_technology_radar-generateJson": "dist_scripts/scripts/generateJson.js"
-  },
+  "name": "tech-radar-next",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "prepare": "npm run build:scripts",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:scripts": "tsc --project tsconfig.scripts.json",
-    "test": "react-scripts test --watchAll=false",
-    "ts:check": "tsc --noEmit",
-    "lint": "npm run ts:check && eslint src/**/*.tsx",
-    "start:server": "npx serve -s build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate-data": "ts-node --skip-project scripts/csvToJson.ts && prettier --write data/categories.ts"
   },
   "dependencies": {
-    "@apideck/better-ajv-errors": "0.3.6",
-    "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "13.3.0",
-    "@types/d3": "7.4.0",
-    "@types/fs-extra": "9.0.13",
-    "@types/jest": "28.1.8",
-    "@types/node": "18.7.13",
-    "@types/react": "18.0.17",
-    "@types/react-dom": "18.0.6",
-    "@types/sanitize-html": "2.6.2",
-    "@types/walk": "2.3.1",
-    "classnames": "2.3.1",
-    "d3": "7.6.1",
-    "front-matter": "4.0.2",
-    "fs-extra": "10.1.0",
-    "highlight.js": "11.6.0",
-    "marked": "4.0.19",
-    "moment": "2.29.4",
-    "postcss-normalize": "10.0.1",
-    "query-string": "7.1.1",
+    "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "4.4.0",
-    "react-router-dom": "6.3.0",
-    "react-scripts": "5.0.1",
-    "react-tooltip": "4.2.21",
-    "sanitize-html": "2.7.1",
-    "sass": "1.54.5",
-    "typescript": "4.7.4",
-    "walk": "2.3.15",
-    "yaml": "2.1.1"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "5.35.1",
-    "eslint": "8.22.0",
-    "eslint-config-react-app": "7.0.1",
-    "eslint-plugin-react": "7.31.0",
-    "yallist": "4.0.0",
-    "serve": "^14.0.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@types/node": "18.7.16",
+    "@types/react": "18.0.19",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "4.8.3"
   }
 }

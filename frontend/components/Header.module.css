@@ -1,0 +1,15 @@
+.title {
+  color: var(--color-green1);
+  text-align: center;
+  font-weight: 700;
+}
+
+.subTitle {
+  font-weight: 400;
+}
+
+.header {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}

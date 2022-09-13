@@ -1,0 +1,121 @@
+type,area,item,status,priority
+languages,backend,Kotlin,ADOPT,TRUE
+languages,backend,Clojure,TEST,FALSE
+languages,backend,C#,KEEP,FALSE
+languages,backend,Python,KEEP,TRUE
+languages,backend,Java,KEEP,FALSE
+languages,backend,Ruby,KEEP,FALSE
+languages,backend,Rust,TRIAL,TRUE
+languages,backend,GraphQL,TRIAL,FALSE
+languages,backend,Golang,TRIAL,TRUE
+languages,backend,Scala,HOLD,FALSE
+frameworks,backend,Mockk,ADOPT,FALSE
+frameworks,backend,ASP.NET Core,ADOPT,FALSE
+frameworks,backend,.NET 5.0+,ADOPT,FALSE
+frameworks,backend,pytorch,TEST,FALSE
+frameworks,backend,Rockt,TEST,FALSE
+frameworks,backend,Actix,TEST,FALSE
+frameworks,backend,Exposed,TEST,FALSE
+frameworks,backend,Pandas,KEEP,FALSE
+frameworks,backend,Django,KEEP,FALSE
+frameworks,backend,Spring Boot,KEEP,FALSE
+frameworks,backend,Hibernate,KEEP,FALSE
+frameworks,backend,Quarkus,TRIAL,FALSE
+frameworks,backend,Micronaut,TRIAL,TRUE
+frameworks,backend,WebFlux,TRIAL,FALSE
+frameworks,backend,NodeJS,TRIAL,FALSE
+frameworks,backend,SQLAlchemy ORM,TRIAL,FALSE
+frameworks,backend,Koin,TRIAL,FALSE
+frameworks,backend,Ktorm,TRIAL,FALSE
+frameworks,backend,Ktor,TRIAL,FALSE
+frameworks,backend,Play2 Framework,HOLD,FALSE
+tools,backend,SNS,ADOPT,FALSE
+tools,backend,SQS,ADOPT,FALSE
+tools,backend,Owasp security checking,ADOPT,FALSE
+tools,backend,Terraform,ADOPT,TRUE
+tools,backend,Redis,ADOPT,FALSE
+tools,backend,Kafka,ADOPT,TRUE
+tools,backend,GraalVM,TEST,FALSE
+tools,backend,AWS CDK,TEST,FALSE
+tools,backend,InfluxDB,TEST,FALSE
+tools,backend,EventStoreDB,TEST,FALSE
+tools,backend,DynamoDB,KEEP,FALSE
+tools,backend,MSSQL Server,KEEP,FALSE
+tools,backend,Flyway/Liquibase,KEEP,FALSE
+tools,backend,ELK-stack,KEEP,FALSE
+tools,backend,S3/simple storage,KEEP,FALSE
+tools,backend,PostgreSQL,KEEP,FALSE
+tools,backend,Kubernetes,KEEP,FALSE
+tools,backend,BigQuery,TRIAL,FALSE
+tools,backend,MongoDB,TRIAL,FALSE
+tools,backend,Snyk,TRIAL,FALSE
+tools,backend,Azure Pipelines,TRIAL,FALSE
+tools,backend,CosmosDB,TRIAL,FALSE
+tools,backend,Gitlab CI/CD,TRIAL,FALSE
+tools,backend,Github Actions,TRIAL,FALSE
+tools,backend,Kong,TRIAL,FALSE
+tools,backend,DocumentDB,TRIAL,FALSE
+tools,backend,MySql,HOLD,FALSE
+tools,backend,OracleDB,HOLD,FALSE
+tools,backend,Helm 2,HOLD,FALSE
+methods,backend,Reactive architecture,ADOPT,FALSE
+methods,backend,DevOps,ADOPT,FALSE
+methods,backend,Eventdriven,ADOPT,TRUE
+methods,backend,IaC,ADOPT,TRUE
+methods,backend,Object-oriented programming,KEEP,FALSE
+methods,backend,SCRUM,KEEP,FALSE
+methods,backend,Functional programming,KEEP,FALSE
+methods,backend,Kanban,KEEP,FALSE
+methods,backend,Microservices,KEEP,FALSE
+methods,backend,Service Mesh,TRIAL,FALSE
+methods,backend,OKR,TRIAL,FALSE
+methods,backend,Serverless,TRIAL,FALSE
+methods,backend,DevSecOps,TRIAL,FALSE
+languages,ai-and-data,Python,KEEP,TRUE
+languages,ai-and-data,Kotlin,KEEP,FALSE
+languages,ai-and-data,Julia,TEST,FALSE
+languages,ai-and-data,R,TEST,FALSE
+languages,ai-and-data,SQL,KEEP,FALSE
+tools,ai-and-data,AWS Sagemaker,ADOPT,FALSE
+tools,ai-and-data,Snowflake,ADOPT,TRUE
+tools,ai-and-data,Databricks,ADOPT,FALSE
+tools,ai-and-data,AWS Sagemaker Model Registry,ADOPT,FALSE
+tools,ai-and-data,Pandas for Spark 3.0,ADOPT,TRUE
+tools,ai-and-data,EMR,KEEP,FALSE
+tools,ai-and-data,Managed Airflow,KEEP,FALSE
+tools,ai-and-data,BigQuery,KEEP,TRUE
+tools,ai-and-data,Apache Spark,KEEP,TRUE
+tools,ai-and-data,Jupyterhub,KEEP,TRUE
+tools,ai-and-data,Jupyter notebooks,KEEP,TRUE
+tools,ai-and-data,AWS Feature store,TEST,FALSE
+tools,ai-and-data,AWS MLOps,TEST,FALSE
+tools,ai-and-data,AWS Sagemaker Pipelines,TEST,FALSE
+tools,ai-and-data,AWS Sagemaker studio,TEST,FALSE
+tools,ai-and-data,AWS Sagemaker Autopilot,TEST,FALSE
+tools,ai-and-data,Snowpark,TEST,FALSE
+tools,ai-and-data,IBM AI Fairness 360,TEST,FALSE
+tools,ai-and-data,Vertex AI (Google),TEST,FALSE
+tools,ai-and-data,Dataiku,TRIAL,FALSE
+tools,ai-and-data,Unity Catalog,TRIAL,FALSE
+tools,ai-and-data,BigQuery ML,TRIAL,FALSE
+methods,ai-and-data,AutoML,TEST,FALSE
+methods,ai-and-data,GPT(-3),TEST,FALSE
+methods,ai-and-data,Support Vector Machines,TRIAL,FALSE
+methods,ai-and-data,Data Mesh,TRIAL,FALSE
+methods,ai-and-data,ETL,KEEP,TRUE
+frameworks,ai-and-data,DBT,ADOPT,TRUE
+frameworks,ai-and-data,Airflow,ADOPT,FALSE
+frameworks,ai-and-data,Great Expectations,ADOPT,FALSE
+frameworks,ai-and-data,Pytorch,KEEP,FALSE
+frameworks,ai-and-data,XGBoost,KEEP,FALSE
+frameworks,ai-and-data,Scikit-Learn,KEEP,FALSE
+frameworks,ai-and-data,Tensorflow,KEEP,TRUE
+frameworks,ai-and-data,Pandas,KEEP,FALSE
+frameworks,ai-and-data,Keras,KEEP,FALSE
+frameworks,ai-and-data,Prefect,TEST,FALSE
+frameworks,ai-and-data,Koalas,TEST,FALSE
+frameworks,ai-and-data,Dagster,TEST,FALSE
+frameworks,ai-and-data,DataHub,TEST,FALSE
+frameworks,ai-and-data,Spark on Kubernetes,TRIAL,FALSE
+frameworks,ai-and-data,Delta Live Tables,TRIAL,TRUE
+frameworks,ai-and-data,Nansen,TRIAL,FALSE

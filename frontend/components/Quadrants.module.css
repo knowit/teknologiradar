@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  .quadrantGrouping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .quadrantGrouping {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.quadrantsWrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

@@ -1,0 +1,30 @@
+.categoryList {
+  font-size: 16px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+
+.categoryListItem {
+  list-style: none;
+}
+
+.categoryContent {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  background-color: #dbeede;
+  border: 1px solid var(--color-green1);
+}
+.current {
+  background-color: #fac0b1;
+  border: 1px solid #fac0b1;
+}
+.activeIndicator {
+  padding-top: 8px;
+  border-bottom: 1px solid var(--color-purple);
+}
