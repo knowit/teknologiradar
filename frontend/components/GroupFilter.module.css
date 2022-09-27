@@ -1,11 +1,16 @@
 .filtersWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1rem;
   align-items: center;
 }
 
 .filter {
   display: flex;
   gap: 5px;
+  align-items: center;
+}
+
+.sortingLegend {
+  font-size: 1.6rem;
 }

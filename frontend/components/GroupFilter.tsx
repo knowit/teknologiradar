@@ -1,5 +1,6 @@
+import { group } from "console";
 import { useRouter } from "next/router";
-import { ChangeEvent, memo, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { Group } from "../data/categories";
 import styles from "./GroupFilter.module.css";
 
@@ -60,12 +61,18 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
       }
     }
   };
+
   return (
-    <div className={styles.filtersWrapper}>
-      <p>Sort</p>
+    <div
+      className={styles.filtersWrapper}
+      role="group"
+      aria-labelledby="sortinglegend"
+    >
+      <div id="sortinglegend" className={styles.sortingLegend}>
+        Sort by
+      </div>
       {sortedKeys.map((key) => (
         <div key={key} className={styles.filter}>
-          <label htmlFor={key}>{key}</label>
           <input
             id={key}
             key={key}
@@ -74,6 +81,9 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
             checked={filters[key]}
             onChange={onChange}
           />
+          <label htmlFor={key}>
+            {groups.find((group) => group.id === key)?.name || key}
+          </label>
         </div>
       ))}
     </div>

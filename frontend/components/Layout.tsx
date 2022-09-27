@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { useRouter } from "next/router";
 import Header from "./Header";
 import styles from "./Layout.module.css";
 
@@ -6,11 +7,13 @@ interface Props {
   children: ReactNode;
 }
 const Layout = ({ children }: Props) => {
+  const { pathname } = useRouter();
+  const isRootPage = pathname === '/';
   return (
-    <>
-      <Header />
-      <main className={styles.main}>{children}</main>
-    </>
+    <div className={styles.main}>
+      <Header forRoot={isRootPage}/>
+      {children}
+    </div>
   );
 };
 

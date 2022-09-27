@@ -24,7 +24,7 @@ const CategoryComponent = ({
 }: CategoryComponentProps) => {
   const classNames = `${styles.categoryContent} ${
     current ? styles.current : undefined
-  }`;
+  } ${asButton ? styles.button : undefined}`;
   if (asButton) {
     return (
       <button onClick={() => onClick(category)} className={classNames}>
