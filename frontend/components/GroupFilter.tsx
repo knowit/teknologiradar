@@ -66,10 +66,10 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
     <div
       className={styles.filtersWrapper}
       role="group"
-      aria-labelledby="sortinglegend"
+      aria-labelledby="filter-label"
     >
-      <div id="sortinglegend" className={styles.sortingLegend}>
-        Sort by
+      <div id="filter-label" className={styles.filterLabel}>
+        Filter by
       </div>
       {sortedKeys.map((key) => (
         <div key={key} className={styles.filter}>
