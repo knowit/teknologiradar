@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className={styles.main}>
       <Header forRoot={isRootPage}/>
-      {children}
+      <main>{children}</main>
     </div>
   );
 };

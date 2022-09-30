@@ -16,47 +16,47 @@ const ExplanationQuadrant = ({ title, content }: ExplanationQuadrantProps) => {
 
 const ExplanationQuadrants = () => {
   return (
-    <>
-    <h2>Terminology</h2>
-    <div className={styles.quadrantWrapper}>
-      <ExplanationQuadrant
-        title="Priorities"
-        content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-      />
+    <aside>
+      <h2>Terminology</h2>
+      <div className={styles.quadrantWrapper}>
+        <ExplanationQuadrant
+          title="Priorities"
+          content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+        />
 
-      <div className={styles.explanationQuadrants}>
-        <div>
-          <ExplanationQuadrant
-            title="Keep"
-            content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-          />
+        <div className={styles.explanationQuadrants}>
+          <div>
+            <ExplanationQuadrant
+              title="Keep"
+              content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+            />
+          </div>
+          <div>
+            <ExplanationQuadrant
+              title="Adopt"
+              content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+            />
+          </div>
+          <div>
+            <ExplanationQuadrant
+              title="Trial"
+              content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+            />
+          </div>
+          <div>
+            <ExplanationQuadrant
+              title="Test"
+              content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+            />
+          </div>
         </div>
-        <div>
-          <ExplanationQuadrant
-            title="Adopt"
-            content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-          />
-        </div>
-        <div>
-          <ExplanationQuadrant
-            title="Trial"
-            content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-          />
-        </div>
-        <div>
-          <ExplanationQuadrant
-            title="Test"
-            content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-          />
-        </div>
+
+        <ExplanationQuadrant
+          title="Hold-Phase out"
+          content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
+        />
       </div>
-
-      <ExplanationQuadrant
-        title="Hold-Phase out"
-        content="Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna. "
-      />
-    </div>
-    </>
+    </aside>
   );
 };
 

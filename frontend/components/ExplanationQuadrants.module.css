@@ -1,7 +1,7 @@
 .quadrantWrapper {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 30px;
 }
 
 @media (min-width: 768px) {
