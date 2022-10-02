@@ -26,8 +26,8 @@
   top: 0.4rem;
   height: 0.5rem;
   width: 0.9rem;
-  border-left: 0.2rem solid black;
-  border-bottom: 0.2rem solid black;
+  border-left: 0.2rem solid var(--color-fg);
+  border-bottom: 0.2rem solid var(--color-fg);
   transform: rotate(-45deg);
 }
 

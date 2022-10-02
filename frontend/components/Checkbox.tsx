@@ -8,7 +8,7 @@ interface Props extends HTMLProps<HTMLInputElement> {
 }
 const Checkbox = ({ id, checked, label, onChange }: Props) => {
   return (
-    <div key={id}>
+    <div>
       <input
         className={styles.input}
         id={id}
