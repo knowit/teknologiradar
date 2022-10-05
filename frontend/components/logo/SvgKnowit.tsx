@@ -1,10 +1,6 @@
 const SvgKnowit = () => {
   return (
-    <svg
-      viewBox="0 0 119 27"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>Knowit</title>   
+    <svg viewBox="0 0 119 27" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

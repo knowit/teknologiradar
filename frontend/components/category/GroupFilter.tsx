@@ -1,7 +1,7 @@
-import { group } from "console";
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
-import { Group } from "../data/categories";
+import { Group } from "../../data/categories";
 import Checkbox from "./Checkbox";
 import styles from "./GroupFilter.module.css";
 
@@ -20,6 +20,7 @@ const toInitialFilter = (groups: Group[]) => {
 };
 
 const GroupFilter = ({ groups, onFilterChange }: Props) => {
+  const { t } = useTranslation("category");
   const { pathname } = useRouter();
   const [filters, setFilters] = useState(toInitialFilter(groups));
   const sortedKeys = useMemo(
@@ -70,7 +71,7 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
       aria-labelledby="filter-label"
     >
       <div id="filter-label" className={styles.filterLabel}>
-        Filter by
+        {t("filterByCategory")}
       </div>
       {sortedKeys.map((key) => (
         <Checkbox
