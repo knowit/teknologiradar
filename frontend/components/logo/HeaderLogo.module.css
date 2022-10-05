@@ -1,0 +1,7 @@
+.logo {
+  display: flex;
+  grid-gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}

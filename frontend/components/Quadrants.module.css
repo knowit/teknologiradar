@@ -3,19 +3,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .quadrantGrouping > div {
+    height: 25rem;
+  }
 }
 
 @media (max-width: 768px) {
   .quadrantGrouping {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 3rem;
   }
 }
 
 .quadrantsWrapper {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 3rem;
 }

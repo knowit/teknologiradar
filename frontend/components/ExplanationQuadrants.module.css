@@ -1,35 +1,57 @@
 .quadrantWrapper {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
+@media (min-width: 768px) {
+  .explanationQuadrants {
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-green1);
+  }
+
+  .explanationQuadrants > div:nth-child(4n + 1),
+  .explanationQuadrants > div:nth-child(4n + 2) {
+    padding-bottom: 20px;
+  }
+
+  .explanationQuadrants > div:nth-child(4n + 3),
+  .explanationQuadrants > div:nth-child(4n + 4) {
+    padding-top: 20px;
+  }
+  .explanationQuadrants > div:nth-child(odd) {
+    padding-right: 20px;
+  }
+
+  .explanationQuadrants > div:nth-child(even) {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .explanationQuadrants {
+    grid-template-columns: 1fr;
+    background-color: var(--color-bg);
+  }
+}
+
 .explanationQuadrants {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: var(--color-green1);
   grid-gap: 1px;
 }
+
 .explanationQuadrants > div {
   background-color: var(--color-bg);
-}
-.explanationQuadrants > div:nth-child(4n + 1),
-.explanationQuadrants > div:nth-child(4n + 2) {
-  padding-bottom: 20px;
-}
-.explanationQuadrants > div:nth-child(4n + 3),
-.explanationQuadrants > div:nth-child(4n + 4) {
-  padding-top: 20px;
-}
-.explanationQuadrants > div:nth-child(odd) {
-  padding-right: 20px;
-}
-.explanationQuadrants > div:nth-child(even) {
-  padding-left: 20px;
 }
 
 .quadrantHeading {
   color: var(--color-green1);
   margin: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.quadrantContent {
+  font-size: 1.6rem;
+  font-weight: 400;
 }

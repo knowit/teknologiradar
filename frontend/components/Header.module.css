@@ -1,15 +1,30 @@
-.title {
-  color: var(--color-green1);
-  text-align: center;
-  font-weight: 700;
-}
-
-.subTitle {
-  font-weight: 400;
-}
-
 .header {
-  padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
+  flex-flow: wrap;
+  justify-content: left;
+}
+
+.header svg {
+  height: 2.7rem;
+}
+
+.header h1 {
+  margin: 2rem;
+}
+
+header.root {
+  justify-content: center;
+}
+
+header.root svg {
+  height: 5rem;
+}
+
+.header.root h1 {
+  margin: 10rem 4rem 8rem;
+}
+
+.separator {
+  width: 100%;
+  border-bottom: 1px solid var(--color-purple);
 }
