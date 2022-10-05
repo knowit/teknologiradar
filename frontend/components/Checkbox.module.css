@@ -1,0 +1,48 @@
+.label {
+  position: relative;
+  display: inline-block;
+  padding-left: 2.6rem;
+  font-size: 1.4rem;
+}
+
+.label::before,
+.label::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+}
+
+.label::before {
+  left: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 0.1rem solid var(--color-green1);
+  border-radius: 0.5rem;
+  background-color: #dbeede;
+}
+
+.label::after {
+  left: 0.4rem;
+  top: 0.4rem;
+  height: 0.5rem;
+  width: 0.9rem;
+  border-left: 0.2rem solid var(--color-fg);
+  border-bottom: 0.2rem solid var(--color-fg);
+  transform: rotate(-45deg);
+}
+
+.input {
+  opacity: 0;
+}
+
+.input + label::after {
+  content: none;
+}
+
+.input:checked + label::after {
+  content: "";
+}
+
+.input:focus-within + label::before {
+  outline: auto 0.5rem;
+}
