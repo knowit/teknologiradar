@@ -1,6 +1,8 @@
+import { group } from "console";
 import { useRouter } from "next/router";
-import { ChangeEvent, memo, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { Group } from "../data/categories";
+import Checkbox from "./Checkbox";
 import styles from "./GroupFilter.module.css";
 
 interface Props {
@@ -60,21 +62,24 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
       }
     }
   };
+
   return (
-    <div className={styles.filtersWrapper}>
-      <p>Sort</p>
+    <div
+      className={styles.filtersWrapper}
+      role="group"
+      aria-labelledby="filter-label"
+    >
+      <div id="filter-label" className={styles.filterLabel}>
+        Filter by
+      </div>
       {sortedKeys.map((key) => (
-        <div key={key} className={styles.filter}>
-          <label htmlFor={key}>{key}</label>
-          <input
-            id={key}
-            key={key}
-            type="checkbox"
-            name={key}
-            checked={filters[key]}
-            onChange={onChange}
-          />
-        </div>
+        <Checkbox
+          id={key}
+          key={key}
+          checked={filters[key]}
+          onChange={onChange}
+          label={key}
+        />
       ))}
     </div>
   );

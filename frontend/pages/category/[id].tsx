@@ -57,12 +57,10 @@ const Category: NextPage<Props> = ({ category: categoryProp }) => {
 
   const onFilterChange = useCallback(
     (groups: string[]) => {
-      console.log(groups);
       if (groups[0] === "all") {
         setItems(allItems);
       } else {
         const newItems = groups.map((g) => itemsByCategory[g]).flat();
-        console.log(newItems);
         setItems(newItems);
       }
     },
@@ -70,20 +68,20 @@ const Category: NextPage<Props> = ({ category: categoryProp }) => {
   );
 
   return (
-    <>
-      <div className={styles.leftAligned}>
-        <h2>Filter by Work area</h2>
+    <main className={styles.main}>
+      <div>
+        <h2 className={styles.categoryHeader}>Filter by Work area</h2>
         <CategorySelector
           categories={categoryValues}
           asButtons
           onClick={setCategory}
         />
-        <GroupFilter groups={category.groups} onFilterChange={onFilterChange} />
       </div>
+      <GroupFilter groups={category.groups} onFilterChange={onFilterChange} />
       <div className={styles.separator} />
       <Quadrants items={items} />
       <ExplanationQuadrants />
-    </>
+    </main>
   );
 };
 

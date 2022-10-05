@@ -21,33 +21,39 @@ const Quadrants = ({ items }: Props) => {
   return (
     <div className={styles.quadrantsWrapper}>
       <Quadrant
+        id="priorities"
         name="Priorities"
         description="Technologies that we want to prioritize and use more"
         items={prioritizedItems}
       />
       <div className={styles.quadrantGrouping}>
         <Quadrant
+          id="keep"
           name="Keep"
           description="Technologies that we want to prioritize and use more"
           items={groupedByStatus["KEEP"]}
         />
         <Quadrant
+          id="adopt"
           name="Adopt"
           description="Technologies that we want to prioritize and use more"
           items={groupedByStatus["ADOPT"]}
         />
         <Quadrant
+          id="trial"
           name="Trial"
           description="Technologies that we want to prioritize and use more"
           items={groupedByStatus["TRIAL"]}
         />
         <Quadrant
+          id="test"
           name="Test"
           description="Technologies that we want to prioritize and use more"
           items={groupedByStatus["TEST"]}
         />
       </div>
       <Quadrant
+        id="hold-phase-out"
         name="Hold-Phase Out"
         description="Technologies that we want to prioritize and use more"
         items={groupedByStatus["HOLD"]}
