@@ -2,7 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import styles from "../styles/Home.module.css";
 import categories from "../data/categories";
-import CategorySelector from "../components/category/CategorySelector";
+import CategorySelector from "../components/CategorySelector";
 import { useTranslation } from "next-i18next";
 import Head from "next/head";
 

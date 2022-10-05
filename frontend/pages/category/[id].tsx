@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
-import CategorySelector from "../../components/category/CategorySelector";
+import CategorySelector from "../../components/CategorySelector";
 import ExplanationQuadrants from "../../components/category/ExplanationQuadrants";
 import categories, { Item } from "../../data/categories";
 import type { Category } from "../../data/categories";

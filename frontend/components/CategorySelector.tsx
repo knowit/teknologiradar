@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Category } from "../../data/categories";
+import { Category } from "../data/categories";
 import styles from "./CategorySelector.module.css";
 
 interface Props {
