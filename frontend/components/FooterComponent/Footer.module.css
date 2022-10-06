@@ -40,4 +40,8 @@
   .footer {
     grid-template: auto/ 1fr;
   }
+
+  .footer .socialMediaIcons {
+    flex-direction: row;
+  }
 }
