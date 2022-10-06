@@ -30,6 +30,12 @@
   list-style: none;
 }
 
+.socialMediaIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .footer {
     grid-template: auto/ 1fr;
