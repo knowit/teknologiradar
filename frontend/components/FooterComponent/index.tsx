@@ -21,11 +21,11 @@ export default function FooterComponent() {
   return (
     <footer className={footerStyle.footer}>
       <div>
-        <strong>Text</strong>
+        <strong>Learn more about us</strong>
         {renderLinks(learnMoreLinks)}
       </div>
       <div>
-        <strong>Text</strong>
+        <strong>Other languages</strong>
         {renderLinks(otherLanguages)}
       </div>
       <div>del 3</div>
