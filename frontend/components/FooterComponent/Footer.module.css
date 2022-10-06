@@ -1,6 +1,37 @@
 .footer {
-  background-color: red;
   display: grid;
-  grid-template: auto/ 1fr 1fr 1fr;
+  grid-template: auto/ 1fr 1fr 40px;
+  padding: 40px 10rem;
+  gap: 10px;
+  color: var(--color-green1);
+  background-color: var(--color-fg);
 }
 
+.footer a {
+  color: var(--color-green1);
+}
+
+.footer a:hover {
+  color: var(--color-green2);
+}
+
+.footer li {
+  margin-bottom: 8px;
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer ul {
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    grid-template: auto/ 1fr;
+  }
+}
