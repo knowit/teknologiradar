@@ -1,5 +1,6 @@
 {
-  "homeLink": "Knowit TechRadar",
+  "homeLink1": "Knowit ",
+  "homeLink2": "TechRadar",
   "areaNames": {
     "backend": "Backend",
     "ai-and-data": "AI & Data"
