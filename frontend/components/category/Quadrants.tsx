@@ -1,6 +1,7 @@
+import { useTranslation } from "next-i18next";
 import { memo, useMemo } from "react";
-import { Category, Item } from "../data/categories";
-import { groupBy } from "../util/helpers";
+import { Item } from "../../data/categories";
+import { groupBy } from "../../util/helpers";
 import Quadrant from "./Quadrant";
 import styles from "./Quadrants.module.css";
 
@@ -8,6 +9,7 @@ interface Props {
   items: Item[];
 }
 const Quadrants = ({ items }: Props) => {
+  const { t } = useTranslation("category");
   const groupedByStatus = useMemo(
     () => groupBy(items, (item) => item.status),
     [items]
@@ -22,40 +24,40 @@ const Quadrants = ({ items }: Props) => {
     <div className={styles.quadrantsWrapper}>
       <Quadrant
         id="priorities"
-        name="Priorities"
-        description="Technologies that we want to prioritize and use more"
+        name={t("priorities.title")}
+        description={t("priorities.description")}
         items={prioritizedItems}
       />
       <div className={styles.quadrantGrouping}>
         <Quadrant
           id="keep"
-          name="Keep"
-          description="Technologies that we want to prioritize and use more"
+          name={t("keep.title")}
+          description={t("keep.description")}
           items={groupedByStatus["KEEP"]}
         />
         <Quadrant
           id="adopt"
-          name="Adopt"
-          description="Technologies that we want to prioritize and use more"
+          name={t("adopt.title")}
+          description={t("adopt.description")}
           items={groupedByStatus["ADOPT"]}
         />
         <Quadrant
           id="trial"
-          name="Trial"
-          description="Technologies that we want to prioritize and use more"
+          name={t("trial.title")}
+          description={t("trial.description")}
           items={groupedByStatus["TRIAL"]}
         />
         <Quadrant
           id="test"
-          name="Test"
-          description="Technologies that we want to prioritize and use more"
+          name={t("test.title")}
+          description={t("test.description")}
           items={groupedByStatus["TEST"]}
         />
       </div>
       <Quadrant
         id="hold-phase-out"
-        name="Hold-Phase Out"
-        description="Technologies that we want to prioritize and use more"
+        name={t("hold.title")}
+        description={t("hold.description")}
         items={groupedByStatus["HOLD"]}
       />
     </div>

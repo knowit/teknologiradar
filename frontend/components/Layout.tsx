@@ -8,10 +8,10 @@ interface Props {
 }
 const Layout = ({ children }: Props) => {
   const { pathname } = useRouter();
-  const isRootPage = pathname === '/';
+  const isRootPage = pathname === "/";
   return (
     <div className={styles.main}>
-      <Header forRoot={isRootPage}/>
+      <Header forRoot={isRootPage} />
       <main>{children}</main>
     </div>
   );

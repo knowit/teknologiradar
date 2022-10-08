@@ -1,0 +1,15 @@
+{
+  "homeLink1": "Knowit ",
+  "homeLink2": "TechRadar",
+  "areaNames": {
+    "backend": "Backend",
+    "ai-and-data": "AI & Data"
+  },
+  "categoryNames": {
+    "all": "Alle",
+    "frameworks": "Rammeverk",
+    "languages": "Språk",
+    "methods": "Metoder",
+    "tools": "Verktøy"
+  }
+}
