@@ -2,8 +2,11 @@ import styles from './Footer.module.css';
 import type { LinkType } from './links';
 import { learnMoreLinks, otherLanguages } from './links';
 import SocialMediaLinks from './SocialMediaLinks';
+import { useTranslation } from 'next-i18next';
 
 export default function FooterComponent() {
+  const { t } = useTranslation('footer');
+
   function renderLinks(links: LinkType[], external: boolean) {
     if (!links || links.length <= 0) {
       return null;
@@ -14,10 +17,10 @@ export default function FooterComponent() {
           <li key={link.id}>
             {external ? (
               <a href={link.url} target={'_blank'} rel="noreferrer noopener">
-                {link.title}
+                {t(`links.${link.title}`)}
               </a>
             ) : (
-              <a href={link.url}>{link.title}</a>
+              <a href={link.url}>{t(`links.${link.title}`)}</a>
             )}
           </li>
         ))}
@@ -28,11 +31,11 @@ export default function FooterComponent() {
   return (
     <footer className={styles.footer}>
       <div>
-        <strong>Learn more about us</strong>
+        <strong>{t('learnMoreAboutUs')}</strong>
         {renderLinks(learnMoreLinks, true)}
       </div>
       <div>
-        <strong>Other languages</strong>
+        <strong>{t('otherLanguages')}</strong>
         {renderLinks(otherLanguages, false)}
       </div>
       <SocialMediaLinks />
