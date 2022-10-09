@@ -2,9 +2,10 @@
   display: grid;
   grid-template: auto/ 1fr 1fr 40px;
   padding: 40px 10rem;
-  gap: 10px;
+  gap: 30px;
   color: var(--color-green1);
   background-color: var(--color-fg);
+  border-top: 1px solid var(--color-green1);
 }
 
 .footer a {
