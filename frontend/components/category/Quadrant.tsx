@@ -1,5 +1,6 @@
+import { useTranslation } from "next-i18next";
 import { memo } from "react";
-import { Item } from "../data/categories";
+import { Item } from "../../data/categories";
 import styles from "./Quadrant.module.css";
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const Quadrant = ({ id, name, description, items }: Props) => {
+  const { t } = useTranslation("category");
   const descriptionId = `${id}_description`;
   return (
     <div className={styles.wrapper}>
@@ -35,7 +37,7 @@ const Quadrant = ({ id, name, description, items }: Props) => {
             </li>
           ))
         ) : (
-          <p>Her var det ingenting!</p>
+          <p>{t("noContent")}</p>
         )}
       </ul>
     </div>

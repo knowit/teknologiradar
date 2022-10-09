@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next";
 import { HTMLProps } from "react";
 import styles from "./Checkbox.module.css";
 
@@ -7,6 +8,7 @@ interface Props extends HTMLProps<HTMLInputElement> {
   label: string;
 }
 const Checkbox = ({ id, checked, label, onChange }: Props) => {
+  const { t } = useTranslation("common");
   return (
     <div>
       <input
@@ -19,7 +21,7 @@ const Checkbox = ({ id, checked, label, onChange }: Props) => {
         onChange={onChange}
       />
       <label htmlFor={id} className={styles.label}>
-        {label}
+        {t(`categoryNames.${label}`)}
       </label>
     </div>
   );
