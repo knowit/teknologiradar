@@ -6,7 +6,7 @@ export interface LinkType {
 
 export const learnMoreLinks: LinkType[] = [
   { id: 1, title: 'contactUs', url: 'https://www.knowit.no/kontakt/' },
-  { id: 2, title: 'blogg', url: 'https://blogg.knowit.no/' },
+  { id: 2, title: 'blog', url: 'https://blogg.knowit.no/' },
   { id: 3, title: 'services', url: 'https://www.knowit.no/tjenester/solutions/' },
 ];
 
