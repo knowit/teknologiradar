@@ -5,6 +5,7 @@ import categories from '../data/categories';
 import CategorySelector from '../components/CategorySelector';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
+import { localeList } from './localeList';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('home');
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const translations = locale ? await serverSideTranslations(locale, ['common', 'home', 'footer']) : {};
+  const translations = locale ? await serverSideTranslations(locale, localeList) : {};
   return {
     props: {
       ...translations,

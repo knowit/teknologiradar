@@ -11,6 +11,7 @@ import GroupFilter from '../../components/category/GroupFilter';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
+import { localeList } from '../localeList';
 
 interface Props {
   category: Category;
@@ -51,7 +52,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({ params, lo
   const id = params?.id;
   const category = id ? categories[id] : undefined;
 
-  const translations = locale ? await serverSideTranslations(locale, ['common', 'category', 'footer']) : {};
+  const translations = locale ? await serverSideTranslations(locale, localeList) : {};
 
   if (!category) {
     return { notFound: true };
