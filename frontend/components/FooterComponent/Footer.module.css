@@ -5,7 +5,7 @@
   gap: 30px;
   color: var(--color-green1);
   background-color: var(--color-fg);
-  border-top: 1px solid var(--color-green1);
+  border-top: 1px solid var(--color-purple);
 }
 
 .footer a {
