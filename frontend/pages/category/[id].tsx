@@ -11,7 +11,7 @@ import GroupFilter from '../../components/category/GroupFilter';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
-import { localeList } from '../localeList';
+import { localeList } from '../_app';
 
 interface Props {
   category: Category;

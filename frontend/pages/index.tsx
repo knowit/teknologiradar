@@ -5,7 +5,7 @@ import categories from '../data/categories';
 import CategorySelector from '../components/CategorySelector';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
-import { localeList } from './localeList';
+import { localeList } from './_app';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('home');
