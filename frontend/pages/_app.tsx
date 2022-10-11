@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 import Layout from '../components/Layout';
 import { appWithTranslation } from 'next-i18next';
 
-export const localeList = ['common', 'category', 'footer', 'home'];
+export const locales = ['common', 'category', 'footer', 'home'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
