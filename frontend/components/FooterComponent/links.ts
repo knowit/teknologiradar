@@ -11,8 +11,6 @@ export const learnMoreLinks: LinkType[] = [
 ];
 
 export const otherLanguages: LinkType[] = [
-  { id: 1, title: 'no', url: 'https://www.knowit.no/' },
+  { id: 1, title: 'nb', url: 'https://www.knowit.no/' },
   { id: 2, title: 'en', url: 'https://www.knowit.eu/' },
-  { id: 3, title: 'fi', url: 'https://www.knowit.fi/' },
-  { id: 4, title: 'se', url: 'https://www.knowit.se/' },
 ];

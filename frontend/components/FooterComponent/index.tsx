@@ -1,12 +1,14 @@
 import styles from './Footer.module.css';
 import type { LinkType } from './links';
+import Link from 'next/link';
 import { learnMoreLinks, otherLanguages } from './links';
 import SocialMediaLinks from './SocialMediaLinks';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
 
 export default function FooterComponent() {
   const { t } = useTranslation('footer');
-
+  const { asPath } = useRouter();
   function renderLinks(links: LinkType[], external: boolean) {
     if (!links || links.length <= 0) {
       return null;
@@ -20,7 +22,9 @@ export default function FooterComponent() {
                 {t(`links.${link.title}`)}
               </a>
             ) : (
-              <a href={link.url}>{t(`links.${link.title}`)}</a>
+              <Link href={asPath} locale={link.title}>
+                <a>{t(`links.${link.title}`)}</a>
+              </Link>
             )}
           </li>
         ))}
