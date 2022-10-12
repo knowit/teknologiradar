@@ -2,10 +2,22 @@
   .quadrantGrouping {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    transition: all 250ms;
+  }
+
+  .expanded {
+    grid-template-columns: 1fr;
+    transition: all 250ms;
+  }
+
+  .quadrantGrouping.expanded > div {
+    height: 50rem;
+    transition: all 250ms;
   }
 
   .quadrantGrouping > div {
     height: 25rem;
+    transition: all 250ms;
   }
 }
 

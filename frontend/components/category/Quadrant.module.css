@@ -6,9 +6,19 @@
   height: 15rem;
 }
 
+.hidden {
+  width: 0;
+  height: 0;
+  transition: all 350ms;
+}
+
 @media (max-width: 768px) {
   .wrapper {
     height: auto;
+  }
+
+  .toggleButton {
+    display: none;
   }
 }
 
@@ -38,14 +48,29 @@
   align-items: center;
   gap: 10px;
 }
+
 .titleWrapper {
   border-right: 1px solid var(--color-green1);
   border-bottom: 1px solid var(--color-green1);
-  padding: 5px;
+  color: var(--color-green1);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .titleWrapper {
+    grid-template-columns: auto;
+  }
+}
+
+.expanded {
+  color: var(--color-purple);
 }
 
 .quadrantTitle {
-  color: var(--color-green1);
   padding: 0;
   margin: 0;
   font-weight: 400;
@@ -57,16 +82,19 @@
     display: none;
   }
 }
+
 .description {
   padding: 0;
   margin: 0;
 }
+
 .quadrantList {
   padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .quadrantListItem {
   padding: 5px;
   display: block;

@@ -4,6 +4,10 @@
   "filterByCategory": "Filtrer på Kategori",
   "noContent": "Ingenting funnet!",
   "explanationQuadrantTitle": "Terminologi",
+  "buttons": {
+    "expand": "Vis mere",
+    "collapse": "Vis mindre"
+  },
   "priorities": {
     "title": "Prioriteringer",
     "description": "Teknologier vi vil prioritere og bruke mer",

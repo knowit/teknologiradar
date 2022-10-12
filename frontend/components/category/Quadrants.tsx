@@ -1,64 +1,71 @@
-import { useTranslation } from "next-i18next";
-import { memo, useMemo } from "react";
-import { Item } from "../../data/categories";
-import { groupBy } from "../../util/helpers";
-import Quadrant from "./Quadrant";
-import styles from "./Quadrants.module.css";
+import { useTranslation } from 'next-i18next';
+import { memo, useMemo, useState } from 'react';
+import { Item, Status } from '../../data/categories';
+import { groupBy } from '../../util/helpers';
+import Quadrant from './Quadrant';
+import styles from './Quadrants.module.css';
+
+export enum QuadrantType {
+  Priorities = 'PRIORITIES',
+  Keep = 'KEEP',
+  Adopt = 'ADOPT',
+  Trial = 'TRIAL',
+  Test = 'TEST',
+  Hold = 'HOLD',
+}
+
+export const groupedQuadrants: Array<QuadrantType> = [
+  QuadrantType.Keep,
+  QuadrantType.Adopt,
+  QuadrantType.Trial,
+  QuadrantType.Test,
+];
 
 interface Props {
   items: Item[];
 }
-const Quadrants = ({ items }: Props) => {
-  const { t } = useTranslation("category");
-  const groupedByStatus = useMemo(
-    () => groupBy(items, (item) => item.status),
-    [items]
-  );
 
-  const prioritizedItems = useMemo(
-    () => items.filter((item) => !!item.priority),
-    [items]
-  );
+const Quadrants = ({ items }: Props) => {
+  const { t } = useTranslation('category');
+  const groupedByStatus = useMemo(() => groupBy(items, (item) => item.status), [items]);
+  const prioritizedItems = useMemo(() => items.filter((item) => !!item.priority), [items]);
+
+  const [expandedId, setExpandedId] = useState<QuadrantType | null>(null);
+
+  const quadrantGroupingClass = `${styles.quadrantGrouping} ${
+    expandedId && groupedQuadrants.includes(expandedId) ? styles.expanded : ''
+  }`;
 
   return (
     <div className={styles.quadrantsWrapper}>
       <Quadrant
-        id="priorities"
-        name={t("priorities.title")}
-        description={t("priorities.description")}
+        id={QuadrantType.Priorities}
+        name={t('priorities.title')}
+        description={t('priorities.description')}
         items={prioritizedItems}
+        setExpandedId={(value) => setExpandedId(value)}
+        expandedId={expandedId}
       />
-      <div className={styles.quadrantGrouping}>
-        <Quadrant
-          id="keep"
-          name={t("keep.title")}
-          description={t("keep.description")}
-          items={groupedByStatus["KEEP"]}
-        />
-        <Quadrant
-          id="adopt"
-          name={t("adopt.title")}
-          description={t("adopt.description")}
-          items={groupedByStatus["ADOPT"]}
-        />
-        <Quadrant
-          id="trial"
-          name={t("trial.title")}
-          description={t("trial.description")}
-          items={groupedByStatus["TRIAL"]}
-        />
-        <Quadrant
-          id="test"
-          name={t("test.title")}
-          description={t("test.description")}
-          items={groupedByStatus["TEST"]}
-        />
+      <div className={quadrantGroupingClass}>
+        {groupedQuadrants.map((quadrant) => (
+          <Quadrant
+            key={quadrant as string}
+            id={quadrant}
+            name={t(`${(quadrant as string).toLowerCase()}.title`)}
+            description={t(`${(quadrant as string).toLowerCase()}.description`)}
+            items={groupedByStatus[quadrant as Status]}
+            setExpandedId={(value) => setExpandedId(value)}
+            expandedId={expandedId}
+          />
+        ))}
       </div>
       <Quadrant
-        id="hold-phase-out"
-        name={t("hold.title")}
-        description={t("hold.description")}
-        items={groupedByStatus["HOLD"]}
+        id={QuadrantType.Hold}
+        name={t('hold.title')}
+        description={t('hold.description')}
+        items={groupedByStatus['HOLD']}
+        setExpandedId={(value) => setExpandedId(value)}
+        expandedId={expandedId}
       />
     </div>
   );

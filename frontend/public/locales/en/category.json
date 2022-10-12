@@ -4,6 +4,10 @@
   "filterByCategory": "Filter by category",
   "noContent": "Nothing found!",
   "explanationQuadrantTitle": "Terminology",
+  "buttons": {
+    "expand": "Show more",
+    "collapse": "Show less"
+  },
   "priorities": {
     "title": "Priorities",
     "description": "Technologies that we want to prioritize and use more",

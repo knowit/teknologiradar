@@ -4,7 +4,11 @@ import styles from './Footer.module.css';
 export default function SocialMediaLinks() {
   return (
     <div className={styles.socialMediaIcons}>
-      <a href={'https://www.instagram.com/weareknowit/'} target={'_blank'} rel="noreferrer noopener">
+      <a
+        href={'https://www.instagram.com/weareknowit/'}
+        target={'_blank'}
+        rel="noreferrer noopener"
+      >
         <Image src="/social-icons/instagram.svg" height={40} width={40} alt={'Instagram logo'} />
       </a>
       <a href={'https://www.linkedin.com/company/8067'} target={'_blank'} rel="noreferrer noopener">

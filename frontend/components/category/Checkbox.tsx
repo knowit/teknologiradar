@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next";
-import { HTMLProps } from "react";
-import styles from "./Checkbox.module.css";
+import { useTranslation } from 'next-i18next';
+import { HTMLProps } from 'react';
+import styles from './Checkbox.module.css';
 
 interface Props extends HTMLProps<HTMLInputElement> {
   id: string;
@@ -8,7 +8,7 @@ interface Props extends HTMLProps<HTMLInputElement> {
   label: string;
 }
 const Checkbox = ({ id, checked, label, onChange }: Props) => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   return (
     <div>
       <input
