@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <Head>
         <title>{t('pageTitle')}</title>
       </Head>
-      <div className={styles.container}>
+      <main className={styles.container}>
         <div className={styles.descriptionWrapper}>
           <p className={styles.description}>{t('introduction')}</p>
         </div>
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <div className={styles.categoryWrapper}>
           <CategorySelector categories={Object.values(categories)} />
         </div>
-      </div>
+      </main>
     </>
   );
 };

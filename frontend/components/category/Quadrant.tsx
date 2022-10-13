@@ -1,6 +1,7 @@
 import { useTranslation } from 'next-i18next';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { Item } from '../../data/categories';
+import { useMedia } from 'react-use';
 import styles from './Quadrant.module.css';
 import QuadrantButton from './QuadrantButton';
 import { groupedQuadrants, QuadrantType } from './Quadrants';
@@ -33,6 +34,9 @@ const CloseSvg = () => {
 const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, index }: Props) => {
   const pinnedQuadrants: Array<QuadrantType> = [QuadrantType.Priorities, QuadrantType.Hold];
 
+  // If any expanded and viewport change to mobile, reset expansion
+  const isMobileViewport = useMedia('(max-width: 768px)');
+
   const { t } = useTranslation('category');
   const descriptionId = `${id}_description`;
   const isExpanded = expandedId === id;
@@ -40,11 +44,14 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
   const showQuadrant =
     expandedId === null ||
     isExpanded ||
+    isMobileViewport ||
     !groupedQuadrants.includes(id) ||
     !groupedQuadrants.includes(expandedId);
 
-  const titleClass = `${styles.titleWrapper} ${isExpanded ? styles.expanded : ''}`;
-  const quadrantWrapperClass = isExpanded ? `${styles[`quadrant_${index}`]}` : '';
+  const titleClass = `${styles.titleWrapper} ${isExpanded ? styles.titleExpanded : ''}`;
+  const quadrantWrapperClass = isExpanded
+    ? `${styles.quadrandExpanded} ${styles[`quadrant_${index}`]}`
+    : '';
 
   return (
     <>
@@ -71,7 +78,7 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
                   className={styles.closeButton}
                   onClick={() => setExpandedId(null)}
                 >
-                  {t('buttons.close')}
+                  <span className={styles.closeButtonText}>{t('buttons.close')}</span>
                   <CloseSvg />
                 </div>
               )}

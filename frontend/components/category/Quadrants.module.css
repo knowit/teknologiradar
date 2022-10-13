@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr;
   }
   .quadrantGrouping > div {
-    height: 25rem;
+    height: 22rem;
     transition: width 250ms, height 250ms;
   }
 
@@ -31,7 +31,7 @@
   }
 
   .quadrantGrouping.expanded > div {
-    height: 50rem;
+    height: 44rem;
     transition: width 250ms, height 250ms;
   }
 }
