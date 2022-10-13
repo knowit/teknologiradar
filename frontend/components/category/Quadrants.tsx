@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { memo, useEffect, useMemo, useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 
 import { Item, Status } from '../../data/categories';
 import { groupBy } from '../../util/helpers';

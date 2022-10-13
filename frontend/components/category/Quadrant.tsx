@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { memo, useEffect } from 'react';
+import { memo } from 'react';
 import { Item } from '../../data/categories';
 import { useMedia } from 'react-use';
 import styles from './Quadrant.module.css';
@@ -19,8 +19,6 @@ interface Props {
 }
 
 const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, index }: Props) => {
-  const pinnedQuadrants: Array<QuadrantType> = [QuadrantType.Priorities, QuadrantType.Hold];
-
   // If any expanded and viewport change to mobile, reset expansion
   const isMobileViewport = useMedia('(max-width: 768px)');
 
