@@ -11,5 +11,9 @@
     "languages": "Languages",
     "methods": "Methods",
     "tools": "Tools"
+  },
+  "languages": {
+    "nb": "Norsk",
+    "en": "Engelsk"
   }
 }

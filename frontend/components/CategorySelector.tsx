@@ -1,8 +1,8 @@
-import { useTranslation } from "next-i18next";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Category } from "../data/categories";
-import styles from "./CategorySelector.module.css";
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Category } from '../data/categories';
+import styles from './CategorySelector.module.css';
 
 interface Props {
   categories: Category[];
@@ -17,16 +17,9 @@ interface CategoryComponentProps {
   onClick: (category: Category) => void;
 }
 
-const CategoryComponent = ({
-  category,
-  current,
-  asButton,
-  onClick,
-}: CategoryComponentProps) => {
-  const { t } = useTranslation("common");
-  const classNames = `${styles.categoryContent} ${
-    current ? styles.current : undefined
-  } ${asButton ? styles.button : undefined}`;
+const CategoryComponent = ({ category, current, asButton, onClick }: CategoryComponentProps) => {
+  const { t } = useTranslation('common');
+  const classNames = `${styles.categoryContent} ${current ? styles.current : undefined} ${asButton ? styles.button : undefined}`;
   if (asButton) {
     return (
       <button onClick={() => onClick(category)} className={classNames}>
@@ -36,7 +29,7 @@ const CategoryComponent = ({
   } else {
     return (
       <Link href={`/category/${category.link}`}>
-        <a aria-current={current ? "page" : undefined} className={classNames}>
+        <a aria-current={current ? 'page' : undefined} className={classNames}>
           {t(`areaNames.${category.name}`)}
         </a>
       </Link>
@@ -59,15 +52,8 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
       <ul className={styles.categoryList}>
         {categories.map((category) => (
           <li key={category.link} className={styles.categoryListItem}>
-            <CategoryComponent
-              category={category}
-              onClick={onClicked}
-              asButton={asButtons}
-              current={category.link === query.id}
-            />
-            {category.link === query.id && (
-              <div className={styles.activeIndicator} />
-            )}
+            <CategoryComponent category={category} onClick={onClicked} asButton={asButtons} current={category.link === query.id} />
+            {category.link === query.id && <div className={styles.activeIndicator} />}
           </li>
         ))}
       </ul>

@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next";
-import { memo } from "react";
-import styles from "./ExplanationQuadrants.module.css";
+import { useTranslation } from 'next-i18next';
+import { memo } from 'react';
+import styles from './ExplanationQuadrants.module.css';
 interface ExplanationQuadrantProps {
   title: string;
   content: string;
@@ -16,46 +16,28 @@ const ExplanationQuadrant = ({ title, content }: ExplanationQuadrantProps) => {
 };
 
 const ExplanationQuadrants = () => {
-  const { t } = useTranslation("category");
+  const { t } = useTranslation('category');
   return (
     <aside>
-      <h2>{t("explanationQuadrantTitle")}</h2>
+      <h2>{t('explanationQuadrantTitle')}</h2>
       <div className={styles.quadrantWrapper}>
-        <ExplanationQuadrant
-          title={t("priorities.title")}
-          content={t("priorities.explanation")}
-        />
+        <ExplanationQuadrant title={t('priorities.title')} content={t('priorities.explanation')} />
         <div className={styles.explanationQuadrants}>
           <div>
-            <ExplanationQuadrant
-              title={t("keep.title")}
-              content={t("keep.explanation")}
-            />
+            <ExplanationQuadrant title={t('keep.title')} content={t('keep.explanation')} />
           </div>
           <div>
-            <ExplanationQuadrant
-              title={t("adopt.title")}
-              content={t("adopt.explanation")}
-            />
+            <ExplanationQuadrant title={t('adopt.title')} content={t('adopt.explanation')} />
           </div>
           <div>
-            <ExplanationQuadrant
-              title={t("trial.title")}
-              content={t("trial.explanation")}
-            />
+            <ExplanationQuadrant title={t('trial.title')} content={t('trial.explanation')} />
           </div>
           <div>
-            <ExplanationQuadrant
-              title={t("test.title")}
-              content={t("test.explanation")}
-            />
+            <ExplanationQuadrant title={t('test.title')} content={t('test.explanation')} />
           </div>
         </div>
 
-        <ExplanationQuadrant
-          title={t("hold.title")}
-          content={t("hold.explanation")}
-        />
+        <ExplanationQuadrant title={t('hold.title')} content={t('hold.explanation')} />
       </div>
     </aside>
   );

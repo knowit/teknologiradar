@@ -1,4 +1,3 @@
-
 .categoryList {
   display: flex;
   margin: 0;
@@ -26,7 +25,6 @@
 .button {
   font-size: 1.6rem;
 }
-
 
 .current {
   background-color: #fac0b1;
