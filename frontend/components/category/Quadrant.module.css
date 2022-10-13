@@ -6,17 +6,15 @@
   height: 15rem;
 }
 
-.hidden {
-  width: 0;
-  height: 0;
-  transition: all 350ms;
+.toggleButton {
+  padding-top: 5px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .wrapper {
     height: auto;
   }
-
   .toggleButton {
     display: none;
   }
@@ -24,7 +22,7 @@
 
 @media (min-width: 768px) {
   .wrapper {
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-color: var(--color-green1) var(--color-green1);
   }
   .wrapper::-webkit-scrollbar {
@@ -54,10 +52,9 @@
   border-bottom: 1px solid var(--color-green1);
   color: var(--color-green1);
   padding: 10px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   align-items: center;
-  gap: 1rem;
+  grid-gap: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -66,8 +63,32 @@
   }
 }
 
+.descriptionWrapper {
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .descriptionWrapper {
+    justify-content: end;
+  }
+}
+
 .expanded {
   color: var(--color-purple);
+}
+
+.closeButton {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: right;
+  cursor: pointer;
+  align-items: center;
+  grid-gap: 1rem;
+  cursor: pointer;
 }
 
 .quadrantTitle {
@@ -100,4 +121,25 @@
   display: block;
   background-color: rgba(75, 100, 85, 0.2);
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .quadrant_0 {
+    border-right: 4px solid var(--color-green1) !important;
+    border-bottom: 4px solid var(--color-green1) !important;
+  }
+  .quadrant_1 {
+    border-left: 4px solid var(--color-green1) !important;
+    border-bottom: 4px solid var(--color-green1) !important;
+  }
+
+  .quadrant_2 {
+    border-right: 4px solid var(--color-green1) !important;
+    border-top: 4px solid var(--color-green1) !important;
+  }
+
+  .quadrant_3 {
+    border-left: 4px solid var(--color-green1) !important;
+    border-top: 4px solid var(--color-green1) !important;
+  }
 }

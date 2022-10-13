@@ -6,7 +6,8 @@
   "explanationQuadrantTitle": "Terminology",
   "buttons": {
     "expand": "Show more",
-    "collapse": "Show less"
+    "collapse": "Show less",
+    "close": "Close expanded theme"
   },
   "priorities": {
     "title": "Priorities",

@@ -1,5 +1,6 @@
 import { useTranslation } from 'next-i18next';
-import { memo, useMemo, useState } from 'react';
+import { memo, useEffect, useMemo, useState } from 'react';
+import { useMedia } from 'react-use';
 import { Item, Status } from '../../data/categories';
 import { groupBy } from '../../util/helpers';
 import Quadrant from './Quadrant';
@@ -27,6 +28,13 @@ interface Props {
 
 const Quadrants = ({ items }: Props) => {
   const { t } = useTranslation('category');
+
+  // If any expanded and viewport change to mobile, reset expansion
+  const isMobileViewport = useMedia('(max-width: 768px)');
+  useEffect(() => {
+    if (isMobileViewport) setExpandedId(null);
+  }, [isMobileViewport]);
+
   const groupedByStatus = useMemo(() => groupBy(items, (item) => item.status), [items]);
   const prioritizedItems = useMemo(() => items.filter((item) => !!item.priority), [items]);
 
@@ -47,15 +55,16 @@ const Quadrants = ({ items }: Props) => {
         expandedId={expandedId}
       />
       <div className={quadrantGroupingClass}>
-        {groupedQuadrants.map((quadrant) => (
+        {groupedQuadrants.map((quadrant, index) => (
           <Quadrant
-            key={quadrant as string}
+            key={quadrant}
             id={quadrant}
             name={t(`${(quadrant as string).toLowerCase()}.title`)}
             description={t(`${(quadrant as string).toLowerCase()}.description`)}
             items={groupedByStatus[quadrant as Status]}
             setExpandedId={(value) => setExpandedId(value)}
             expandedId={expandedId}
+            index={index}
           />
         ))}
       </div>

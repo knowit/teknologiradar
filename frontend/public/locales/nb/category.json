@@ -6,7 +6,8 @@
   "explanationQuadrantTitle": "Terminologi",
   "buttons": {
     "expand": "Vis mere",
-    "collapse": "Vis mindre"
+    "collapse": "Vis mindre",
+    "close": "Lukk fokusert tema"
   },
   "priorities": {
     "title": "Prioriteringer",
