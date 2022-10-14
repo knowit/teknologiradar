@@ -1,8 +1,6 @@
 // This is an automatically generated file.
 // Please do not adjust it without adjusting the script.
-
 export type Status = 'TEST' | 'KEEP' | 'ADOPT' | 'TRIAL' | 'HOLD';
-
 export interface Item {
   name: string;
   status: Status;
