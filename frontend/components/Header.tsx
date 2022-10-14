@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import HeaderLogo from './logo/HeaderLogo';
 import styles from './Header.module.css';
-import { ArrowLeftIcon } from './icons';
+import { ForwardIcon } from './icons';
 
 interface Props {
   forRoot: boolean;
@@ -25,7 +25,7 @@ const Header = ({ forRoot }: Props) => {
       <header className={headerClassName}>
         <Link href={asPath} locale={toLocale}>
           <a className={styles.localeSwitch}>
-            {t(`languages.${toLocale}`)} <ArrowLeftIcon />
+            {t(`languages.${toLocale}`)} <ForwardIcon />
           </a>
         </Link>
         <h1>

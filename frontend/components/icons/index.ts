@@ -1,3 +1,3 @@
-import ArrowLeftIcon from './ArrowLeftIcon';
+import ForwardIcon from './ForwardIcon';
 
-export { ArrowLeftIcon };
+export { ForwardIcon };
