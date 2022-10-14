@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { learnMoreLinks, otherLanguages } from './links';
 import SocialMediaLinks from './SocialMediaLinks';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 export default function FooterComponent() {
   const { t } = useTranslation('footer');

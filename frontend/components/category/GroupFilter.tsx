@@ -1,9 +1,9 @@
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
-import { Group } from "../../data/categories";
-import Checkbox from "./Checkbox";
-import styles from "./GroupFilter.module.css";
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { Group } from '../../data/categories';
+import Checkbox from './Checkbox';
+import styles from './GroupFilter.module.css';
 
 interface Props {
   groups: Group[];
@@ -15,19 +15,19 @@ const toInitialFilter = (groups: Group[]) => {
     acc[curr.id] = false;
     return acc;
   }, {});
-  filters["all"] = true;
+  filters['all'] = true;
   return filters;
 };
 
 const GroupFilter = ({ groups, onFilterChange }: Props) => {
-  const { t } = useTranslation("category");
+  const { t } = useTranslation('category');
   const { pathname } = useRouter();
   const [filters, setFilters] = useState(toInitialFilter(groups));
   const sortedKeys = useMemo(
     () =>
       groups
         .map((g) => g.id)
-        .concat("all")
+        .concat('all')
         .sort(),
     [groups]
   );
@@ -45,8 +45,8 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
   }, [onFilterChange, filters]);
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.name === "all") {
-      if (filters["all"]) {
+    if (e.target.name === 'all') {
+      if (filters['all']) {
         return;
       }
       setFilters(toInitialFilter(groups));
@@ -65,22 +65,12 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
   };
 
   return (
-    <div
-      className={styles.filtersWrapper}
-      role="group"
-      aria-labelledby="filter-label"
-    >
+    <div className={styles.filtersWrapper} role="group" aria-labelledby="filter-label">
       <div id="filter-label" className={styles.filterLabel}>
-        {t("filterByCategory")}
+        {t('filterByCategory')}
       </div>
       {sortedKeys.map((key) => (
-        <Checkbox
-          id={key}
-          key={key}
-          checked={filters[key]}
-          onChange={onChange}
-          label={key}
-        />
+        <Checkbox id={key} key={key} checked={filters[key]} onChange={onChange} label={key} />
       ))}
     </div>
   );

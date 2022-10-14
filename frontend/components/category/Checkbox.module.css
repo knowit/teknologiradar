@@ -8,7 +8,7 @@
 .label::before,
 .label::after {
   position: absolute;
-  content: "";
+  content: '';
   display: inline-block;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .input:checked + label::after {
-  content: "";
+  content: '';
 }
 
 .input:focus-within + label::before {

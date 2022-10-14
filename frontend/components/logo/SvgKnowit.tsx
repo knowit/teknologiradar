@@ -1,10 +1,10 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from 'next-i18next';
 
 const SvgKnowit = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   return (
     <svg viewBox="0 0 119 27" xmlns="http://www.w3.org/2000/svg">
-      <title>{t("homeLink1")}</title>
+      <title>{t('homeLink1')}</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

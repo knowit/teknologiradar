@@ -1,14 +1,14 @@
-import Link from "next/link";
-import Head from "next/head";
-import HeaderLogo from "./logo/HeaderLogo";
-import styles from "./Header.module.css";
+import Link from 'next/link';
+import Head from 'next/head';
+import HeaderLogo from './logo/HeaderLogo';
+import styles from './Header.module.css';
 
 interface Props {
   forRoot: boolean;
 }
 
 const Header = ({ forRoot }: Props) => {
-  const headerClassName = `${styles.header} ${forRoot ? styles.root : ""}`;
+  const headerClassName = `${styles.header} ${forRoot ? styles.root : ''}`;
   return (
     <>
       <Head>
