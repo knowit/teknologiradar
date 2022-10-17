@@ -2,8 +2,14 @@
   "homeLink1": "Knowit ",
   "homeLink2": "TechRadar",
   "areaNames": {
+    "aidata": "AI & Data",
     "backend": "Backend",
-    "ai-and-data": "AI & Data"
+    "cloud": "Cloud",
+    "cybersec": "Cyber security",
+    "design": "Design",
+    "frontend": "Frontend",
+    "iot": "IOT",
+    "mobil": "Mobil"
   },
   "categoryNames": {
     "all": "Alle",
@@ -11,6 +17,9 @@
     "languages": "Språk",
     "methods": "Metoder",
     "tools": "Verktøy"
+  },
+  "dialog": {
+    "close": "Lukk"
   },
   "languages": {
     "nb": "Norwegian",

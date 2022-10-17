@@ -12,6 +12,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head';
 import { locales } from '../_app';
+import { InfoModalProvider } from '../../components/InfoModal';
 
 interface Props {
   category: Category;
@@ -96,20 +97,22 @@ const Category: NextPage<Props> = ({ category: categoryProp }) => {
       <Head>
         <title>
           {t('category:pageTitle', {
-            area: t(`common:areaNames.${category.name}`),
+            area: t(`common:areaNames.${category.link}`, category.name),
           })}
         </title>
       </Head>
-      <main className={styles.main}>
-        <div>
-          <h2 className={styles.categoryHeader}>{t('filterByArea')}</h2>
-          <CategorySelector categories={categoryValues} asButtons onClick={setCategory} />
-        </div>
-        <GroupFilter groups={category.groups} onFilterChange={onFilterChange} />
-        <div className={styles.separator} />
-        <Quadrants items={items} />
-        <ExplanationQuadrants />
-      </main>
+      <InfoModalProvider>
+        <main className={styles.main}>
+          <div>
+            <h2 className={styles.categoryHeader}>{t('filterByArea')}</h2>
+            <CategorySelector categories={categoryValues} asButtons onClick={setCategory} />
+          </div>
+          <GroupFilter groups={category.groups} onFilterChange={onFilterChange} />
+          <div className={styles.separator} />
+          <Quadrants items={items} />
+          <ExplanationQuadrants />
+        </main>
+      </InfoModalProvider>
     </>
   );
 };

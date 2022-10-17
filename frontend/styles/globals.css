@@ -2,14 +2,14 @@
   --breakpoint-tablet: 768px;
 
   --color-green1: #b7debd;
-  --color-green2: #dfecdf;
+  --color-green2: #dbeede;
   --color-purple: #ff00ff;
   --color-bg: #333333;
   --color-fg: #292929;
 
   --color-text: #e4e1db;
 
-  --color-border: hsl(17, 24%, 90%);
+  --color-border: #a5b1aa;
 }
 
 html {

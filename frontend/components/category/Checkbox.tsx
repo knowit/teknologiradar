@@ -21,7 +21,7 @@ const Checkbox = ({ id, checked, label, onChange }: Props) => {
         onChange={onChange}
       />
       <label htmlFor={id} className={styles.label}>
-        {t(`categoryNames.${label}`)}
+        {t(`categoryNames.${id}`, label)}
       </label>
     </div>
   );

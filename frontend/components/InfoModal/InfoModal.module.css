@@ -1,0 +1,29 @@
+.wrapper {
+  background: var(--color-green2);
+  color: var(--color-bg);
+  width: calc(100% - 20vw);
+  max-width: 60rem;
+  margin: 40vh auto;
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.dialogTitle {
+  margin: 0px;
+}
+
+.dialogButton {
+  all: unset;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
