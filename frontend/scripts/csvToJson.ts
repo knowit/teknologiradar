@@ -19,25 +19,28 @@ const objects: Record<string, string>[] = values.map((value) => {
 });
 
 const groupedByArea = groupBy(objects, (obj) => obj['area']);
-const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, object>>((acc, curr) => {
-  const [key, entries] = curr;
-  const byType = Object.values(groupBy(entries, (entry) => entry.type));
-  acc[key] = {
-    name: key,
-    link: key,
-    groups: byType.map((items) => ({
-      name: items[0].type,
-      id: items[0].type,
-      items: items.map(({ item, status, priority }) => ({
-        name: item,
-        status,
-        priority,
+const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, object>>(
+  (acc, curr) => {
+    const [key, entries] = curr;
+    const byType = Object.values(groupBy(entries, (entry) => entry.type));
+    acc[key] = {
+      name: key,
+      link: key,
+      groups: byType.map((items) => ({
+        name: items[0].type,
+        id: items[0].type,
+        items: items.map(({ item, status, priority }) => ({
+          name: item,
+          status,
+          priority,
+        })),
       })),
-    })),
-  };
+    };
 
-  return acc;
-}, {});
+    return acc;
+  },
+  {}
+);
 
 const categoriesData = JSON.stringify(withGroupedTypes, replacer);
 

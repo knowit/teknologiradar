@@ -1,4 +1,7 @@
-export const groupBy = <T, KeyType extends keyof any>(collection: T[], func: (item: T) => KeyType): Record<KeyType, T[]> => {
+export const groupBy = <T, KeyType extends keyof any>(
+  collection: T[],
+  func: (item: T) => KeyType
+): Record<KeyType, T[]> => {
   return collection.reduce<Record<KeyType, T[]>>((acc, curr) => {
     const value = func(curr);
     const accValue = acc[value];

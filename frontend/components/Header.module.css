@@ -4,6 +4,12 @@
   justify-content: left;
 }
 
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+}
+
 .header svg {
   height: 2.7rem;
 }

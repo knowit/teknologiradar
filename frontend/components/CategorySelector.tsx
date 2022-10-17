@@ -19,7 +19,9 @@ interface CategoryComponentProps {
 
 const CategoryComponent = ({ category, current, asButton, onClick }: CategoryComponentProps) => {
   const { t } = useTranslation('common');
-  const classNames = `${styles.categoryContent} ${current ? styles.current : undefined} ${asButton ? styles.button : undefined}`;
+  const classNames = `${styles.categoryContent} ${current ? styles.current : undefined} ${
+    asButton ? styles.button : undefined
+  }`;
   if (asButton) {
     return (
       <button onClick={() => onClick(category)} className={classNames}>
@@ -52,7 +54,12 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
       <ul className={styles.categoryList}>
         {categories.map((category) => (
           <li key={category.link} className={styles.categoryListItem}>
-            <CategoryComponent category={category} onClick={onClicked} asButton={asButtons} current={category.link === query.id} />
+            <CategoryComponent
+              category={category}
+              onClick={onClicked}
+              asButton={asButtons}
+              current={category.link === query.id}
+            />
             {category.link === query.id && <div className={styles.activeIndicator} />}
           </li>
         ))}

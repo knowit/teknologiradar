@@ -11,7 +11,15 @@ const Checkbox = ({ id, checked, label, onChange }: Props) => {
   const { t } = useTranslation('common');
   return (
     <div>
-      <input className={styles.input} id={id} key={id} type="checkbox" name={id} checked={checked} onChange={onChange} />
+      <input
+        className={styles.input}
+        id={id}
+        key={id}
+        type="checkbox"
+        name={id}
+        checked={checked}
+        onChange={onChange}
+      />
       <label htmlFor={id} className={styles.label}>
         {t(`categoryNames.${label}`)}
       </label>

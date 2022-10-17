@@ -3,9 +3,36 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
   .quadrantGrouping > div {
-    height: 25rem;
+    height: 22rem;
+    transition: width 250ms, height 250ms;
+  }
+
+  .quadrantGrouping > div:nth-child(4n + 1),
+  .quadrantGrouping > div:nth-child(4n + 2) {
+    border-bottom: 2px solid var(--color-green1);
+  }
+
+  .quadrantGrouping > div:nth-child(4n + 3),
+  .quadrantGrouping > div:nth-child(4n + 4) {
+    border-top: 2px solid var(--color-green1);
+  }
+
+  .quadrantGrouping > div:nth-child(odd) {
+    border-right: 2px solid var(--color-green1);
+  }
+
+  .quadrantGrouping > div:nth-child(even) {
+    border-left: 2px solid var(--color-green1);
+  }
+
+  .expanded {
+    grid-template-columns: 1fr;
+  }
+
+  .quadrantGrouping.expanded > div {
+    height: 44rem;
+    transition: width 250ms, height 250ms;
   }
 }
 
