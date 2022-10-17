@@ -20,5 +20,9 @@
   },
   "dialog": {
     "close": "Lukk"
+  }, 
+  "languages": {
+    "nb": "Norwegian",
+    "en": "English"
   }
 }
