@@ -43,6 +43,8 @@ jobs:
           node-version: "16"
           cache: "yarn"
           cache-dependency-path: './frontend/yarn.lock'
+        working-directory: frontend
+        run: yarn --frozen-lockfile
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
