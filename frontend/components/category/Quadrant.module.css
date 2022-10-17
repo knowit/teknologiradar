@@ -8,6 +8,8 @@
 }
 
 .toggleButton {
+  all: unset;
+  cursor: pointer;
   padding-top: 5px;
   cursor: pointer;
 }
