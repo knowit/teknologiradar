@@ -44,7 +44,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: frontend/yarn.lock
+          cache: "yarn"
+          cache-dependecy-path: frontend/yarn.lock
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
