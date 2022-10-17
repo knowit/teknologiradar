@@ -42,7 +42,7 @@ jobs:
         with:
           node-version: "16"
           cache: "yarn"
-          cache-directory-path: frontend/yarn.lock
+          cache-dependency-path: './frontend/yarn.lock'
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
