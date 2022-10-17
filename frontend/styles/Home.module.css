@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5.5rem;
+  gap: 3rem;
 }
 
 .descriptionWrapper {
@@ -18,4 +18,8 @@
 .description {
   text-align: center;
   margin: 10rem 20%;
+}
+
+.categoryWrapper {
+  padding: 2.5rem 10rem;
 }

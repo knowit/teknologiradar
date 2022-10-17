@@ -1,7 +1,9 @@
 import { useTranslation } from 'next-i18next';
-import { memo } from 'react';
+import { memo, useState } from 'react';
+import { useRouter } from 'next/router';
 import { Item } from '../../data/categories';
 import styles from './Quadrant.module.css';
+import { useInfoModal } from '../InfoModal/InfoModalProvider';
 
 interface Props {
   id: string;
@@ -12,7 +14,11 @@ interface Props {
 
 const Quadrant = ({ id, name, description, items }: Props) => {
   const { t } = useTranslation('category');
+  const { locale } = useRouter();
   const descriptionId = `${id}_description`;
+  
+  const { open } = useInfoModal();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.headingWrapper}>
@@ -27,15 +33,24 @@ const Quadrant = ({ id, name, description, items }: Props) => {
       </div>
       <ul className={styles.quadrantList} aria-labelledby={id} aria-describedby={descriptionId}>
         {items ? (
-          items?.map((item) => (
-            <li key={item.name} className={styles.quadrantListItem}>
-              {item.name}
-            </li>
-          ))
+          items?.map((item, index) => {
+            const descriptionText = locale === 'nb' ? item.reason_no : item.reason_en;
+            const hasDescription = descriptionText && descriptionText.length > 0;
+            const itemClass = [styles.quadrantListItem, hasDescription ? styles.description : ''].join(' ');
+            const itemRole = hasDescription ? 'button' : 'listitem';
+            return (
+              <>
+                <li key={index} className={itemClass} role={itemRole} onClick={() => open({ title: item.name, message: descriptionText})}>
+                  {item.name}
+                </li>
+              </>
+            );
+          })
         ) : (
           <p>{t('noContent')}</p>
         )}
       </ul>
+      {/* <GroupItemInfo title={itemInfo?.title} message={itemInfo?.message} show={itemInfo?.show} /> */}
     </div>
   );
 };

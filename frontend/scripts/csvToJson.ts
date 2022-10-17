@@ -1,5 +1,8 @@
 import { readFileSync, writeFileSync } from 'fs';
+import { capitalize } from 'lodash';
 import { groupBy } from '../util/helpers';
+
+const validStatuses = ['TEST', 'KEEP', 'ADOPT', 'TRIAL', 'HOLD'];
 
 const replacer = (key: string, value: string) => {
   if (key === 'priority') {
@@ -9,9 +12,9 @@ const replacer = (key: string, value: string) => {
 };
 
 const [fields, ...values] = readFileSync('data.csv').toString().split('\r');
-const splitFields = fields.split(',');
+const splitFields = fields.split('|');
 const objects: Record<string, string>[] = values.map((value) => {
-  const valueAsArray = value.replace('\n', '').split(',');
+  const valueAsArray = value.replaceAll('\n', '').split('|');
   return splitFields.reduce<Record<string, string>>((acc, curr, i) => {
     acc[curr] = valueAsArray[i];
     return acc;
@@ -23,16 +26,20 @@ const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, obj
   const [key, entries] = curr;
   const byType = Object.values(groupBy(entries, (entry) => entry.type));
   acc[key] = {
-    name: key,
+    name: capitalize(key),
     link: key,
     groups: byType.map((items) => ({
-      name: items[0].type,
-      id: items[0].type,
-      items: items.map(({ item, status, priority }) => ({
-        name: item,
-        status,
-        priority,
-      })),
+      name: capitalize(items[0].type),
+      id: items[0].type.replaceAll(' ', '-').replaceAll('/', '-'),
+      items: items
+        .filter((item) => item.status && validStatuses.includes(item.status.toUpperCase())) // Ignore if not valid status
+        .map(({ item, status, priority, reason_no, reason_en }) => ({
+          name: item,
+          status: status.toUpperCase(),
+          priority,
+          reason_no: reason_no,
+          reason_en: reason_en,
+        })),
     })),
   };
 
@@ -49,6 +56,8 @@ export interface Item {
   name: string;
   status: Status;
   priority?: boolean;
+  reason_no?: string;
+  reason_en?: string;
 }
 export interface Group {
   name: string;

@@ -23,14 +23,14 @@ const CategoryComponent = ({ category, current, asButton, onClick }: CategoryCom
   if (asButton) {
     return (
       <button onClick={() => onClick(category)} className={classNames}>
-        {t(`areaNames.${category.name}`)}
+        {t(`areaNames.${category.link}`, category.name)}
       </button>
     );
   } else {
     return (
       <Link href={`/category/${category.link}`}>
         <a aria-current={current ? 'page' : undefined} className={classNames}>
-          {t(`areaNames.${category.name}`)}
+          {t(`areaNames.${category.link}`, category.name)}
         </a>
       </Link>
     );
@@ -47,10 +47,12 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
     onClick?.(category);
   };
 
+  const sortedCategories = categories.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <nav>
       <ul className={styles.categoryList}>
-        {categories.map((category) => (
+        {sortedCategories.map((category) => (
           <li key={category.link} className={styles.categoryListItem}>
             <CategoryComponent category={category} onClick={onClicked} asButton={asButtons} current={category.link === query.id} />
             {category.link === query.id && <div className={styles.activeIndicator} />}

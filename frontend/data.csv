@@ -1,121 +1,479 @@
-type,area,item,status,priority
-languages,backend,Kotlin,ADOPT,TRUE
-languages,backend,Clojure,TEST,FALSE
-languages,backend,C#,KEEP,FALSE
-languages,backend,Python,KEEP,TRUE
-languages,backend,Java,KEEP,FALSE
-languages,backend,Ruby,KEEP,FALSE
-languages,backend,Rust,TRIAL,TRUE
-languages,backend,GraphQL,TRIAL,FALSE
-languages,backend,Golang,TRIAL,TRUE
-languages,backend,Scala,HOLD,FALSE
-frameworks,backend,Mockk,ADOPT,FALSE
-frameworks,backend,ASP.NET Core,ADOPT,FALSE
-frameworks,backend,.NET 5.0+,ADOPT,FALSE
-frameworks,backend,pytorch,TEST,FALSE
-frameworks,backend,Rockt,TEST,FALSE
-frameworks,backend,Actix,TEST,FALSE
-frameworks,backend,Exposed,TEST,FALSE
-frameworks,backend,Pandas,KEEP,FALSE
-frameworks,backend,Django,KEEP,FALSE
-frameworks,backend,Spring Boot,KEEP,FALSE
-frameworks,backend,Hibernate,KEEP,FALSE
-frameworks,backend,Quarkus,TRIAL,FALSE
-frameworks,backend,Micronaut,TRIAL,TRUE
-frameworks,backend,WebFlux,TRIAL,FALSE
-frameworks,backend,NodeJS,TRIAL,FALSE
-frameworks,backend,SQLAlchemy ORM,TRIAL,FALSE
-frameworks,backend,Koin,TRIAL,FALSE
-frameworks,backend,Ktorm,TRIAL,FALSE
-frameworks,backend,Ktor,TRIAL,FALSE
-frameworks,backend,Play2 Framework,HOLD,FALSE
-tools,backend,SNS,ADOPT,FALSE
-tools,backend,SQS,ADOPT,FALSE
-tools,backend,Owasp security checking,ADOPT,FALSE
-tools,backend,Terraform,ADOPT,TRUE
-tools,backend,Redis,ADOPT,FALSE
-tools,backend,Kafka,ADOPT,TRUE
-tools,backend,GraalVM,TEST,FALSE
-tools,backend,AWS CDK,TEST,FALSE
-tools,backend,InfluxDB,TEST,FALSE
-tools,backend,EventStoreDB,TEST,FALSE
-tools,backend,DynamoDB,KEEP,FALSE
-tools,backend,MSSQL Server,KEEP,FALSE
-tools,backend,Flyway/Liquibase,KEEP,FALSE
-tools,backend,ELK-stack,KEEP,FALSE
-tools,backend,S3/simple storage,KEEP,FALSE
-tools,backend,PostgreSQL,KEEP,FALSE
-tools,backend,Kubernetes,KEEP,FALSE
-tools,backend,BigQuery,TRIAL,FALSE
-tools,backend,MongoDB,TRIAL,FALSE
-tools,backend,Snyk,TRIAL,FALSE
-tools,backend,Azure Pipelines,TRIAL,FALSE
-tools,backend,CosmosDB,TRIAL,FALSE
-tools,backend,Gitlab CI/CD,TRIAL,FALSE
-tools,backend,Github Actions,TRIAL,FALSE
-tools,backend,Kong,TRIAL,FALSE
-tools,backend,DocumentDB,TRIAL,FALSE
-tools,backend,MySql,HOLD,FALSE
-tools,backend,OracleDB,HOLD,FALSE
-tools,backend,Helm 2,HOLD,FALSE
-methods,backend,Reactive architecture,ADOPT,FALSE
-methods,backend,DevOps,ADOPT,FALSE
-methods,backend,Eventdriven,ADOPT,TRUE
-methods,backend,IaC,ADOPT,TRUE
-methods,backend,Object-oriented programming,KEEP,FALSE
-methods,backend,SCRUM,KEEP,FALSE
-methods,backend,Functional programming,KEEP,FALSE
-methods,backend,Kanban,KEEP,FALSE
-methods,backend,Microservices,KEEP,FALSE
-methods,backend,Service Mesh,TRIAL,FALSE
-methods,backend,OKR,TRIAL,FALSE
-methods,backend,Serverless,TRIAL,FALSE
-methods,backend,DevSecOps,TRIAL,FALSE
-languages,ai-and-data,Python,KEEP,TRUE
-languages,ai-and-data,Kotlin,KEEP,FALSE
-languages,ai-and-data,Julia,TEST,FALSE
-languages,ai-and-data,R,TEST,FALSE
-languages,ai-and-data,SQL,KEEP,FALSE
-tools,ai-and-data,AWS Sagemaker,ADOPT,FALSE
-tools,ai-and-data,Snowflake,ADOPT,TRUE
-tools,ai-and-data,Databricks,ADOPT,FALSE
-tools,ai-and-data,AWS Sagemaker Model Registry,ADOPT,FALSE
-tools,ai-and-data,Pandas for Spark 3.0,ADOPT,TRUE
-tools,ai-and-data,EMR,KEEP,FALSE
-tools,ai-and-data,Managed Airflow,KEEP,FALSE
-tools,ai-and-data,BigQuery,KEEP,TRUE
-tools,ai-and-data,Apache Spark,KEEP,TRUE
-tools,ai-and-data,Jupyterhub,KEEP,TRUE
-tools,ai-and-data,Jupyter notebooks,KEEP,TRUE
-tools,ai-and-data,AWS Feature store,TEST,FALSE
-tools,ai-and-data,AWS MLOps,TEST,FALSE
-tools,ai-and-data,AWS Sagemaker Pipelines,TEST,FALSE
-tools,ai-and-data,AWS Sagemaker studio,TEST,FALSE
-tools,ai-and-data,AWS Sagemaker Autopilot,TEST,FALSE
-tools,ai-and-data,Snowpark,TEST,FALSE
-tools,ai-and-data,IBM AI Fairness 360,TEST,FALSE
-tools,ai-and-data,Vertex AI (Google),TEST,FALSE
-tools,ai-and-data,Dataiku,TRIAL,FALSE
-tools,ai-and-data,Unity Catalog,TRIAL,FALSE
-tools,ai-and-data,BigQuery ML,TRIAL,FALSE
-methods,ai-and-data,AutoML,TEST,FALSE
-methods,ai-and-data,GPT(-3),TEST,FALSE
-methods,ai-and-data,Support Vector Machines,TRIAL,FALSE
-methods,ai-and-data,Data Mesh,TRIAL,FALSE
-methods,ai-and-data,ETL,KEEP,TRUE
-frameworks,ai-and-data,DBT,ADOPT,TRUE
-frameworks,ai-and-data,Airflow,ADOPT,FALSE
-frameworks,ai-and-data,Great Expectations,ADOPT,FALSE
-frameworks,ai-and-data,Pytorch,KEEP,FALSE
-frameworks,ai-and-data,XGBoost,KEEP,FALSE
-frameworks,ai-and-data,Scikit-Learn,KEEP,FALSE
-frameworks,ai-and-data,Tensorflow,KEEP,TRUE
-frameworks,ai-and-data,Pandas,KEEP,FALSE
-frameworks,ai-and-data,Keras,KEEP,FALSE
-frameworks,ai-and-data,Prefect,TEST,FALSE
-frameworks,ai-and-data,Koalas,TEST,FALSE
-frameworks,ai-and-data,Dagster,TEST,FALSE
-frameworks,ai-and-data,DataHub,TEST,FALSE
-frameworks,ai-and-data,Spark on Kubernetes,TRIAL,FALSE
-frameworks,ai-and-data,Delta Live Tables,TRIAL,TRUE
-frameworks,ai-and-data,Nansen,TRIAL,FALSE
+type|area|item|status|priority|reason_no|reason_en
+languages|mobil|TypeScript|TRIAL|FALSE|Støtte for typescript i React Native bør vurderes, da type trygghet er kjempeviktig|Support for TypeScript in React Native should be considered as type safety is very important
+languages|mobil|Dart|ADOPT|TRUE|Brukes av Flutter rammeverket|Used by the Flutter framework
+languages|mobil|Yaml|KEEP|FALSE|Brukes av Flutter og React Native|Used by both Flutter and React Native framework
+languages|mobil|C#|HOLD|FALSE|Xamarin fases ut, Maui tar over. Samme språk, men avvent Maui stabilitet før revurdering.|Xamarin is deprecated and is phasing out, Maui is taking over. Both use the same language but we are awaiting Maui for stabilization before re-evaluating.
+languages|mobil|Ruby|HOLD|FALSE|Brukes for Cocoapods som vi trenger - men som språk er det lite vits i å fokusere på|Used by Cocoapods - which we need - but as a language it is not worth focusing on
+languages|mobil|Swift|KEEP|TRUE|Brukes av native iOS. Bransjestandard.|Used by native iOS. Industry standard.
+languages|mobil|Kotlin|KEEP|TRUE|Brukes av native Android. Bransjestandard.|Used by native Android. Industry standard.
+languages|mobil|GraphQL|TRIAL|FALSE|Alternativ til vanlig REST apier - bør vurderes med tanke på nyere integrasjoner mot sky|Alternative to REST apis - should be considered with regards to newer integrations towards Cloud
+languages|mobil|JavaScript|HOLD|FALSE|Mindre typesafe måte å jobbe med React native, unngå om vi har mulighet til fordel for typescript|Less typesafe langauge for React Native, avoid if possible and use TypeScript if available
+languages|mobil|Java|HOLD|FALSE|Kotlin er bransjestandard for Android, Java er en rest i gamle apper og bør ikke fokuseres på|Kotlin is industry standard for Android, Java is a legacy remainer in old Android apps and should not be focused on
+languages|mobil|Objective-C|HOLD|FALSE|Swift er bransjestandard for iOS, Objective C er bare for gamle apper. Bør ikke fokuseres på.|Swift is industry standard for iOS, Objective C are legacy code for old iOS apps and should not be focused on.
+languages|mobil|Groovy|KEEP|FALSE|Brukes av Android gradle, bransjestandard|Used by Android gradle, industry standard
+frameworks|mobil|Flutter|ADOPT|TRUE|Store fordeler iforhold til hurtighet, modenhet, kryssplattform samt utvikler vennlighet og dokumentasjon.|Huge advantages in regards to development speed, maturity, cross platform as well as developer friendlyness and documentation
+frameworks|mobil|Hilt|ADOPT|FALSE|En "nykommer" blandt dependency injection rammeverkene (sammen med Koin og Dagger2). Har stort potensiale. Er lite, kjapt og godt dokumentert. Begynn å bruke det om du ikke allerede gjør det.|A "newcomer" among dependency injection libraries (along with Koin and Dagger2). Great potential. Is small, fast and well documented. Start using it if not already doing so.
+frameworks|mobil|Jetpack Components|ADOPT|FALSE|Ferdige komponenter som håndterer en rekke velkjente problemer. Fungerer godt og bør brukes i native android apper|Finished components handling a wide array of common problems. Should be used in native Android apps.
+frameworks|mobil|SwiftUI|ADOPT|TRUE|Moderne funksjonelt rammeverk for native iOS utvikling. Veien framover for iOS native.|Modern functional framework for native iOS development. The road forward for iOS native.
+frameworks|mobil|Appcelerator|HOLD|FALSE|Gammelt kryssplattform system, blir sjedent brukt|Old cross-platform framework. Rarely used nowadays.
+frameworks|mobil|Dagger2|HOLD|FALSE|Dette dependency injection rammeverket er stort og tungt, ingen vits i å bruke tid på det lenger da Google selv fokuserer på Hilt|This Dependency Injection framework is old and heavy, no point in focusing anymore as Android is focusing on Hilt.
+frameworks|mobil|Ionic|HOLD|FALSE|Gammelt kryssplattform system, blir sjedent brukt|Old cross-platform framework. Rarely used nowadays.
+frameworks|mobil|PhoneGap|HOLD|FALSE|Gammelt kryssplattform system, blir sjedent brukt|Old cross-platform framework. Rarely used nowadays.
+frameworks|mobil|Robolectric|HOLD|FALSE|Denne typen enhetstesting er det lite hold i å bruke tid på lenger, Android native har egne test rammeverk som håndterer dette nå|This framework for unit testing is rarely used nowadays, as Android has implemented better testing methods internally.
+frameworks|mobil|RxJava|HOLD|FALSE|Eldre reaktivt programmeringsbibliotek, holder ikke mål lenger og bør erstattes av Flow eller andre|Older library for programming reactive flows, should be phased out and replaced with Flow or others
+frameworks|mobil|Xamarin|HOLD|FALSE|Microsoft har deprekert Xamarin så det er inget poeng i å bruke tid på det. Arvtageren Maui derimot må følges med.|Microsoft has deprecated Xamarin so there is no point in focusing on it. The inheritor, Maui, on the other hand should be considered.
+frameworks|mobil|Koin|KEEP|FALSE|En av de tre vanligste Dependency Injection rammeverkene for Android. Bør ikke fases ut, men nykommeren Hilt vil nok fase ut Koin etterhvert|One of the three most common Dependency Injection frameworks. Should not be phased out, but the newcomer Hilt will phase it out in time
+frameworks|mobil|Kotlin Coroutines|KEEP|FALSE|Bransjestandard og en stor fordel for Kotlin som språk|Industry standard and a great advantage for Kotlin as a language
+frameworks|mobil|Kotlin Flow Native|KEEP|FALSE|Native utvikling som ikke brukes compose vil ha fortsatt ha fordeler av reaktiv Flow|Native development that does not use Compose will still have advantages to using reactive Flow programming
+frameworks|mobil|Native Android|KEEP|FALSE|Bransjestandard. Vil aldri forsvinne helt|Industry standard. Will never completely disappear.
+frameworks|mobil|React Native|KEEP|FALSE|Kryssplattform som brukes av diverse prosjekter, bør ikke legge fra oss det helt enda. Flutter derimot kommer kjappere inn|Cross platform used by a number of projects - it should not be laid away, though Flutter will come more and more in
+frameworks|mobil|UIKit|KEEP|FALSE|Bransjestandard for iOS native|Industry standard for iOS Native.
+frameworks|mobil|XCTest|KEEP|FALSE|Bransjestandard for testing på iOS.|Industry standard for testing on iOS.
+frameworks|mobil|Kotlin Multiplatform|TEST|FALSE|Kryssplattform i Kotlin, bør vurderes med tanke på styrkene til Kotlin og antall ressurser som enten kan Kotlin eller har bakgrunn i Java|Crossplatform with Kotlin, should be tested considering Kotlins strengths and the number of resources that have experience in Kotlin or Java
+frameworks|mobil|Maui|TEST|FALSE|Arvtager etter Xamarin. Kan bli verdt å holde øye med - hovedsaklig for prosjekter som har sterk C# kompetanse som også ønsker å fokusere på mobil|Xamarin's inheritor. Can be useful to pay attention to - mainly for projects that have a strong C# compentence willing to work on mobile.
+frameworks|mobil|Jetpack Compose|TRIAL|TRUE|Moderne funksjonelt rammeverk for Android native. Kjappere enn tradisjonell native android, men fortsatt relativt nytt og ikke alltid like god integrasjon.|Modern functional framework for native Android development. Faster than traditional native Android, but still relatively new and not always as good integration
+frameworks|mobil|Kotlin Flow Compose|TRIAL|FALSE|Reaktiv programmering for Jetpack Compose, kan brukes i prosjekter nå som det er stabilt|Reactive programming for compose with Flow, can be used in projects now that its stable.
+methods|mobil|e2e-testing|KEEP|FALSE|Bransjestandard|Industry standard.
+methods|mobil|Feature modularization|KEEP|FALSE|Enkapsulering av features for enklere distribuering og inkludering er fortsatt noe som bør gjøres|Encapsulation of features for ease of distribution and inclusion is still something that should be done.
+methods|mobil|MVVM|KEEP|FALSE|Bransjestandard for Android. Rent og ryddig for både iOS og Android derimot.|Industry standard for Android. Clean and a good pattern for both iOS and Android though.
+methods|mobil|Cross platform|ADOPT|TRUE|Å redusere tid til marked har blitt en mye større prioritet enn før og antall mobilressurser er knapt. Spesielt når man må splitte det på to plattformer. Kryssplattform kommer til å bli viktigere og viktigere framover.|Reducing time-to-market is even bigger priority than before and the number of mobile resources are tight. Especially when having to split them to two different platforms. Crossplatform will be more and more important as time goes on.
+methods|mobil|Domain Driven Design|ADOPT|TRUE|Et relativt moderne arktitekturelt pattern som bør brukes.|A relatively modern architectural pattern that should be used.
+methods|mobil|Server-driven UI|TEST|FALSE|Noe som bør testes ut, en interessant vei å fare siden Spotify begynte med det. Holder appen native men kan endre på det visuelle som om det er nettsider|Someething that should be tested and is an interesting path to take ever since Spotify startet it. Keeps the app native but you can change the visual aspects like web.
+methods|mobil|MVP|HOLD|FALSE|Eldre design pattern som ikke holder helt samme utbredelsen som MVVM og bør fases ut|Older design pattern that doesn't quite match MVVM anymore and should be phased out.
+methods|mobil|MVC|HOLD|FALSE|Eldre design pattern som ikke holder helt samme utbredelsen som MVVM og bør fases ut|Older design pattern that doesn't quite match MVVM anymore and should be phased out.
+tools|mobil|Draw.io|KEEP|FALSE|Bransjestandard verktøy for arkitektur og flyt skissering. Nyttig verktøy enda.|Industry standard tool for architectural and flow schematics. Still a useful tool.
+tools|mobil|Figma|ADOPT|FALSE|Nyeste design verktøy med god støtte for mobile flater. Bør brukes om mulig.|Newest design tool with good support for mobile designs. Should be used if possible.
+tools|mobil|JUnit|KEEP|FALSE|Bransjestandard|Industry standard.
+tools|mobil|Sourcetree|KEEP|FALSE|Hendig verktøy for versjonskontroll|Useful tool for version control.
+tools|mobil|Android Studio|KEEP|FALSE|Bransjestandard IDE|Industry standard IDE.
+tools|mobil|Xcode|KEEP|FALSE|Bransjestandard IDE|Industry standard IDE.
+tools|mobil|TestFlight|KEEP|FALSE|Bransjestandard test verktøy, må brukes for å publisere test apper til testere på iOS|Industy standard test tool, must be used for publishing apps to testers on iOS
+tools|mobil|Visual Studio Code|KEEP|FALSE|Bransjestandard IDE for Flutter (og andre selvsagt)|Industry standard IDE for Flutter (and others of course).
+tools|mobil|Cocoapods|KEEP|FALSE|Bransjestandard|Industry standard.
+tools|mobil|Firebase Cloud Messaging|KEEP|FALSE|Essensielt og bransjestandard for notifikasjoner på Android|Essential and industry standard for notifications on Android.
+tools|mobil|GitLab CI/CD|TEST|FALSE|GitLab og automatisk bygging før klart prøves ut.|GitLab and automation for building should of course be tested.
+tools|mobil|GCP|ADOPT|FALSE|Skyløsningen til Google er klart noe som bør fokuseres på med tanke på avhengighet til Firebase for Android|Googles cloud solution is something that should clearly be focused on considering dependency to Firebase for Android
+tools|mobil|Firebase|ADOPT|TRUE|Android trenger en form for Firebase integrasjon for notifikasjoner. I tillegg til de andre fordelene gjør det Firebase til et nærmest go-to verktøy for alt for mobilutvikling.|Android needs a form of integration towards Firebase for notifications. In addition to the other advantages it makes Firebase a near go-to solution for everything in mobile development.
+tools|mobil|Azure|ADOPT|TRUE|Vanligst brukt av offentlige og større bedrifter, Azure har gode integrasjoner for mobil og bør fokuseres mer på.|Commonly used by bigger or public companies, Azure has good integrations towards mobile and should be focused on.
+tools|mobil|Github Actions|ADOPT|FALSE|Github Actions gir gode muligheter for automasjon for mer enklere prosjekter men også for større som ikke er bundet av eksisterende platforms og bør klart fokuseres på|Github Actions gives good opportunities for automation for simpler projects but also for bigger that are not bound by existing platforms and should be focused on
+tools|mobil|Firebase ML|TEST|FALSE|Maskinlæring vil ikke bli redusert med tiden og Firebase sin ML komponent bør klart testes ut|Machine learning will not go down with time and the Firebase ML module should clearly be tested
+tools|mobil|Unity 3D|TEST|FALSE|Unity er en klar markedsleder for mobile applikasjoner som krever et mye større grafisk grensesnitt, med kryssplattform støtte. Bør testes ut om mulig.|Unity is a market leader in mobile apps with a greater graphical requirement with crossplatform support. Should be tested if possible.
+tools|mobil|IntelliJ|HOLD|FALSE|IntelliJ Idea er en dårlig løsning for Android da Android Studio også lages av JetBrain. For iOS finnes AppCode, men Xcode har kommet såpass på banen at det ikke er poeng med denne lenger|IntelliJ Idea is an bad solution for Android as Android Studio is also made by JetBrain. For iOS there is AppCode, but XCode has gotten so far that there is little point with this anymore.
+tools|mobil|Eclipse|HOLD|FALSE|Gammelt IDE for Android native. Brukes ikke lenger siden Android Studio tok over. Faset ut.|Old IDE for Android native. Not in use anymore since Android Studio took over. Phased out.
+tools|mobil|Invision|KEEP|FALSE|En av de vanligste bransjeverktøy for design av mobile flater. Bør holde oss oppdatert inntil det er faset ut med Figma som blir mer og mer aktuelt.|One of the more common design tools for mobile design. We should keep updated until it is phased out with Figma which is more and more in the wind.
+tools|mobil|Carthage|HOLD|FALSE|Et forsøk på å desentralisere cocoapods, men er komplisert og ikke like godt kjent/brukt i prosjekter. Bør fases ut.|An attempt to decentralize CocoaPods but more complex and not that big use in projects. Should be phased out.
+tools|mobil|Sketch|HOLD|FALSE|Design verktøy som ikke er særlig relevant lenger med tanke på Invision og Figma. Fases ut.|Design tool that is not very relevant anymore considering Invision and Figma. Phasing out.
+frameworks|design|UU|ADOPT|TRUE|Hensikten er å oppnå like muligheter til samfunnsdeltakelse og motvirke diskriminering på grunnlag av nedsatt funksjonsevne.|The purpose of UU is to plan products, services and enviroments in order to make them usable for all persons. In this way helps people to achieve equal opportunities for social participation and to counteract discrimination based on reduced functional capacity.
+frameworks|design|WCAG|ADOPT|TRUE|Retningslinjer for tilgjengelig webinnhold og internasjonal standard for universell utforming av nettsider og apper. WCAG 2.1 standarden en del av norsk lov og dermed et krav for alle offentlige nettsteder.|Web Content Accessibility Guidelines for web content and is the international standard for universal design of websites and apps. The WCAG 2.1 standard is part of Norwegian law and thus a requirement for all public websites.
+frameworks|design|Design system|ADOPT|FALSE|Et designsystem er en samling av gjenbrukbare komponenter. Det er et bibliotek og rammeverk for en virksomhets digitale strategi og identitet. Komponentene kan ses på som byggesteiner for å lage en helhetlig nettside. Det kan bidra til en god brukeropplevelse, men gjør også både kode og design mer effektivt.|A design system is a collection of reusable components. It is a library and framework for a company's digital strategy and identity. The components can be seen as building blocks to create a comprehensive website. It can contribute to a good user experience, but also makes both code and design more efficient.
+frameworks|design|Storybook|ADOPT|FALSE|Gir en oversikt over eksisterende komponenter både for designere og utviklere. Alle elementene i et produkt kan plasseres der for å skape et levende designsystem. Både designere, utviklere og produkteiere kan det direkte fra nettleseren.|Gives an overview of existing components both for designers and developers. All the elements of a product can be placed there to create a living design system. Both designers, developers and product owners can access directly from the browser.
+frameworks|design|Autonome team|ADOPT|TRUE|Komplekse problemer løses best i team med stor grad av autonomi. Dette medfører økt innovasjon og nøyaktighet i problemløsning. Mindre behov for eksterne ledere, gir økt produktivitet og forutsetning for smidighet (agile) og folk er mer fornøyde|Complex problems are best solved in teams with a high degree of autonomy. This leads to increased innovation and accuracy in problem solving. Less need for external managers, gives increased productivity and prerequisite for flexibility (agile) and people are more satisfied.
+frameworks|design|Business design|TRIAL|FALSE|Business designer er en forretningsutvikler med et designtankesett i bunn, eller en designer som også inkluderer et forretningstankesett i sitt arbeid. |Business designer is a business developer with a design mindset at the bottom, or a designer who also includes a business mindset in her/his work.
+frameworks|design|UX design|KEEP|FALSE|User experience design, handler om å forbedre totalopplevelsen et menneskelig  har i møte med et digitalt produkt, en tjeneste eller et system. Disse interaksjonene skal maksimere brukerens følelse av måloppnåelse og samtidig minimere frustrasjoner.|User experience design is about improving the overall experience a person has when dealing with a digital product, service or system. These interactions should maximize the user's sense of goal achievement while minimizing frustration.
+frameworks|design|Service design|KEEP|FALSE|Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. Tjenester produseres og forbrukes samtidig. Kunden er en av medskaperne av tjenesten.|Service design is a discipline within design with goals about developing user-oriented and holistic services. Services are produced and consumed at the same time. The customer is one of the co-creators of the service.
+methods|design|Personas/ Archetypes|KEEP|FALSE|Personas er fiktive karakterer, som du lager basert på forskningen din for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren din på lignende måter.|Personas are fictional characters, which you create based upon your research in order to represent the different user types that might use your service, product, site, or brand in a similar way. 
+methods|design|Service blueprint|KEEP|FALSE|Service Blueprint er en teknikk som opprinnelig ble brukt for tjenestedesign, men har også funnet applikasjoner for å diagnostisere problemer med driftseffektivitet.|The service blueprint is a technique originally used for service design, but has also found applications in diagnosing problems with operational efficiency.
+methods|design|Customer journey|KEEP|FALSE|En kundereise er en visualisering av prosessen som en person går gjennom for å oppnå et mål.|A CS is map is a visualization of the process that a person goes through in order to accomplish a goal.
+methods|design|Design sprint|HOLD|FALSE|En designsprint er en tidsbegrenset, fem-fase prosess som bruker designtenkning med sikte på å redusere risikoen ved å bringe et nytt produkt, en tjeneste eller en funksjon til markedet.|The sprint is a five-day process for answering critical business questions through design, prototyping, and testing ideas with customers.
+methods|design|Spørreundersøkelse|HOLD|FALSE|En spørreundersøkelse bør bestå av Tema / Problemstilling / Hypoteser / Spørsmål|A survey should consist of a Theme / Problem / Hypotheses / Questions
+methods|design|Design thinking|KEEP|FALSE|Design Thinking er en iterativ, ikke-lineær prosess som fokuserer på et samarbeid mellom designere og brukere.|Design thinking is an iterative, non-linear process which focuses on a collaboration between designers and users. 
+methods|design|Observation|KEEP|FALSE|Kan være å gi brukere en oppgave eller en prototype for å se hvordan de utfører den eller bruker den.|Could be to give users a task or a prototype to see how they perform it or use it.
+methods|design|Crazy eights|HOLD|FALSE|Crazy 8's er en kjernemetode for Design Sprint. Det er en rask skisseøvelse som utfordrer folk til å skissere åtte forskjellige ideer på åtte minutter.|Crazy 8's is a core Design Sprint method. It is a fast sketching exercise that challenges people to sketch eight distinct ideas in eight minutes.
+methods|design|Card sorting|ADOPT|FALSE|Kortsortering er en metode brukt til blant annet design av brukeropplevelser, og kan gi innspill til struktur til f.eks. et nettsted (kan brukes i brukertester).|Card sorting is a method used for the design of user experiences, and can provide input for the structure of e.g. a website (can be used in user tests).
+methods|design|Workshops|KEEP|TRUE|En design thinking workshop er tilrettelagt møte hvor tverrfaglige team planlegger og prototyper brukersentrerte design.|A Design Thinking workshop is facilitated meeting where multi-disciplinary teams plan and prototype user-centered designs. 
+methods|design|Costumer journey|KEEP|FALSE|En kundereise er en visualisering av prosessen som en person går gjennom for å oppnå et mål.|A CS is map is a visualization of the process that a person goes through in order to accomplish a goal.
+methods|design|Test av design på brukere med spesielle behov|ADOPT|TRUE|Hvordan forstå om et design faktisk fungerer med brukere med spesielle behov. En prioritet på grunn av UU-reglene og inkluderende designbehov.|How to understand if a design actually works with users with special needs. A priority because of the UU rules and inclusive design needs.
+methods|design|MoSCoW prioritization|KEEP|FALSE|MoSCoW er en prioriteringsmetode som ofte blir brukt innenfor ledelse, prosjektledelse, virksomhetsanalyse og spesielt i smidige team.|MoSCoW is a prioritization method that is often used within management, project management, business analysis and especially in agile teams.
+methods|design|User stories|KEEP|FALSE|En brukerhistorie er en beskrivelse av funksjonen til en programvare sett fra et brukerperspektiv. |A user story is a description of the function of a software from a user's perspective.
+methods|design|User story maps|KEEP|FALSE|Kartlegging av brukerhistorier er en enkel, samarbeidsøvelse som hjelper deg med å definere brukerens reise med et produkt eller en tjeneste, hvor det finnes hull og hva det kan bli.|User story mapping is a simple, collaborative exercise that helps you define your user’s journey with your product., where any gaps exist, and what it could be
+methods|design|Affinity mapping|KEEP|FALSE|En metode for å merke alle ideer og kategorisere dem basert på deres likheter med hverandre, gir mulighet for en sterkere organisering av ideer, og til slutt en mer organisert handlingsplan.|A method of labeling ideas and categorizing them based on their similarities to each other allows for a stronger organization of ideas, and ultimately a more organized plan of action.
+methods|design|Brukertest|KEEP|TRUE|Brukertesting handler om å teste løsninger på ekte brukere i en realistisk kontekst. Det er sele nøkkelen i en brukersentrert designprosess.|User testing is about testing solutions on real users in a realistic context. It is the key to a user-centered design process.
+methods|design|Gerillija testing|KEEP|FALSE|Geriljatesting er en metode å brukerteste på, der du tar en idé eller et uferdig konsept og tester det raskt med folk på gata.|Guerrilla testing is a method where you take an idea or an unfinished concept and quickly test it with people on the street
+methods|design|Stakeholder mapping|KEEP|FALSE|Interessentanalyse er prosessen med å vurdere et system og potensielle endringer i det når de forholder seg til relevante og interesserte parter. |Stakeholder mapping is the process of assessing a system and potential changes to it as they relate to relevant and interested parties.
+methods|design|Double/ Triple diamond|KEEP|FALSE|Den doble diamanten består av fire steg. I den første diamanten skal vi 1) Oppdage og 2) Definer. Den andre diamanten setter deg på sporet av å 3) Utvikle og 4. Levere.|The double diamond consists of four steps. In the first diamond we will 1) Discover and 2) Define. The second diamond puts you on the track to 3) Develop and 4. Deliver.
+methods|design|Brukerintervju|KEEP|FALSE|Brukerintervju er en kvalitativ metode i for å kartlegge en brukers behov eller forstå opplevelsen av en bestemt tjeneste eller et produkt.|User interviews are a qualitative method for mapping a user's needs or understanding the experience of a particular service or product
+methods|design|Mind map|ADOPT|FALSE|Hjelper deg visuelt å organisere ideer og lage tankekartillustrasjoner.|Helps you visually organize ideas and create mind map illustrations.
+methods|design|Paper prototype|HOLD|FALSE|Papirprototyping er en proses for å utvikle ideer og designe brukerflyter ved å bruke håndskisserte "skjermer" som representerer et digitalt produkt.|Paper prototyping is the process of developing ideas and designing user flows using hand-sketched “screens” that represent a digital product. 
+methods|design|Innsiktsfasen|HOLD|FALSE|I innsiktsfasen skapes en felles forståelse av designprosessen, og det settes forventninger og retningslinjer for alle involverte aktører i prosjektet.  Fokusområder: Kartlegge behov. Definere målgruppe.|In the insight phase, a common understanding of the design process is created, and expectations and guidelines are set for all actors involved in the project. Focus areas: Mapping needs. Define target group.
+methods|design|5 why's|KEEP|FALSE|Five whys er en iterativ spørreteknikk som brukes til å utforske årsak-og-virkning-sammenhengene som ligger til grunn for et bestemt problem.|5 whys is an iterative interrogative technique used to explore the cause-and-effect relationships underlying a particular problem. 
+methods|design|Sitemap|KEEP|FALSE|Sitemap er en organisering og visualisering av sidestruktur|Sitemap is an organization and visualization of a site structure
+methods|design|Iterativ helle tiden|KEEP|FALSE|Å definere hypoteser, og teste og justere dem er det beste alternativet til fossefall. Å jobbe iterativt tillater tilpasninger til nye situasjoner, teknologi eller strategiendringer.|Defining hypotheses, and testing and adjusting them is the best alternative to waterfall thinking. Working iteratively allows adjustments to new situations, technology or strategy changes. 
+methods|design|Måle Opplevd effekt|ADOPT|FALSE| Måter å synliggjøre hvilke resultater en innsatsen har ført til – for bedriften og for brukerne deres.|Ways to make results clear and visable, baseed on various measures - for a company and for their users.
+methods|design|Utvikle / forstå menneske-maskin-interaksjon|ADOPT|FALSE|Studien omkring interaksjonen mellom mennesker og datamaskiner.|The study of the interaction between humans and computers.
+methods|design|Accessibility and inclusive design|ADOPT|FALSE|Inkluderende design etterstreber å skape barrierefrie rom. Inkluderende design gjør tjenster brukervennlige og nyttige for alle,|Inclusive design examples look to create barrier-free spaces. Inclusive design makes places usable by everyone,
+tools|design|Google meet|KEEP|TRUE|Et uunnværlig verktøy siden pandemien. Vi er enda nærmere raske møter og avgjørelser nå i stedet for å skrive endeløse e-poster.|An indispensable tool since the pandemic. We are even closer now and connect face to face with fast meetings instead of writing endless emails. 
+tools|design|Google calendar|KEEP|TRUE|Tidsstyring gjort enkel og effektiv. |Time management made simple and efficient. Fantastic use flow.
+tools|design|Figma|KEEP|TRUE|Figma er raskt i ferd med å bli designerens favoritt plattform, med smidig teamarbeid og gjenbrukbare elementer for både designere og utviklere.|Figma is quickly becoming the designers platform, with direct team work and simultaneously  shaping new ground when it comes to creation of reusable elements approaching designer and developerseven more.
+tools|design|Miro|KEEP|TRUE|Visuelt samarbeidsverktøy. Enkelt å onboarde nye deltakere på få minutter, kraftig nok til komplekse workshops, innsiktsarbeid og planlegging.|Visual collaboration tool. Simple enough to onboard a new person in minutes, powerful enough to deep workshops, insight work and planing.
+tools|design|Slack|KEEP|TRUE|Den eneste måten å kommunisere raskt på i et selskap i dag. Svært enkelt i bruk.|The email killer. The only way to communicate in a company nowadays. Simple, clean and right to the point.
+tools|design|Penn og papir|KEEP|FALSE|Noen ganger er de enkle løsningene de som kommuniserer på den raskeste og mest tilgjengelige måten :pencil2: :page_facing_up:|Sometimes the simple solutions are the ones that communicate fastest. 
+tools|design|trello|KEEP|FALSE|Gratis brukervennlig kanban-tavle som er enkel å tilpasse. Brukes til oppgavehåndtering og oversikt. |Free customizable and user friendly kanban board. Used for task management and overview.
+tools|design|Pocket|KEEP|FALSE|En gratis tjeneste for lagre kategorisere og merke artikler. Kan brukes som en kunnskapssamling for å samle og organisere de mer relevante informasjonskildene og gjøre dem lett tilgjengelige.|A free service for save categorize and tag articles. Can be used as a knowledge pool to gather and organize the more relevant information sources and make them easily accessible.
+tools|design|Testflow|KEEP|FALSE|Norsk rekrutterings- og brukertesttjeneste. Integrert med Figma og tillater semi-automatisert og umoderert brukertesting med kvalitative spørsmål og svar.|Norwegian recruitment and user test service. Integrated with Figma allows semi-automated and unmoderated user testest with qualitative questions and answers. 
+tools|design|Figma:plugin: Iconify|KEEP|FALSE||
+tools|design|Figma:plugin: Unsplash|KEEP|FALSE||
+tools|design|Figma:plugin: Contrast|KEEP|FALSE||
+tools|design|Figma:plugin: Similayer|KEEP|FALSE||
+tools|design|Figma:plugin: Color blind|KEEP|FALSE||
+tools|design|Figma:plugin: Contrast|KEEP|FALSE||
+tools|design|Klistrelapper|KEEP|FALSE|Et av designerens foretrukne verktøy. Sortering med ulike farger og med riktig størrelse for et enkelt ord eller en setning. De kan grupperes, flyttes, limes og går aldri tom for batterier.|The designer preferred office tools. Colourful with the right size for a single word or a sentence. They can be grouped, moved, glued and never run out of batteries.
+tools|design|Moodboards|KEEP|FALSE||
+languages|frontend|WebAssembly|TEST|FALSE|WebAssembly kan i visse tilfeller gi økt ytelse, men vær obs på at just-in-time-kompilering ofte gjør at vanlig Javascript er like vel-ytende.|
+languages|frontend|Imba (programmeringsspråk)|TEST|FALSE|Kortfattet prototyping-språk.|
+languages|frontend|clojure + fulcro|TEST|FALSE||
+languages|frontend|JavaScript uten typer (JSdoc-TS er regnet som typet)|HOLD|TRUE|Typescript som ikke trenger å transpileres kan gi mindre teknisk gjeld. Foreløpig er det en stor nok utfordring å få alle prosjekter til å bruke typer.|
+languages|frontend|ESNext|ADOPT|TRUE|Bruk nye EcmaScript-språkfunksjoner (som er i stage 3 og 4) og transpiler fremfor å bruke gammeldags kode.|
+languages|frontend|TypeScript|ADOPT|TRUE|Typing av Javascript er kommet for å bli i langtlevde prosjekter.|
+languages|frontend|GraphQL|ADOPT|TRUE|GraphQL er en moden teknologi som passer godt for sine bruksområder.|
+languages|frontend|Elm|HOLD|FALSE|Aktiv utvikling har tilsynelatende stoppet opp.|
+languages|frontend|Flow|HOLD|FALSE|Typescript er et betydelig bedre alternativ.|
+languages|frontend|PHP|HOLD|FALSE|Server-side-rendering av apper skrevet i rammeverk som også egner seg for klientsiden (React, Vue, Svelte) er et mer fleksibelt alternativ enn et rent server-side-språk.|
+frameworks|frontend|React|KEEP|TRUE|React er bransjestandarden for øyeblikket, og duger godt til jobben sin.|
+frameworks|frontend|Ant design|KEEP|FALSE||
+frameworks|frontend|react-query (Erstattes av SWR i methods)|ADOPT|TRUE||
+frameworks|frontend|testing-library|ADOPT|TRUE|testing-library er et bibliotek med testfunksjoner, implementert for ulike verktøy (Jest, Cypress). I tillegg til å være arbeidsbesparende, er det en fordel å ha et standard-«vokabular» man kan forholde seg til enda man bytter prosjekt eller testverktøy.|
+frameworks|frontend|Next|ADOPT|TRUE|Next gjør det lett å lage webapplikasjoner som følger alle kunstens regler uten at man legger mye arbeid i det. Andre alternativer eksisterer (Remix, SvelteKit), men ingen er så modne som Next.|
+frameworks|frontend|Vue|ADOPT|TRUE|Vue er et av de tre store rammeverkene om dagen (React og Svelte er de to andre). Hvis man synes Vue er passende for et prosjekt, må man gjerne bruke dette.|
+frameworks|frontend|Jest|ADOPT|TRUE|Standard-testverktøyet for enhetstester.|
+frameworks|frontend|Cypress|ADOPT|TRUE|Standard-testverktøyet for ende-til-ende-tester.|
+frameworks|frontend|SWR (Erstattes av SWR i methods)|ADOPT|FALSE||
+frameworks|frontend|Material-ui|ADOPT|FALSE|Et godt designbibliotek utviklet av Google. Etter vår vurdering mer egnet for mobilskjermer enn for datamaskin.|
+frameworks|frontend|Gatsby|ADOPT|FALSE|En god statisk-side-generator.|
+frameworks|frontend|Razzle (SSR for alle rammeverk)|TRIAL|FALSE||
+frameworks|frontend|Tailwind|TRIAL|TRUE|Tailwind sparer en for mye komplisert CSS og holder bundle-størrelsen nede. De som bruker det er så fornøyde at vi kan anbefale det for de fleste.|
+frameworks|frontend|Svelte/ svelte-kit|TRIAL|TRUE|Svelte-kit er Svelte-alternativet til Next (der Next baserer seg på React). Apper skrevet i Svelte-kit blir mindre, men mengden tilgjengelige funksjoner er noe mindre i SvelteKit for tiden. Velg Next om du er i tvil.|
+frameworks|frontend|Fastify/koa (erstatning for Express)|TRIAL|TRUE||
+frameworks|frontend|flutter|TEST|FALSE|Vår begrensede erfaring med Flutter for Web gjør at vi ønsker at utviklerne våre skal gjøre varsomme forsøk med det.|
+frameworks|frontend|preact|TEST|FALSE|Preact tilbyr en noe mindre kjøretidspakke enn det React gjør i bytte mot et begrenset funksjonalitetssett. Vi har lite erfaring med hvor begrensende dette er, og vil gjerne ha erfaringer.|
+frameworks|frontend|Angular|HOLD|FALSE|Angular er ikke et alternativ for nyoppstartede prosjekter|
+frameworks|frontend|jQuery|HOLD|FALSE|jQuery er ikke et alternativ for nyoppstartede prosjekter.|
+methods|frontend|CSS-in-JS|ADOPT|TRUE|CSS-in-JS gjør kodebaser lettere å holde styr på, med en liten kjøretidskostnad for brukeren (fordi CSS-en må påføres av Javascript-kode). Bruk hvis brukerne dine kan tåle denne merkostnaden.|
+methods|frontend|Funksjonell stil når du kan, imperativt når du må|ADOPT|TRUE|Imperativ programmering er lettere for nybegynnere og tidvis mer effektivt, men erfarne programmerere bør legge seg til en funksjonell stil av hensyn til testbarhet og feilsøking.|
+methods|frontend|Serverless Hosting - Object Storage|ADOPT|TRUE||
+methods|frontend|HTML over the wire|TRIAL|TRUE|Å rendre HTML på tjeneren og overføre den til klienten gir noen kjøretidsfordeler, men vi vil fortsatt se om gevinsten er verdt ulempene.|
+methods|frontend|i18n|ADOPT|FALSE|"Gjør appen klar for internasjonalisering fra første stund; få tjenester i Norge lever lenge uten å få en engelsk eller nynorsk variant i tillegg til bokmål."|
+methods|frontend|Immutable data|ADOPT|FALSE|Bruk teknikker som spreading og funksjoner Array.prototype.slice fremfor å mutere enkelte deler av objekter og arrays. Det gjør det lettere å hanskes med oppdateringer og å finne ut når endringer skjer.|
+methods|frontend|Lazy Loading|ADOPT|FALSE|Unngå å laste inn Javascript du ikke vet du trenger å bruke. Moderne bundlere og rammeverk inneholder mange metoder for å lazy-loade deler av en SPA, slik at den først lastes ned og parses av datamaskinen idet brukeren trenger den.|
+methods|frontend|prioriter feilhåndtering og beskrivelse|ADOPT|FALSE|Lag apper som krasjer sjelden, og fortell brukerne dine så godt du kan hva årsaken til krasjen er. Da blir brukerne fornøyde, og tilbakemeldingene du får bedre.|
+methods|frontend|Native Code|TRIAL|FALSE||
+methods|frontend|Microfrontends|TRIAL|FALSE|Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse). |
+methods|frontend|Småbiblioteker av JS-onelinere|HOLD|FALSE|Skriv heller koden selv eller kopier inn koden. Husk på å oppgi de lisensene du bruker!|
+methods|frontend|Global state|HOLD|FALSE|Å sentralisere all tilstand i ett stort objekt, som i for eksempel Redux, var en trend for rundt fem år siden. Vi beveger oss nå bort fra det fordi apper (som regel) blir tregere av å gjøre oppdateringer inni ett objekt. Det er også vanskeligere for utviklerne å forholde seg til.|
+methods|frontend|Stale While Revalidate (frontend-caching)|ADOPT|FALSE|Å hente data med hooks, slik react-query og SWR tilbyr, fører til betydelig færer kodelinjer enn om man gjør det samme med redux. Caching blir betydelig lettere.|
+tools|frontend|Redux for React|HOLD|TRUE|Global tilstand er tregt for brukerne og vanskelig for utviklere å forholde seg til. Foretrekk mindre biter.|
+tools|frontend|MSW|ADOPT|TRUE||
+tools|frontend|React Hook Form|ADOPT|TRUE|Dagens beste alternativ for skjemahåndtering i React: Raskt.|
+tools|frontend|Sentry / loggly|ADOPT|TRUE|De beste alternativene for å logge feil som hender hos brukerne.|
+tools|frontend|Vite|TRIAL|TRUE|En god, rask bundler som fungerer for de aller fleste prosjekter. Mindre konfigurering enn Webpack.|
+tools|frontend|Reach UI|TRIAL|TRUE||
+tools|frontend|PostCSS|ADOPT|TRUE|Et modent verktøy som lar deg bruke den nyeste CSS-en uten å bekymre deg for brukernes opplevelse.|
+tools|frontend|Formik|HOLD|TRUE|Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig. |
+tools|frontend|Webpack|KEEP|TRUE|Et nødvendig onde mens verktøy som Vite modnes.|
+tools|frontend|Esbuild|TRIAL|TRUE|Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler. |
+tools|frontend|ESLint|ADOPT|FALSE|Eslint er bransjestandarden for å håndheve stilregler i ethvert prosjekt.|
+tools|frontend|Prettier|ADOPT|FALSE|En rask formaterer med få konfigurasjonstilvalg.|
+tools|frontend|Fathom (personvernorientert Google Analytics-alternativ)|TRIAL|FALSE||
+tools|frontend|Moment|HOLD|FALSE|Et overdimensjonert bibliotek i rene kilobytes. Bruk heller date-fns.|
+tools|frontend|Underscore|HOLD|FALSE|Bruk lodash i stedet.|
+tools|frontend|Selenium|HOLD|FALSE|Bruk Cypress i stedet.|
+tools|frontend|Lodash|KEEP|FALSE||
+tools|frontend|Snowpack|TEST|FALSE|FJERNES vedlikeholdes ikke lenger|
+tools|frontend|web-components|TRIAL|FALSE||
+tools|frontend|MDX|TRIAL|FALSE||
+tools|frontend|wmr|TEST|FALSE|FJERNES|
+languages|cloud|Java|KEEP|FALSE|De største er fremdeles størst, og de siste årene har ny funksjonalitet kommet mye raskere|The most used language amongst our customers, and new features has been added more quickly recently
+languages|cloud|CloudFormation|KEEP|FALSE|For AWS er dette det best støttede IaC-språket, selv om Terraform er bedre hvis du ønsker gjenbruk mellom skyer eller for generiske tjenester|For AWS, this is the best supported IaC language, although Terraform is better if you want reuse between clouds or for generic services
+languages|cloud|Javascript|KEEP|FALSE||
+languages|cloud|Kotlin|ADOPT|TRUE)|For alle nye prosjekter på JVM anbefaler vi at du vurderer Kotlin, da det er et mer ergonomisk språk, særlig i et miljø som får god effekt av noen av Kotlins sterkeste punkter, som immutabilitet, coroutines og sterk støtte for asynkrone APIer|For all new projects on the JVM, we recommend that you consider Kotlin, as it is a more ergonomic language, especially in an environment that benefits from some of Kotlin's strongest points, such as immutability, coroutines, and strong support for asynchronous APIs
+languages|cloud|Typescript|ADOPT|FALSE|Javascript med statiske typer, og som krever en mer moderne stack. What's not to like?|Javascript with static types, and which requires a more modern stack. What's not to like?
+languages|cloud|Python|ADOPT|TRUE)|Python er en av de raskeste måtene å prototype avansert funksjonalitet, eller lage mikrotjenester for FaaaS-arkitektur på. Ytelse blir sjelden et problem i praksis, men for tjenester hvor man vet at dette kan bli kritisk bør man kanskje kjøre litt ytelsestesting i prototyping-fasen for å være sikker.|Python is one of the fastest ways to prototype advanced functionality, or create microservices for FaaaS architecture. Performance rarely becomes a problem in practice, but for services where you know this can be critical, you should perhaps run some performance testing in the prototyping phase to be sure.
+languages|cloud|Go|TRIAL|TRUE)|Et moderne språk med et etter hvert temmelig solid økosystem. La deg ikke lure av hvor "enkelt" språket er - kompleksiteten ligger rett under overflaten, og nesten alt er mulig. Kompilasjon til statiske binærfiler gjør dette til et spesielt godt valg for FaaS og mikrotjenester.|A modern language with an increasingly solid ecosystem. Don't be fooled by how "simple" the language is - the complexity lies just beneath the surface, and almost anything is possible. Compiling to static binaries makes this a particularly good choice for FaaS and microservices.
+languages|cloud|Rust|TRIAL|FALSE|Rust er kanskje det beste språket for å skrive "sikker" funksjonalitet. Du vet alltid hvor minnet ditt er, og hva som ligger der. (Hvis du bruker språket riktig.) Merk at selv om økosystemet er solid og har enormt god støtte fra ildsjeler, er det fremdeles krevende å sette seg inn i Rust, og det er i praksis veldig vanskelig for ett team å jobbe alene med Rust i en organisasjon som er fokusert på et annet språk..|Rust is perhaps the best language for writing "safe" functionality. You always know where your memory is and what is there. (If you use the language correctly.) Note that although the ecosystem is solid and has tremendously good support from the community, it is still a demanding language to learn, and it is practically very difficult for one team to work alone with Rust in an organization that is focused on another language..
+languages|cloud|Scala|HOLD|FALSE|Scalas utvikling har ikke stoppet, og Scala 3.0 kom ut for ikke så lenge siden. Likevel er det ikke mulig å se bort fra at Kotlin har tatt over rollen som "utfordreren på JVM", og vi anbefaler ikke nye prosjekter å bruke Scala.|Scala's development never stopped, and Scala 3.0 was released not too long ago. Nevertheless, it is not possible to ignore that Kotlin has taken over the role of the "challenger on the JVM", and we do not recommend new projects to use Scala.
+services/components/frameworks|cloud|VMs|KEEP|TRUE|Det er vanskelig å slå ytelsen ved å bare kjøre appen på alle kjerner og all minne du har tilgjengelig. For monolitter og krevende tjenester som ikke er lette å kjøre i parallel er VMer derfor fremdeles et godt valg. |It is difficult to beat the performance by just running the app on all the cores and all the memory you have available. For monoliths and demanding services that are not easy to drive in parallel, Vmer is therefore still a good choice.
+services/components/frameworks|cloud|Google Compute Engine|KEEP|FALSE||
+services/components/frameworks|cloud|Kafka|KEEP|FALSE|Blant alle de skynøytrale køplattformene, er Kafka den som har fått mest oppmerksomhet. Det er enkelt å se hvorfor - den kombinerer funksjonalitet de andre ikke har, med bred dekning blant PaaS leverandører og ikke minst en bevist ytelse og skalering over tid.|Among all the cloud-neutral queuing platforms, Kafka is the one that has received the most attention. It is easy to see why - it combines functionality that the others do not have, with broad coverage among PaaS providers and not least a proven performance and scaling over time.
+services/components/frameworks|cloud|Skyplattformenes egne køtjenester|ADOPT|FALSE|Selv om Kafka er en populær plattform som er forholdsvis enkel og drifte, har den fremdeles en vedlikeholdsbyrde som ikke er å kimse av. Dette slipper du unna dersom du bruker skyleverandørenes egen stack. Disse er også nesten alltid billigere, selv om de kan være litt mindre fleksible enn Kafka.|Although Kafka is a popular platform that is relatively simple and easy to operate, it still has a maintenance burden that cannot be ignored. You avoid this if you use the cloud providers' own stack. These are also almost always cheaper, although they may be slightly less flexible than Kafka.
+services/components/frameworks|cloud|AWS API Gateway|ADOPT|FALSE||
+services/components/frameworks|cloud|FaaS (Lambda/Google Cloud Functions, Cloud Run)|ADOPT|TRUE|Det er ingenting som er mer befriende enn å bare lage en liten kodebit som gjør én enkel ting, og så bare la den leve sitt eget liv uten at den koster deg noe i drift eller teknisk gjeld. Husk bare å oppdatere dependencies, helst automatisk.|There is nothing more liberating than just creating a small piece of code that does one simple thing, and then just letting it live its own life without costing you anything in operation or technical debt. Just remember to update dependencies, preferably automatically.
+services/components/frameworks|cloud|AWS CloudFront|ADOPT|FALSE||
+services/components/frameworks|cloud|AWS DynamoDB|ADOPT|FALSE|En uendelig skalerbar, billig og rask dokumentdatabase. What's not to like? Vel, skjemasystemet gjør det litt vanskelig å lage enkle søk, og er veldig tregt å kjøre spørringer på alle radene. Likevel er det flere fordeler enn ulemper her!|An infinitely scalable, cheap and fast document database. What's not to like? Well, the form system makes it a bit difficult to create simple queries, and is very slow to run queries on all the rows. Still, there are more pros than cons here!
+services/components/frameworks|cloud|Google BigQuery|ADOPT|FALSE|Den ubetvilte standarden på spørringer i big data. Du må jobbe hardt for å få til noe tilsvarende selv, og selv Azures og AWS' tjenester kan ikke måle seg. Med BigQuery ML og Looker kan du også gjøre ting du ellers må bruke kombinasjoner av flere tjenester for å få til.|The default standard for big data queries. You have to work hard to build something similar yourself, and even Azure's and AWS' services cannot compare. With BigQuery ML and Looker, you can also do things that you would otherwise have to use combinations of several services to achieve.
+services/components/frameworks|cloud|AWS RDS|ADOPT|FALSE|Hvorfor drifte server når du bare kan opprette en database og koble til med en gang? La noen andre bry seg om vedlikehold, patching og slikt. De er sikkert flinkere enn deg uansett.|Why run a server when you can just create a database and connect right away? Let someone else take care of maintenance, patching and such. They're probably better at it than you anyway.
+services/components/frameworks|cloud|Google Storage|ADOPT|FALSE|Mens AWS S3 har vært på markedet lenger, har Google Storage et minst like bra tilbud. Det er også billigere, og snart kan du lagre ting på norsk jord.|While AWS S3 has been on the market longer, Google Storage has at least as good an offering. It is also cheaper, and soon you will be able to store things on Norwegian soil.
+services/components/frameworks|cloud|AWS Athena|TRIAL|FALSE||
+services/components/frameworks|cloud|AWS Cognito|TRIAL|FALSE||
+services/components/frameworks|cloud|Databricks|TRIAL|FALSE||
+services/components/frameworks|cloud|Micronaut|TRIAL|TRUE|Et lettere rammeverk enn Spring Boot, med mange av de samme funksjonene. I tillegg kan du kompilere koden med GraalVM og ende opp med et Dockerimage som starter på noen få millisekunder|A lighter framework than Spring Boot, with many of the same features. In addition, you can compile the code with GraalVM and end up with a Dockerimage that starts in a few milliseconds
+services/components/frameworks|cloud|AWS Redshift|TRIAL|FALSE||
+services/components/frameworks|cloud|AWS X-Ray|TRIAL|FALSE||
+services/components/frameworks|cloud|Google BigQuery ML|TRIAL|FALSE|Med BigQuery ML kan du bruke det kjente BigQuery interfacet og de samme datasettene til å seede ML modeller som du senere kan bruke i produksjon overalt. Dette kan bli dyrt, men det kan også gjøre ML tilgjengelig for dataanalytikere som ellers ville kviet seg for å lære seg andre verktøy.|With BigQuery ML, you can use the familiar BigQuery interface and the same data sets to seed ML models that you can later use in production everywhere. This can be expensive, but it can also make ML accessible to data analysts who would otherwise be reluctant to learn other tools.
+services/components/frameworks|cloud|AWS SageMaker|TRIAL|FALSE||
+services/components/frameworks|cloud|AWS Glue|TRIAL|FALSE||
+services/components/frameworks|cloud|Google Anthos|TRIAL|TRUE|Anthos er Googles PaaS løsning for Kubernetes, og kombinerer GKE med Anthos Service Mesh (basert på Istio) og en rekke støtteverktøyer. Vi har god erfaring med dette som on-prem skyplattform, og anbefaler at alle som bygger hybridsky evaluerer dette.|Anthos is Google's PaaS solution for Kubernetes, and combines GKE with Anthos Service Mesh (based on Istio) and a number of support tools. We have good experience with this as an on-prem cloud platform, and recommend that everyone who builds a hybrid cloud evaluates this.
+services/components/frameworks|cloud|Cloudflare Workers|TEST|FALSE|En veldig billig FaaS-løsning som lover enklere administrasjon. "You write code. We handle the rest." lover de, og vi håper de har rett, for AWS Lambda krever veldig mye administrasjon for å få til IAM, databasetilkoblinger osv.|A very cheap FaaS solution that promises easier administration. "You write code. We handle the rest." they promise, and we hope they're right, because AWS Lambda requires a lot of administration to get IAM, database connections, etc.
+services/components/frameworks|cloud|AWS Aurora Serverless|TEST|FALSE|Billig og enkel Postgres/MySQL-kompatibel database. Serverless, så betaler bare for bruk og lagring. Dette kan man spare mye på. Forhåpentligvis tar dette over rollen til "vanlig" RDS.|Cheap and simple Postgres/MySQL compatible database. Serverless, so you only pay for use and storage. You can save a lot on this. Hopefully this will outcompete RDS.
+services/components/frameworks|cloud|AWS ECS Anywhere|TEST|FALSE|AWS versjon av Anthos, men uten den sikkerheten man får via Service Mesh. Likevel interessant for de som allerede har bestemt seg for å bruke AWS på sky.|AWS version of Anthos, but without the security you get via Service Mesh. Still interesting for those who have already decided to use AWS on cloud.
+services/components/frameworks|cloud|AWS ECS|HOLD|FALSE|Folket har talt - Kubernetes har tatt over på godt og vondt. Vi anbefaler å bruke EKS på alle nye prosjekter.|The people have spoken - Kubernetes has taken over for better or for worse. We recommend using EKS on all new projects.
+services/components/frameworks|cloud|AWS Lightsail|HOLD|FALSE|Folket har talt - Kubernetes har tatt over på godt og vondt. Vi anbefaler å bruke EKS på alle nye prosjekter.|The people have spoken - Kubernetes has taken over for better or for worse. We recommend using EKS on all new projects.
+methods|cloud|CI/CD|KEEP|FALSE|CI/CD har vokst seg til en gigantisk bevegelse, og selv om det kan være vanskelig å sette seg inn i de forskjellige verktøyene og hva ting EGENTLIG gjør - er det kommet for å bli. CI/CD gjort riktig sikrer både utviklingshastigheten og kvaliteten på koden via testing.|CI/CD has grown into a giant movement, and although it can be difficult to get to grips with the various tools and what things REALLY do - it's here to stay. CI/CD done right ensures both the speed of development and the quality of the code via testing.
+methods|cloud|Cloud Native Development|KEEP|FALSE|Skyen har kommet for å bli. Selv om du ikke jobber mot skyen i dag, vil du antageligvis gjøre det i fremtiden. Fordelene ved å bruke Cloud Native teknologier i dag er at du både vil være forberedt på fremtiden, og at det du lager antageligvis vil kunne brukes lenger. Dessverre er dette vanskelig å gjøre i en umoden organisasjon...|The cloud is here to stay. Even if you don't work against the cloud today, you probably will in the future. The advantages of using Cloud Native technologies today are that you will both be prepared for the future, and that what you create will probably be able to be used for longer. Unfortunately, this is difficult to do in an immature organization…
+methods|cloud|Event-driven development|ADOPT|FALSE|Asynkron og eventbasert utvikling (og datamodellering) har bevist sin verdi - og ingen steder er dette viktigere enn på skyen. Dette er den beste måten å bli kvitt gamle paradigmer på, men ikke prøv å skrive om en monolitt! Bytt heller ut deler av monolitten med FaaS-funksjoner som kommuniserer via køer. Lykke til!|Asynchronous and event-based development (and data modeling) has proven its value - and nowhere is this more important than in the cloud. This is the best way to get rid of old paradigms, but don't try to rewrite a monolith! Instead, replace parts of the monolith with FaaS functions that communicate via queues. Good luck!
+methods|cloud|Event sourcing|ADOPT|FALSE||
+methods|cloud|Infrastructure as Code|ADOPT|FALSE|Unngå manuelle steg, og bruk Terraform eller CloudFormation/CDK. Automatisk repeterbare handlinger gjør det fantastisk mye enklere å sikre at den koden du tester lokalt på din maskin faktisk vil fungere på skyen også!|Avoid manual steps and use Terraform or CloudFormation/CDK. Automatically repeatable actions make it incredibly much easier to ensure that the code you test locally on your machine will actually work in the cloud too!
+methods|cloud|DORA Metrics|ADOPT|FALSE|Flere og flere verktøy i CI/CD-sfæren gjør det nå mulig å måle disse fire metrikkene for å måle utviklingshastighet og driftsstabilitet. Problemet er at det ikke finnes noen enkel måte å samle inn alle metrikkene og vise de på samme sted. Mens vi fremdeles venter på dette universalverktøyet (eller en standard som gjør det enklere å lage slike verktøy) kan vi i hvert fall samle inn noen av tallene manuelt med jevne mellomrom og sjekke om det faktisk går fremover. |More and more tools in the CI/CD sphere now make it possible to measure these four metrics to measure development speed and operational stability. The problem is that there is no easy way to collect all the metrics and display them in one place. While we're still waiting for this universal tool (or a standard that makes it easier to create such tools) we can at least collect some of the numbers manually on a regular basis and check if it's actually moving forward.
+methods|cloud|Identity and Access Management|ADOPT|FALSE||
+methods|cloud|NoOps|TRIAL|FALSE||
+methods|cloud|SecOps|ADOPT|FALSE||
+tools|cloud|Docker Desktop|KEEP|TRUE|Docker har med sin overgang til ny lisensmodell gjort det vanskelig å uforbeholdent anbefale å bruke Docker Desktop. Samtidig har Kubernetes byttet ut Docker med ContainerD, noe som gjør firmaet Docker mindre og mindre relevant. Samtidig er det enda ikke en god erstatter for Docker Desktop for utvikling på egne maskiner, da de eksisterende verktøyene har en mer umoden brukeropplevelse, og ofte mangler funksjonalitet. Vi ser frem til den dagen vi har et verktøy som kan ta over her, men anbefaler ingen å bytte enda.|With its transition to a new license model, Docker has made it difficult to unreservedly recommend using Docker Desktop. At the same time, Kubernetes has replaced Docker with ContainerD, making the company Docker less and less relevant. At the same time, it is not yet a good replacement for Docker Desktop for development on your own machines, as the existing tools have a more immature user experience, and often lack functionality. We look forward to the day when we have a tool that can take over here, but do not recommend anyone to switch just yet.
+tools|cloud|CircleCI|KEEP|TRUE|CircleCI er fremdeles et av de SaaS-tjenestene for CI som har best økosystem, dokumentasjon og gjennomføringsevne. Github Actions er en sterk utfordrer, og vi mistenker at siste ord ikke er sagt - men CircleCI er fremdeles best her.|CircleCI is still one of the SaaS services for CI that has the best ecosystem, documentation and implementation capabilities. Github Actions is a strong contender, and we suspect that the last word has not been said - but CircleCI is still the best here.
+tools|cloud|Terraform|ADOPT|FALSE||
+tools|cloud|Cloud Secret Management tools|ADOPT|TRUE||
+tools|cloud|Cloud Logging|ADOPT|FALSE||
+tools|cloud|Managed Kubernetes|ADOPT|FALSE||
+tools|cloud|Github Actions|TRIAL|FALSE||
+tools|cloud|Google Cloud Composer/Apache Airflow|TRIAL|FALSE||
+tools|cloud|Google Datastudio|TRIAL|FALSE||
+tools|cloud|Helm|TRIAL|FALSE||
+tools|cloud|Google Dataflow/Apache Beam|TRIAL|FALSE||
+tools|cloud|AWS CDK|TEST|TRUE||
+tools|cloud|DBT|TEST|FALSE||
+tools|cloud|Great Expectations|TEST|FALSE||
+tools|cloud|Serverless Framework|HOLD|FALSE||
+tools|cloud|Berglas|HOLD|FALSE||
+tools|cloud|Vault|HOLD|FALSE||
+languages|aidata|Python|KEEP|TRUE|Hovedspråket i datadomenet.|Main language of the data domain.
+languages|aidata|Kotlin|KEEP|FALSE|Dominant JVM språk.|Dominant JVM language.
+languages|aidata|Julia|TEST|FALSE|Populært data språk.|Popular data language.
+languages|aidata|R|TEST|FALSE|Populært data språk.|Popular data language.
+languages|aidata|SQL|KEEP|FALSE|Default språk for data.|Default language for data.
+frameworks|aidata|DBT|ADOPT|TRUE|Høy momentum data rammeverk.|High momentum data framework.
+frameworks|aidata|Airflow|ADOPT|FALSE|Industri standard orkestrering.|Industry standard orchestration.
+frameworks|aidata|Great Expectations|ADOPT|FALSE|Industri-ledende data quality rammeverk.|Industry leading data quality framework.
+frameworks|aidata|Pytorch|KEEP|FALSE|Viktig ML lib.|Important ML lib.
+frameworks|aidata|XGBoost|KEEP|FALSE|Viktig ML lib.|Important ML lib.
+frameworks|aidata|Scikit-Learn|kEEP|FALSE|Viktig ML lib.|Important ML lib.
+frameworks|aidata|Tensorflow|KEEP|TRUE|Viktig ML lib.|Important ML lib.
+frameworks|aidata|Pandas|KEEP|FALSE|Viktig python data rammeverk.|Important python data framework.
+frameworks|aidata|Keras|KEEP|FALSE|Viktig ML lib.|Important ML lib.
+frameworks|aidata|Prefect|TEST|FALSE|Orkestrering utfordrer med bedre design.|Orchestration challenger.
+frameworks|aidata|Dagster|TEST|FALSE|Orkestrering utfordrer med bedre design.|Orchestration challenger.
+frameworks|aidata|DataHub|TEST|FALSE|Datakatalog rammeverk with momentum.|Data catalog framework with momentum.
+frameworks|aidata|Spark on Kubernetes|TRIAL|FALSE|Høy momentum rammeverk.|High momentum framework.
+frameworks|aidata|Delta Live Tables|TRIAL|TRUE|Høy momentum rammeverk on ledende platform.|High momentum framework on leading platform.
+frameworks|aidata|Nansen|TRIAL|FALSE|Datakatalog rammeverk med momentum.|Data catalog framework with momentum.
+methods|aidata|AutoML|TEST|FALSE|Viktig ML paradigm.|Important ML paradigm.
+methods|aidata|GPT(-3)|TEST|FALSE|Høy momentum ML model.|High momentum ML model.
+methods|aidata|Support Vector Machines|TRIAL|FALSE|Viktig ML paradigm.|Important ML paradigm.
+methods|aidata|Data Mesh|TRIAL|FALSE|Høy momentum data platform paradigm.|High momentum data platform paradigm.
+methods|aidata|ETL|KEEP|TRUE|Central data platform paradigm.|Central data platform paradigm.
+tools|aidata|AWS Sagemaker|ADOPT|TRUE|Høy-fokus AWS ML stack.|High focus AWS ML stack.
+tools|aidata|Snowflake|ADOPT|TRUE|Industri-ledende DWH.|Industry leading DWH.
+tools|aidata|Databricks|ADOPT|FALSE|Industri-ledende multi cloud data platform.|Industry leading multi cloud data platform.
+tools|aidata|AWS Sagemaker Model Registry|ADOPT|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|Pandas for Spark 3.0|ADOPT|TRUE|Ledende python data rammeverk.|Leading python data framework.
+tools|aidata|EMR|KEEP|FALSE|Kamp-testet AWS Spark data platform.|Battle tested AWS Spark data platform.
+tools|aidata|Managed Airflow|KEEP|FALSE|Managed version of industry standard orchestrator.|Managed version of industry standard orchestrator.
+tools|aidata|BigQuery|KEEP|TRUE|Kamp-testet cloud DB.|Battle tested cloud DB.
+tools|aidata|Apache Spark|KEEP|TRUE|Ledende data rammeverk.|Leading data framework.
+tools|aidata|Jupyterhub|KEEP|TRUE|Høy momentum notebook service open source.|High momentum notebook service open source.
+tools|aidata|Jupyter notebooks|KEEP|TRUE|Ledende notebook rammeverk.|Leading notebook framework.
+tools|aidata|AWS Feature store|TEST|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|AWS MLOps|TEST|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|AWS Sagemaker Pipelines|TEST|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|AWS Sagemaker studio|TEST|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|AWS Sagemaker Autopilot|TEST|FALSE|Høy-fokus AWS ML service.|High focus AWS ML service.
+tools|aidata|Snowpark|TEST|FALSE|Python environment on Snowflake.|Python environment on Snowflake.
+tools|aidata|IBM AI Fairness 360|TEST|FALSE|Høy-fokus AI Fairness rammeverk.|High focus AI Fairness framework.
+tools|aidata|Vertex AI (Google)|TEST|FALSE|Høy-fokus GCP ML service.|High focus GCP ML service.
+tools|aidata|Dataiku|TRIAL|FALSE|Innovative and mature multi cloud data platform.|Innovative and mature multi cloud data platform.
+tools|aidata|Unity Catalog|TRIAL|FALSE|Data governance and access mgmt data catalog.|Data governance and access mgmt data catalog.
+tools|aidata|BigQuery ML|TRIAL|FALSE|Høy-fokus GCP ML service.|High focus GCP ML service.
+languages|backend|Kotlin|ADOPT|TRUE|Effektiviserer og muliggjør tryggere standard utvikling. Enklere å skrive bra, vedlikeholdseffektiv kode. Høy grad av adopsjon hos utviklere og kunder|Streamlines and enables safer standard development. Easier to write good, maintainable code. High degree of adoption by developers and customers
+languages|backend|Clojure|TEST|FALSE|Kan vurderes der funksjonell stil og samtidighet er viktig|Can be considered where functional style and concurrency are important
+languages|backend|C#|KEEP|FALSE|Veletablert og er en bransjestandard|Well established and an industry standard
+languages|backend|Python|KEEP|TRUE|Veletablert og er en bransjestandard, i tillegg velegnet til ML/AI|Well established and an industry standard, also well suited for ML/AI
+languages|backend|Java|KEEP|FALSE|Veletablert og er en bransjestandard|Well established and an industry standard
+languages|backend|Ruby|KEEP|FALSE|Veletablert for startups og effektiv for kjapp utvikling av webapplikasjoner|Well-established for startups and efficient for rapid development of web applications
+languages|backend|Rust|TRIAL|TRUE|Et spennende språk med meget god ytelse. Stort nedslagsfelt|An exciting language with very good performance. Many areas of use
+languages|backend|GraphQL|TRIAL|FALSE|Fleksibel og god måte å hente data på, gjør det enkelt å utforske apier.|Enables a flexible and good way to retrieve data which makes it easy to explore APIs.
+languages|backend|Golang|TRIAL|TRUE|Enkelt språk å lære seg. Velegnet for CRUD apps. Tiltar i popularitet hos kunder.|Easy language to learn. Suitable for CRUD apps. Increasing in popularity with customers.
+languages|backend|Scala|HOLD|FALSE|Bra potensiale, men i ferd med å bli upopulært. Lite nyvinning, og lite utbredt hos kunder. Stor fleksibilitet gjør at språket støtter mange løsningsstrategier som gjør det vanskelig å skrive kode som nye utviklere raskt kan sette seg inn i.|Good potential, but becoming unpopular. Little innovation, and not much use among customers. Great flexibility means that the language supports many solution strategies that make it difficult to write code that new developers can quickly get used to.
+frameworks|backend|Mockk|ADOPT|FALSE|Et av de beste mock-rammeverkene på markedet. Stor fleksibilitet og funksjonalitet som dekker vanlige bruksområder. Særdeles bra på verifikasjon. Full støtte for co-routines.|One of the best mocking frameworks on the market. Great flexibility and functionality that covers common areas of use. Particularly good at verification. Full support for co-routines.
+frameworks|backend|ASP.NET Core|ADOPT|FALSE|Veletablert og er en bransjestandard|Well established and an industry standard
+frameworks|backend|.NET 5.0+|ADOPT|FALSE|Veletablert og er en bransjestandard|Well established and an industry standard
+frameworks|backend|Rocket|TEST|FALSE|Enkelt og spennende Web rammeverk for Rust|Simple and exciting Web framework for Rust
+frameworks|backend|Actix|TEST|FALSE|Enkelt og spennende Web rammeverk for Rust|Simple and exciting Web framework for Rust
+frameworks|backend|Exposed|TEST|FALSE|JetBrains eget ORM for Kotlin. Utvikles raskt og vil trolig bli standardvalg for Kotlin når det blir stabilt.|JetBrain's own ORM for Kotlin. It is being developed quickly and will probably become the standard choice for Kotlin when it becomes stable.
+frameworks|backend|Pandas|KEEP|FALSE|Veletablert databehandlingsrammeverk for Python.|Well-established computing framework for Python.
+frameworks|backend|Django|KEEP|FALSE|Veletablert webrammeverk/bransjestandard for Python|Well-established web framework/industry standard for Python
+frameworks|backend|Spring Boot|KEEP|FALSE|Veletablert bransjestandard|Well established and an industry standard
+frameworks|backend|Hibernate|KEEP|FALSE|Veletablert bransjestandard|Well established and an industry standard
+frameworks|backend|Quarkus|TRIAL|FALSE|Spennende og lovende full-stack rammeverk for kubernetes native utvikling|Exciting and promising full-stack framework for kubernetes native development
+frameworks|backend|Micronaut|TRIAL|TRUE|Spennende og lovende rammeverk for mikrotjenester og serverless applikasjoner|Exciting and promising framework for microservices and serverless applications
+frameworks|backend|WebFlux|TRIAL|FALSE|Rammeverk for async springapplikasjoner. Et spennende alternativ til Spring MVC. Bygget på Reactive.|Framework for async spring applications. An exciting alternative to Spring MVC. Built on Reactive.
+frameworks|backend|NodeJS|TRIAL|FALSE|Et godt alternativ for BFF (backend for frontend). Passer høyt i stacken. Velegnet til applikasjoner som må tåle høy last, men med lavt cpu-forbruk.|A good option for BFF (backend for frontend). A good fit in the top section of the stack. Suitable for applications that must handle a high load, but with low cpu consumption.
+frameworks|backend|SQLAlchemy ORM|TRIAL|FALSE|Veletablert ORM rammeverk i python applikasjoner|Well-established ORM framework for python applications
+frameworks|backend|Koin|TRIAL|FALSE|Standard dependency injection rammeverk for Android-utvikling. På vei til å bli mer egnet for backendutvikling|Standard dependency injection framework for Android development. On the way to becoming more suitable for backend development
+frameworks|backend|Ktorm|TRIAL|FALSE|ORM-rammeverk for Kotlin med god støtte for funksjonell programmering mot database. |ORM framework for Kotlin with good support for functional programming against database.
+frameworks|backend|Ktor|TRIAL|FALSE|JetBrains eget web-rammeverk. I ferd med å bli en standard for Kotlin.|JetBrain's own web framework. Becoming a standard for Kotlin.
+frameworks|backend|Play2 Framework|HOLD|FALSE|Popularitet daler, få nye prosjekter tar dette i bruk.  |Popularity is falling, few new projects are adopting this.
+methods|backend|Reactive architecture|ADOPT|FALSE|Populært arkitekturvalg som underbygger et godt ytende system bestående av flere små tjenester.|Popular architecture choice that supports a well-performing system consisting of several small services.
+methods|backend|DevOps|ADOPT|FALSE|Velprøvd metodikk for å sikre kontinuerlige leveranser med høy kvalitet og stabilitet|Proven methodology to ensure continuous deliveries with high quality and stability
+methods|backend|Eventdriven|ADOPT|TRUE|Populært arkitekturvalg som underbygger et godt ytende system. En byggekloss på veien mot å bli datadrevet. Hjelper på oppdeling av systemer og å unngå tette koblinger.|Popular architecture choice that supports a high performing system. A building block on the road to becoming data-driven. 
+methods|backend|IaC|ADOPT|TRUE|Infrastruktur som kode. Bidrar til selvdokumenterende, stabil, kostnadsbesparende og effektiv infrastruktur.|Infrastructure as code. Contributes to self-documenting, stable, cost-saving and efficient infrastructure.
+methods|backend|Object-oriented programming|KEEP|FALSE|Veletablert bransjestandard. Fremdeles ofte den foretrukne metoden for å modellere et domene. |Well established and an industry standard. Still often the preferred method for modeling a domain.
+methods|backend|SCRUM|KEEP|FALSE|God metodikk for å oppnå struktur og forutsigbarhet i team.|Good methodology for achieving structure and predictability in teams.
+methods|backend|Functional programming|KEEP|FALSE|Veletablert bransjestandard. Har vokst frem som den foretrukne måten å lage lettlest kode som ikke er sårbare for trivielle feil.|Well established and an industry standard. Has emerged as the preferred way to create easy-to-read code that is not vulnerable to trivial errors.
+methods|backend|Kanban|KEEP|FALSE|Godt alternativ til scrum for struktur i team med mindre definerte leveranser.|Good alternative to scrum for structure in teams with less defined deliverables.
+methods|backend|Microservices|KEEP|FALSE|Veletablert bransjestandard. Sikrer skalerbarhet|Well established and an industry standard. Ensures scalability.
+methods|backend|Service Mesh|TRIAL|FALSE|Bidrar til økt stabilitet og tjenesteorientert kommunikasjon i store systemer|Contributes to increased stability and service-oriented communication in large systems
+methods|backend|OKR|TRIAL|FALSE|God strukturert metodikk for målstyring og resultatoppfølging. Kan bidra til økt eierskap av produktet.|Structured methodology for goal management and result follow-up. Can contribute to increased ownership of the product.
+methods|backend|Serverless|TRIAL|FALSE|God løsning for små og lite ressurskrevende applikasjoner som gir stor fleksibilitet med tanke på både kostnad og skalering.|Good solution for small and low-resource applications that provide great flexibility in terms of both cost and scaling.
+methods|backend|DevSecOps|TRIAL|FALSE|Stadig større behov for sikkerhet i løsninger gjør det nødvendig å ha dette som en integrert del av utviklingsløpet.|The increasing need for security in solutions makes it necessary to have this as an integrated part of the development process.
+tools|backend|SNS|ADOPT|FALSE|God, enkel og strukturert serverless-tjeneste for notifikasjoner. Lett å ta ibruk.|Good, simple and structured serverless service for notifications. Easy to use.
+tools|backend|SQS|ADOPT|FALSE|God, enkel og strukturert serverless-tjeneste for køfunksjonalitet. Lett å ta ibruk.|Good, simple and structured serverless service for queue functionality. Easy to use.
+tools|backend|Owasp security checking|ADOPT|FALSE|Lett tilgjengelig og vedlikehold verktøy for sikkerhetstesting. Viktig del av DevSecOps|Easily accessible and maintainable tools for security testing. Important part of DevSecOps
+tools|backend|Terraform|ADOPT|TRUE|Velprøvd og populært verktøy som dekker de fleste skyleverandører for å strukturere og versjonere infrastruktur som kode.|Proven and popular tool that covers most cloud providers for structuring and versioning infrastructure as code.
+tools|backend|Redis|ADOPT|FALSE|Veletablert bransjestandard for cache for distribuerte systemer.|Well-established industry standard for caching for distributed systems.
+tools|backend|Kafka|ADOPT|TRUE|Velprøvd og raskt verktøy for hendelseslogging.  |Proven and fast event logging tool.
+tools|backend|GraalVM|TEST|FALSE|Spennende alternativ til JVM med lav starttid, optimalisert for lav ressursbruk.|Exciting alternative to JVM with low start time, optimized for low resource use.
+tools|backend|AWS CDK|TEST|FALSE|Interessant verktøy for å skrive IaC med standard programmeringsspråk mot AWS.|Interesting tool for writing IaC with a standard programming language for provisioning AWS.
+tools|backend|InfluxDB|TEST|FALSE|Database spesifikt bygget for tidsserier. |Database specifically built for time series.
+tools|backend|EventStoreDB|TEST|FALSE|Spennende database designet for å passe inn i en eventdreven arkitektur.|Exciting database designed to fit into an event-driven architecture.
+tools|backend|DynamoDB|KEEP|FALSE|Veletablert key-value store på AWS. |Well-established key-value store on AWS.
+tools|backend|MSSQL Server|KEEP|FALSE|Veletablert DBMS som er lett å konfigurere. Spesielt egnet sammen med annen Microsoft-teknologi. Et godt valg dersom det ønskes et lisensiert alternativ til PostgreSql.|Well-established DBMS that is easy to configure. Especially suitable together with other Microsoft technology. A good choice if a licensed alternative to PostgreSql is desired.
+tools|backend|Flyway/Liquibase|KEEP|FALSE|Velkjent og velprøvde verktøy for versjonering av relasjonelle databaser.|Well-known and proven tools for versioning relational databases.
+tools|backend|ELK-stack|KEEP|FALSE|Velkjent og velprøvd verktøy for logging og loggovervåkning.|Well-known and proven tool for logging and log monitoring.
+tools|backend|S3/simple storage|KEEP|FALSE|Veletablert objekt-lagring på AWS|Well-established object storage on AWS
+tools|backend|PostgreSQL|KEEP|FALSE|Veletablert DBMS som er gratis. Fullgodt alternativ til de store, lisensierte løsningene. Støttes av de fleste ORM.|Well-established DBMS that is free. Very good alternative to the large, licensed solutions. Supported by most ORMs.
+tools|backend|Kubernetes|KEEP|FALSE|Veletablert bransjestand for container-orkestrering.|Well-established industry standard for container orchestration.
+tools|backend|BigQuery|TRIAL|FALSE|Managed, serverless og kraftig datavarehusløsning med gode muligheter for skalering og høy ytelse på store datamengder.|Managed, serverless and powerful data warehouse solution with good possibilities for scaling and high performance on large amounts of data.
+tools|backend|MongoDB|TRIAL|FALSE|Velkjent og etablert dokumentdatabase. Et godt alternativ dersom en dokumentdatabase er nødvendig. Vurder om dokumentdatabase er riktig valg.|Well-known and established document database. A good alternative if a document database is needed. Consider whether a document database is the right choice for you.
+tools|backend|Snyk|TRIAL|FALSE|Interessant verktøy for sikkerhetsanalyse. Viktig del av DevSecOps|Interesting tool for security analysis. Important part of DevSecOps
+tools|backend|Azure Pipelines|TRIAL|FALSE|Interessant CI/CD-verktøy for Azure|Interesting CI/CD tool for Azure
+tools|backend|Gitlab CI/CD|TRIAL|FALSE|Interessant CI/CD-verktøy|Interesting CI/CD tool
+tools|backend|Github Actions|TRIAL|FALSE|Interessant CI/CD-verktøy|Interesting CI/CD tool
+tools|backend|Kong|TRIAL|FALSE|Spennende og open source api management verktøy.|Exciting and open source api management tool.
+tools|backend|MySql|HOLD|FALSE|Komplisert lisensieringsmodell. Bedre alternativer er tilgjengelig.|Complex licensing model. Better options are available.
+tools|backend|OracleDB|HOLD|FALSE|Veletablert DBMS. Høy kostnad og fullgode alternativer er tilgjengelig.|Well established DBMS. High cost and other as good options are available.
+tools|backend|Helm 2|HOLD|FALSE|Helm 3 er tilgjengelig, og trenger ikke tiller-server|Helm 3 is available, and does not need a tiller server
+languages|iot|C/C++|KEEP|TRUE|Bransjestandard for embedded utvikling.|De facto standard for embedded development
+languages|iot|Embedded Rust|TEST|FALSE|Spennende språk med interessante egenskaper, ikke nådd critical mass enda.|Interesting language, but has not reached critical mass yet in terms of market adoption.
+languages|iot|MicroPython|TEST|FALSE|Python for  små enheter, lett i bruk og viser interessant potensiale.|Python for embedded systems, shows potential given that it is quick to prototype with and stable enough for production use.
+frameworks|iot|AWS IoT|ADOPT|TRUE|#1 IoT markedsleder.|#1 IoT market leader.
+frameworks|iot|Embedded Linux|ADOPT|TRUE|Raspberry Pi + clones usage enablement. Low cost and good performance for many applications.|Raspberry Pi + clones
+frameworks|iot|TensorFlow Lite for microcontrollers|TEST|FALSE|Integrert ML bruk er stigende pga mer effektiv opplæring og deling av denne.|Embedded ML is on the rise as uC with ML support is becoming more main stream.
+frameworks|iot|GCP IoT Core|ADOPT|FALSE|#2 IoT market|#2 IoT market
+frameworks|iot|Azure IoT Hub|TRIAL|FALSE|#3 IoT market|#3 IoT market
+frameworks|iot|ROS (Robot Operating System)|TEST|FALSE|Monitor|Monitor
+frameworks|iot|ESP-IDF|TRIAL|FALSE|ESP32 bare metal development ved behov|ESP32 bare metal development, as needed
+frameworks|iot|Zephyr (RTOS)|TEST|FALSE|Nordic Semiconductor foretrukne rammeverk|Nordic Semiconductor backed framework for nRF52 and nRF91
+frameworks|iot|Edge IoT|TEST|FALSE|Container basert offloading av funksjoner til IoT enheter|Container based offloading of functions to IoT devices
+frameworks|iot|Balena|TEST|FALSE|Løsning for Linux based IoT device management|Framework for IoT Linux development
+frameworks|iot|Mongoose mdash|TEST|FALSE|Solution for uC IoT device management|Solution for uC IoT device management
+frameworks|iot|Mongoose OS|TEST|FALSE|Rammeverk for IoT uC enheter|Framework for IoT uC development
+frameworks|iot|FreeRTOS|ADOPT|TRUE|Amazon backed RTOS used on ESP32/Nordic uC|Amazon backed RTOS used on ESP32/Nordic uC
+frameworks|iot|Pycom|TEST|FALSE|Interessant IoT løsning basert på microPython|Interesting off-the-shelf IoT offering which includes everything you need.
+frameworks|iot|Particle|TRIAL|TRUE|Interessant komplett IoT løsning basert på Arduino rammeverk|Interesting off-the-shelf IoT offering which includes everything you need.
+communications|iot|MQTT|KEEP|TRUE|#1 IoT standard|#1 IoT standard
+communications|iot|Protobuf|ADOPT|FALSE|Standardization|Standardization
+communications|iot|I2C/SPI/CAN|KEEP|FALSE|uC standards|uC standards
+communications|iot|Zigbee|TRIAL|FALSE|Home automation standard|Home automation standard
+communications|iot|Z-Wave|TRIAL|FALSE|Home automation standard|Home automation standard
+communications|iot|4G/5G(NB-IoT/Cat M1)|ADOPT|FALSE|Cellular standard|Cellular standard
+communications|iot|BLE|ADOPT|FALSE|Smart device standard|Smart device standard
+communications|iot|COAP|TRIAL|FALSE|#2 IoT standard|#2 IoT standard
+communications|iot|LoRaWAN|TRIAL|TRUE|Lav terskel nettverksteknologi for sensorer|Low barrier network technology for sensors
+communications|iot|Bluetooth Thread|TRIAL|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
+communications|iot|Iridium|TEST|FALSE|Customer driven|Customer driven
+communications|iot|802.11|KEEP|FALSE|De facto standard|De facto standard
+communications|iot|UWB|TEST|TRUE|Precise indoor location|Precise indoor location
+communications|iot|Bluetooth DirectionFinding|TEST|FALSE|UWB is better?|UWB is better?
+tools|iot|Fusion 360|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
+tools|iot|FreeCAD|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
+tools|iot|PlatformIO|ADOPT|TRUE|Time to market, prototyping|Time to market, prototyping
+tools|iot|Arduino IDE|HOLD|FALSE|Too simplistic and there are better alternatives|Too simplistic and there are better alternatives
+tools|iot|KiCAD|TEST|FALSE|Custom PCB capability|Custom PCB capability
+tools|iot|Easy EDA|TEST|FALSE|Custom PCB capability|Custom PCB capability
+tools|iot|Eagle EDA|TEST|FALSE|Custom PCB capability|Custom PCB capability
+hardware|iot|Arduino|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
+hardware|iot|ESP32|KEEP|TRUE|Swiss army knife, uC/IoT|Swiss army knife, uC/IoT
+hardware|iot|STM32|ADOPT|FALSE|Industrial uC solutions|Industrial uC solutions
+hardware|iot|FPGA|KEEP|FALSE|Rå ytelse, for applikasjoner som trenger dette.|Raw performance if you need it.
+hardware|iot|Teensy|HOLD|FALSE|Bra for prototyping, uklar skaleringspotensiale|Excellent for protoyping, hard to scale up
+hardware|iot|TPU (coral)|TEST|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
+hardware|iot|mmWave Radar|TEST|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
+hardware|iot|Raspberry PI Pico|TRIAL|FALSE|Cost/benefit +|Cost/benefit +
+hardware|iot|ESP8266|HOLD|FALSE|Legacy component, superceded by ESP32.|Legacy component, superceded by ESP32.
+hardware|iot|nRF9160|TRIAL|TRUE|SoC, Cat-M1 + ARM|SoC, Cat-M1 + ARM
+hardware|iot|Jetson Nano|TEST|FALSE|Embedded ML board|Embedded ML board
+languages|cybersec|Shell|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|Golang|ADOPT|TRUE|Industristandard.|Industry standard.
+languages|cybersec|Python|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|REGO|TEST|FALSE|Industristandard.|Industry standard.
+languages|cybersec|RegEx|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|Hyperscan|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|HashiCorp Configuration Language|TRIAL|FALSE|Industristandard.|Industry standard.
+languages|cybersec|JSON|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|YAML|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|SQL|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|ZSH||FALSE|Industristandard.|Industry standard.
+languages|cybersec|Bash|KEEP|FALSE|Industristandard.|Industry standard.
+languages|cybersec|ZSH|ADOPT|FALSE|Industristandard.|Industry standard.
+languages|cybersec|PHP|HOLD|FALSE|Nei. Need i say more?|No. Need i say more?
+languages|cybersec|NOSQL|ADOPT|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|OPA|TEST|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|Gatekeeper|ADOPT|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|Kubernetes|ADOPT|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|GitHub Advanced Security|TRIAL|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|NIST Cybersecurity Framework|ADOPT|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|ISO 27000|HOLD|FALSE|Industristandard.|Industry standard.
+methods|cybersec|Code Signing|ADOPT|FALSE|«Best practice» for integritetssjekk av kodeleveranse til infrastrukturplattform|
+methods|cybersec|SBOM|TEST|FALSE|Fullstendig oversikt over avhengigheter. Gir verdi ved hendelser og sikkerhetsfeil i avhengigheter.|
+methods|cybersec|ROS (RVA-analysis)|-|FALSE|Nødvendig del av sikkerhetsmetodikk. Forstå og evaluere (samt. dokumentere) potensielle risikoer for tjenester.|
+methods|cybersec|SWOT|HOLD|FALSE|Vektet mot virksomhet- og organisatorisk sikkerhetsbilde.|
+methods|cybersec|SecOps|ADOPT|FALSE|Integrasjon av sikkerhetsområde med driftområde. Automatisering av sikkerhetsmekanismer og innebygget-sikkerhet.|
+methods|cybersec|Zero trust|ADOPT|FALSE|«Best practice» for tilgangskontroll. Vanligvis uoppnåelig og er heller noe en aspirerer til.|
+methods|cybersec|Least privilege|ADOPT|FALSE|Industristandard. Minimumskrav for tilgangsstyring.|
+methods|cybersec|Service Mesh|ADOPT|FALSE|Rammeverk for tjenestekommunikasjon. Brukt rikig styrker tilgangskontroll og sikkerhetsmetodikk. |
+methods|cybersec|Ethical Hacking|TEST|FALSE|Forhindrer potensielt misbruk av tjenester ved å teste sikkerheten på en trygg måte.|
+methods|cybersec|Red Team / Blue Team|TEST|FALSE|Øker og bistår til bedre |
+procedures|cybersec|Code Signing|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Code Scanning|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Secret Scanning|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Dependency Graph|TRIAL|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Dependency Scanning|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Version pinning|KEEP|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Reverse Engineering|HOLD|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|DevSecOps|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|GitSecOps|TRIAL|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|CI/CD|KEEP|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Contninous upgrade|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Data governance|KEEP|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|SIEM|TRIAL|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Userless authentication||FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Policy Controller|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Container isolation|ADOPT|FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Virtual Private Network||FALSE|Industristandard.|Industry standard.
+procedures|cybersec|Cryptogrophy||FALSE|Industristandard.|Industry standard.
+tools|cybersec|cosign|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|kube-notary|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Binary Authorization|TRIAL|FALSE|Industristandard.|Industry standard.
+tools|cybersec|GCP *|TRIAL|FALSE|Industristandard.|Industry standard.
+tools|cybersec|AWS *|TRIAL|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Azure *|HOLD|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Istio|TRIAL|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Snyk|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|GitHub Advanced Security|TRIAL|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Splunk|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Datadog|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|SolarWinds|HOLD|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Rapid7|TEST|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Workload Identity||FALSE|Industristandard.|Industry standard.
+tools|cybersec|GKE Sandbox||FALSE|Industristandard.|Industry standard.
+tools|cybersec|PodSecurityPolicy|HOLD|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Gatekeeper|ADOPT|FALSE|Industristandard.|Industry standard.
+tools|cybersec|Config Management||FALSE|Industristandard.|Industry standard.
+tools|cybersec|VIM|KEEP|FALSE|Industristandard.|Industry standard.
+tools|cybersec|NANO|HOLD|FALSE|Industristandard.|Industry standard.

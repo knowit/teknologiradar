@@ -1,0 +1,25 @@
+.dialogTitle {
+  margin: 0px;
+}
+
+.wrapper {
+  background: var(--color-green2);
+  color:  var(--color-bg);
+  width: 40rem;
+  margin: 30vh auto;
+  border-radius: 12px;
+  padding: 2.5rem;
+}
+
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+.dialogButton {
+  all: unset;
+  cursor: pointer;
+}
