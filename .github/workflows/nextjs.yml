@@ -45,7 +45,7 @@ jobs:
         with:
           node-version: "16"
           cache: "yarn"
-      - run: yarn install --frozen-lockfile
+      - run: cd frontend && yarn install --frozen-lockfile
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
