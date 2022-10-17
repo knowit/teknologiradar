@@ -41,8 +41,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: "yarn"
-          cache-dependency-path: './frontend/yarn.lock'
+      - name: Install deps
         working-directory: frontend
         run: yarn --frozen-lockfile
       - name: Setup Pages
