@@ -34,7 +34,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
-        working-directory: "./frontend"
         id: detect-package-manager
         run: |
           echo "::set-output name=manager::yarn"
