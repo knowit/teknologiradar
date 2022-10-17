@@ -1,5 +1,6 @@
 import CloseIcon from './CloseIcon';
-import ExpandIcon from './ExpandIcon';
 import CollapseIcon from './CollapseIcon';
+import ExpandIcon from './ExpandIcon';
+import ForwardIcon from './ForwardIcon';
 
-export { CloseIcon, ExpandIcon, CollapseIcon };
+export { CloseIcon, ExpandIcon, CollapseIcon, ForwardIcon };
