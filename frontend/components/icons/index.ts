@@ -1,3 +1,4 @@
+import CloseIcon from './CloseIcon';
 import ForwardIcon from './ForwardIcon';
 
-export { ForwardIcon };
+export { CloseIcon, ForwardIcon };

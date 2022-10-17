@@ -1,12 +1,9 @@
-.dialogTitle {
-  margin: 0px;
-}
-
 .wrapper {
   background: var(--color-green2);
-  color:  var(--color-bg);
-  width: 40rem;
-  margin: 30vh auto;
+  color: var(--color-bg);
+  width: calc(100% - 20vw);
+  max-width: 60rem;
+  margin: 40vh auto;
   border-radius: 12px;
   padding: 2.5rem;
 }
@@ -18,8 +15,15 @@
   gap: 10px;
 }
 
+.dialogTitle {
+  margin: 0px;
+}
 
 .dialogButton {
   all: unset;
   cursor: pointer;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
 }

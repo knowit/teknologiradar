@@ -72,11 +72,17 @@
 }
 
 .quadrantListItem {
-  padding: 5px;  
+  padding: 5px;
   border-radius: 4px;
   display: block;
   background-color: rgba(75, 100, 85, 0.2);
   list-style: none;
+}
+
+.activeListItem {
+  border: 1px solid var(--color-green2);
+  background: var(--color-green2);
+  color: var(--color-bg);
 }
 
 .quadrantListItem.description {

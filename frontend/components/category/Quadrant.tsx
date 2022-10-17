@@ -16,8 +16,8 @@ const Quadrant = ({ id, name, description, items }: Props) => {
   const { t } = useTranslation('category');
   const { locale } = useRouter();
   const descriptionId = `${id}_description`;
-  
-  const { open } = useInfoModal();
+
+  const { open: openModal, modalContent } = useInfoModal();
 
   return (
     <div className={styles.wrapper}>
@@ -36,11 +36,23 @@ const Quadrant = ({ id, name, description, items }: Props) => {
           items?.map((item, index) => {
             const descriptionText = locale === 'nb' ? item.reason_no : item.reason_en;
             const hasDescription = descriptionText && descriptionText.length > 0;
-            const itemClass = [styles.quadrantListItem, hasDescription ? styles.description : ''].join(' ');
-            const itemRole = hasDescription ? 'button' : 'listitem';
+            const role = hasDescription ? 'button' : 'listitem';
+            const active = modalContent.title === item.name;
+
+            const itemClass = [styles.quadrantListItem, hasDescription ? styles.description : '', active ? styles.activeListItem : ''].join(' ');
+
             return (
               <>
-                <li key={index} className={itemClass} role={itemRole} onClick={() => open({ title: item.name, message: descriptionText})}>
+                <li
+                  key={index}
+                  className={itemClass}
+                  role={role}
+                  {...(hasDescription && {
+                    onClick: () => {
+                      openModal({ title: item.name, message: descriptionText });
+                    },
+                  })}
+                >
                   {item.name}
                 </li>
               </>
@@ -50,7 +62,6 @@ const Quadrant = ({ id, name, description, items }: Props) => {
           <p>{t('noContent')}</p>
         )}
       </ul>
-      {/* <GroupItemInfo title={itemInfo?.title} message={itemInfo?.message} show={itemInfo?.show} /> */}
     </div>
   );
 };

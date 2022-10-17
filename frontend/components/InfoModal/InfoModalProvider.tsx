@@ -13,11 +13,10 @@ const initalContent: InfoModalContent = {
   show: false,
 };
 
-
 type InfoModalContextState = {
   open: (content: InfoModalContent) => void;
   close: () => void;
-  modalContent: any,
+  modalContent: any;
 };
 
 const initalState: InfoModalContextState = {
@@ -40,14 +39,11 @@ export const InfoModalProvider = ({ children }: FeatureProviderOptions) => {
     setModalContent({
       ...content,
       ...{ show: true },
-    });;
+    });
   };
 
   const close = () => {
-    setModalContent({
-      ...modalContent,
-      ...{ show: false },
-    });
+    setModalContent(initalContent);
   };
 
   return (

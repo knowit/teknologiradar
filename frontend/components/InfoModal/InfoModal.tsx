@@ -2,6 +2,7 @@ import { Dialog } from '@reach/dialog';
 import { useTranslation } from 'next-i18next';
 import { useInfoModal } from './InfoModalProvider';
 import styles from './InfoModal.module.css';
+import { CloseIcon } from '../icons';
 
 const InfoModal = () => {
   const { modalContent, close } = useInfoModal();
@@ -16,8 +17,10 @@ const InfoModal = () => {
               {modalContent.title}
             </h2>
             <button onClick={close} className={styles.dialogButton}>
-              <span aria-hidden>{t('dialog.close')}</span>
-              <span aria-hidden>X</span>
+              <span>{t('dialog.close')}</span>
+              <span aria-hidden>
+                <CloseIcon />
+              </span>
             </button>
           </div>
           <p aria-labelledby="dialog-title">{modalContent.message}</p>
