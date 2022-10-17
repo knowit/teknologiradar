@@ -70,7 +70,13 @@ const GroupFilter = ({ groups, onFilterChange }: Props) => {
         {t('filterByCategory')}
       </div>
       {sortedKeys.map((key) => (
-        <Checkbox id={key} key={key} checked={filters[key]} onChange={onChange} label={groups.find((group) => group.id === key)?.name || ''} />
+        <Checkbox
+          id={key}
+          key={key}
+          checked={filters[key]}
+          onChange={onChange}
+          label={groups.find((group) => group.id === key)?.name || ''}
+        />
       ))}
     </div>
   );

@@ -22,29 +22,32 @@ const objects: Record<string, string>[] = values.map((value) => {
 });
 
 const groupedByArea = groupBy(objects, (obj) => obj['area']);
-const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, object>>((acc, curr) => {
-  const [key, entries] = curr;
-  const byType = Object.values(groupBy(entries, (entry) => entry.type));
-  acc[key] = {
-    name: capitalize(key),
-    link: key,
-    groups: byType.map((items) => ({
-      name: capitalize(items[0].type),
-      id: items[0].type.replaceAll(' ', '-').replaceAll('/', '-'),
-      items: items
-        .filter((item) => item.status && validStatuses.includes(item.status.toUpperCase())) // Ignore if not valid status
-        .map(({ item, status, priority, reason_no, reason_en }) => ({
-          name: item,
-          status: status.toUpperCase(),
-          priority,
-          reason_no: reason_no,
-          reason_en: reason_en,
-        })),
-    })),
-  };
+const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, object>>(
+  (acc, curr) => {
+    const [key, entries] = curr;
+    const byType = Object.values(groupBy(entries, (entry) => entry.type));
+    acc[key] = {
+      name: capitalize(key),
+      link: key,
+      groups: byType.map((items) => ({
+        name: capitalize(items[0].type),
+        id: items[0].type.replaceAll(' ', '-').replaceAll('/', '-'),
+        items: items
+          .filter((item) => item.status && validStatuses.includes(item.status.toUpperCase())) // Ignore if not valid status
+          .map(({ item, status, priority, reason_no, reason_en }) => ({
+            name: item,
+            status: status.toUpperCase(),
+            priority,
+            reason_no: reason_no,
+            reason_en: reason_en,
+          })),
+      })),
+    };
 
-  return acc;
-}, {});
+    return acc;
+  },
+  {}
+);
 
 const categoriesData = JSON.stringify(withGroupedTypes, replacer);
 

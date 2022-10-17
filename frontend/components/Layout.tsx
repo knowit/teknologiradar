@@ -15,7 +15,7 @@ const Layout = ({ children }: Props) => {
   return (
     <div className={styles.main}>
       <Header forRoot={isRootPage} />
-      <main>{children}</main>
+      {children}
       <FooterComponent />
     </div>
   );

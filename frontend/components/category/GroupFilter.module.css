@@ -1,13 +1,16 @@
 .filtersWrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+  justify-content: flex-start;
+  align-items: baseline;
 }
 
-.filter {
+.filterOptionsWrapper {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  row-gap: 1rem;
   align-items: center;
 }
 
