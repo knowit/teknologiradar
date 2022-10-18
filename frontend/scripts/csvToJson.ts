@@ -38,8 +38,8 @@ const withGroupedTypes = Object.entries(groupedByArea).reduce<Record<string, obj
             name: item,
             status: status.toUpperCase(),
             priority,
-            reason_no: reason_no.replaceAll('\n', ' '),
-            reason_en: reason_en.replaceAll('\n', ' '),
+            reason_no: reason_no.replaceAll('\n', ' ').trim(),
+            reason_en: reason_en.replaceAll('\n', ' ').trim(),
           })),
       })),
     };
