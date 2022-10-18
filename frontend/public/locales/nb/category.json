@@ -12,31 +12,31 @@
   "priorities": {
     "title": "Prioriteringer",
     "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "explanation": "Disse er satsningsområder sett av KnowIt som spesielt viktige - og vi kommer derfor til å bruke ekstra tid og krefter på disse."
   },
   "keep": {
     "title": "Behold",
-    "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Etablerte bransjestandarder",
+    "explanation": "Dette er teknologier, verktøy og annet som er godt brukt i markedet som standarder og vil ikke forsvinne på hverken kort eller lang sikt. De er essensielle og det er ingen grunn til å slutte å bruke de."
   },
   "adopt": {
     "title": "Bruk",
-    "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Førstevalg for nye prosjekter",
+    "explanation": "Her er teknologiene som vi vil anbefale å enten bruke for nye prosjekter- eller for migrering av gamle. Dette er teknologi som både er bevist produksjonsklar og som vi ser vil få mer og mer bruk etter som tiden går. Å vente med denne teknologien vil være en ulempe for kunden."
   },
   "trial": {
     "title": "Prøv",
-    "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Bør prøves i et større prosjekt",
+    "explanation": "Teknologien har vært testet ut og vi har sett at den er moden nok til å brukes mer. For kunder som har mulighet til å satse vil en investering i disse gi de et fortrinn over tid da vi ser at teknologien vil mest sannsynlig bli mer og mer fyldig med tiden."
   },
   "test": {
     "title": "Test",
-    "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Nye og spennende områder",
+    "explanation": "Dette er teknologier som er på start nivået - de bør ikke brukes i produksjon enda, men bør kjøres som mindre interne test prosjekter. De kan muligens vise seg å bli bra men foreløpig har vi ikke nok grunnlag til å kunne gå til kunder med disse. I en framtidig radar vil de kanskje gå videre, men de trenger fortsatt tid."
   },
   "hold": {
     "title": "Avvent / Fas ut",
-    "description": "Teknologier vi vil prioritere og bruke mer",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Avleggs og gammeldags",
+    "explanation": "De gamle og deprekerte teknologiene her er enten allerede ikke i bruk, eller de er på vei ut; enten fordi annen teknologi har tatt over eller fordi de ikke lenger trengs."
   }
 }

@@ -597,7 +597,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Hensikten er å oppnå like muligheter til samfunnsdeltakelse og motvirke diskriminering på grunnlag av nedsatt funksjonsevne.',
             reason_en:
-              'The purpose of UU is to plan products, services and enviroments in order to make them usable for all persons. In this way helps people to achieve equal opportunities for social participation and to counteract discrimination based on reduced functional capacity.',
+              'The purpose of UU is to plan products, services and environments in order to make them usable for all people. ',
           },
           {
             name: 'WCAG',
@@ -606,61 +606,59 @@ const categories: Record<string, Category> = {
             reason_no:
               'Retningslinjer for tilgjengelig webinnhold og internasjonal standard for universell utforming av nettsider og apper. WCAG 2.1 standarden en del av norsk lov og dermed et krav for alle offentlige nettsteder.',
             reason_en:
-              'Web Content Accessibility Guidelines for web content and is the international standard for universal design of websites and apps. The WCAG 2.1 standard is part of Norwegian law and thus a requirement for all public websites.',
+              'Web Content Accessibility Guidelines for web content is the international standard for universal design of digital products and services. The WCAG 2.1 standard is part of Norwegian law and thus a requirement for all websites.',
           },
           {
             name: 'Design system',
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Et designsystem er en samling av gjenbrukbare komponenter. Det er et bibliotek og rammeverk for en virksomhets digitale strategi og identitet. Komponentene kan ses på som byggesteiner for å lage en helhetlig nettside. Det kan bidra til en god brukeropplevelse, men gjør også både kode og design mer effektivt.',
+              'Et designsystem er en samling av gjenbrukbare komponenter. Det er et bibliotek og rammeverk for en virksomhets digitale strategi og identitet. Komponentene kan ses på som byggesteiner for å lage en helhetlig nettside.',
             reason_en:
-              "A design system is a collection of reusable components. It is a library and framework for a company's digital strategy and identity. The components can be seen as building blocks to create a comprehensive website. It can contribute to a good user experience, but also makes both code and design more efficient.",
+              "A design system is a collection of reusable components. It is a library and framework for a company's digital strategy and identity. The components can be seen as building blocks to create a comprehensive website. ",
           },
           {
             name: 'Storybook',
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Gir en oversikt over eksisterende komponenter både for designere og utviklere. Alle elementene i et produkt kan plasseres der for å skape et levende designsystem. Både designere, utviklere og produkteiere kan det direkte fra nettleseren.',
+              'Gir en oversikt over eksisterende komponenter både for designere og utviklere. Alle elementene i et produkt kan plasseres der for å skape et levende designsystem.',
             reason_en:
-              'Gives an overview of existing components both for designers and developers. All the elements of a product can be placed there to create a living design system. Both designers, developers and product owners can access directly from the browser.',
+              'Gives an overview of existing components both for designers and developers. All the elements of a product can be placed there to create a living design system.',
           },
           {
             name: 'Autonome team',
             status: 'ADOPT',
             priority: true,
             reason_no:
-              'Komplekse problemer løses best i team med stor grad av autonomi. Dette medfører økt innovasjon og nøyaktighet i problemløsning. Mindre behov for eksterne ledere, gir økt produktivitet og forutsetning for smidighet (agile) og folk er mer fornøyde',
+              'Tverrfaglig team som tar avgjørelser basert på prosjektets og teamets behov. Komplekse problemer løses best i team med stor grad av autonomi. Dette medfører økt innovasjon og nøyaktighet i problemløsning.',
             reason_en:
-              'Complex problems are best solved in teams with a high degree of autonomy. This leads to increased innovation and accuracy in problem solving. Less need for external managers, gives increased productivity and prerequisite for flexibility (agile) and people are more satisfied.',
+              'Crossfunctional teams that makes decisons based on project needs. Complex problems are best solved in teams with a high degree of autonomy. This leads to increased innovation and accuracy in problem solving.',
           },
           {
             name: 'Business design',
-            status: 'TRIAL',
+            status: 'ADOPT',
             priority: false,
-            reason_no:
-              'Business designer er en forretningsutvikler med et designtankesett i bunn, eller en designer som også inkluderer et forretningstankesett i sitt arbeid. ',
-            reason_en:
-              'Business designer is a business developer with a design mindset at the bottom, or a designer who also includes a business mindset in her/his work.',
+            reason_no: 'Business design er forretningsutvikling med et designtankesett i bunn.',
+            reason_en: 'Business design is business development combined with a design mindset. ',
           },
           {
             name: 'UX design',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'User experience design, handler om å forbedre totalopplevelsen et menneskelig  har i møte med et digitalt produkt, en tjeneste eller et system. Disse interaksjonene skal maksimere brukerens følelse av måloppnåelse og samtidig minimere frustrasjoner.',
+              'User experience design handler om å forbedre totalopplevelsen for mennesker i interaksjon med et digitalt produkt, en tjeneste eller et system. ',
             reason_en:
-              "User experience design is about improving the overall experience a person has when dealing with a digital product, service or system. These interactions should maximize the user's sense of goal achievement while minimizing frustration.",
+              'User experience design is about improving the overall experience a person has when dealing with a digital product, service or system. ',
           },
           {
             name: 'Service design',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. Tjenester produseres og forbrukes samtidig. Kunden er en av medskaperne av tjenesten.',
+              'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. ',
             reason_en:
-              'Service design is a discipline within design with goals about developing user-oriented and holistic services. Services are produced and consumed at the same time. The customer is one of the co-creators of the service.',
+              'Service design is a discipline within design with goalsabout developing user-oriented and holistic services. ',
           },
         ],
       },
@@ -673,18 +671,18 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Personas er fiktive karakterer, som du lager basert på forskningen din for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren din på lignende måter.',
+              'Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles. ',
             reason_en:
-              'Personas are fictional characters, which you create based upon your research in order to represent the different user types that might use your service, product, site, or brand in a similar way. ',
+              'Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way. ',
           },
           {
             name: 'Service blueprint',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Service Blueprint er en teknikk som opprinnelig ble brukt for tjenestedesign, men har også funnet applikasjoner for å diagnostisere problemer med driftseffektivitet.',
+              'Service Blueprint er en metode som blir brukt i tjenestedesign. Service Blueprint kan for eksempel inkludere flere aktører og tjenester for å få en helhetlig oversikt av en brukerreise.',
             reason_en:
-              'The service blueprint is a technique originally used for service design, but has also found applications in diagnosing problems with operational efficiency.',
+              'The service blueprint is a method used for service design. Service blueprint can also be used by adressing several services and actors to provide a holistic overview.',
           },
           {
             name: 'Customer journey',
@@ -700,9 +698,9 @@ const categories: Record<string, Category> = {
             status: 'HOLD',
             priority: false,
             reason_no:
-              'En designsprint er en tidsbegrenset, fem-fase prosess som bruker designtenkning med sikte på å redusere risikoen ved å bringe et nytt produkt, en tjeneste eller en funksjon til markedet.',
+              'En designsprint er en tidsbegrenset, fem-dagers prosess som bruker designtenkning med sikte på å redusere risikoen ved å bringe et nytt produkt, en tjeneste eller en funksjon til markedet.',
             reason_en:
-              'The sprint is a five-day process for answering critical business questions through design, prototyping, and testing ideas with customers.',
+              'Design sprint is a five-day process for answering critical business questions through design, prototyping, and testing ideas with customers.',
           },
           {
             name: 'Spørreundersøkelse',
@@ -726,16 +724,16 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Kan være å gi brukere en oppgave eller en prototype for å se hvordan de utfører den eller bruker den.',
+              'Observasjon av en bruker gir mer innsikt av hvordan bruker interagerer med nettsiden, tjenesten eller produktet.',
             reason_en:
-              'Could be to give users a task or a prototype to see how they perform it or use it.',
+              'Observation of the user gives valuable insights of their interactions with a website, service or product.',
           },
           {
             name: 'Crazy eights',
             status: 'HOLD',
             priority: false,
             reason_no:
-              "Crazy 8's er en kjernemetode for Design Sprint. Det er en rask skisseøvelse som utfordrer folk til å skissere åtte forskjellige ideer på åtte minutter.",
+              "Crazy 8's er en metode ofte brukt under Design Sprint. Det er en rask skisseøvelse som utfordrer folk til å skissere åtte forskjellige ideer på åtte minutter.",
             reason_en:
               "Crazy 8's is a core Design Sprint method. It is a fast sketching exercise that challenges people to sketch eight distinct ideas in eight minutes.",
           },
@@ -753,9 +751,9 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: true,
             reason_no:
-              'En design thinking workshop er tilrettelagt møte hvor tverrfaglige team planlegger og prototyper brukersentrerte design.',
+              'En designdrevet workshop er et tilrettelagt møte hvor folk på tvers av fagdisipliner planlegger og prototyper brukersentrert design.',
             reason_en:
-              'A Design Thinking workshop is facilitated meeting where multi-disciplinary teams plan and prototype user-centered designs. ',
+              'A design driven workshop is a facilitated meeting where multi-disciplinary teams plan and prototype user-centered designs. ',
           },
           {
             name: 'Costumer journey',
@@ -764,7 +762,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'En kundereise er en visualisering av prosessen som en person går gjennom for å oppnå et mål.',
             reason_en:
-              'A CS is map is a visualization of the process that a person goes through in order to accomplish a goal.',
+              'A costumer journey is a visualization of the process that a person goes through in order to accomplish a goal.',
           },
           {
             name: 'Test av design på brukere med spesielle behov',
@@ -789,18 +787,18 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'En brukerhistorie er en beskrivelse av funksjonen til en programvare sett fra et brukerperspektiv. ',
+              'En brukerhistorie er en beskrivelse av funksjonen til en gitt oppgave fra et brukerperspektiv. ',
             reason_en:
-              "A user story is a description of the function of a software from a user's perspective.",
+              "A user story is a description of a given function from a user's perspective.",
           },
           {
             name: 'User story maps',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Kartlegging av brukerhistorier er en enkel, samarbeidsøvelse som hjelper deg med å definere brukerens reise med et produkt eller en tjeneste, hvor det finnes hull og hva det kan bli.',
+              'Kartlegging av brukerhistorier er en enkel samarbeidsøvelse som hjelper med å definere brukerens reise med et produkt eller en tjeneste, hvor det finnes muligheter og hva det kan bli til.',
             reason_en:
-              'User story mapping is a simple, collaborative exercise that helps you define your user’s journey with your product., where any gaps exist, and what it could be',
+              'User story mapping is a simple, collaborative exercise that helps define the user’s journey within a service or a product. It can define any gaps, and what the service or product could be.',
           },
           {
             name: 'Affinity mapping',
@@ -816,7 +814,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Brukertesting handler om å teste løsninger på ekte brukere i en realistisk kontekst. Det er sele nøkkelen i en brukersentrert designprosess.',
+              'Brukertesting handler om å teste løsninger på ekte brukere i en realistisk kontekst. Det er selve nøkkelen i en brukersentrert designprosess.',
             reason_en:
               'User testing is about testing solutions on real users in a realistic context. It is the key to a user-centered design process.',
           },
@@ -825,16 +823,16 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Geriljatesting er en metode å brukerteste på, der du tar en idé eller et uferdig konsept og tester det raskt med folk på gata.',
+              'Geriljatesting er en metode å brukerteste på der man tar en idé eller et uferdig konsept og tester det raskt med målgruppen i deres miljø.',
             reason_en:
-              'Guerrilla testing is a method where you take an idea or an unfinished concept and quickly test it with people on the street',
+              'Guerrilla testing is a method where you take an idea or an unfinished concept and quickly test it with the target group in their environment.',
           },
           {
             name: 'Stakeholder mapping',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Interessentanalyse er prosessen med å vurdere et system og potensielle endringer i det når de forholder seg til relevante og interesserte parter. ',
+              'Interessentanalyse eller aktørkart bbrukes til å kartlegge potensielle parter som kan påvirke et produkt, tjeneste eller system.',
             reason_en:
               'Stakeholder mapping is the process of assessing a system and potential changes to it as they relate to relevant and interested parties.',
           },
@@ -860,8 +858,8 @@ const categories: Record<string, Category> = {
             name: 'Mind map',
             status: 'ADOPT',
             priority: false,
-            reason_no: 'Hjelper deg visuelt å organisere ideer og lage tankekartillustrasjoner.',
-            reason_en: 'Helps you visually organize ideas and create mind map illustrations.',
+            reason_no: 'Et tankekart er en visuell måte å organisere ideer på.',
+            reason_en: 'A mind map is a visual way to organize ideas.',
           },
           {
             name: 'Paper prototype',
@@ -879,7 +877,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'I innsiktsfasen skapes en felles forståelse av designprosessen, og det settes forventninger og retningslinjer for alle involverte aktører i prosjektet.  Fokusområder: Kartlegge behov. Definere målgruppe.',
             reason_en:
-              'In the insight phase, a common understanding of the design process is created, and expectations and guidelines are set for all actors involved in the project. Focus areas: Mapping needs. Define target group.',
+              'In the insight phase, a common understanding of the design process is created, and expectations and guidelines are set for all actors involved in the project. Focus areas: Mapping needs and defining the target group.',
           },
           {
             name: "5 why's",
@@ -894,32 +892,32 @@ const categories: Record<string, Category> = {
             name: 'Sitemap',
             status: 'KEEP',
             priority: false,
-            reason_no: 'Sitemap er en organisering og visualisering av sidestruktur',
-            reason_en: 'Sitemap is an organization and visualization of a site structure',
+            reason_no: 'Sitemap er en organisering og visualisering av sidestrukturer.',
+            reason_en: 'Sitemap is an organization and visualization of a site structure.',
           },
           {
-            name: 'Iterativ helle tiden',
+            name: 'Kontinuerlig iterasjon',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Å definere hypoteser, og teste og justere dem er det beste alternativet til fossefall. Å jobbe iterativt tillater tilpasninger til nye situasjoner, teknologi eller strategiendringer.',
+              'Å definere hypoteser, og teste og justere arbeidet etter funn og læringer. Å jobbe iterativt tillater tilpasninger til nye situasjoner, teknologi eller strategiendringer.',
             reason_en:
-              'Defining hypotheses, and testing and adjusting them is the best alternative to waterfall thinking. Working iteratively allows adjustments to new situations, technology or strategy changes. ',
+              'Defining hypotheses, and testing and adjusting findings and learnings. Working iteratively allows adjustments to new situations, technology or strategy changes. ',
           },
           {
             name: 'Måle Opplevd effekt',
             status: 'ADOPT',
             priority: false,
             reason_no:
-              ' Måter å synliggjøre hvilke resultater en innsatsen har ført til – for bedriften og for brukerne deres.',
+              'Måter å synliggjøre hvilke resultater en innsatsen har ført til – for bedriften og for brukerne deres.',
             reason_en:
               'Ways to make results clear and visable, baseed on various measures - for a company and for their users.',
           },
           {
-            name: 'Utvikle / forstå menneske-maskin-interaksjon',
+            name: 'Mennesker- og systemforståelse',
             status: 'ADOPT',
             priority: false,
-            reason_no: 'Studien omkring interaksjonen mellom mennesker og datamaskiner.',
+            reason_no: 'Omhandler studien av interaksjonen mellom mennesker og datamaskiner.',
             reason_en: 'The study of the interaction between humans and computers.',
           },
           {
@@ -927,9 +925,9 @@ const categories: Record<string, Category> = {
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Inkluderende design etterstreber å skape barrierefrie rom. Inkluderende design gjør tjenster brukervennlige og nyttige for alle,',
+              'Inkluderende design etterstreber å skape barrierefrie rom. Inkluderende design gjør tjenster brukervennlige og nyttige for alle.',
             reason_en:
-              'Inclusive design examples look to create barrier-free spaces. Inclusive design makes places usable by everyone,',
+              'Inclusive design examples look to create barrier-free spaces. Inclusive design makes places usable by everyone.',
           },
         ],
       },
@@ -942,54 +940,54 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Et uunnværlig verktøy siden pandemien. Vi er enda nærmere raske møter og avgjørelser nå i stedet for å skrive endeløse e-poster.',
+              'Et uunnværlig verktøy. Fremmer raske møter og avgjørelser fremfor endeløse e-poster.',
             reason_en:
-              'An indispensable tool since the pandemic. We are even closer now and connect face to face with fast meetings instead of writing endless emails. ',
+              'An indispensable tool.  We are even closer now and connect face to face with fast meetings instead of writing endless emails. ',
           },
           {
             name: 'Google calendar',
-            status: 'KEEP',
+            status: 'HOLD',
             priority: true,
             reason_no: 'Tidsstyring gjort enkel og effektiv. ',
-            reason_en: 'Time management made simple and efficient. Fantastic use flow.',
+            reason_en: 'Time management made simple and efficient.',
           },
           {
             name: 'Figma',
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Figma er raskt i ferd med å bli designerens favoritt plattform, med smidig teamarbeid og gjenbrukbare elementer for både designere og utviklere.',
+              'Figma er en av de mest brukte UX-plattformene med mulighet for smidig teamarbeid og gjenbrukbare elementer for designere og utviklere.',
             reason_en:
-              'Figma is quickly becoming the designers platform, with direct team work and simultaneously  shaping new ground when it comes to creation of reusable elements approaching designer and developerseven more.',
+              'Figma is one of the most popular design platforms, with efficient team work and reusable design components for designers and developers.',
           },
           {
             name: 'Miro',
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Visuelt samarbeidsverktøy. Enkelt å onboarde nye deltakere på få minutter, kraftig nok til komplekse workshops, innsiktsarbeid og planlegging.',
+              '"Visuelt samarbeidsverktøy. Det er enkelt å onboarde nye deltakere på få minutter; kraftig nok til komplekse workshops, innsiktsarbeid og planlegging."',
             reason_en:
-              'Visual collaboration tool. Simple enough to onboard a new person in minutes, powerful enough to deep workshops, insight work and planing.',
+              'Visual collaboration tool. Simple enough to onboard a new person in minutes, powerful enough for complex topics and workshops, insight work, and planning.',
           },
           {
             name: 'Slack',
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Den eneste måten å kommunisere raskt på i et selskap i dag. Svært enkelt i bruk.',
+              'En enkel plattforn for å kommunisere raskt innad  i et selskap. Svært enkelt i bruk.',
             reason_en:
-              'The email killer. The only way to communicate in a company nowadays. Simple, clean and right to the point.',
+              'A great way to communicate across companies. Simple, clean and right to the point.',
           },
           {
             name: 'Penn og papir',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Noen ganger er de enkle løsningene de som kommuniserer på den raskeste og mest tilgjengelige måten :pencil2: :page_facing_up:',
+              'Noen ganger er de enkle løsningene de som kommuniserer på den raskeste og mest tilgjengelige måten',
             reason_en: 'Sometimes the simple solutions are the ones that communicate fastest. ',
           },
           {
-            name: 'trello',
+            name: 'Trello',
             status: 'KEEP',
             priority: false,
             reason_no:
@@ -1001,19 +999,17 @@ const categories: Record<string, Category> = {
             name: 'Pocket',
             status: 'KEEP',
             priority: false,
-            reason_no:
-              'En gratis tjeneste for lagre kategorisere og merke artikler. Kan brukes som en kunnskapssamling for å samle og organisere de mer relevante informasjonskildene og gjøre dem lett tilgjengelige.',
-            reason_en:
-              'A free service for save categorize and tag articles. Can be used as a knowledge pool to gather and organize the more relevant information sources and make them easily accessible.',
+            reason_no: 'En gratis tjeneste for lagre kategorisere og merke artikler. ',
+            reason_en: 'A free service for save categorize and tag articles. ',
           },
           {
             name: 'Testflow',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Norsk rekrutterings- og brukertesttjeneste. Integrert med Figma og tillater semi-automatisert og umoderert brukertesting med kvalitative spørsmål og svar.',
+              'Norsk rekrutterings- og brukertesttjeneste. Integrert med Figma og tillater semi-automatisert og umoderert brukertesting.',
             reason_en:
-              'Norwegian recruitment and user test service. Integrated with Figma allows semi-automated and unmoderated user testest with qualitative questions and answers. ',
+              'Norwegian recruitment and user test service. Integrated with Figma allows semi-automated and unmoderated user tests. ',
           },
           {
             name: 'Figma:plugin: Iconify',
@@ -1066,7 +1062,15 @@ const categories: Record<string, Category> = {
             reason_en:
               'The designer preferred office tools. Colourful with the right size for a single word or a sentence. They can be grouped, moved, glued and never run out of batteries.',
           },
-          { name: 'Moodboards', status: 'KEEP', priority: false, reason_no: '', reason_en: '' },
+          {
+            name: 'Moodboards',
+            status: 'KEEP',
+            priority: false,
+            reason_no:
+              'Er en samling av bilder, materiale tekst, etc. som har som intensjon å vekke følelser eller fremme en bestemt stil eller konsept',
+            reason_en:
+              'An arrangement of images, materials, pieces of text, etc. intended to evoke or project a particular style or concept.',
+          },
         ],
       },
     ],
@@ -1612,8 +1616,8 @@ const categories: Record<string, Category> = {
         ],
       },
       {
-        name: 'Services/components/frameworks',
-        id: 'services-components-frameworks',
+        name: 'Technologies',
+        id: 'technologies',
         items: [
           {
             name: 'VMs',
@@ -1849,11 +1853,29 @@ const categories: Record<string, Category> = {
             name: 'Identity and Access Management',
             status: 'ADOPT',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'IAM-systemene til skyleverandørene er dessverre veldig krevende, og ofte må selv gruppeledere på forholdsvis lavt nivå forholde seg til disse. Likevel er det helt kritisk at dette verktøyet brukes riktig. En stor andel sikkerhetsproblemer stammer fra uriktig bruk av IAM-systemet, eller rett og slett en misforståelse i hvilke rettigheter som bør gis i hvilke situasjoner. Skyleverandørene har i det siste fått øynene opp for automatisk varsling av mulige feilkonfigurasjoner, og det er en stor hjelp.',
+            reason_en:
+              'Unfortunately, the IAM systems of the hyperscalers are very demanding, and often even group leaders at a relatively low level have to deal with these. Nevertheless, it is absolutely critical that this tool is used properly. A large proportion of security issues derived from the incorrect use of the IAM system, or simply a misunderstanding in which rights should be given in which situations. The hyperscalers have recently caught the eye for automatic notification of possible error configurations, which is a great help.',
           },
-          { name: 'NoOps', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
-          { name: 'SecOps', status: 'ADOPT', priority: false, reason_no: '', reason_en: '' },
+          {
+            name: 'NoOps',
+            status: 'TRIAL',
+            priority: false,
+            reason_no:
+              'SaaS som eneste måte å kjøre programvare på er foreløpig en utopi for veldig mange, men hvis du har muligheten til å eliminere all drift er dette noe du absolutt bør undersøke. ',
+            reason_en:
+              'Saas as the only way to run software is currently an utopia for many, but if you have the opportunity to eliminate all operations, this is something you should definitely investigate.',
+          },
+          {
+            name: 'SecOps',
+            status: 'ADOPT',
+            priority: false,
+            reason_no:
+              'Sikkerhet bør være en kjernedel av utviklingspraksisen din. I stedet for et eksternt team av "sikkerhetsekspert" som sitter og skaper best practices for hele selskapet, bør hele teamet ditt bli utdannet til å bruke best practices for ditt felt når du lager produktet ditt. Den beste praksis for en backend-utvikler er ikke den samme som beste praksis for en produkteier, og ethvert sett med "best practices som prøver å dekke begge vil per definisjon være mindre enn best for begge to.',
+            reason_en:
+              'Security should be a core part of your development practice. Instead of an external team of "security expert" who sit around creating best practices for the entire company, your entire team should be educated to use the best practices for your field when creating your product. The best practices for a backend developer are not the same as the best practices for a product manager, and any set of "best practices" that try to cover both will by definition be less than best for either.',
+          },
         ],
       },
       {
@@ -1878,28 +1900,49 @@ const categories: Record<string, Category> = {
             reason_en:
               'CircleCI is still one of the SaaS services for CI that has the best ecosystem, documentation and implementation capabilities. Github Actions is a strong contender, and we suspect that the last word has not been said - but CircleCI is still the best here.',
           },
-          { name: 'Terraform', status: 'ADOPT', priority: false, reason_no: '', reason_en: '' },
+          {
+            name: 'Terraform',
+            status: 'ADOPT',
+            priority: false,
+            reason_no:
+              'Terraform er fremdeles det beste verktøyet for de fleste tilfeller. Med mindre du er tungt investert i AWS som eneste skyplattform, er dette alltid verktøyet du burde bruke. ',
+            reason_en:
+              'Terraform is still the best tool for most cases. Unless you are heavily invested in AWS as the only cloud platform, this is always the tool you should use.',
+          },
           {
             name: 'Cloud Secret Management tools',
             status: 'ADOPT',
             priority: true,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'Nøkler og sertifikater som sjekkes inn i git-repoet er en klisjé, men det skjer fremdeles. Og det er ikke den eneste måten slike ting blir lekket på. Ved riktig bruk av Hashicorp Vault eller skyleverandørenes egne verktøy kan du unngå å bruke nøkler og sertifikater manuelt, og i stedet konfigurere (via IaC!) CI/CD pipelinen til selv å ta seg av opprettelse, fornyelse og rettighetsfordeling selv. Slik slipper du både å lagre nøkler på laptopen din, og i det hele tatt å tenke på nøkler som en del av utviklingsprosessen!',
+            reason_en:
+              "Keys and certificates checked into the Git repos are a cliché, but it still happens. And that's not the only way such things are leaked. When using Hashicorp Vault or the cloud suppliers' own tools, you can avoid using keys and certificates manually, and instead configure (via IaC!) the CI/CD pipelines to take care of creation, renewal and cascading of correct usage attributes yourself. This way, you don't have to store any keys on your laptop, or even handle keys as part of the development process!",
           },
-          { name: 'Cloud Logging', status: 'ADOPT', priority: false, reason_no: '', reason_en: '' },
+          {
+            name: 'Cloud Logging',
+            status: 'ADOPT',
+            priority: false,
+            reason_no:
+              'Oppbevaring og søk i logger er tungvint, vanskelig og dyrt. Alle skyleverandørene har nå moderne og beviste verktøy, og selv AWS CloudWatch begynner å bli bra nok - på tross av at det fremdeles praktisk talt er umulig å søke på tvers av alle logger. Så lenge du passer på at ingen sensitiv data blir logget er det ikke lenger noen god grunn til å behandle logger spesielt, og det er både enklere og i mange tilfeller billigere å bare legge også denne delen av driftshverdagen over på spesialistene, og fokusere på vår kjernefunksjonalitet i stedet.',
+            reason_en:
+              'Storage and searches of logs are cumbersome, difficult and expensive. All cloud suppliers have now mature and proven tools, and even AWS Cloudwatch is starting to be good enough - despite the fact that it is still practically impossible to search across all logs. As long as you take care that no sensitive data is logged there is no longer any good reason to treat logs as sensitive data, and it is both simpler and in many cases cheaper to just throw this burden over to the specialists and focus on our core business instead.',
+          },
           {
             name: 'Managed Kubernetes',
             status: 'ADOPT',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              "Ikke drift Kubernetes selv. Just don't. Hvis du absolutt må ha noe on-prem, bruk Google Anthos eller noe lignende.",
+            reason_en:
+              "Do not operate Kubernetes yourself. Just don't. If you absolutely need something on-prem, use Google Anthos or something similar.",
           },
           {
             name: 'Github Actions',
             status: 'TRIAL',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              "This practically new Github feature has had an enormous growthcurve, and it's now extremely mature for its age. The ecosystem is huge, and what previously had to be done through workarounds has been simplified or simply added as default features. Everything Just Works now, and it's on the way to becoming the best CI tool. ",
+            reason_en: '#REF!',
           },
           {
             name: 'Google Cloud Composer/Apache Airflow',
@@ -1915,7 +1958,6 @@ const categories: Record<string, Category> = {
             reason_no: '',
             reason_en: '',
           },
-          { name: 'Helm', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'Google Dataflow/Apache Beam',
             status: 'TRIAL',
@@ -1923,7 +1965,15 @@ const categories: Record<string, Category> = {
             reason_no: '',
             reason_en: '',
           },
-          { name: 'AWS CDK', status: 'TEST', priority: true, reason_no: '', reason_en: '' },
+          {
+            name: 'AWS CDK',
+            status: 'TEST',
+            priority: true,
+            reason_no:
+              'For de som brukes AWS er CDK på mange måter bedre enn Terraform. Hovedsalgsargumentet er at dette er APIer for det språket du (forhåpentligvis) bruker til å utvikle produktet ditt uansett, slik at du slipper å lære deg HCL eller jobbe med deklarativ kode i YAML.',
+            reason_en:
+              "For those used AWS, CDK is in many ways better than Terraform. The main selling point is that these are APIs for the language you (hopefully) use to develop your product anyway, so you don't have to learn HCL or work with declarative code in Yaml.",
+          },
           { name: 'DBT', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'Great Expectations',
@@ -3370,8 +3420,9 @@ const categories: Record<string, Category> = {
             name: 'PHP',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Nei. Need i say more?',
-            reason_en: 'No. Need i say more?',
+            reason_no: 'Det finnes bedre server-side rammeverk som følger dagens beste praksis.',
+            reason_en:
+              'Use alternative server-side frameworks that follows up-to-date best practices.',
           },
           {
             name: 'NOSQL',
@@ -3440,7 +3491,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               '«Best practice» for integritetssjekk av kodeleveranse til infrastrukturplattform',
-            reason_en: '',
+            reason_en:
+              '«Best practice» for integrity check of code delivery to infrastructure plattform.',
           },
           {
             name: 'SBOM',
@@ -3448,14 +3500,15 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Fullstendig oversikt over avhengigheter. Gir verdi ved hendelser og sikkerhetsfeil i avhengigheter.',
-            reason_en: '',
+            reason_en:
+              'Complete overview of dependencies. Gives value during incidents and security-issues in dependencies.',
           },
           {
             name: 'SWOT',
             status: 'HOLD',
             priority: false,
             reason_no: 'Vektet mot virksomhet- og organisatorisk sikkerhetsbilde.',
-            reason_en: '',
+            reason_en: 'Angled towards business and organizational security overview.',
           },
           {
             name: 'SecOps',
@@ -3463,7 +3516,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Integrasjon av sikkerhetsområde med driftområde. Automatisering av sikkerhetsmekanismer og innebygget-sikkerhet.',
-            reason_en: '',
+            reason_en:
+              'Integration between security and with operations. Automation of security mechanisms and built-in security.',
           },
           {
             name: 'Zero trust',
@@ -3471,14 +3525,15 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               '«Best practice» for tilgangskontroll. Vanligvis uoppnåelig og er heller noe en aspirerer til.',
-            reason_en: '',
+            reason_en:
+              'Best practice for access control. Usually unattainable and rather something one aspires to acheive.',
           },
           {
             name: 'Least privilege',
             status: 'ADOPT',
             priority: false,
             reason_no: 'Industristandard. Minimumskrav for tilgangsstyring.',
-            reason_en: '',
+            reason_en: 'Industry standard. Minimum requirements for access control.',
           },
           {
             name: 'Service Mesh',
@@ -3486,7 +3541,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Rammeverk for tjenestekommunikasjon. Brukt rikig styrker tilgangskontroll og sikkerhetsmetodikk. ',
-            reason_en: '',
+            reason_en:
+              'Framework for service communication. Utilized correctly strengthens access control and security methodology.',
           },
           {
             name: 'Ethical Hacking',
@@ -3494,14 +3550,15 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Forhindrer potensielt misbruk av tjenester ved å teste sikkerheten på en trygg måte.',
-            reason_en: '',
+            reason_en:
+              'Prevents potential misuse of services by testing security in practice in a safe way.',
           },
           {
             name: 'Red Team / Blue Team',
             status: 'TEST',
             priority: false,
-            reason_no: 'Øker og bistår til bedre ',
-            reason_en: '',
+            reason_no: 'Øker og bistår til bedre hendelseshåndtering og sikkerhetstesting.',
+            reason_en: 'Increases and assists to improve incident management and security testing.',
           },
         ],
       },
@@ -3743,6 +3800,7 @@ const categories: Record<string, Category> = {
       },
     ],
   },
+  undefined: { name: 'Undefined', link: 'undefined', groups: [{ name: '', id: '', items: [] }] },
 };
 
 export default categories;
