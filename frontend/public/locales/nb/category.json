@@ -22,7 +22,7 @@
   "adopt": {
     "title": "Bruk",
     "description": "Førstevalg for nye prosjekter",
-    "explanation": "Her er teknologiene som vi vil anbefale å enten bruke for nye prosjekter- eller for migrering av gamle. Dette er teknologi som både er bevist produksjonsklar og som vi ser vil få mer og mer bruk etter som tiden går. Å vente med denne teknologien vil være en ulempe for kunden."
+    "explanation": "Her er teknologiene som vi vil anbefale å bruke for nye prosjekter, eller for migrering av gamle. Dette er teknologi som både er bevist produksjonsklar og som vi ser vil få mer og mer bruk etter som tiden går. Å vente med denne teknologien vil være en ulempe for kunden."
   },
   "trial": {
     "title": "Prøv",
