@@ -597,7 +597,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Hensikten er å oppnå like muligheter til samfunnsdeltakelse og motvirke diskriminering på grunnlag av nedsatt funksjonsevne.',
             reason_en:
-              'The purpose of UU is to plan products, services and environments in order to make them usable for all people. ',
+              'The purpose of UU is to plan products, services and environments in order to make them usable for all people.',
           },
           {
             name: 'WCAG',
@@ -615,7 +615,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Et designsystem er en samling av gjenbrukbare komponenter. Det er et bibliotek og rammeverk for en virksomhets digitale strategi og identitet. Komponentene kan ses på som byggesteiner for å lage en helhetlig nettside.',
             reason_en:
-              "A design system is a collection of reusable components. It is a library and framework for a company's digital strategy and identity. The components can be seen as building blocks to create a comprehensive website. ",
+              "A design system is a collection of reusable components. It is a library and framework for a company's digital strategy and identity. The components can be seen as building blocks to create a comprehensive website.",
           },
           {
             name: 'Storybook',
@@ -640,25 +640,25 @@ const categories: Record<string, Category> = {
             status: 'ADOPT',
             priority: false,
             reason_no: 'Business design er forretningsutvikling med et designtankesett i bunn.',
-            reason_en: 'Business design is business development combined with a design mindset. ',
+            reason_en: 'Business design is business development combined with a design mindset.',
           },
           {
             name: 'UX design',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'User experience design handler om å forbedre totalopplevelsen for mennesker i interaksjon med et digitalt produkt, en tjeneste eller et system. ',
+              'User experience design handler om å forbedre totalopplevelsen for mennesker i interaksjon med et digitalt produkt, en tjeneste eller et system.',
             reason_en:
-              'User experience design is about improving the overall experience a person has when dealing with a digital product, service or system. ',
+              'User experience design is about improving the overall experience a person has when dealing with a digital product, service or system.',
           },
           {
             name: 'Service design',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. ',
+              'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester.',
             reason_en:
-              'Service design is a discipline within design with goalsabout developing user-oriented and holistic services. ',
+              'Service design is a discipline within design with goals about developing user-oriented and holistic services.',
           },
         ],
       },
@@ -671,9 +671,9 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles. ',
+              'Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles.',
             reason_en:
-              'Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way. ',
+              'Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way.',
           },
           {
             name: 'Service blueprint',
@@ -717,7 +717,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Design Thinking er en iterativ, ikke-lineær prosess som fokuserer på et samarbeid mellom designere og brukere.',
             reason_en:
-              'Design thinking is an iterative, non-linear process which focuses on a collaboration between designers and users. ',
+              'Design thinking is an iterative, non-linear process which focuses on a collaboration between designers and users.',
           },
           {
             name: 'Observation',
@@ -753,7 +753,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'En designdrevet workshop er et tilrettelagt møte hvor folk på tvers av fagdisipliner planlegger og prototyper brukersentrert design.',
             reason_en:
-              'A design driven workshop is a facilitated meeting where multi-disciplinary teams plan and prototype user-centered designs. ',
+              'A design driven workshop is a facilitated meeting where multi-disciplinary teams plan and prototype user-centered designs.',
           },
           {
             name: 'Costumer journey',
@@ -787,7 +787,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'En brukerhistorie er en beskrivelse av funksjonen til en gitt oppgave fra et brukerperspektiv. ',
+              'En brukerhistorie er en beskrivelse av funksjonen til en gitt oppgave fra et brukerperspektiv.',
             reason_en:
               "A user story is a description of a given function from a user's perspective.",
           },
@@ -868,7 +868,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Papirprototyping er en proses for å utvikle ideer og designe brukerflyter ved å bruke håndskisserte "skjermer" som representerer et digitalt produkt.',
             reason_en:
-              'Paper prototyping is the process of developing ideas and designing user flows using hand-sketched “screens” that represent a digital product. ',
+              'Paper prototyping is the process of developing ideas and designing user flows using hand-sketched “screens” that represent a digital product.',
           },
           {
             name: 'Innsiktsfasen',
@@ -886,7 +886,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Five whys er en iterativ spørreteknikk som brukes til å utforske årsak-og-virkning-sammenhengene som ligger til grunn for et bestemt problem.',
             reason_en:
-              '5 whys is an iterative interrogative technique used to explore the cause-and-effect relationships underlying a particular problem. ',
+              '5 whys is an iterative interrogative technique used to explore the cause-and-effect relationships underlying a particular problem.',
           },
           {
             name: 'Sitemap',
@@ -902,7 +902,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Å definere hypoteser, og teste og justere arbeidet etter funn og læringer. Å jobbe iterativt tillater tilpasninger til nye situasjoner, teknologi eller strategiendringer.',
             reason_en:
-              'Defining hypotheses, and testing and adjusting findings and learnings. Working iteratively allows adjustments to new situations, technology or strategy changes. ',
+              'Defining hypotheses, and testing and adjusting findings and learnings. Working iteratively allows adjustments to new situations, technology or strategy changes.',
           },
           {
             name: 'Måle Opplevd effekt',
@@ -942,13 +942,13 @@ const categories: Record<string, Category> = {
             reason_no:
               'Et uunnværlig verktøy. Fremmer raske møter og avgjørelser fremfor endeløse e-poster.',
             reason_en:
-              'An indispensable tool.  We are even closer now and connect face to face with fast meetings instead of writing endless emails. ',
+              'An indispensable tool.  We are even closer now and connect face to face with fast meetings instead of writing endless emails.',
           },
           {
             name: 'Google calendar',
             status: 'HOLD',
             priority: true,
-            reason_no: 'Tidsstyring gjort enkel og effektiv. ',
+            reason_no: 'Tidsstyring gjort enkel og effektiv.',
             reason_en: 'Time management made simple and efficient.',
           },
           {
@@ -984,14 +984,14 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Noen ganger er de enkle løsningene de som kommuniserer på den raskeste og mest tilgjengelige måten',
-            reason_en: 'Sometimes the simple solutions are the ones that communicate fastest. ',
+            reason_en: 'Sometimes the simple solutions are the ones that communicate fastest.',
           },
           {
             name: 'Trello',
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Gratis brukervennlig kanban-tavle som er enkel å tilpasse. Brukes til oppgavehåndtering og oversikt. ',
+              'Gratis brukervennlig kanban-tavle som er enkel å tilpasse. Brukes til oppgavehåndtering og oversikt.',
             reason_en:
               'Free customizable and user friendly kanban board. Used for task management and overview.',
           },
@@ -999,8 +999,8 @@ const categories: Record<string, Category> = {
             name: 'Pocket',
             status: 'KEEP',
             priority: false,
-            reason_no: 'En gratis tjeneste for lagre kategorisere og merke artikler. ',
-            reason_en: 'A free service for save categorize and tag articles. ',
+            reason_no: 'En gratis tjeneste for lagre kategorisere og merke artikler.',
+            reason_en: 'A free service for save categorize and tag articles.',
           },
           {
             name: 'Testflow',
@@ -1009,7 +1009,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Norsk rekrutterings- og brukertesttjeneste. Integrert med Figma og tillater semi-automatisert og umoderert brukertesting.',
             reason_en:
-              'Norwegian recruitment and user test service. Integrated with Figma allows semi-automated and unmoderated user tests. ',
+              'Norwegian recruitment and user test service. Integrated with Figma allows semi-automated and unmoderated user tests.',
           },
           {
             name: 'Figma:plugin: Iconify',
@@ -1373,7 +1373,7 @@ const categories: Record<string, Category> = {
             status: 'TRIAL',
             priority: false,
             reason_no:
-              'Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse). ',
+              'Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse).',
             reason_en: '',
           },
           {
@@ -1451,7 +1451,7 @@ const categories: Record<string, Category> = {
             status: 'HOLD',
             priority: true,
             reason_no:
-              'Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig. ',
+              'Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig.',
             reason_en: '',
           },
           {
@@ -1466,7 +1466,7 @@ const categories: Record<string, Category> = {
             status: 'TRIAL',
             priority: true,
             reason_no:
-              'Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler. ',
+              'Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler.',
             reason_en: '',
           },
           {
@@ -1624,7 +1624,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: true,
             reason_no:
-              'Det er vanskelig å slå ytelsen ved å bare kjøre appen på alle kjerner og all minne du har tilgjengelig. For monolitter og krevende tjenester som ikke er lette å kjøre i parallel er VMer derfor fremdeles et godt valg. ',
+              'Det er vanskelig å slå ytelsen ved å bare kjøre appen på alle kjerner og all minne du har tilgjengelig. For monolitter og krevende tjenester som ikke er lette å kjøre i parallel er VMer derfor fremdeles et godt valg.',
             reason_en:
               'It is difficult to beat the performance by just running the app on all the cores and all the memory you have available. For monoliths and demanding services that are not easy to drive in parallel, Vmer is therefore still a good choice.',
           },
@@ -1845,7 +1845,7 @@ const categories: Record<string, Category> = {
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Flere og flere verktøy i CI/CD-sfæren gjør det nå mulig å måle disse fire metrikkene for å måle utviklingshastighet og driftsstabilitet. Problemet er at det ikke finnes noen enkel måte å samle inn alle metrikkene og vise de på samme sted. Mens vi fremdeles venter på dette universalverktøyet (eller en standard som gjør det enklere å lage slike verktøy) kan vi i hvert fall samle inn noen av tallene manuelt med jevne mellomrom og sjekke om det faktisk går fremover. ',
+              'Flere og flere verktøy i CI/CD-sfæren gjør det nå mulig å måle disse fire metrikkene for å måle utviklingshastighet og driftsstabilitet. Problemet er at det ikke finnes noen enkel måte å samle inn alle metrikkene og vise de på samme sted. Mens vi fremdeles venter på dette universalverktøyet (eller en standard som gjør det enklere å lage slike verktøy) kan vi i hvert fall samle inn noen av tallene manuelt med jevne mellomrom og sjekke om det faktisk går fremover.',
             reason_en:
               "More and more tools in the CI/CD sphere now make it possible to measure these four metrics to measure development speed and operational stability. The problem is that there is no easy way to collect all the metrics and display them in one place. While we're still waiting for this universal tool (or a standard that makes it easier to create such tools) we can at least collect some of the numbers manually on a regular basis and check if it's actually moving forward.",
           },
@@ -1863,7 +1863,7 @@ const categories: Record<string, Category> = {
             status: 'TRIAL',
             priority: false,
             reason_no:
-              'SaaS som eneste måte å kjøre programvare på er foreløpig en utopi for veldig mange, men hvis du har muligheten til å eliminere all drift er dette noe du absolutt bør undersøke. ',
+              'SaaS som eneste måte å kjøre programvare på er foreløpig en utopi for veldig mange, men hvis du har muligheten til å eliminere all drift er dette noe du absolutt bør undersøke.',
             reason_en:
               'Saas as the only way to run software is currently an utopia for many, but if you have the opportunity to eliminate all operations, this is something you should definitely investigate.',
           },
@@ -1905,7 +1905,7 @@ const categories: Record<string, Category> = {
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Terraform er fremdeles det beste verktøyet for de fleste tilfeller. Med mindre du er tungt investert i AWS som eneste skyplattform, er dette alltid verktøyet du burde bruke. ',
+              'Terraform er fremdeles det beste verktøyet for de fleste tilfeller. Med mindre du er tungt investert i AWS som eneste skyplattform, er dette alltid verktøyet du burde bruke.',
             reason_en:
               'Terraform is still the best tool for most cases. Unless you are heavily invested in AWS as the only cloud platform, this is always the tool you should use.',
           },
@@ -1941,7 +1941,7 @@ const categories: Record<string, Category> = {
             status: 'TRIAL',
             priority: false,
             reason_no:
-              "This practically new Github feature has had an enormous growthcurve, and it's now extremely mature for its age. The ecosystem is huge, and what previously had to be done through workarounds has been simplified or simply added as default features. Everything Just Works now, and it's on the way to becoming the best CI tool. ",
+              "This practically new Github feature has had an enormous growthcurve, and it's now extremely mature for its age. The ecosystem is huge, and what previously had to be done through workarounds has been simplified or simply added as default features. Everything Just Works now, and it's on the way to becoming the best CI tool.",
             reason_en: '#REF!',
           },
           {
@@ -2577,7 +2577,7 @@ const categories: Record<string, Category> = {
             status: 'TRIAL',
             priority: false,
             reason_no:
-              'ORM-rammeverk for Kotlin med god støtte for funksjonell programmering mot database. ',
+              'ORM-rammeverk for Kotlin med god støtte for funksjonell programmering mot database.',
             reason_en:
               'ORM framework for Kotlin with good support for functional programming against database.',
           },
@@ -2592,7 +2592,7 @@ const categories: Record<string, Category> = {
             name: 'Play2 Framework',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Popularitet daler, få nye prosjekter tar dette i bruk.  ',
+            reason_no: 'Popularitet daler, få nye prosjekter tar dette i bruk.',
             reason_en: 'Popularity is falling, few new projects are adopting this.',
           },
         ],
@@ -2626,7 +2626,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Populært arkitekturvalg som underbygger et godt ytende system. En byggekloss på veien mot å bli datadrevet. Hjelper på oppdeling av systemer og å unngå tette koblinger.',
             reason_en:
-              'Popular architecture choice that supports a high performing system. A building block on the road to becoming data-driven. ',
+              'Popular architecture choice that supports a high performing system. A building block on the road to becoming data-driven.',
           },
           {
             name: 'IaC',
@@ -2642,7 +2642,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Veletablert bransjestandard. Fremdeles ofte den foretrukne metoden for å modellere et domene. ',
+              'Veletablert bransjestandard. Fremdeles ofte den foretrukne metoden for å modellere et domene.',
             reason_en:
               'Well established and an industry standard. Still often the preferred method for modeling a domain.',
           },
@@ -2767,7 +2767,7 @@ const categories: Record<string, Category> = {
             name: 'Kafka',
             status: 'ADOPT',
             priority: true,
-            reason_no: 'Velprøvd og raskt verktøy for hendelseslogging.  ',
+            reason_no: 'Velprøvd og raskt verktøy for hendelseslogging.',
             reason_en: 'Proven and fast event logging tool.',
           },
           {
@@ -2792,7 +2792,7 @@ const categories: Record<string, Category> = {
             name: 'InfluxDB',
             status: 'TEST',
             priority: false,
-            reason_no: 'Database spesifikt bygget for tidsserier. ',
+            reason_no: 'Database spesifikt bygget for tidsserier.',
             reason_en: 'Database specifically built for time series.',
           },
           {
@@ -2806,7 +2806,7 @@ const categories: Record<string, Category> = {
             name: 'DynamoDB',
             status: 'KEEP',
             priority: false,
-            reason_no: 'Veletablert key-value store på AWS. ',
+            reason_no: 'Veletablert key-value store på AWS.',
             reason_en: 'Well-established key-value store on AWS.',
           },
           {
@@ -3540,7 +3540,7 @@ const categories: Record<string, Category> = {
             status: 'ADOPT',
             priority: false,
             reason_no:
-              'Rammeverk for tjenestekommunikasjon. Brukt rikig styrker tilgangskontroll og sikkerhetsmetodikk. ',
+              'Rammeverk for tjenestekommunikasjon. Brukt rikig styrker tilgangskontroll og sikkerhetsmetodikk.',
             reason_en:
               'Framework for service communication. Utilized correctly strengthens access control and security methodology.',
           },
@@ -3800,7 +3800,6 @@ const categories: Record<string, Category> = {
       },
     ],
   },
-  undefined: { name: 'Undefined', link: 'undefined', groups: [{ name: '', id: '', items: [] }] },
 };
 
 export default categories;
