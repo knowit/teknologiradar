@@ -32,7 +32,7 @@
   "test": {
     "title": "Test",
     "description": "Nye og spennende områder",
-    "explanation": "Dette er teknologier som er på start nivået - de bør ikke brukes i produksjon enda, men bør kjøres som mindre interne test prosjekter. De kan muligens vise seg å bli bra men foreløpig har vi ikke nok grunnlag til å kunne gå til kunder med disse. I en framtidig radar vil de kanskje gå videre, men de trenger fortsatt tid."
+    "explanation": "Dette er teknologier som er i en oppstartsfase - de bør ikke brukes i produksjon enda, men bør kjøres som mindre interne test prosjekter. De kan muligens vise seg å bli bra men foreløpig har vi ikke nok grunnlag til å kunne gå til kunder med disse. I en framtidig radar vil de kanskje gå videre, men de trenger fortsatt tid."
   },
   "hold": {
     "title": "Avvent / Fas ut",
