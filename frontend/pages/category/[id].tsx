@@ -5,7 +5,7 @@ import ExplanationQuadrants from '../../components/category/ExplanationQuadrants
 import type { Category } from '../../data/categories';
 import categories, { Item } from '../../data/categories';
 import styles from '../../styles/Category.module.css';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import Quadrants from '../../components/category/Quadrants';
 import GroupFilter from '../../components/category/GroupFilter';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -91,6 +91,11 @@ const Category: NextPage<Props> = ({ category: categoryProp }) => {
     },
     [itemsByCategory, allItems]
   );
+
+  // Reset filter on category change
+  useEffect(() => {
+    setItems(allItems);
+  }, [category, allItems]);
 
   return (
     <>
