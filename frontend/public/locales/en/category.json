@@ -12,31 +12,31 @@
   "priorities": {
     "title": "Priorities",
     "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "explanation": "These areas are seen by Knowit as especially important - and we will use extra time and effort for these."
   },
   "keep": {
     "title": "Keep",
-    "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Industry standards",
+    "explanation": "These are technologies, tools and other that are well used in the market as industry standards and will not vanish in either the short or long term. They are essential and there is no reason to stop using them."
   },
   "adopt": {
     "title": "Adopt",
-    "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "First pick for new projects",
+    "explanation": "Here are the technologies we would recommend to either use for new projects - or for migration of old ones. These are technologies proven production ready and we can see will get more and more use with time. Waiting with these technologies would be a disadvantage for the customer."
   },
   "trial": {
     "title": "Trial",
-    "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Should be tested in a bigger project",
+    "explanation": "These technologies have been tested and evaluated to be mature enough to be used more. For customers that have the possibility to take a hit, this investment would give them an advantage over time as we see the technology will most likely get more and more fulfilled with time."
   },
   "test": {
     "title": "Test",
-    "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "New and exciting areas",
+    "explanation": "These are technologies at the starting level - and should not be considered for production yet - but should be tested in lesser test projects internally. It might be they turn out good but currently we don't have enough foundation to recommend them to customers. In a future radar maybe they've moved on, but for now they still need time."
   },
   "hold": {
     "title": "Hold / Phase out",
-    "description": "Technologies that we want to prioritize and use more",
-    "explanation": "Lörem ipsum her sovbutik, de terramani antin. Rebelogi seheten. Reklejma itt. Ögonkramp lalig, dibel. Gigas rekoring pseudod dingar, gönde. Krympflation orar när mifungen. Prolösamma sed om än vir. Julgranssyndrom hagyll i reda misk. Pare seminde mikrorad lerat. Biovis märk-dna."
+    "description": "Old and deprecated",
+    "explanation": "These old and deprecated technologies are either not in use anymore or they are on their way out; either because other technology has taken over or they are no longer needed."
   }
 }
