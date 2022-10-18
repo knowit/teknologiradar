@@ -658,7 +658,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. ',
             reason_en:
-              'Service design is a discipline within design with goalsabout developing user-oriented and holistic services. ',
+              'Service design is a discipline within design with goals about developing user-oriented and holistic services. ',
           },
         ],
       },
@@ -671,7 +671,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: false,
             reason_no:
-              'Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles. ',
+              'Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles.',
             reason_en:
               'Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way. ',
           },
@@ -3800,7 +3800,6 @@ const categories: Record<string, Category> = {
       },
     ],
   },
-  undefined: { name: 'Undefined', link: 'undefined', groups: [{ name: '', id: '', items: [] }] },
 };
 
 export default categories;

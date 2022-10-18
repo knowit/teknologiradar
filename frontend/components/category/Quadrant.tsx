@@ -89,20 +89,18 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
                 ].join(' ');
 
                 return (
-                  <>
-                    <li
-                      key={index}
-                      className={itemClass}
-                      role={role}
-                      {...(hasDescription && {
-                        onClick: () => {
-                          openModal({ title: item.name, message: descriptionText });
-                        },
-                      })}
-                    >
-                      {item.name}
-                    </li>
-                  </>
+                  <li
+                    key={index}
+                    className={itemClass}
+                    role={role}
+                    {...(hasDescription && {
+                      onClick: () => {
+                        openModal({ title: item.name, message: descriptionText });
+                      },
+                    })}
+                  >
+                    {item.name}
+                  </li>
                 );
               })
             ) : (
