@@ -50,21 +50,29 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
   };
 
   const sortedCategories = categories.sort((a, b) => a.name.localeCompare(b.name));
-  const categoryListClass = [styles.categoryList, !asButtons ? styles.asLink : ''].join(" ");
+  const categoryListClass = [styles.categoryList, !asButtons ? styles.asLink : ''].join(' ');
+
   return (
     <nav>
       <ul className={categoryListClass}>
-        {sortedCategories.map((category) => (
-          <li key={category.link} className={styles.categoryListItem}>
-            <CategoryComponent
-              category={category}
-              onClick={onClicked}
-              asButton={asButtons}
-              current={category.link === query.id}
-            />
-            {category.link === query.id && <div className={styles.activeIndicator} />}
-          </li>
-        ))}
+        {sortedCategories.map((category) => {
+          const indicatorClass = [
+            styles.indicator,
+            category.link === query.id ? styles.selected : '',
+          ].join(' ');
+          return (
+            <li key={category.link} className={styles.categoryListItem}>
+              <CategoryComponent
+                category={category}
+                onClick={onClicked}
+                asButton={asButtons}
+                current={category.link === query.id}
+              />
+              {/* {category.link === query.id && <div className={styles.activeIndicator} />} */}
+              <div className={indicatorClass} />
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

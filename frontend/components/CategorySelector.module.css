@@ -14,7 +14,6 @@
   list-style: none;
 }
 
-
 .categoryContent {
   cursor: pointer;
   display: block;
@@ -36,7 +35,11 @@
   border: 1px solid #fac0b1;
 }
 
-.activeIndicator {
+.indicator {
   padding-top: 8px;
+  border-bottom: 1px solid var(--color-bg);
+}
+
+.selected {
   border-bottom: 1px solid var(--color-purple);
 }

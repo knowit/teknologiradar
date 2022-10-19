@@ -27,6 +27,7 @@
 @media (max-width: 768px) {
   .description {
     margin: var(--container-padding-xs);
+    font-size: 2.6rem;
   }
   .categoryWrapper {
     padding: 2.5rem var(--container-padding-xs);

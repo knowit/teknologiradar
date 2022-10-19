@@ -1,7 +1,7 @@
 {
   "pageTitle": "{{area}} - Knowit TechRadar",
-  "filterByArea": "Filtrer på Arbeidsområde",
-  "filterByCategory": "Filtrer på Kategori",
+  "filterByArea": "Filtrer arbeidsområde",
+  "filterByCategory": "Filtrer kategori",
   "noContent": "Ingenting funnet!",
   "explanationQuadrantTitle": "Terminologi",
   "buttons": {

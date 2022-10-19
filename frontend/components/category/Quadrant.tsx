@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import { useRouter } from 'next/router';
 import { Item } from '../../data/categories';
 import { useMedia } from 'react-use';

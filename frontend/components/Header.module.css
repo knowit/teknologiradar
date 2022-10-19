@@ -6,7 +6,7 @@
 }
 
 header.root {
-  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-columns: 5rem 1fr 5rem;
 }
 
 @media (max-width: 768px) {
@@ -19,13 +19,6 @@ header.root {
   }
 }
 
-@media (min-width: 768px) {
-  .header h1 {
-    margin: 2rem 4rem;
-    justify-self: flex-start;
-  }
-}
-
 .header svg {
   height: 2.7rem;
 }
@@ -35,7 +28,7 @@ header.root svg {
 }
 
 .header.root h1 {
-  margin: 10rem 0rem 8rem;
+  margin: 6rem 0rem 2rem;
   justify-self: center;
 }
 
@@ -56,4 +49,18 @@ header.root svg {
   text-decoration: underline;
   padding-top: 2rem;
   padding-right: 4rem;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 2rem 4rem;
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .localeSwitch {
+    padding-top: 3.1rem;
+    padding-right: 2rem;
+  }
 }
