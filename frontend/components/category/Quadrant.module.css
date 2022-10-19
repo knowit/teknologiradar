@@ -10,8 +10,6 @@
 .toggleButton {
   all: unset;
   cursor: pointer;
-  padding-top: 5px;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -35,7 +33,7 @@
   color: var(--color-green1);
   padding: 10px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   grid-gap: 1rem;
 }
 
@@ -83,6 +81,7 @@
   padding: 0;
   margin: 0;
   font-weight: 400;
+  display: inline;
   font-size: 2.4rem;
 }
 

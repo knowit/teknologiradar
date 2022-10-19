@@ -38,7 +38,6 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
     !groupedQuadrants.includes(id) ||
     !groupedQuadrants.includes(expandedId);
 
-  const titleClass = `${styles.titleWrapper} ${isExpanded ? styles.titleExpanded : ''}`;
   const quadrantWrapperClass = isExpanded
     ? `${styles.quadrandExpanded} ${styles[`quadrant_${index}`]}`
     : '';
@@ -48,16 +47,12 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
       {showQuadrant && (
         <div className={[styles.wrapper, quadrantWrapperClass].join(' ')}>
           <div className={styles.headingWrapper}>
-            <div className={titleClass}>
-              <h2 id={id} className={styles.quadrantTitle}>
-                {name}
-              </h2>
-              <QuadrantButton
-                id={id}
-                selectedValue={expandedId}
-                onClick={() => setExpandedId(isExpanded ? null : id)}
-              />
-            </div>
+            <QuadrantButton
+              id={id}
+              title={name}
+              selectedValue={expandedId}
+              onClick={() => setExpandedId(isExpanded ? null : id)}
+            />
             <div className={styles.descriptionWrapper}>
               <p id={descriptionId} className={styles.description}>
                 {description}
