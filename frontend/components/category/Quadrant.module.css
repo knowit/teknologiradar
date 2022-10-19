@@ -10,13 +10,16 @@
 .toggleButton {
   all: unset;
   cursor: pointer;
-  padding-top: 5px;
-  cursor: pointer;
+  border: 1px solid var(--color-green1);
+}
+
+.toggleButton:hover {
+  box-shadow: 0px 0px 1px 2px var(--color-purple) inset;
 }
 
 @media (max-width: 768px) {
   .wrapper {
-    max-height: 22rem;
+    max-height: 23rem;
   }
   .wrapper.quadrandExpanded {
     max-height: fit-content;
@@ -27,15 +30,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  top: -1px;
+  left: -1px;
 }
 
 .titleWrapper {
-  border-right: 1px solid var(--color-green1);
-  border-bottom: 1px solid var(--color-green1);
   color: var(--color-green1);
   padding: 10px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   grid-gap: 1rem;
 }
 
@@ -83,6 +87,7 @@
   padding: 0;
   margin: 0;
   font-weight: 400;
+  display: inline;
   font-size: 2.4rem;
 }
 

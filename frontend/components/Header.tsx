@@ -23,11 +23,7 @@ const Header = ({ forRoot }: Props) => {
         <link rel="icon" href="../favicon.ico" />
       </Head>
       <header className={headerClassName}>
-        <Link href={asPath} locale={toLocale}>
-          <a className={styles.localeSwitch}>
-            {t(`languages.${toLocale}`)} <ForwardIcon />
-          </a>
-        </Link>
+        <div>&nbsp;</div>
         <h1>
           <Link href="/">
             <a>
@@ -35,6 +31,11 @@ const Header = ({ forRoot }: Props) => {
             </a>
           </Link>
         </h1>
+        <Link href={asPath} locale={toLocale}>
+          <a className={styles.localeSwitch}>
+            {t(`languages.${toLocale}`)} <ForwardIcon />
+          </a>
+        </Link>
         {!forRoot && <div className={styles.separator} />}
       </header>
     </>

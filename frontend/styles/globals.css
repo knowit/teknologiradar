@@ -10,6 +10,10 @@
   --color-text: #e4e1db;
 
   --color-border: #a5b1aa;
+
+  --container-padding: 8rem;
+  --container-padding-xs: 5rem;
+  --container-max-width: 138rem;
 }
 
 html {

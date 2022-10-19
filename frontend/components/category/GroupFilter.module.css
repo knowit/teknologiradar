@@ -1,7 +1,7 @@
 .filtersWrapper {
   display: flex;
+  flex-wrap: wrap;
   grid-gap: 1rem;
-  grid-template-columns: auto auto;
   justify-content: flex-start;
   align-items: baseline;
 }
@@ -15,5 +15,6 @@
 }
 
 .filterLabel {
+  flex: 0 0 13rem;
   font-size: 1.6rem;
 }
