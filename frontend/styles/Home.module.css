@@ -17,9 +17,18 @@
 
 .description {
   text-align: center;
-  margin: 10rem 20%;
+  margin: var(--container-padding) 20%;
 }
 
 .categoryWrapper {
-  padding: 2.5rem 10rem;
+  padding: 2.5rem var(--container-padding);
+}
+
+@media (max-width: 768px) {
+  .description {
+    margin: var(--container-padding-xs);
+  }
+  .categoryWrapper {
+    padding: 2.5rem var(--container-padding-xs);
+  }
 }

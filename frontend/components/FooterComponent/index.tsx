@@ -33,16 +33,18 @@ export default function FooterComponent() {
   }
 
   return (
-    <footer className={styles.footer}>
-      <div>
-        <strong>{t('learnMoreAboutUs')}</strong>
-        {renderLinks(learnMoreLinks, true)}
+    <footer className={styles.footerWrapper}>
+      <div className={styles.footer}>
+        <div>
+          <strong>{t('learnMoreAboutUs')}</strong>
+          {renderLinks(learnMoreLinks, true)}
+        </div>
+        <div className={styles.languages}>
+          <strong>{t('otherLanguages')}</strong>
+          {renderLinks(otherLanguages, false)}
+        </div>
+        <SocialMediaLinks />
       </div>
-      <div>
-        <strong>{t('otherLanguages')}</strong>
-        {renderLinks(otherLanguages, false)}
-      </div>
-      <SocialMediaLinks />
     </footer>
   );
 }
