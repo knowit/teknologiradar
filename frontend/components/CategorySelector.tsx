@@ -68,7 +68,6 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
                 asButton={asButtons}
                 current={category.link === query.id}
               />
-              {/* {category.link === query.id && <div className={styles.activeIndicator} />} */}
               <div className={indicatorClass} />
             </li>
           );
