@@ -50,10 +50,10 @@ const CategorySelector = ({ categories, asButtons, onClick }: Props) => {
   };
 
   const sortedCategories = categories.sort((a, b) => a.name.localeCompare(b.name));
-
+  const categoryListClass = [styles.categoryList, !asButtons ? styles.asLink : ''].join(" ");
   return (
     <nav>
-      <ul className={styles.categoryList}>
+      <ul className={categoryListClass}>
         {sortedCategories.map((category) => (
           <li key={category.link} className={styles.categoryListItem}>
             <CategoryComponent

@@ -6,9 +6,14 @@
   padding: 0;
 }
 
+.categoryList.asLink {
+  justify-content: center;
+}
+
 .categoryListItem {
   list-style: none;
 }
+
 
 .categoryContent {
   cursor: pointer;
