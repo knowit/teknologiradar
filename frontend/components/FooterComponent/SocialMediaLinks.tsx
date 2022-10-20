@@ -12,7 +12,7 @@ export default function SocialMediaLinks() {
         <InstagramIcon />
       </a>
       <a href={'https://www.linkedin.com/company/8067'} target={'_blank'} rel="noreferrer noopener">
-        <LinkedinIcon/>
+        <LinkedinIcon />
       </a>
       <a href={'https://twitter.com/knowitab'} target={'_blank'} rel="noreferrer noopener">
         <TwitterIcon />

@@ -6,4 +6,12 @@ import InstagramIcon from './InstagramIcon';
 import LinkedinIcon from './LinkedinIcon';
 import TwitterIcon from './TwitterIcon';
 
-export { CloseIcon, ExpandIcon, CollapseIcon, ForwardIcon, TwitterIcon, LinkedinIcon, InstagramIcon };
+export {
+  CloseIcon,
+  ExpandIcon,
+  CollapseIcon,
+  ForwardIcon,
+  TwitterIcon,
+  LinkedinIcon,
+  InstagramIcon,
+};
