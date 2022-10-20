@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const ForwardIcon = () => {
   return (
     <svg
@@ -12,4 +14,4 @@ const ForwardIcon = () => {
   );
 };
 
-export default ForwardIcon;
+export default memo(ForwardIcon);

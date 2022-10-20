@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { InstagramIcon, LinkedinIcon, TwitterIcon } from '../icons';
 import styles from './Footer.module.css';
 
 export default function SocialMediaLinks() {
@@ -9,13 +9,13 @@ export default function SocialMediaLinks() {
         target={'_blank'}
         rel="noreferrer noopener"
       >
-        <Image src="/social-icons/instagram.svg" height={40} width={40} alt={'Instagram logo'} />
+        <InstagramIcon />
       </a>
       <a href={'https://www.linkedin.com/company/8067'} target={'_blank'} rel="noreferrer noopener">
-        <Image src="/social-icons/linkedIn.svg" height={40} width={40} alt={'LinkedIn logo'} />
+        <LinkedinIcon />
       </a>
       <a href={'https://twitter.com/knowitab'} target={'_blank'} rel="noreferrer noopener">
-        <Image src="/social-icons/twitter.svg" height={40} width={40} alt={'Twitter logo'} />
+        <TwitterIcon />
       </a>
     </div>
   );
