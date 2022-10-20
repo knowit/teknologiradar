@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { memo } from 'react';
+import { createRef, memo, RefObject, useLayoutEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Item } from '../../data/categories';
 import { useMedia } from 'react-use';
@@ -23,9 +23,11 @@ interface Props {
 const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, index }: Props) => {
   // If any expanded and viewport change to mobile, reset expansion
   const isMobileViewport = useMedia('(max-width: 768px)');
+  const [showExpander, setShowExpander] = useState(false);
+  const quadrantRef: RefObject<HTMLDivElement> = useRef(null);
+  const { locale } = useRouter();
 
   const { t } = useTranslation('category');
-  const { locale } = useRouter();
   const descriptionId = `${id}_description`;
 
   const { open: openModal, modalContent } = useInfoModal();
@@ -42,16 +44,29 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
     ? `${styles.quadrandExpanded} ${styles[`quadrant_${index}`]}`
     : '';
 
+  useLayoutEffect(() => {
+    const node = quadrantRef?.current;
+    if (node !== null) {
+      const overflow = node.scrollHeight > node.clientHeight;
+      setShowExpander(overflow);
+    }
+  }, [quadrantRef, items]);
+
   return (
     <>
       {showQuadrant && (
-        <div className={[styles.wrapper, quadrantWrapperClass].join(' ')}>
+        <div ref={quadrantRef} className={[styles.wrapper, quadrantWrapperClass].join(' ')}>
           <div className={styles.headingWrapper}>
             <QuadrantButton
               id={id}
               title={name}
+              canExpand={showExpander}
               selectedValue={expandedId}
-              onClick={() => setExpandedId(isExpanded ? null : id)}
+              {...(showExpander && {
+                onClick: () => {
+                  setExpandedId(isExpanded ? null : id);
+                },
+              })}
             />
             <div className={styles.descriptionWrapper}>
               <p id={descriptionId} className={styles.description}>

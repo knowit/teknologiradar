@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const ExpandIcon = () => {
   return (
     <svg width="15" height="15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -7,4 +9,4 @@ const ExpandIcon = () => {
   );
 };
 
-export default ExpandIcon;
+export default memo(ExpandIcon);
