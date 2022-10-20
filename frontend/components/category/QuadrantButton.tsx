@@ -7,27 +7,30 @@ import { QuadrantType } from './Quadrants';
 interface Props {
   id: QuadrantType;
   title: string;
+  canExpand: boolean;
   selectedValue: QuadrantType | null;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-const QuadrantButton = ({ id, title, selectedValue, onClick }: Props) => {
+const QuadrantButton = ({ id, title, canExpand, selectedValue, onClick }: Props) => {
   const { t } = useTranslation('category');
 
-  const button = id === selectedValue ? <CollapseIcon /> : <ExpandIcon />;
-  const label = id === selectedValue ? t('buttons.collapse') : t('buttons.expand');
   const isExpanded = id === selectedValue;
+  const icon = isExpanded ? <CollapseIcon /> : <ExpandIcon />;
+  const label = canExpand ? (isExpanded ? t('buttons.collapse') : t('buttons.expand')) : undefined;
   const titleClass = `${styles.titleWrapper} ${isExpanded ? styles.titleExpanded : ''}`;
+  const role = canExpand ? 'button' : 'presentation';
+  const buttonClass = [styles.toggleButtonWrapper, canExpand ? styles.toggleButton : ''].join(' ');
 
   return (
-    <button onClick={onClick} aria-label={label} className={styles.toggleButton}>
+    <div role={role} onClick={onClick} aria-label={label} className={buttonClass}>
       <div className={titleClass}>
         <h2 id={id} className={styles.quadrantTitle}>
           {title}
         </h2>
-        <span aria-hidden="true">{button}</span>
+        {canExpand && <span aria-hidden="true">{icon}</span>}
       </div>
-    </button>
+    </div>
   );
 };
 
