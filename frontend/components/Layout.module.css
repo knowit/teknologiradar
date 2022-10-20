@@ -1,4 +1,4 @@
 .main {
   display: grid;
-  gap: 3rem;
+  grid-gap: 3rem;
 }
