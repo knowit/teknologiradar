@@ -3,6 +3,7 @@ import { memo } from 'react';
 const InstagramIcon = () => {
   return (
     <svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+      <title>Instagram</title>
       <g fill="currentColor">
         <path d="m31.7 17.4v-3.6-.5h-.5-3.6v4.1z" />
         <path d="m22.4 27.1c2.4 0 4.3-1.9 4.3-4.3 0-.9-.3-1.8-.8-2.5-.8-1.1-2-1.8-3.5-1.8-1.4 0-2.7.7-3.5 1.8-.5.7-.8 1.6-.8 2.5 0 2.4 1.9 4.3 4.3 4.3" />
