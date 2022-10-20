@@ -70,8 +70,11 @@ frameworks|design|Storybook|ADOPT|FALSE|Gir en oversikt over eksisterende kompon
 frameworks|design|Autonome team|ADOPT|TRUE|Tverrfaglig team som tar avgjørelser basert på prosjektets og teamets behov. Komplekse problemer løses best i team med stor grad av autonomi. Dette medfører økt innovasjon og nøyaktighet i problemløsning.|Crossfunctional teams that makes decisons based on project needs. Complex problems are best solved in teams with a high degree of autonomy. This leads to increased innovation and accuracy in problem solving.
 frameworks|design|Business design|ADOPT|FALSE|Business design er forretningsutvikling med et designtankesett i bunn.|Business design is business development combined with a design mindset. 
 frameworks|design|UX design|KEEP|FALSE|User experience design handler om å forbedre totalopplevelsen for mennesker i interaksjon med et digitalt produkt, en tjeneste eller et system. |User experience design is about improving the overall experience a person has when dealing with a digital product, service or system. 
-frameworks|design|Service design|KEEP|FALSE|Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester. |Service design is a discipline within design with goals about developing user-oriented and holistic services. 
-methods|design|Personas/ Archetypes|KEEP|FALSE|Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles.|Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way. 
+frameworks|design|Service design|KEEP|FALSE|Tjenestedesign er en fagretning innen design med mål 
+om å utvikle brukerrettede og helhetlige tjenester. |Service design is a discipline within design with goals
+about developing user-oriented and holistic services. 
+methods|design|Personas/ Archetypes|KEEP|FALSE|Personas er fiktive karakterer, som er lagd basert på innsikt for å representere de forskjellige brukertypene som kan bruke tjenesten, produktet, nettstedet eller merkevaren som utvikles. 
+|Personas are fictional characters, based upon research in order to represent the different user types that might use a service, product, site, or brand in a similar way. 
 methods|design|Service blueprint|KEEP|FALSE|Service Blueprint er en metode som blir brukt i tjenestedesign. Service Blueprint kan for eksempel inkludere flere aktører og tjenester for å få en helhetlig oversikt av en brukerreise.|The service blueprint is a method used for service design. Service blueprint can also be used by adressing several services and actors to provide a holistic overview.
 methods|design|Customer journey|KEEP|FALSE|En kundereise er en visualisering av prosessen som en person går gjennom for å oppnå et mål.|A CS is map is a visualization of the process that a person goes through in order to accomplish a goal.
 methods|design|Design sprint|HOLD|FALSE|En designsprint er en tidsbegrenset, fem-dagers prosess som bruker designtenkning med sikte på å redusere risikoen ved å bringe et nytt produkt, en tjeneste eller en funksjon til markedet.|Design sprint is a five-day process for answering critical business questions through design, prototyping, and testing ideas with customers.
@@ -94,7 +97,7 @@ methods|design|Double/ Triple diamond|KEEP|FALSE|Den doble diamanten består av 
 methods|design|Brukerintervju|KEEP|FALSE|Brukerintervju er en kvalitativ metode i for å kartlegge en brukers behov eller forstå opplevelsen av en bestemt tjeneste eller et produkt.|User interviews are a qualitative method for mapping a user's needs or understanding the experience of a particular service or product
 methods|design|Mind map|ADOPT|FALSE|Et tankekart er en visuell måte å organisere ideer på.|A mind map is a visual way to organize ideas.
 methods|design|Paper prototype|HOLD|FALSE|Papirprototyping er en proses for å utvikle ideer og designe brukerflyter ved å bruke håndskisserte "skjermer" som representerer et digitalt produkt.|Paper prototyping is the process of developing ideas and designing user flows using hand-sketched “screens” that represent a digital product. 
-methods|design|Innsiktsfasen|HOLD|FALSE|I innsiktsfasen skapes en felles forståelse av designprosessen, og det settes forventninger og retningslinjer for alle involverte aktører i prosjektet.  Fokusområder: Kartlegge behov. Definere målgruppe.|In the insight phase, a common understanding of the design process is created, and expectations and guidelines are set for all actors involved in the project. Focus areas: Mapping needs and defining the target group.
+methods|design|Innsiktsfasen|KEEP|FALSE|I innsiktsfasen skapes en felles forståelse av designprosessen, og det settes forventninger og retningslinjer for alle involverte aktører i prosjektet.  Fokusområder: Kartlegge behov. Definere målgruppe.|In the insight phase, a common understanding of the design process is created, and expectations and guidelines are set for all actors involved in the project. Focus areas: Mapping needs and defining the target group.
 methods|design|5 why's|KEEP|FALSE|Five whys er en iterativ spørreteknikk som brukes til å utforske årsak-og-virkning-sammenhengene som ligger til grunn for et bestemt problem.|5 whys is an iterative interrogative technique used to explore the cause-and-effect relationships underlying a particular problem. 
 methods|design|Sitemap|KEEP|FALSE|Sitemap er en organisering og visualisering av sidestrukturer.|Sitemap is an organization and visualization of a site structure.
 methods|design|Kontinuerlig iterasjon|KEEP|FALSE|Å definere hypoteser, og teste og justere arbeidet etter funn og læringer. Å jobbe iterativt tillater tilpasninger til nye situasjoner, teknologi eller strategiendringer.|Defining hypotheses, and testing and adjusting findings and learnings. Working iteratively allows adjustments to new situations, technology or strategy changes. 
@@ -118,69 +121,69 @@ tools|design|Figma:plugin: Color blind|KEEP|FALSE||
 tools|design|Figma:plugin: Contrast|KEEP|FALSE||
 tools|design|Klistrelapper|KEEP|FALSE|Et av designerens foretrukne verktøy. Sortering med ulike farger og med riktig størrelse for et enkelt ord eller en setning. De kan grupperes, flyttes, limes og går aldri tom for batterier.|The designer preferred office tools. Colourful with the right size for a single word or a sentence. They can be grouped, moved, glued and never run out of batteries.
 tools|design|Moodboards|KEEP|FALSE|Er en samling av bilder, materiale tekst, etc. som har som intensjon å vekke følelser eller fremme en bestemt stil eller konsept|An arrangement of images, materials, pieces of text, etc. intended to evoke or project a particular style or concept.
-languages|frontend|WebAssembly|TEST|FALSE|WebAssembly kan i visse tilfeller gi økt ytelse, men vær obs på at just-in-time-kompilering ofte gjør at vanlig Javascript er like vel-ytende.|
-languages|frontend|Imba (programmeringsspråk)|TEST|FALSE|Kortfattet prototyping-språk.|
-languages|frontend|clojure + fulcro|TEST|FALSE||
-languages|frontend|JavaScript uten typer (JSdoc-TS er regnet som typet)|HOLD|TRUE|Typescript som ikke trenger å transpileres kan gi mindre teknisk gjeld. Foreløpig er det en stor nok utfordring å få alle prosjekter til å bruke typer.|
-languages|frontend|ESNext|ADOPT|TRUE|Bruk nye EcmaScript-språkfunksjoner (som er i stage 3 og 4) og transpiler fremfor å bruke gammeldags kode.|
-languages|frontend|TypeScript|ADOPT|TRUE|Typing av Javascript er kommet for å bli i langtlevde prosjekter.|
-languages|frontend|GraphQL|ADOPT|TRUE|GraphQL er en moden teknologi som passer godt for sine bruksområder.|
-languages|frontend|Elm|HOLD|FALSE|Aktiv utvikling har tilsynelatende stoppet opp.|
-languages|frontend|Flow|HOLD|FALSE|Typescript er et betydelig bedre alternativ.|
-languages|frontend|PHP|HOLD|FALSE|Server-side-rendering av apper skrevet i rammeverk som også egner seg for klientsiden (React, Vue, Svelte) er et mer fleksibelt alternativ enn et rent server-side-språk.|
-frameworks|frontend|React|KEEP|TRUE|React er bransjestandarden for øyeblikket, og duger godt til jobben sin.|
-frameworks|frontend|Ant design|KEEP|FALSE||
-frameworks|frontend|react-query (Erstattes av SWR i methods)|ADOPT|TRUE||
-frameworks|frontend|testing-library|ADOPT|TRUE|testing-library er et bibliotek med testfunksjoner, implementert for ulike verktøy (Jest, Cypress). I tillegg til å være arbeidsbesparende, er det en fordel å ha et standard-«vokabular» man kan forholde seg til enda man bytter prosjekt eller testverktøy.|
-frameworks|frontend|Next|ADOPT|TRUE|Next gjør det lett å lage webapplikasjoner som følger alle kunstens regler uten at man legger mye arbeid i det. Andre alternativer eksisterer (Remix, SvelteKit), men ingen er så modne som Next.|
-frameworks|frontend|Vue|ADOPT|TRUE|Vue er et av de tre store rammeverkene om dagen (React og Svelte er de to andre). Hvis man synes Vue er passende for et prosjekt, må man gjerne bruke dette.|
-frameworks|frontend|Jest|ADOPT|TRUE|Standard-testverktøyet for enhetstester.|
-frameworks|frontend|Cypress|ADOPT|TRUE|Standard-testverktøyet for ende-til-ende-tester.|
-frameworks|frontend|SWR (Erstattes av SWR i methods)|ADOPT|FALSE||
-frameworks|frontend|Material-ui|ADOPT|FALSE|Et godt designbibliotek utviklet av Google. Etter vår vurdering mer egnet for mobilskjermer enn for datamaskin.|
-frameworks|frontend|Gatsby|ADOPT|FALSE|En god statisk-side-generator.|
-frameworks|frontend|Razzle (SSR for alle rammeverk)|TRIAL|FALSE||
-frameworks|frontend|Tailwind|TRIAL|TRUE|Tailwind sparer en for mye komplisert CSS og holder bundle-størrelsen nede. De som bruker det er så fornøyde at vi kan anbefale det for de fleste.|
-frameworks|frontend|Svelte/ svelte-kit|TRIAL|TRUE|Svelte-kit er Svelte-alternativet til Next (der Next baserer seg på React). Apper skrevet i Svelte-kit blir mindre, men mengden tilgjengelige funksjoner er noe mindre i SvelteKit for tiden. Velg Next om du er i tvil.|
-frameworks|frontend|Fastify/koa (erstatning for Express)|TRIAL|TRUE||
-frameworks|frontend|flutter|TEST|FALSE|Vår begrensede erfaring med Flutter for Web gjør at vi ønsker at utviklerne våre skal gjøre varsomme forsøk med det.|
-frameworks|frontend|preact|TEST|FALSE|Preact tilbyr en noe mindre kjøretidspakke enn det React gjør i bytte mot et begrenset funksjonalitetssett. Vi har lite erfaring med hvor begrensende dette er, og vil gjerne ha erfaringer.|
-frameworks|frontend|Angular|HOLD|FALSE|Angular er ikke et alternativ for nyoppstartede prosjekter|
-frameworks|frontend|jQuery|HOLD|FALSE|jQuery er ikke et alternativ for nyoppstartede prosjekter.|
-methods|frontend|CSS-in-JS|ADOPT|TRUE|CSS-in-JS gjør kodebaser lettere å holde styr på, med en liten kjøretidskostnad for brukeren (fordi CSS-en må påføres av Javascript-kode). Bruk hvis brukerne dine kan tåle denne merkostnaden.|
-methods|frontend|Funksjonell stil når du kan, imperativt når du må|ADOPT|TRUE|Imperativ programmering er lettere for nybegynnere og tidvis mer effektivt, men erfarne programmerere bør legge seg til en funksjonell stil av hensyn til testbarhet og feilsøking.|
-methods|frontend|Serverless Hosting - Object Storage|ADOPT|TRUE||
-methods|frontend|HTML over the wire|TRIAL|TRUE|Å rendre HTML på tjeneren og overføre den til klienten gir noen kjøretidsfordeler, men vi vil fortsatt se om gevinsten er verdt ulempene.|
-methods|frontend|i18n|ADOPT|FALSE|"Gjør appen klar for internasjonalisering fra første stund; få tjenester i Norge lever lenge uten å få en engelsk eller nynorsk variant i tillegg til bokmål."|
-methods|frontend|Immutable data|ADOPT|FALSE|Bruk teknikker som spreading og funksjoner Array.prototype.slice fremfor å mutere enkelte deler av objekter og arrays. Det gjør det lettere å hanskes med oppdateringer og å finne ut når endringer skjer.|
-methods|frontend|Lazy Loading|ADOPT|FALSE|Unngå å laste inn Javascript du ikke vet du trenger å bruke. Moderne bundlere og rammeverk inneholder mange metoder for å lazy-loade deler av en SPA, slik at den først lastes ned og parses av datamaskinen idet brukeren trenger den.|
-methods|frontend|prioriter feilhåndtering og beskrivelse|ADOPT|FALSE|Lag apper som krasjer sjelden, og fortell brukerne dine så godt du kan hva årsaken til krasjen er. Da blir brukerne fornøyde, og tilbakemeldingene du får bedre.|
-methods|frontend|Native Code|TRIAL|FALSE||
-methods|frontend|Microfrontends|TRIAL|FALSE|Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse). |
-methods|frontend|Småbiblioteker av JS-onelinere|HOLD|FALSE|Skriv heller koden selv eller kopier inn koden. Husk på å oppgi de lisensene du bruker!|
-methods|frontend|Global state|HOLD|FALSE|Å sentralisere all tilstand i ett stort objekt, som i for eksempel Redux, var en trend for rundt fem år siden. Vi beveger oss nå bort fra det fordi apper (som regel) blir tregere av å gjøre oppdateringer inni ett objekt. Det er også vanskeligere for utviklerne å forholde seg til.|
-methods|frontend|Stale While Revalidate (frontend-caching)|ADOPT|FALSE|Å hente data med hooks, slik react-query og SWR tilbyr, fører til betydelig færer kodelinjer enn om man gjør det samme med redux. Caching blir betydelig lettere.|
-tools|frontend|Redux for React|HOLD|TRUE|Global tilstand er tregt for brukerne og vanskelig for utviklere å forholde seg til. Foretrekk mindre biter.|
-tools|frontend|MSW|ADOPT|TRUE||
-tools|frontend|React Hook Form|ADOPT|TRUE|Dagens beste alternativ for skjemahåndtering i React: Raskt.|
-tools|frontend|Sentry / loggly|ADOPT|TRUE|De beste alternativene for å logge feil som hender hos brukerne.|
-tools|frontend|Vite|TRIAL|TRUE|En god, rask bundler som fungerer for de aller fleste prosjekter. Mindre konfigurering enn Webpack.|
-tools|frontend|Reach UI|TRIAL|TRUE||
-tools|frontend|PostCSS|ADOPT|TRUE|Et modent verktøy som lar deg bruke den nyeste CSS-en uten å bekymre deg for brukernes opplevelse.|
-tools|frontend|Formik|HOLD|TRUE|Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig. |
-tools|frontend|Webpack|KEEP|TRUE|Et nødvendig onde mens verktøy som Vite modnes.|
-tools|frontend|Esbuild|TRIAL|TRUE|Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler. |
-tools|frontend|ESLint|ADOPT|FALSE|Eslint er bransjestandarden for å håndheve stilregler i ethvert prosjekt.|
-tools|frontend|Prettier|ADOPT|FALSE|En rask formaterer med få konfigurasjonstilvalg.|
-tools|frontend|Fathom (personvernorientert Google Analytics-alternativ)|TRIAL|FALSE||
-tools|frontend|Moment|HOLD|FALSE|Et overdimensjonert bibliotek i rene kilobytes. Bruk heller date-fns.|
-tools|frontend|Underscore|HOLD|FALSE|Bruk lodash i stedet.|
-tools|frontend|Selenium|HOLD|FALSE|Bruk Cypress i stedet.|
-tools|frontend|Lodash|KEEP|FALSE||
-tools|frontend|Snowpack|TEST|FALSE|FJERNES vedlikeholdes ikke lenger|
-tools|frontend|web-components|TRIAL|FALSE||
-tools|frontend|MDX|TRIAL|FALSE||
-tools|frontend|wmr|TEST|FALSE|FJERNES|
+languages|frontend|WebAssembly|TEST|FALSE|WebAssembly kan i visse tilfeller gi økt ytelse. Vær obs på at just-in-time-kompilering ofte gjør at vanlig Javascript er like vel-ytende.|WebAssembly may in some cases provide increased performance. Be aware that just-in-time compilation often makes regular Javascript just as well-performing.
+languages|frontend|Imba (programmeringsspråk)|TEST|FALSE|Kortfattet prototyping-språk.|Clojure is a variant of the Lisp programming language. Fulcro is a framework for building fullstack applications in Clojure. This option is interesting for those who want to experiment with one coherent codebase for an entire data program, especially in data-driven applications.
+languages|frontend|clojure + fulcro|TEST|FALSE|Clojure er en variant av programmeringsspråket Lisp. Fulcro er et rammeverk for å bygge fullstack-applikasjoner i Clojure. Dette alternativet er interessant for de som ønsker å eksperimentere med én sammenhengende kodebase for et helt dataprogram, særlig i datadrevne applikasjoner.|Typescript that doesn't need to be transpiled can provide less technical debt. Currently, it's a big enough challenge to get all projects to use types.
+languages|frontend|JavaScript uten typer (JSdoc-TS er regnet som typet)|HOLD|TRUE|Typescript som ikke trenger å transpileres kan gi mindre teknisk gjeld. Foreløpig er det en stor nok utfordring å få alle prosjekter til å bruke typer.|Use new EcmaScript language features (which are in stage 3 and 4) and transpile instead of using old-fashioned code.
+languages|frontend|ESNext|ADOPT|TRUE|Bruk nye EcmaScript-språkfunksjoner (som er i stage 3 og 4) og transpiler fremfor å bruke gammeldags kode.|TypeScript is here to stay in long-lived projects.
+languages|frontend|TypeScript|ADOPT|TRUE|Typing av Javascript er kommet for å bli i langtlevde prosjekter.|GraphQL is a mature technology that fits well for its use cases.
+languages|frontend|GraphQL|ADOPT|TRUE|GraphQL er en moden teknologi som passer godt for sine bruksområder.|Active development appears to have come to a standstill.
+languages|frontend|Elm|HOLD|FALSE|Aktiv utvikling har tilsynelatende stoppet opp.|TypeScript is a significantly better alternative.
+languages|frontend|Flow|HOLD|FALSE|Typescript er et betydelig bedre alternativ.|Server-side rendering of apps written in frameworks that also work well on the client side (React, Vue, Svelte) is a more flexible option than a pure server-side language.
+languages|frontend|PHP|HOLD|FALSE|Server-side-rendering av apper skrevet i rammeverk som også egner seg for klientsiden (React, Vue, Svelte) er et mer fleksibelt alternativ enn et rent server-side-språk.|#REF!
+frameworks|frontend|React|KEEP|TRUE|React er bransjestandarden for øyeblikket, og duger godt til jobben sin.|React is the industry standard at the moment, and does its job well.
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|testing-library|ADOPT|TRUE|testing-library er et bibliotek med testfunksjoner, implementert for ulike verktøy (Jest, Cypress). I tillegg til å være arbeidsbesparende, er det en fordel å ha et standard-«vokabular» man kan forholde seg til enda man bytter prosjekt eller testverktøy.|testing-library is a library with testing functions, implemented for various tools (Jest, Cypress). In addition to being time-saving, it is an advantage to have a standard "vocabulary" to relate to even if you switch projects or test tools.
+frameworks|frontend|Next|ADOPT|TRUE|Next gjør det lett å lage webapplikasjoner som følger alle kunstens regler uten at man legger mye arbeid i det. Andre alternativer eksisterer (Remix, SvelteKit), men ingen er så modne som Next.|Next makes it easy to create web applications that follow all the rules of the art without putting a lot of work into it. Other alternatives exist (Remix, SvelteKit), but none are as mature as Next.
+frameworks|frontend|Vue|ADOPT|TRUE|Vue er et av de tre store rammeverkene om dagen (React og Svelte er de to andre). Hvis man synes Vue er passende for et prosjekt, må man gjerne bruke dette.|Vue is one of the three major frameworks of the day (React and Svelte are the other two). If you think Vue is suitable for a project, feel free to use it.
+frameworks|frontend|Jest|ADOPT|TRUE|Standard-testverktøyet for enhetstester.|The standard tool for unit tests.
+frameworks|frontend|Cypress|ADOPT|TRUE|Standard-testverktøyet for ende-til-ende-tester.|The standard tool for end-to-end tests.
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+frameworks|frontend|Tailwind|TRIAL|TRUE|Tailwind sparer en for mye komplisert CSS og holder bundle-størrelsen nede. De som bruker det er så fornøyde at vi kan anbefale det for de fleste.|Tailwind saves you from a lot of complicated CSS and keeps the bundle size down. Those who use it are so pleased that we can recommend it for most.
+frameworks|frontend|Svelte/ svelte-kit|TRIAL|TRUE|Svelte-kit er Svelte-alternativet til Next (der Next baserer seg på React). Apper skrevet i Svelte-kit blir mindre, men mengden tilgjengelige funksjoner er noe mindre i SvelteKit for tiden. Velg Next om du er i tvil.|Svelte-kit is the Svelte alternative to Next (where Next is based on React). Apps written in Svelte-kit are smaller, but the amount of available features is somewhat less in SvelteKit at the moment. Choose Next if you are in doubt.
+frameworks|frontend|Fastify/koa (erstatning for Express)|TRIAL|TRUE|To webrammeverk for Node.js som er arvtakere for Express med noen viktige forskjeller seg imellom: Fastify vektlegger konvensjon over konfigurasjon. Koa er derimot mer minimalistisk, og gir deg frihet i bytte mot ansvar.|Two web frameworks for Node.js that are successors to Express with some important differences between them: Fastify emphasizes convention over configuration. Koa, on the other hand, is more minimalist, and gives you freedom in exchange for responsibility.
+frameworks|frontend|flutter|TEST|FALSE|Vår begrensede erfaring med Flutter for Web gjør at vi ønsker at utviklerne våre skal gjøre varsomme forsøk med det.|Our limited experience with Flutter for Web makes us want our developers to be cautious with it.
+frameworks|frontend|preact|TEST|FALSE|Preact tilbyr en noe mindre kjøretidspakke enn det React gjør i bytte mot et begrenset funksjonalitetssett. Vi har lite erfaring med hvor begrensende dette er, og vil gjerne ha erfaringer.|Preact offers a slightly smaller runtime package than React does in exchange for a limited feature set. We have little experience with how limiting this is, and would like to have experiences.
+frameworks|frontend|Angular|HOLD|FALSE|Angular er ikke et alternativ for nyoppstartede prosjekter|Angular is not an option for new projects
+frameworks|frontend|jQuery|HOLD|FALSE|jQuery er ikke et alternativ for nyoppstartede prosjekter.|jQuery is not an option for new projects.
+methods|frontend|CSS-in-JS|ADOPT|TRUE|CSS-in-JS gjør kodebaser lettere å holde styr på, med en liten kjøretidskostnad for brukeren (fordi CSS-en må påføres av Javascript-kode). Bruk hvis brukerne dine kan tåle denne merkostnaden.|CSS-in-JS makes codebases easier to keep track of, with a small runtime cost for the user (because the CSS has to be applied by Javascript code). Use if your users can tolerate this additional cost.
+methods|frontend|Funksjonell stil når du kan, imperativt når du må|ADOPT|TRUE|Imperativ programmering er lettere for nybegynnere og tidvis mer effektivt, men erfarne programmerere bør legge seg til en funksjonell stil av hensyn til testbarhet og feilsøking.|Imperative programming is easier for beginners and sometimes more effective, but experienced programmers should adopt a functional style for the sake of testability and debugging.
+methods|frontend|Serverless Hosting - Object Storage|ADOPT|TRUE|Serverless hosting sparer deg for tid du ville brukt på å måtte vedlikeholde en tjener, selv i skyen. Object Storage lar deg lagre filer og data som brukes i tjenerløse applikasjoner, for eksempel bilder. Amazons S3 er et eksempel.|Serverless hosting saves you from having to maintain a server, even in the cloud. Object Storage lets you store files and data used in serverless applications, such as images. Amazon's S3 is an example.
+methods|frontend|HTML over the wire|TRIAL|TRUE|Å rendre HTML på tjeneren og overføre den til klienten gir noen kjøretidsfordeler, men vi vil fortsatt se om gevinsten er verdt ulempene.|Rendering HTML on the server and transferring it to the client provides some performance benefits, but we'll still see if the benefits are worth the drawbacks.
+methods|frontend|i18n|ADOPT|FALSE|"Gjør appen klar for internasjonalisering fra første stund; få tjenester i Norge lever lenge uten å få en engelsk eller nynorsk variant i tillegg til bokmål."|"Get the app ready for internationalization from the start; many services in Norway live on without ever getting an English or Norwegian variant in addition to Bokmål."
+methods|frontend|Immutable data|ADOPT|FALSE|Bruk teknikker som spreading og funksjoner Array.prototype.slice fremfor å mutere enkelte deler av objekter og arrays. Det gjør det lettere å hanskes med oppdateringer og å finne ut når endringer skjer.|Use techniques such as spreading and Array.prototype.slice functions rather than mutating individual parts of objects and arrays. It makes it easier to deal with updates and to find out when changes occur.
+methods|frontend|Lazy Loading|ADOPT|FALSE|Unngå å laste inn Javascript du ikke vet du trenger å bruke. Moderne bundlere og rammeverk inneholder mange metoder for å lazy-loade deler av en SPA, slik at den først lastes ned og parses av datamaskinen idet brukeren trenger den.|Avoid loading in Javascript that you don't know you need to use. Modern bundlers and frameworks contain many methods for lazy-loading parts of an SPA, so that it is only downloaded and parsed by the computer when the user needs it.
+methods|frontend|prioriter feilhåndtering og beskrivelse|ADOPT|FALSE|Lag apper som krasjer sjelden, og fortell brukerne dine så godt du kan hva årsaken til krasjen er. Da blir brukerne fornøyde, og tilbakemeldingene du får bedre.|Make apps that crash rarely, and tell your users as best you can what the cause of the crash is. That will make users happy, and the feedback you get will be better.
+methods|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+methods|frontend|Microfrontends|TRIAL|FALSE|Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse). |We are unsure if the benefits of micro-frontends (independence) are worth the disadvantages (organizational overhead, more difficult project setup, and increased download size).
+methods|frontend|Småbiblioteker av JS-onelinere|HOLD|FALSE|Skriv heller koden selv eller kopier inn koden. Husk på å oppgi de lisensene du bruker!|Either write the code yourself or copy it in. Remember to list the licenses you use!
+methods|frontend|Global state|HOLD|FALSE|Å sentralisere all tilstand i ett stort objekt, som i for eksempel Redux, var en trend for rundt fem år siden. Vi beveger oss nå bort fra det fordi apper (som regel) blir tregere av å gjøre oppdateringer inni ett objekt. Det er også vanskeligere for utviklerne å forholde seg til.|Centralizing all state in one large object, as in for example Redux, was a trend around five years ago. We are now moving away from that because apps (usually) become slower from making updates inside one object. It is also more difficult for developers to keep track of.
+methods|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+tools|frontend|Redux for React|HOLD|TRUE|Global tilstand er tregt for brukerne og vanskelig for utviklere å forholde seg til. Foretrekk mindre biter.|The global state is slow for users and difficult for developers to keep track of. Prefer smaller pieces.
+tools|frontend|MSW|ADOPT|TRUE|Et bibliotek som lar deg mocke (erstatte) såkalte Service Workers i testene dine. Vi har prøvd dette og er fornøyde.|A library that lets you mock (replace) so-called Service Workers in your tests. We've tried it and are happy with it.
+tools|frontend|React Hook Form|ADOPT|TRUE|Dagens beste alternativ for skjemahåndtering i React: Raskt.|Today's best option for schema handling in React: Quick.
+tools|frontend|Sentry / loggly|ADOPT|TRUE|De beste alternativene for å logge feil som hender hos brukerne.|The best options for logging errors that happen to users.
+tools|frontend|Vite|TRIAL|TRUE|En god, rask bundler som fungerer for de aller fleste prosjekter. Mindre konfigurering enn Webpack.|A good, fast bundler that works for most projects. Less configuration than Webpack.
+tools|frontend|Reach UI|TRIAL|TRUE|Et komponentbibliotek med mål om å være en selvsagt grunnpillar i ethvert React-basert designsystem. |A component library with the goal of being a natural foundation in any React-based design system.
+tools|frontend|PostCSS|ADOPT|TRUE|Et modent verktøy som lar deg bruke den nyeste CSS-en uten å bekymre deg for brukernes opplevelse.|A mature tool that lets you use the latest CSS without worrying about the user experience.
+tools|frontend|Formik|HOLD|TRUE|Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig. |A more verbose and slower alternative to React Hook Form that isn't updated often.
+tools|frontend|Webpack|KEEP|TRUE|Et nødvendig onde mens verktøy som Vite modnes.|A necessary evil while tools like Vite mature.
+tools|frontend|Esbuild|TRIAL|TRUE|Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler. |Esbuild is a faster alternative to Babel. poorer support for old syntax, such as CommonJS modules.
+tools|frontend|ESLint|ADOPT|FALSE|Eslint er bransjestandarden for å håndheve stilregler i ethvert prosjekt.|Eslint is the industry standard for enforcing style rules in any project.
+tools|frontend|Prettier|ADOPT|FALSE|En rask formaterer med få konfigurasjonstilvalg.|A fast formatter with few configuration options.
+tools|frontend|Fathom (personvernorientert Google Analytics-alternativ)|TRIAL|FALSE|Fathom og andre personvernorienterte analyseverktøy er svært nødvendige å få erfaring med nå som Google Analytics sannsynligvis er å regne som ulovlig i Europa.|Fathom and other privacy-oriented analytics tools are essential to get experience with now that Google Analytics is likely to be considered illegal in Europe.
+tools|frontend|Moment|HOLD|FALSE|Et overdimensjonert bibliotek i rene kilobytes. Bruk heller date-fns.|A oversized library in pure kilobytes. Use date-fns instead.
+tools|frontend|Underscore|HOLD|FALSE|Bruk vanlig Javascript hvis du kan og lodash hvis du må.|Use regular Javascript if you can and lodash if you must.
+tools|frontend|Selenium|HOLD|FALSE|Bruk Cypress i stedet.|Use Cypress instead.
+tools|frontend|Lodash|KEEP|FALSE|Lodash er et rikholdig bibliotek med generelle funksjoner. Det blir stadig mindre nødvendig, ettersom de beste idéene fra lodash blir tatt inn i Javascript som metoder på arrays og objekter (for eksempel Array.prototype.map, og nå i nyere tid lodashs groupBy, som er blitt til Array.prototype.group).|Lodash is a rich library with general functions. It is becoming increasingly unnecessary, as the best ideas from lodash are being taken into Javascript as methods on arrays and objects (for example Array.prototype.map, and more recently lodash's groupBy, which has become Array.prototype.group).
+tools|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
+tools|frontend|web-components|TRIAL|FALSE|web-komponenter er gjenbrukbarekomponenter som er skrevet i ren HTML, CSS og Javascript. Derfor kan de gjenbrukes, uavhengig av hvilket rammeverk man bruker. Ulempen er at de er vanskelige å tegne opp på tjenersiden (SSR), som gjør at de ikke er fullt så universelle å bruke som de burde vært.|Web components are reusable components written in pure HTML, CSS and Javascript. Therefore, they can be reused regardless of which framework is used. The downside is that they are difficult to render on the server side (SSR), which makes them not as universal as they should be.
+tools|frontend|MDX|TRIAL|FALSE|Dette burde oversettes fra engelsk til norsk|MDX is a syntax extension for Markdown that allows you to write JSX inline. This makes it possible to write JSX components that render to Markdown, and embed React components in your markdown documents.
+tools|frontend|#REF!|#REF!|TRUE|#REF!|#REF!
 languages|cloud|Java|KEEP|FALSE|De største er fremdeles størst, og de siste årene har ny funksjonalitet kommet mye raskere|The most used language amongst our customers, and new features has been added more quickly recently
 languages|cloud|CloudFormation|KEEP|FALSE|For AWS er dette det best støttede IaC-språket, selv om Terraform er bedre hvis du ønsker gjenbruk mellom skyer eller for generiske tjenester|For AWS, this is the best supported IaC language, although Terraform is better if you want reuse between clouds or for generic services
 languages|cloud|Javascript|KEEP|FALSE||
@@ -256,8 +259,8 @@ frameworks|aidata|Scikit-Learn|kEEP|FALSE|Viktig ML lib.|Important ML lib.
 frameworks|aidata|Tensorflow|KEEP|TRUE|Viktig ML lib.|Important ML lib.
 frameworks|aidata|Pandas|KEEP|FALSE|Viktig python data rammeverk.|Important python data framework.
 frameworks|aidata|Keras|KEEP|FALSE|Viktig ML lib.|Important ML lib.
-frameworks|aidata|Prefect|TEST|FALSE|Orkestrering utfordrer med bedre design.|Orchestration challenger.
-frameworks|aidata|Dagster|TEST|FALSE|Orkestrering utfordrer med bedre design.|Orchestration challenger.
+frameworks|aidata|Prefect|TEST|FALSE|Utfordrer innen orkestrering med bedre design.|Orchestration challenger.
+frameworks|aidata|Dagster|TEST|FALSE|Utfordrer innen orkestrering med bedre design.|Orchestration challenger.
 frameworks|aidata|DataHub|TEST|FALSE|Datakatalog rammeverk with momentum.|Data catalog framework with momentum.
 frameworks|aidata|Spark on Kubernetes|TRIAL|FALSE|Høy momentum rammeverk.|High momentum framework.
 frameworks|aidata|Delta Live Tables|TRIAL|TRUE|Høy momentum rammeverk on ledende platform.|High momentum framework on leading platform.
@@ -362,7 +365,7 @@ languages|iot|C/C++|KEEP|TRUE|Bransjestandard for embedded utvikling.|De facto s
 languages|iot|Embedded Rust|TEST|FALSE|Spennende språk med interessante egenskaper, ikke nådd critical mass enda.|Interesting language, but has not reached critical mass yet in terms of market adoption.
 languages|iot|MicroPython|TEST|FALSE|Python for  små enheter, lett i bruk og viser interessant potensiale.|Python for embedded systems, shows potential given that it is quick to prototype with and stable enough for production use.
 frameworks|iot|AWS IoT|ADOPT|TRUE|#1 IoT markedsleder.|#1 IoT market leader.
-frameworks|iot|Embedded Linux|ADOPT|TRUE|Raspberry Pi + clones usage enablement. Low cost and good performance for many applications.|Raspberry Pi + clones
+frameworks|iot|Embedded Linux|ADOPT|TRUE|Raspberry Pi + clones usage enablement. Low cost and good performance for many applications.|Raspberry Pi + cloner
 frameworks|iot|TensorFlow Lite for microcontrollers|TEST|FALSE|Integrert ML bruk er stigende pga mer effektiv opplæring og deling av denne.|Embedded ML is on the rise as uC with ML support is becoming more main stream.
 frameworks|iot|GCP IoT Core|ADOPT|FALSE|#2 IoT market|#2 IoT market
 frameworks|iot|Azure IoT Hub|TRIAL|FALSE|#3 IoT market|#3 IoT market
@@ -371,13 +374,13 @@ frameworks|iot|ESP-IDF|TRIAL|FALSE|ESP32 bare metal development ved behov|ESP32 
 frameworks|iot|Zephyr (RTOS)|TEST|FALSE|Nordic Semiconductor foretrukne rammeverk|Nordic Semiconductor backed framework for nRF52 and nRF91
 frameworks|iot|Edge IoT|TEST|FALSE|Container basert offloading av funksjoner til IoT enheter|Container based offloading of functions to IoT devices
 frameworks|iot|Balena|TEST|FALSE|Løsning for Linux based IoT device management|Framework for IoT Linux development
-frameworks|iot|Mongoose mdash|TEST|FALSE|Solution for uC IoT device management|Solution for uC IoT device management
+frameworks|iot|Mongoose mdash|TEST|FALSE|Løsning for uC IoT device management|Solution for uC IoT device management
 frameworks|iot|Mongoose OS|TEST|FALSE|Rammeverk for IoT uC enheter|Framework for IoT uC development
-frameworks|iot|FreeRTOS|ADOPT|TRUE|Amazon backed RTOS used on ESP32/Nordic uC|Amazon backed RTOS used on ESP32/Nordic uC
+frameworks|iot|FreeRTOS|ADOPT|TRUE|Amazon støttet RTOS mye brukt på ESP32/Nordic uC|Amazon backed RTOS used on ESP32/Nordic uC
 frameworks|iot|Pycom|TEST|FALSE|Interessant IoT løsning basert på microPython|Interesting off-the-shelf IoT offering which includes everything you need.
 frameworks|iot|Particle|TRIAL|TRUE|Interessant komplett IoT løsning basert på Arduino rammeverk|Interesting off-the-shelf IoT offering which includes everything you need.
 communications|iot|MQTT|KEEP|TRUE|#1 IoT standard|#1 IoT standard
-communications|iot|Protobuf|ADOPT|FALSE|Standardization|Standardization
+communications|iot|Protobuf|ADOPT|FALSE|Standardisering av data utveksling|Standardization of data exchange for constrained devices
 communications|iot|I2C/SPI/CAN|KEEP|FALSE|uC standards|uC standards
 communications|iot|Zigbee|TRIAL|FALSE|Home automation standard|Home automation standard
 communications|iot|Z-Wave|TRIAL|FALSE|Home automation standard|Home automation standard
@@ -385,50 +388,50 @@ communications|iot|4G/5G(NB-IoT/Cat M1)|ADOPT|FALSE|Cellular standard|Cellular s
 communications|iot|BLE|ADOPT|FALSE|Smart device standard|Smart device standard
 communications|iot|COAP|TRIAL|FALSE|#2 IoT standard|#2 IoT standard
 communications|iot|LoRaWAN|TRIAL|TRUE|Lav terskel nettverksteknologi for sensorer|Low barrier network technology for sensors
-communications|iot|Bluetooth Thread|TRIAL|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
-communications|iot|Iridium|TEST|FALSE|Customer driven|Customer driven
+communications|iot|Bluetooth Thread|TRIAL|FALSE|Følg med på adopsjon i markedet og applikasjoner.|Monitor market adoption and applications as needed.
+communications|iot|Iridium|TEST|FALSE|Bruk drevet av business case|Customer driven
 communications|iot|802.11|KEEP|FALSE|De facto standard|De facto standard
-communications|iot|UWB|TEST|TRUE|Precise indoor location|Precise indoor location
-communications|iot|Bluetooth DirectionFinding|TEST|FALSE|UWB is better?|UWB is better?
+communications|iot|UWB|TEST|TRUE|Presis innomhus lokalisering|Precise indoor location
+communications|iot|Bluetooth DirectionFinding|TEST|FALSE|UWB er en bedre teknologi?|UWB is better?
 tools|iot|Fusion 360|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
 tools|iot|FreeCAD|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
 tools|iot|PlatformIO|ADOPT|TRUE|Time to market, prototyping|Time to market, prototyping
-tools|iot|Arduino IDE|HOLD|FALSE|Too simplistic and there are better alternatives|Too simplistic and there are better alternatives
+tools|iot|Arduino IDE|HOLD|FALSE|Supert for nybegynner, men det finnes bedre løsninger nå|Too simplistic and there are better alternatives
 tools|iot|KiCAD|TEST|FALSE|Custom PCB capability|Custom PCB capability
 tools|iot|Easy EDA|TEST|FALSE|Custom PCB capability|Custom PCB capability
 tools|iot|Eagle EDA|TEST|FALSE|Custom PCB capability|Custom PCB capability
 hardware|iot|Arduino|KEEP|TRUE|Time to market, prototyping|Time to market, prototyping
-hardware|iot|ESP32|KEEP|TRUE|Swiss army knife, uC/IoT|Swiss army knife, uC/IoT
-hardware|iot|STM32|ADOPT|FALSE|Industrial uC solutions|Industrial uC solutions
+hardware|iot|ESP32|KEEP|TRUE|Swiss army knife, uC/IoT enhet|Swiss army knife, uC/IoT
+hardware|iot|STM32|ADOPT|FALSE|Industriell uC løsning|Industrial uC solutions
 hardware|iot|FPGA|KEEP|FALSE|Rå ytelse, for applikasjoner som trenger dette.|Raw performance if you need it.
 hardware|iot|Teensy|HOLD|FALSE|Bra for prototyping, uklar skaleringspotensiale|Excellent for protoyping, hard to scale up
-hardware|iot|TPU (coral)|TEST|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
-hardware|iot|mmWave Radar|TEST|FALSE|Monitor market adoption and applications as needed.|Monitor market adoption and applications as needed.
-hardware|iot|Raspberry PI Pico|TRIAL|FALSE|Cost/benefit +|Cost/benefit +
-hardware|iot|ESP8266|HOLD|FALSE|Legacy component, superceded by ESP32.|Legacy component, superceded by ESP32.
+hardware|iot|TPU (coral)|TEST|FALSE|Følg med på adopsjon i markedet og applikasjoner.|Monitor market adoption and applications as needed.
+hardware|iot|mmWave Radar|TEST|FALSE|Følg med på adopsjon i markedet og applikasjoner.|Monitor market adoption and applications as needed.
+hardware|iot|Raspberry PI Pico|TRIAL|FALSE|Kost/nytte for mange applikasjoner|Cost/benefit for simple applications
+hardware|iot|ESP8266|HOLD|FALSE|Komponent har blitt byttet ut med ESP32.|Legacy component, superceded by ESP32.
 hardware|iot|nRF9160|TRIAL|TRUE|SoC, Cat-M1 + ARM|SoC, Cat-M1 + ARM
 hardware|iot|Jetson Nano|TEST|FALSE|Embedded ML board|Embedded ML board
 languages|cybersec|Shell|KEEP|FALSE|Industristandard.|Industry standard.
-languages|cybersec|Golang|ADOPT|TRUE|Industristandard.|Industry standard.
+languages|cybersec|Golang|ADOPT|TRUE|Golang er et programmeringsspråk utviklet av Google, som har blitt et viktig standardspråk for en rekke løsninger.|Golang is a programming language developed by Google, which has become an important standard language for numerous solutions.
 languages|cybersec|Python|KEEP|FALSE|Industristandard.|Industry standard.
-languages|cybersec|REGO|TEST|FALSE|Industristandard.|Industry standard.
+languages|cybersec|REGO|TEST|FALSE|Standard språk for OPA.|Default language for OPA.
 languages|cybersec|RegEx|KEEP|FALSE|Industristandard.|Industry standard.
 languages|cybersec|Hyperscan|KEEP|FALSE|Industristandard.|Industry standard.
-languages|cybersec|HashiCorp Configuration Language|TRIAL|FALSE|Industristandard.|Industry standard.
+languages|cybersec|HashiCorp Configuration Language|TRIAL|FALSE|JSON-lignende Terraform format|JSON-flavoured Terraform markup language / format.
 languages|cybersec|JSON|KEEP|FALSE|Industristandard.|Industry standard.
 languages|cybersec|YAML|KEEP|FALSE|Industristandard.|Industry standard.
 languages|cybersec|SQL|KEEP|FALSE|Industristandard.|Industry standard.
-languages|cybersec|ZSH||FALSE|Industristandard.|Industry standard.
+languages|cybersec|ZSH|KEEP|FALSE|Industry standard.|Industry standard.
 languages|cybersec|Bash|KEEP|FALSE|Industristandard.|Industry standard.
-languages|cybersec|ZSH|ADOPT|FALSE|Industristandard.|Industry standard.
 languages|cybersec|PHP|HOLD|FALSE|Det finnes bedre server-side rammeverk som følger dagens beste praksis.|Use alternative server-side frameworks that follows up-to-date best practices.
-languages|cybersec|NOSQL|ADOPT|FALSE|Industristandard.|Industry standard.
-frameworks|cybersec|OPA|TEST|FALSE|Industristandard.|Industry standard.
+languages|cybersec|NOSQL|ADOPT|FALSE||
+languages|cybersec|||FALSE||
+frameworks|cybersec|OPA|TEST|FALSE|Generell-bruk og åpen kildekode-samsvarsrammeverk |General-use and open source compliance framework
 frameworks|cybersec|Gatekeeper|ADOPT|FALSE|Industristandard.|Industry standard.
 frameworks|cybersec|Kubernetes|ADOPT|FALSE|Industristandard.|Industry standard.
-frameworks|cybersec|GitHub Advanced Security|TRIAL|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|GitHub Advanced Security|TRIAL|FALSE|Ledende GitOps / SecOps alt-i-ett SaaS løsning|Leading GitOps / SecOps all-in-one SaaS solution
 frameworks|cybersec|NIST Cybersecurity Framework|ADOPT|FALSE|Industristandard.|Industry standard.
-frameworks|cybersec|ISO 27000|HOLD|FALSE|Industristandard.|Industry standard.
+frameworks|cybersec|ISO 27000|HOLD|FALSE|Fortsatt relevant for organisatorisk bruk, men erstattes av ISO 27100 for cybersikkerhet|Still relevant for organizational use, but superseded by ISO 27100 for cybersecurity
 methods|cybersec|Code Signing|ADOPT|FALSE|«Best practice» for integritetssjekk av kodeleveranse til infrastrukturplattform|«Best practice» for integrity check of code delivery to infrastructure plattform.
 methods|cybersec|SBOM|TEST|FALSE|Fullstendig oversikt over avhengigheter. Gir verdi ved hendelser og sikkerhetsfeil i avhengigheter.|Complete overview of dependencies. Gives value during incidents and security-issues in dependencies.
 methods|cybersec|ROS (RVA-analysis)|-|FALSE|Nødvendig del av sikkerhetsmetodikk. Forstå og evaluere (samt. dokumentere) potensielle risikoer for tjenester.|Necessary part of security methodology. Understand and evaluate (as well as document) potential risks for services.
@@ -457,23 +460,23 @@ procedures|cybersec|Policy Controller|ADOPT|FALSE|Industristandard.|Industry sta
 procedures|cybersec|Container isolation|ADOPT|FALSE|Industristandard.|Industry standard.
 procedures|cybersec|Virtual Private Network||FALSE|Industristandard.|Industry standard.
 procedures|cybersec|Cryptogrophy||FALSE|Industristandard.|Industry standard.
-tools|cybersec|cosign|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|kube-notary|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Binary Authorization|TRIAL|FALSE|Industristandard.|Industry standard.
-tools|cybersec|GCP *|TRIAL|FALSE|Industristandard.|Industry standard.
-tools|cybersec|AWS *|TRIAL|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Azure *|HOLD|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Istio|TRIAL|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Snyk|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|GitHub Advanced Security|TRIAL|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Splunk|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Datadog|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|SolarWinds|HOLD|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Rapid7|TEST|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Workload Identity||FALSE|Industristandard.|Industry standard.
-tools|cybersec|GKE Sandbox||FALSE|Industristandard.|Industry standard.
-tools|cybersec|PodSecurityPolicy|HOLD|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Gatekeeper|ADOPT|FALSE|Industristandard.|Industry standard.
-tools|cybersec|Config Management||FALSE|Industristandard.|Industry standard.
-tools|cybersec|VIM|KEEP|FALSE|Industristandard.|Industry standard.
-tools|cybersec|NANO|HOLD|FALSE|Industristandard.|Industry standard.
+tools|cybersec|cosign|TEST|FALSE||
+tools|cybersec|kube-notary|TEST|FALSE||
+tools|cybersec|Binary Authorization|TRIAL|FALSE||
+tools|cybersec|GCP *|TRIAL|FALSE||
+tools|cybersec|AWS *|TRIAL|FALSE||
+tools|cybersec|Azure *|HOLD|FALSE||
+tools|cybersec|Istio|TRIAL|FALSE||
+tools|cybersec|Snyk|TEST|FALSE||
+tools|cybersec|GitHub Advanced Security|TRIAL|FALSE||
+tools|cybersec|Splunk|TEST|FALSE||
+tools|cybersec|Datadog|TEST|FALSE||
+tools|cybersec|SolarWinds|HOLD|FALSE||
+tools|cybersec|Rapid7|TEST|FALSE||
+tools|cybersec|Workload Identity||FALSE||
+tools|cybersec|GKE Sandbox||FALSE||
+tools|cybersec|PodSecurityPolicy|HOLD|FALSE||
+tools|cybersec|Gatekeeper|ADOPT|FALSE||
+tools|cybersec|Config Management||FALSE||
+tools|cybersec|VIM|KEEP|FALSE||
+tools|cybersec|NANO|HOLD|FALSE||
