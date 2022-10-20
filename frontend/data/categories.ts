@@ -3727,7 +3727,6 @@ const categories: Record<string, Category> = {
       },
     ],
   },
-  undefined: { name: 'Undefined', link: 'undefined', groups: [{ name: '', id: '', items: [] }] },
 };
 
 export default categories;
