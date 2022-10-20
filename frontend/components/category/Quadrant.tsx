@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next';
-import { createRef, memo, RefObject, useLayoutEffect, useRef, useState } from 'react';
+import { createRef, memo, RefObject, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Item } from '../../data/categories';
 import { useMedia } from 'react-use';
@@ -44,7 +44,7 @@ const Quadrant = ({ id, name, description, items, setExpandedId, expandedId, ind
     ? `${styles.quadrandExpanded} ${styles[`quadrant_${index}`]}`
     : '';
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const node = quadrantRef?.current;
     if (node !== null) {
       const overflow = node.scrollHeight > node.clientHeight;
