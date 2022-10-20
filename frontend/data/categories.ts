@@ -658,7 +658,7 @@ const categories: Record<string, Category> = {
             reason_no:
               'Tjenestedesign er en fagretning innen design med mål om å utvikle brukerrettede og helhetlige tjenester.',
             reason_en:
-              'Service design is a discipline within design with goals about developing user-oriented and holistic services.',
+              'Service design is a discipline within design with goalsabout developing user-oriented and holistic services.',
           },
         ],
       },
@@ -872,7 +872,7 @@ const categories: Record<string, Category> = {
           },
           {
             name: 'Innsiktsfasen',
-            status: 'HOLD',
+            status: 'KEEP',
             priority: false,
             reason_no:
               'I innsiktsfasen skapes en felles forståelse av designprosessen, og det settes forventninger og retningslinjer for alle involverte aktører i prosjektet.  Fokusområder: Kartlegge behov. Definere målgruppe.',
@@ -1088,22 +1088,26 @@ const categories: Record<string, Category> = {
             status: 'TEST',
             priority: false,
             reason_no:
-              'WebAssembly kan i visse tilfeller gi økt ytelse, men vær obs på at just-in-time-kompilering ofte gjør at vanlig Javascript er like vel-ytende.',
-            reason_en: '',
+              'WebAssembly kan i visse tilfeller gi økt ytelse. Vær obs på at just-in-time-kompilering ofte gjør at vanlig Javascript er like vel-ytende.',
+            reason_en:
+              'WebAssembly may in some cases provide increased performance. Be aware that just-in-time compilation often makes regular Javascript just as well-performing.',
           },
           {
             name: 'Imba (programmeringsspråk)',
             status: 'TEST',
             priority: false,
             reason_no: 'Kortfattet prototyping-språk.',
-            reason_en: '',
+            reason_en:
+              'Clojure is a variant of the Lisp programming language. Fulcro is a framework for building fullstack applications in Clojure. This option is interesting for those who want to experiment with one coherent codebase for an entire data program, especially in data-driven applications.',
           },
           {
             name: 'clojure + fulcro',
             status: 'TEST',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'Clojure er en variant av programmeringsspråket Lisp. Fulcro er et rammeverk for å bygge fullstack-applikasjoner i Clojure. Dette alternativet er interessant for de som ønsker å eksperimentere med én sammenhengende kodebase for et helt dataprogram, særlig i datadrevne applikasjoner.',
+            reason_en:
+              "Typescript that doesn't need to be transpiled can provide less technical debt. Currently, it's a big enough challenge to get all projects to use types.",
           },
           {
             name: 'JavaScript uten typer (JSdoc-TS er regnet som typet)',
@@ -1111,7 +1115,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Typescript som ikke trenger å transpileres kan gi mindre teknisk gjeld. Foreløpig er det en stor nok utfordring å få alle prosjekter til å bruke typer.',
-            reason_en: '',
+            reason_en:
+              'Use new EcmaScript language features (which are in stage 3 and 4) and transpile instead of using old-fashioned code.',
           },
           {
             name: 'ESNext',
@@ -1119,35 +1124,36 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Bruk nye EcmaScript-språkfunksjoner (som er i stage 3 og 4) og transpiler fremfor å bruke gammeldags kode.',
-            reason_en: '',
+            reason_en: 'TypeScript is here to stay in long-lived projects.',
           },
           {
             name: 'TypeScript',
             status: 'ADOPT',
             priority: true,
             reason_no: 'Typing av Javascript er kommet for å bli i langtlevde prosjekter.',
-            reason_en: '',
+            reason_en: 'GraphQL is a mature technology that fits well for its use cases.',
           },
           {
             name: 'GraphQL',
             status: 'ADOPT',
             priority: true,
             reason_no: 'GraphQL er en moden teknologi som passer godt for sine bruksområder.',
-            reason_en: '',
+            reason_en: 'Active development appears to have come to a standstill.',
           },
           {
             name: 'Elm',
             status: 'HOLD',
             priority: false,
             reason_no: 'Aktiv utvikling har tilsynelatende stoppet opp.',
-            reason_en: '',
+            reason_en: 'TypeScript is a significantly better alternative.',
           },
           {
             name: 'Flow',
             status: 'HOLD',
             priority: false,
             reason_no: 'Typescript er et betydelig bedre alternativ.',
-            reason_en: '',
+            reason_en:
+              'Server-side rendering of apps written in frameworks that also work well on the client side (React, Vue, Svelte) is a more flexible option than a pure server-side language.',
           },
           {
             name: 'PHP',
@@ -1155,7 +1161,7 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Server-side-rendering av apper skrevet i rammeverk som også egner seg for klientsiden (React, Vue, Svelte) er et mer fleksibelt alternativ enn et rent server-side-språk.',
-            reason_en: '',
+            reason_en: '#REF!',
           },
         ],
       },
@@ -1168,15 +1174,7 @@ const categories: Record<string, Category> = {
             status: 'KEEP',
             priority: true,
             reason_no: 'React er bransjestandarden for øyeblikket, og duger godt til jobben sin.',
-            reason_en: '',
-          },
-          { name: 'Ant design', status: 'KEEP', priority: false, reason_no: '', reason_en: '' },
-          {
-            name: 'react-query (Erstattes av SWR i methods)',
-            status: 'ADOPT',
-            priority: true,
-            reason_no: '',
-            reason_en: '',
+            reason_en: 'React is the industry standard at the moment, and does its job well.',
           },
           {
             name: 'testing-library',
@@ -1184,7 +1182,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'testing-library er et bibliotek med testfunksjoner, implementert for ulike verktøy (Jest, Cypress). I tillegg til å være arbeidsbesparende, er det en fordel å ha et standard-«vokabular» man kan forholde seg til enda man bytter prosjekt eller testverktøy.',
-            reason_en: '',
+            reason_en:
+              'testing-library is a library with testing functions, implemented for various tools (Jest, Cypress). In addition to being time-saving, it is an advantage to have a standard "vocabulary" to relate to even if you switch projects or test tools.',
           },
           {
             name: 'Next',
@@ -1192,7 +1191,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Next gjør det lett å lage webapplikasjoner som følger alle kunstens regler uten at man legger mye arbeid i det. Andre alternativer eksisterer (Remix, SvelteKit), men ingen er så modne som Next.',
-            reason_en: '',
+            reason_en:
+              'Next makes it easy to create web applications that follow all the rules of the art without putting a lot of work into it. Other alternatives exist (Remix, SvelteKit), but none are as mature as Next.',
           },
           {
             name: 'Vue',
@@ -1200,50 +1200,22 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Vue er et av de tre store rammeverkene om dagen (React og Svelte er de to andre). Hvis man synes Vue er passende for et prosjekt, må man gjerne bruke dette.',
-            reason_en: '',
+            reason_en:
+              'Vue is one of the three major frameworks of the day (React and Svelte are the other two). If you think Vue is suitable for a project, feel free to use it.',
           },
           {
             name: 'Jest',
             status: 'ADOPT',
             priority: true,
             reason_no: 'Standard-testverktøyet for enhetstester.',
-            reason_en: '',
+            reason_en: 'The standard tool for unit tests.',
           },
           {
             name: 'Cypress',
             status: 'ADOPT',
             priority: true,
             reason_no: 'Standard-testverktøyet for ende-til-ende-tester.',
-            reason_en: '',
-          },
-          {
-            name: 'SWR (Erstattes av SWR i methods)',
-            status: 'ADOPT',
-            priority: false,
-            reason_no: '',
-            reason_en: '',
-          },
-          {
-            name: 'Material-ui',
-            status: 'ADOPT',
-            priority: false,
-            reason_no:
-              'Et godt designbibliotek utviklet av Google. Etter vår vurdering mer egnet for mobilskjermer enn for datamaskin.',
-            reason_en: '',
-          },
-          {
-            name: 'Gatsby',
-            status: 'ADOPT',
-            priority: false,
-            reason_no: 'En god statisk-side-generator.',
-            reason_en: '',
-          },
-          {
-            name: 'Razzle (SSR for alle rammeverk)',
-            status: 'TRIAL',
-            priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_en: 'The standard tool for end-to-end tests.',
           },
           {
             name: 'Tailwind',
@@ -1251,7 +1223,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Tailwind sparer en for mye komplisert CSS og holder bundle-størrelsen nede. De som bruker det er så fornøyde at vi kan anbefale det for de fleste.',
-            reason_en: '',
+            reason_en:
+              'Tailwind saves you from a lot of complicated CSS and keeps the bundle size down. Those who use it are so pleased that we can recommend it for most.',
           },
           {
             name: 'Svelte/ svelte-kit',
@@ -1259,14 +1232,17 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Svelte-kit er Svelte-alternativet til Next (der Next baserer seg på React). Apper skrevet i Svelte-kit blir mindre, men mengden tilgjengelige funksjoner er noe mindre i SvelteKit for tiden. Velg Next om du er i tvil.',
-            reason_en: '',
+            reason_en:
+              'Svelte-kit is the Svelte alternative to Next (where Next is based on React). Apps written in Svelte-kit are smaller, but the amount of available features is somewhat less in SvelteKit at the moment. Choose Next if you are in doubt.',
           },
           {
             name: 'Fastify/koa (erstatning for Express)',
             status: 'TRIAL',
             priority: true,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'To webrammeverk for Node.js som er arvtakere for Express med noen viktige forskjeller seg imellom: Fastify vektlegger konvensjon over konfigurasjon. Koa er derimot mer minimalistisk, og gir deg frihet i bytte mot ansvar.',
+            reason_en:
+              'Two web frameworks for Node.js that are successors to Express with some important differences between them: Fastify emphasizes convention over configuration. Koa, on the other hand, is more minimalist, and gives you freedom in exchange for responsibility.',
           },
           {
             name: 'flutter',
@@ -1274,7 +1250,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Vår begrensede erfaring med Flutter for Web gjør at vi ønsker at utviklerne våre skal gjøre varsomme forsøk med det.',
-            reason_en: '',
+            reason_en:
+              'Our limited experience with Flutter for Web makes us want our developers to be cautious with it.',
           },
           {
             name: 'preact',
@@ -1282,21 +1259,22 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Preact tilbyr en noe mindre kjøretidspakke enn det React gjør i bytte mot et begrenset funksjonalitetssett. Vi har lite erfaring med hvor begrensende dette er, og vil gjerne ha erfaringer.',
-            reason_en: '',
+            reason_en:
+              'Preact offers a slightly smaller runtime package than React does in exchange for a limited feature set. We have little experience with how limiting this is, and would like to have experiences.',
           },
           {
             name: 'Angular',
             status: 'HOLD',
             priority: false,
             reason_no: 'Angular er ikke et alternativ for nyoppstartede prosjekter',
-            reason_en: '',
+            reason_en: 'Angular is not an option for new projects',
           },
           {
             name: 'jQuery',
             status: 'HOLD',
             priority: false,
             reason_no: 'jQuery er ikke et alternativ for nyoppstartede prosjekter.',
-            reason_en: '',
+            reason_en: 'jQuery is not an option for new projects.',
           },
         ],
       },
@@ -1310,7 +1288,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'CSS-in-JS gjør kodebaser lettere å holde styr på, med en liten kjøretidskostnad for brukeren (fordi CSS-en må påføres av Javascript-kode). Bruk hvis brukerne dine kan tåle denne merkostnaden.',
-            reason_en: '',
+            reason_en:
+              'CSS-in-JS makes codebases easier to keep track of, with a small runtime cost for the user (because the CSS has to be applied by Javascript code). Use if your users can tolerate this additional cost.',
           },
           {
             name: 'Funksjonell stil når du kan, imperativt når du må',
@@ -1318,14 +1297,17 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Imperativ programmering er lettere for nybegynnere og tidvis mer effektivt, men erfarne programmerere bør legge seg til en funksjonell stil av hensyn til testbarhet og feilsøking.',
-            reason_en: '',
+            reason_en:
+              'Imperative programming is easier for beginners and sometimes more effective, but experienced programmers should adopt a functional style for the sake of testability and debugging.',
           },
           {
             name: 'Serverless Hosting - Object Storage',
             status: 'ADOPT',
             priority: true,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'Serverless hosting sparer deg for tid du ville brukt på å måtte vedlikeholde en tjener, selv i skyen. Object Storage lar deg lagre filer og data som brukes i tjenerløse applikasjoner, for eksempel bilder. Amazons S3 er et eksempel.',
+            reason_en:
+              "Serverless hosting saves you from having to maintain a server, even in the cloud. Object Storage lets you store files and data used in serverless applications, such as images. Amazon's S3 is an example.",
           },
           {
             name: 'HTML over the wire',
@@ -1333,7 +1315,8 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Å rendre HTML på tjeneren og overføre den til klienten gir noen kjøretidsfordeler, men vi vil fortsatt se om gevinsten er verdt ulempene.',
-            reason_en: '',
+            reason_en:
+              "Rendering HTML on the server and transferring it to the client provides some performance benefits, but we'll still see if the benefits are worth the drawbacks.",
           },
           {
             name: 'i18n',
@@ -1341,7 +1324,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               '"Gjør appen klar for internasjonalisering fra første stund; få tjenester i Norge lever lenge uten å få en engelsk eller nynorsk variant i tillegg til bokmål."',
-            reason_en: '',
+            reason_en:
+              '"Get the app ready for internationalization from the start; many services in Norway live on without ever getting an English or Norwegian variant in addition to Bokmål."',
           },
           {
             name: 'Immutable data',
@@ -1349,7 +1333,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Bruk teknikker som spreading og funksjoner Array.prototype.slice fremfor å mutere enkelte deler av objekter og arrays. Det gjør det lettere å hanskes med oppdateringer og å finne ut når endringer skjer.',
-            reason_en: '',
+            reason_en:
+              'Use techniques such as spreading and Array.prototype.slice functions rather than mutating individual parts of objects and arrays. It makes it easier to deal with updates and to find out when changes occur.',
           },
           {
             name: 'Lazy Loading',
@@ -1357,7 +1342,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Unngå å laste inn Javascript du ikke vet du trenger å bruke. Moderne bundlere og rammeverk inneholder mange metoder for å lazy-loade deler av en SPA, slik at den først lastes ned og parses av datamaskinen idet brukeren trenger den.',
-            reason_en: '',
+            reason_en:
+              "Avoid loading in Javascript that you don't know you need to use. Modern bundlers and frameworks contain many methods for lazy-loading parts of an SPA, so that it is only downloaded and parsed by the computer when the user needs it.",
           },
           {
             name: 'prioriter feilhåndtering og beskrivelse',
@@ -1365,16 +1351,17 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Lag apper som krasjer sjelden, og fortell brukerne dine så godt du kan hva årsaken til krasjen er. Da blir brukerne fornøyde, og tilbakemeldingene du får bedre.',
-            reason_en: '',
+            reason_en:
+              'Make apps that crash rarely, and tell your users as best you can what the cause of the crash is. That will make users happy, and the feedback you get will be better.',
           },
-          { name: 'Native Code', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'Microfrontends',
             status: 'TRIAL',
             priority: false,
             reason_no:
               'Vi er usikre på om gevinstene ved mikro-frontender (uavhengighet) er verdt ulempene (organisatoriske merkostnader, vanskeligere prosjektoppsett og økt nedlastingsstørrelse).',
-            reason_en: '',
+            reason_en:
+              'We are unsure if the benefits of micro-frontends (independence) are worth the disadvantages (organizational overhead, more difficult project setup, and increased download size).',
           },
           {
             name: 'Småbiblioteker av JS-onelinere',
@@ -1382,7 +1369,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Skriv heller koden selv eller kopier inn koden. Husk på å oppgi de lisensene du bruker!',
-            reason_en: '',
+            reason_en:
+              'Either write the code yourself or copy it in. Remember to list the licenses you use!',
           },
           {
             name: 'Global state',
@@ -1390,15 +1378,8 @@ const categories: Record<string, Category> = {
             priority: false,
             reason_no:
               'Å sentralisere all tilstand i ett stort objekt, som i for eksempel Redux, var en trend for rundt fem år siden. Vi beveger oss nå bort fra det fordi apper (som regel) blir tregere av å gjøre oppdateringer inni ett objekt. Det er også vanskeligere for utviklerne å forholde seg til.',
-            reason_en: '',
-          },
-          {
-            name: 'Stale While Revalidate (frontend-caching)',
-            status: 'ADOPT',
-            priority: false,
-            reason_no:
-              'Å hente data med hooks, slik react-query og SWR tilbyr, fører til betydelig færer kodelinjer enn om man gjør det samme med redux. Caching blir betydelig lettere.',
-            reason_en: '',
+            reason_en:
+              'Centralizing all state in one large object, as in for example Redux, was a trend around five years ago. We are now moving away from that because apps (usually) become slower from making updates inside one object. It is also more difficult for developers to keep track of.',
           },
         ],
       },
@@ -1412,22 +1393,31 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Global tilstand er tregt for brukerne og vanskelig for utviklere å forholde seg til. Foretrekk mindre biter.',
-            reason_en: '',
+            reason_en:
+              'The global state is slow for users and difficult for developers to keep track of. Prefer smaller pieces.',
           },
-          { name: 'MSW', status: 'ADOPT', priority: true, reason_no: '', reason_en: '' },
+          {
+            name: 'MSW',
+            status: 'ADOPT',
+            priority: true,
+            reason_no:
+              'Et bibliotek som lar deg mocke (erstatte) såkalte Service Workers i testene dine. Vi har prøvd dette og er fornøyde.',
+            reason_en:
+              "A library that lets you mock (replace) so-called Service Workers in your tests. We've tried it and are happy with it.",
+          },
           {
             name: 'React Hook Form',
             status: 'ADOPT',
             priority: true,
             reason_no: 'Dagens beste alternativ for skjemahåndtering i React: Raskt.',
-            reason_en: '',
+            reason_en: "Today's best option for schema handling in React: Quick.",
           },
           {
             name: 'Sentry / loggly',
             status: 'ADOPT',
             priority: true,
             reason_no: 'De beste alternativene for å logge feil som hender hos brukerne.',
-            reason_en: '',
+            reason_en: 'The best options for logging errors that happen to users.',
           },
           {
             name: 'Vite',
@@ -1435,16 +1425,26 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'En god, rask bundler som fungerer for de aller fleste prosjekter. Mindre konfigurering enn Webpack.',
-            reason_en: '',
+            reason_en:
+              'A good, fast bundler that works for most projects. Less configuration than Webpack.',
           },
-          { name: 'Reach UI', status: 'TRIAL', priority: true, reason_no: '', reason_en: '' },
+          {
+            name: 'Reach UI',
+            status: 'TRIAL',
+            priority: true,
+            reason_no:
+              'Et komponentbibliotek med mål om å være en selvsagt grunnpillar i ethvert React-basert designsystem.',
+            reason_en:
+              'A component library with the goal of being a natural foundation in any React-based design system.',
+          },
           {
             name: 'PostCSS',
             status: 'ADOPT',
             priority: true,
             reason_no:
               'Et modent verktøy som lar deg bruke den nyeste CSS-en uten å bekymre deg for brukernes opplevelse.',
-            reason_en: '',
+            reason_en:
+              'A mature tool that lets you use the latest CSS without worrying about the user experience.',
           },
           {
             name: 'Formik',
@@ -1452,14 +1452,15 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Et mer ordrikt alternativ og tregere alternativ til React-Hook-Form som ikke oppdateres hyppig.',
-            reason_en: '',
+            reason_en:
+              "A more verbose and slower alternative to React Hook Form that isn't updated often.",
           },
           {
             name: 'Webpack',
             status: 'KEEP',
             priority: true,
             reason_no: 'Et nødvendig onde mens verktøy som Vite modnes.',
-            reason_en: '',
+            reason_en: 'A necessary evil while tools like Vite mature.',
           },
           {
             name: 'Esbuild',
@@ -1467,67 +1468,79 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Esbuild er et raskere alternativ til Babel. Dårligere støtte for gammel syntaks, for eksempel CommonJS-moduler.',
-            reason_en: '',
+            reason_en:
+              'Esbuild is a faster alternative to Babel. poorer support for old syntax, such as CommonJS modules.',
           },
           {
             name: 'ESLint',
             status: 'ADOPT',
             priority: false,
             reason_no: 'Eslint er bransjestandarden for å håndheve stilregler i ethvert prosjekt.',
-            reason_en: '',
+            reason_en: 'Eslint is the industry standard for enforcing style rules in any project.',
           },
           {
             name: 'Prettier',
             status: 'ADOPT',
             priority: false,
             reason_no: 'En rask formaterer med få konfigurasjonstilvalg.',
-            reason_en: '',
+            reason_en: 'A fast formatter with few configuration options.',
           },
           {
             name: 'Fathom (personvernorientert Google Analytics-alternativ)',
             status: 'TRIAL',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'Fathom og andre personvernorienterte analyseverktøy er svært nødvendige å få erfaring med nå som Google Analytics sannsynligvis er å regne som ulovlig i Europa.',
+            reason_en:
+              'Fathom and other privacy-oriented analytics tools are essential to get experience with now that Google Analytics is likely to be considered illegal in Europe.',
           },
           {
             name: 'Moment',
             status: 'HOLD',
             priority: false,
             reason_no: 'Et overdimensjonert bibliotek i rene kilobytes. Bruk heller date-fns.',
-            reason_en: '',
+            reason_en: 'A oversized library in pure kilobytes. Use date-fns instead.',
           },
           {
             name: 'Underscore',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Bruk lodash i stedet.',
-            reason_en: '',
+            reason_no: 'Bruk vanlig Javascript hvis du kan og lodash hvis du må.',
+            reason_en: 'Use regular Javascript if you can and lodash if you must.',
           },
           {
             name: 'Selenium',
             status: 'HOLD',
             priority: false,
             reason_no: 'Bruk Cypress i stedet.',
-            reason_en: '',
+            reason_en: 'Use Cypress instead.',
           },
-          { name: 'Lodash', status: 'KEEP', priority: false, reason_no: '', reason_en: '' },
           {
-            name: 'Snowpack',
-            status: 'TEST',
+            name: 'Lodash',
+            status: 'KEEP',
             priority: false,
-            reason_no: 'FJERNES vedlikeholdes ikke lenger',
-            reason_en: '',
+            reason_no:
+              'Lodash er et rikholdig bibliotek med generelle funksjoner. Det blir stadig mindre nødvendig, ettersom de beste idéene fra lodash blir tatt inn i Javascript som metoder på arrays og objekter (for eksempel Array.prototype.map, og nå i nyere tid lodashs groupBy, som er blitt til Array.prototype.group).',
+            reason_en:
+              "Lodash is a rich library with general functions. It is becoming increasingly unnecessary, as the best ideas from lodash are being taken into Javascript as methods on arrays and objects (for example Array.prototype.map, and more recently lodash's groupBy, which has become Array.prototype.group).",
           },
           {
             name: 'web-components',
             status: 'TRIAL',
             priority: false,
-            reason_no: '',
-            reason_en: '',
+            reason_no:
+              'web-komponenter er gjenbrukbarekomponenter som er skrevet i ren HTML, CSS og Javascript. Derfor kan de gjenbrukes, uavhengig av hvilket rammeverk man bruker. Ulempen er at de er vanskelige å tegne opp på tjenersiden (SSR), som gjør at de ikke er fullt så universelle å bruke som de burde vært.',
+            reason_en:
+              'Web components are reusable components written in pure HTML, CSS and Javascript. Therefore, they can be reused regardless of which framework is used. The downside is that they are difficult to render on the server side (SSR), which makes them not as universal as they should be.',
           },
-          { name: 'MDX', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
-          { name: 'wmr', status: 'TEST', priority: false, reason_no: 'FJERNES', reason_en: '' },
+          {
+            name: 'MDX',
+            status: 'TRIAL',
+            priority: false,
+            reason_no: 'Dette burde oversettes fra engelsk til norsk',
+            reason_en:
+              'MDX is a syntax extension for Markdown that allows you to write JSX inline. This makes it possible to write JSX components that render to Markdown, and embed React components in your markdown documents.',
+          },
         ],
       },
     ],
@@ -2111,14 +2124,14 @@ const categories: Record<string, Category> = {
             name: 'Prefect',
             status: 'TEST',
             priority: false,
-            reason_no: 'Orkestrering utfordrer med bedre design.',
+            reason_no: 'Utfordrer innen orkestrering med bedre design.',
             reason_en: 'Orchestration challenger.',
           },
           {
             name: 'Dagster',
             status: 'TEST',
             priority: false,
-            reason_no: 'Orkestrering utfordrer med bedre design.',
+            reason_no: 'Utfordrer innen orkestrering med bedre design.',
             reason_en: 'Orchestration challenger.',
           },
           {
@@ -2983,7 +2996,7 @@ const categories: Record<string, Category> = {
             priority: true,
             reason_no:
               'Raspberry Pi + clones usage enablement. Low cost and good performance for many applications.',
-            reason_en: 'Raspberry Pi + clones',
+            reason_en: 'Raspberry Pi + cloner',
           },
           {
             name: 'TensorFlow Lite for microcontrollers',
@@ -3047,7 +3060,7 @@ const categories: Record<string, Category> = {
             name: 'Mongoose mdash',
             status: 'TEST',
             priority: false,
-            reason_no: 'Solution for uC IoT device management',
+            reason_no: 'Løsning for uC IoT device management',
             reason_en: 'Solution for uC IoT device management',
           },
           {
@@ -3061,7 +3074,7 @@ const categories: Record<string, Category> = {
             name: 'FreeRTOS',
             status: 'ADOPT',
             priority: true,
-            reason_no: 'Amazon backed RTOS used on ESP32/Nordic uC',
+            reason_no: 'Amazon støttet RTOS mye brukt på ESP32/Nordic uC',
             reason_en: 'Amazon backed RTOS used on ESP32/Nordic uC',
           },
           {
@@ -3095,8 +3108,8 @@ const categories: Record<string, Category> = {
             name: 'Protobuf',
             status: 'ADOPT',
             priority: false,
-            reason_no: 'Standardization',
-            reason_en: 'Standardization',
+            reason_no: 'Standardisering av data utveksling',
+            reason_en: 'Standardization of data exchange for constrained devices',
           },
           {
             name: 'I2C/SPI/CAN',
@@ -3151,14 +3164,14 @@ const categories: Record<string, Category> = {
             name: 'Bluetooth Thread',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Monitor market adoption and applications as needed.',
+            reason_no: 'Følg med på adopsjon i markedet og applikasjoner.',
             reason_en: 'Monitor market adoption and applications as needed.',
           },
           {
             name: 'Iridium',
             status: 'TEST',
             priority: false,
-            reason_no: 'Customer driven',
+            reason_no: 'Bruk drevet av business case',
             reason_en: 'Customer driven',
           },
           {
@@ -3172,14 +3185,14 @@ const categories: Record<string, Category> = {
             name: 'UWB',
             status: 'TEST',
             priority: true,
-            reason_no: 'Precise indoor location',
+            reason_no: 'Presis innomhus lokalisering',
             reason_en: 'Precise indoor location',
           },
           {
             name: 'Bluetooth DirectionFinding',
             status: 'TEST',
             priority: false,
-            reason_no: 'UWB is better?',
+            reason_no: 'UWB er en bedre teknologi?',
             reason_en: 'UWB is better?',
           },
         ],
@@ -3213,7 +3226,7 @@ const categories: Record<string, Category> = {
             name: 'Arduino IDE',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Too simplistic and there are better alternatives',
+            reason_no: 'Supert for nybegynner, men det finnes bedre løsninger nå',
             reason_en: 'Too simplistic and there are better alternatives',
           },
           {
@@ -3254,14 +3267,14 @@ const categories: Record<string, Category> = {
             name: 'ESP32',
             status: 'KEEP',
             priority: true,
-            reason_no: 'Swiss army knife, uC/IoT',
+            reason_no: 'Swiss army knife, uC/IoT enhet',
             reason_en: 'Swiss army knife, uC/IoT',
           },
           {
             name: 'STM32',
             status: 'ADOPT',
             priority: false,
-            reason_no: 'Industrial uC solutions',
+            reason_no: 'Industriell uC løsning',
             reason_en: 'Industrial uC solutions',
           },
           {
@@ -3282,28 +3295,28 @@ const categories: Record<string, Category> = {
             name: 'TPU (coral)',
             status: 'TEST',
             priority: false,
-            reason_no: 'Monitor market adoption and applications as needed.',
+            reason_no: 'Følg med på adopsjon i markedet og applikasjoner.',
             reason_en: 'Monitor market adoption and applications as needed.',
           },
           {
             name: 'mmWave Radar',
             status: 'TEST',
             priority: false,
-            reason_no: 'Monitor market adoption and applications as needed.',
+            reason_no: 'Følg med på adopsjon i markedet og applikasjoner.',
             reason_en: 'Monitor market adoption and applications as needed.',
           },
           {
             name: 'Raspberry PI Pico',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Cost/benefit +',
-            reason_en: 'Cost/benefit +',
+            reason_no: 'Kost/nytte for mange applikasjoner',
+            reason_en: 'Cost/benefit for simple applications',
           },
           {
             name: 'ESP8266',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Legacy component, superceded by ESP32.',
+            reason_no: 'Komponent har blitt byttet ut med ESP32.',
             reason_en: 'Legacy component, superceded by ESP32.',
           },
           {
@@ -3343,8 +3356,10 @@ const categories: Record<string, Category> = {
             name: 'Golang',
             status: 'ADOPT',
             priority: true,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no:
+              'Golang er et programmeringsspråk utviklet av Google, som har blitt et viktig standardspråk for en rekke løsninger.',
+            reason_en:
+              'Golang is a programming language developed by Google, which has become an important standard language for numerous solutions.',
           },
           {
             name: 'Python',
@@ -3357,8 +3372,8 @@ const categories: Record<string, Category> = {
             name: 'REGO',
             status: 'TEST',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: 'Standard språk for OPA.',
+            reason_en: 'Default language for OPA.',
           },
           {
             name: 'RegEx',
@@ -3378,8 +3393,8 @@ const categories: Record<string, Category> = {
             name: 'HashiCorp Configuration Language',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: 'JSON-lignende Terraform format',
+            reason_en: 'JSON-flavoured Terraform markup language / format.',
           },
           {
             name: 'JSON',
@@ -3403,15 +3418,15 @@ const categories: Record<string, Category> = {
             reason_en: 'Industry standard.',
           },
           {
-            name: 'Bash',
+            name: 'ZSH',
             status: 'KEEP',
             priority: false,
-            reason_no: 'Industristandard.',
+            reason_no: 'Industry standard.',
             reason_en: 'Industry standard.',
           },
           {
-            name: 'ZSH',
-            status: 'ADOPT',
+            name: 'Bash',
+            status: 'KEEP',
             priority: false,
             reason_no: 'Industristandard.',
             reason_en: 'Industry standard.',
@@ -3424,13 +3439,7 @@ const categories: Record<string, Category> = {
             reason_en:
               'Use alternative server-side frameworks that follows up-to-date best practices.',
           },
-          {
-            name: 'NOSQL',
-            status: 'ADOPT',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
+          { name: 'NOSQL', status: 'ADOPT', priority: false, reason_no: '', reason_en: '' },
         ],
       },
       {
@@ -3441,8 +3450,8 @@ const categories: Record<string, Category> = {
             name: 'OPA',
             status: 'TEST',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: 'Generell-bruk og åpen kildekode-samsvarsrammeverk',
+            reason_en: 'General-use and open source compliance framework',
           },
           {
             name: 'Gatekeeper',
@@ -3462,8 +3471,8 @@ const categories: Record<string, Category> = {
             name: 'GitHub Advanced Security',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: 'Ledende GitOps / SecOps alt-i-ett SaaS løsning',
+            reason_en: 'Leading GitOps / SecOps all-in-one SaaS solution',
           },
           {
             name: 'NIST Cybersecurity Framework',
@@ -3476,8 +3485,10 @@ const categories: Record<string, Category> = {
             name: 'ISO 27000',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no:
+              'Fortsatt relevant for organisatorisk bruk, men erstattes av ISO 27100 for cybersikkerhet',
+            reason_en:
+              'Still relevant for organizational use, but superseded by ISO 27100 for cybersecurity',
           },
         ],
       },
@@ -3677,129 +3688,46 @@ const categories: Record<string, Category> = {
         name: 'Tools',
         id: 'tools',
         items: [
-          {
-            name: 'cosign',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'kube-notary',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
+          { name: 'cosign', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
+          { name: 'kube-notary', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'Binary Authorization',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: '',
+            reason_en: '',
           },
-          {
-            name: 'GCP *',
-            status: 'TRIAL',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'AWS *',
-            status: 'TRIAL',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'Azure *',
-            status: 'HOLD',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'Istio',
-            status: 'TRIAL',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'Snyk',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
+          { name: 'GCP *', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
+          { name: 'AWS *', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
+          { name: 'Azure *', status: 'HOLD', priority: false, reason_no: '', reason_en: '' },
+          { name: 'Istio', status: 'TRIAL', priority: false, reason_no: '', reason_en: '' },
+          { name: 'Snyk', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'GitHub Advanced Security',
             status: 'TRIAL',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: '',
+            reason_en: '',
           },
-          {
-            name: 'Splunk',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'Datadog',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'SolarWinds',
-            status: 'HOLD',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'Rapid7',
-            status: 'TEST',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
+          { name: 'Splunk', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
+          { name: 'Datadog', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
+          { name: 'SolarWinds', status: 'HOLD', priority: false, reason_no: '', reason_en: '' },
+          { name: 'Rapid7', status: 'TEST', priority: false, reason_no: '', reason_en: '' },
           {
             name: 'PodSecurityPolicy',
             status: 'HOLD',
             priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
+            reason_no: '',
+            reason_en: '',
           },
-          {
-            name: 'Gatekeeper',
-            status: 'ADOPT',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'VIM',
-            status: 'KEEP',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
-          {
-            name: 'NANO',
-            status: 'HOLD',
-            priority: false,
-            reason_no: 'Industristandard.',
-            reason_en: 'Industry standard.',
-          },
+          { name: 'Gatekeeper', status: 'ADOPT', priority: false, reason_no: '', reason_en: '' },
+          { name: 'VIM', status: 'KEEP', priority: false, reason_no: '', reason_en: '' },
+          { name: 'NANO', status: 'HOLD', priority: false, reason_no: '', reason_en: '' },
         ],
       },
     ],
   },
+  undefined: { name: 'Undefined', link: 'undefined', groups: [{ name: '', id: '', items: [] }] },
 };
 
 export default categories;
